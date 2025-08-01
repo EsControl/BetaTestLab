@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="PRG_LVCP1_Group3" Id="{c8b3a09f-a807-46ca-be65-1a7a0e6ec35f}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_LVCP1_Group3
+VAR
+    // Function Block Instance
+    fbContactor: FB_ContactorControl;
+
+    // Contactor 1 IO Structure  
+    stContactor_IO: ST_ContactorIO;
+    
+    // Başlangıç konfigürasyonu için flag
+    bContactorInitDone: BOOL := FALSE;
+    bCapacitorInitDone: BOOL := FALSE;	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+
+	M_Contactor();
+	
+	M_Capacitor();]]></ST>
+    </Implementation>
+    <Method Name="M_Capacitor" Id="{0d7d8ac2-c915-4611-a8bc-bc80c67dfb6a}">
+      <Declaration><![CDATA[METHOD M_Capacitor : BOOL
+VAR
+    nGroupIndex : INT;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[
+nGroupIndex := 2;  // Grup 3 için index
+
+IF NOT bCapacitorInitDone THEN
+    // Grup 3 değerlerini ata
+    GVL_LVCP1.astCompensationGroups[nGroupIndex].rPower := 25.0;
+    GVL_LVCP1.astCompensationGroups[nGroupIndex].rVoltage := 450.0;
+    GVL_LVCP1.astCompensationGroups[nGroupIndex].nQuantity := 6;
+    GVL_LVCP1.astCompensationGroups[nGroupIndex].sTagPrefix := '+EP6-22C1';
+    GVL_LVCP1.astCompensationGroups[nGroupIndex].sProductCode := 'ENT.CXD-450-25';
+    
+    bCapacitorInitDone := TRUE;
+END_IF
+
+// Grup 3 aktif durumu
+GVL_LVCP1.abGroupActive[nGroupIndex] := stContactor_IO.bFeedback;
+
+M_Capacitor := TRUE;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="M_Contactor" Id="{68a3eca6-a342-4adf-a90d-19be6c6ac351}">
+      <Declaration><![CDATA[METHOD M_Contactor : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF NOT bContactorInitDone THEN
+    // Konfigürasyon parametreleri
+    GVL_LVCP1.stGroup3_ContactorHMI.stConfig.sProjectCode := '+EP6-23K1';
+    GVL_LVCP1.stGroup3_ContactorHMI.stConfig.sProductCode := 'SCH LC1G500LSEA';
+    GVL_LVCP1.stGroup3_ContactorHMI.stConfig.rRatedCurrent := 500.0;
+    GVL_LVCP1.stGroup3_ContactorHMI.stConfig.rRatedVoltage := 1000.0;
+    GVL_LVCP1.stGroup3_ContactorHMI.stConfig.nPhaseCount := 3;
+    GVL_LVCP1.stGroup3_ContactorHMI.stConfig.tFeedbackDelay := T#500MS;
+    GVL_LVCP1.stGroup3_ContactorHMI.stConfig.tWeldedDelay := T#2S;
+    GVL_LVCP1.stGroup3_ContactorHMI.stConfig.dwOperationLimit := 100000;
+    
+    // Başlangıç bakım sayacı
+    GVL_LVCP1.stGroup3_ContactorHMI.stStatistics.dwRemainingOperations := GVL_LVCP1.stGroup3_ContactorHMI.stConfig.dwOperationLimit;
+    
+    bContactorInitDone := TRUE;
+END_IF
+
+// Function Block Çağrısı
+fbContactor(
+    // Fiziksel Girişler
+    bFeedback := stContactor_IO.bFeedback,
+    bPLCControl := stContactor_IO.bPLCControl,
+    
+    // Güvenlik Girişleri
+    bSafetyLoop := GVL_Alarm.bSafetyLoop,
+    bInterlock := FALSE,
+    
+    // Sistem Girişleri
+    bMasterReset := GVL_Alarm.bMasterReset,
+    
+    // HMI Bağlantısı
+    stHMI := GVL_LVCP1.stGroup3_ContactorHMI,
+    
+    // Fiziksel Çıkış
+    bOutput => stContactor_IO.bOutput
+);
+
+M_Contactor := TRUE;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="PRG_LVCP1_Group3">
+      <LineId Id="18" Count="3" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="PRG_LVCP1_Group3.M_Capacitor">
+      <LineId Id="10" Count="16" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="PRG_LVCP1_Group3.M_Contactor">
+      <LineId Id="8" Count="36" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

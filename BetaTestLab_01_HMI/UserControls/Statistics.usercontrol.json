@@ -1,0 +1,25 @@
+{
+  "parameters": [
+    {
+      "name": "data-tchmi-ststatistics",
+      "displayName": "stStatistics",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:server#/definitions/PLC1.ST_MotorStatistics_SingleDir",
+      "category": "",
+      "description": "",
+      "defaultValue": {},
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "stStatistics",
+      "propertySetterName": "setStStatistics",
+      "propertyGetterName": "getStStatistics",
+      "refTo": ""
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.762.46/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

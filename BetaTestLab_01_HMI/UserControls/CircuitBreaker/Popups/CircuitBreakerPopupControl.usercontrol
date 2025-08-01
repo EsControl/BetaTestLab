@@ -1,0 +1,702 @@
+<div id="CircuitBreakerPopupControl" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500" data-tchmi-creator-locked="True">
+<div id="CirBreakPopCont_MainContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-right="10" data-tchmi-bottom="10">
+<script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+            {
+            "left": 1,
+            "right": 1,
+            "top": 1,
+            "bottom": 1,
+            "leftUnit": "px",
+            "rightUnit": "px",
+            "topUnit": "px",
+            "bottomUnit": "px"
+            }
+        </script>
+
+        <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+            {
+            "color": "rgba(55, 55, 65, 1)"
+            }
+        </script>
+
+        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+            {
+            "left": "Solid",
+            "right": "Solid",
+            "top": "Solid",
+            "bottom": "Solid"
+            }
+        </script>
+
+        <!-- Başlık -->
+
+        <!-- Ana Grid -->
+        <div id="CirBreakPopCont_CaptionContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="5" data-tchmi-height="40">
+<div id="TcHmiTextblock_190" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Circuit Caption Caption" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="10" data-tchmi-bottom="5" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-font-size="16">
+</div>
+</div>
+<div id="CirBreakPopCont_ControlModGrid" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height-unit="px" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-top="50" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="5" data-tchmi-bottom="50">
+<div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="0" id="CirBreakPopCont_ManualButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="MAN" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="10" data-tchmi-bottom="10" data-tchmi-text-font-size="14">
+<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                            {
+                            "color": "rgba(220, 240, 220, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 2,
+                            "right": 2,
+                            "top": 2,
+                            "bottom": 2,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    
+<script data-tchmi-target-attribute="data-tchmi-border-radius" type="application/json">
+{
+  "topLeft": 5.0,
+  "topRight": 5.0,
+  "bottomLeft": 5.0,
+  "bottomRight": 5.0,
+  "topLeftUnit": "px",
+  "topRightUnit": "px",
+  "bottomLeftUnit": "px",
+  "bottomRightUnit": "px"
+}
+</script>
+
+
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "CirBreakPopCont_ManualButton.onPressed",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%pp%stCircuitBreakerHmi::stCommand::eControlMode%/pp%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:server#/definitions/PLC1.E_CircuitBreakerControlMode",
+          "value": 0
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="CirBreakPopCont_AutoButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="OTO" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="10" data-tchmi-bottom="10" data-tchmi-text-font-size="14">
+<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                            {
+                            "color": "rgba(220, 230, 250, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 2,
+                            "right": 2,
+                            "top": 2,
+                            "bottom": 2,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    
+<script data-tchmi-target-attribute="data-tchmi-border-radius" type="application/json">
+{
+  "topLeft": 5.0,
+  "topRight": 5.0,
+  "bottomLeft": 5.0,
+  "bottomRight": 5.0,
+  "topLeftUnit": "px",
+  "topRightUnit": "px",
+  "bottomLeftUnit": "px",
+  "bottomRightUnit": "px"
+}
+</script>
+
+
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "CirBreakPopCont_AutoButton.onPressed",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%pp%stCircuitBreakerHmi::stCommand::eControlMode%/pp%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:server#/definitions/PLC1.E_CircuitBreakerControlMode",
+          "value": 1
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+
+<script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+[
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(35, 35, 40, 1)"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+{
+  "color": "rgba(55, 55, 65, 1)"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-border-radius" type="application/json">
+{
+  "topLeft": 5.0,
+  "topRight": 5.0,
+  "bottomLeft": 5.0,
+  "bottomRight": 5.0,
+  "topLeftUnit": "px",
+  "topRightUnit": "px",
+  "bottomLeftUnit": "px",
+  "bottomRightUnit": "px"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+[
+  {
+    "width": 1.0,
+    "widthUnit": "factor",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  },
+  {
+    "width": 1.0,
+    "widthUnit": "factor",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+<div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="1" id="CirBreakPopCont_OnButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="ON" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="10" data-tchmi-bottom="10" data-tchmi-text-font-size="14">
+<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+{
+  "color": "rgba(255, 255, 255, 1)"
+}
+</script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 2,
+                            "right": 2,
+                            "top": 2,
+                            "bottom": 2,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    
+
+
+<script data-tchmi-target-attribute="data-tchmi-border-radius" type="application/json">
+{
+  "topLeft": 5.0,
+  "topRight": 5.0,
+  "bottomLeft": 5.0,
+  "bottomRight": 5.0,
+  "topLeftUnit": "px",
+  "topRightUnit": "px",
+  "bottomLeftUnit": "px",
+  "bottomRightUnit": "px"
+}
+</script>
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "CirBreakPopCont_OnButton.onPressed",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%pp%stCircuitBreakerHmi::stCommand::bManualOnCmd%/pp%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/BOOL",
+          "value": true
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%pp%stCircuitBreakerHmi::stCommand::bManualOffCmd%/pp%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/BOOL",
+          "value": false
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="1" id="CirBreakPopCont_OffButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="OFF" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-word-wrap="true" data-tchmi-right="10" data-tchmi-bottom="10" data-tchmi-text-font-size="14">
+<script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                            {
+                            "color": "rgba(220, 240, 220, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 2,
+                            "right": 2,
+                            "top": 2,
+                            "bottom": 2,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    
+
+
+<script data-tchmi-target-attribute="data-tchmi-border-radius" type="application/json">
+{
+  "topLeft": 5.0,
+  "topRight": 5.0,
+  "bottomLeft": 5.0,
+  "bottomRight": 5.0,
+  "topLeftUnit": "px",
+  "topRightUnit": "px",
+  "bottomLeftUnit": "px",
+  "bottomRightUnit": "px"
+}
+</script>
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "CirBreakPopCont_OffButton.onPressed",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%pp%stCircuitBreakerHmi::stCommand::bManualOnCmd%/pp%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/BOOL",
+          "value": false
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%pp%stCircuitBreakerHmi::stCommand::bManualOffCmd%/pp%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/BOOL",
+          "value": true
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="CirBreakPopCont_ActiveButtonLight" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="1" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left-unit="px" data-tchmi-text="🟢" data-tchmi-top="15" data-tchmi-top-unit="px" data-tchmi-width="20" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="15" data-tchmi-text-font-size="15" data-tchmi-zindex="2">
+</div>
+<div id="CirBreakPopCont_ResetButton" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="10" data-tchmi-bottom="10" data-tchmi-text="RESET" data-tchmi-text-font-size="16" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="2">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(193, 178, 9, 1)"
+}
+</script>
+
+                <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+{
+  "color": "rgba(0, 0, 0, 1)"
+}
+</script>
+
+                
+
+                <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                    {
+                    "color": "rgba(200, 180, 120, 1)"
+                    }
+                </script>
+
+                <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                    {
+                    "left": "Solid",
+                    "right": "Solid",
+                    "top": "Solid",
+                    "bottom": "Solid"
+                    }
+                </script>
+            
+
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "CirBreakPopCont_ResetButton_2.onPressed",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%pp%stContactorHmi::stCommand::bResetStatistics%/pp%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/BOOL",
+          "value": true
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-border-radius" type="application/json">
+{
+  "topLeft": 5.0,
+  "topRight": 5.0,
+  "bottomLeft": 5.0,
+  "bottomRight": 5.0,
+  "topLeftUnit": "px",
+  "topRightUnit": "px",
+  "bottomLeftUnit": "px",
+  "bottomRightUnit": "px"
+}
+</script>
+</div>
+</div>
+    <div id="CirBreakPopCont_StatusContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="5" data-tchmi-bottom="5">
+<div id="CirBreakPopCont_StatusText" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="10" data-tchmi-bottom="5" data-tchmi-text-font-size="16" data-tchmi-text="%pp%stCircuitBreakerHmi::stStatus::wsStatusText%/pp%">
+</div>
+</div>
+</div>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%pp%stCircuitBreakerHmi%/pp%",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%pp%stCircuitBreakerHmi::stStatus::eActiveMode%/pp%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:server#/definitions/PLC1.E_CircuitBreakerControlMode",
+                  "value": 0
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CirBreakPopCont_OnButton::IsEnabled%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/Boolean",
+                  "value": true
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CirBreakPopCont_OffButton::IsEnabled%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/Boolean",
+                  "value": true
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CirBreakPopCont_ActiveButtonLight::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Visible"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                  {
+                    "if": [
+                      {
+                        "compare1": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "symbolExpression": "%pp%stCircuitBreakerHmi::stStatus::ePosition%/pp%"
+                        },
+                        "compare2": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:server#/definitions/PLC1.E_CircuitBreakerPosition",
+                          "value": 1
+                        },
+                        "compareOperator": "==",
+                        "logic": null
+                      }
+                    ],
+                    "then": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%CirBreakPopCont_ActiveButtonLight::GridRowIndex%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/UDINT",
+                          "value": 1
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  },
+                  {
+                    "elseif": [
+                      {
+                        "compare1": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "symbolExpression": "%pp%stCircuitBreakerHmi::stStatus::ePosition%/pp%"
+                        },
+                        "compare2": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:server#/definitions/PLC1.E_CircuitBreakerPosition",
+                          "value": 2
+                        },
+                        "compareOperator": "==",
+                        "logic": null
+                      }
+                    ],
+                    "then": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%CirBreakPopCont_ActiveButtonLight::GridRowIndex%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/UDINT",
+                          "value": 0
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  },
+                  {
+                    "else": [
+                      {
+                        "objectType": "Function",
+                        "active": true,
+                        "fn": "TcHmi.Functions.BATR_HMI_Controls.FlyOutPopupBasic",
+                        "fnParams": [
+                          {
+                            "objectType": "StaticValue",
+                            "valueType": "tchmi:general#/definitions/String",
+                            "value": "ePosition değeri UNDEFINED"
+                          },
+                          {
+                            "objectType": "StaticValue",
+                            "valueType": "tchmi:framework#/definitions/EventType",
+                            "value": "Error"
+                          },
+                          {
+                            "objectType": "StaticValue",
+                            "valueType": "tchmi:general#/definitions/String",
+                            "value": "3000"
+                          }
+                        ],
+                        "asyncWait": true
+                      },
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%CirBreakPopCont_ActiveButtonLight::Visibility%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:framework#/definitions/Visibility",
+                          "value": "Collapsed"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  }
+                ],
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CirBreakPopCont_ActiveButtonLight::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Collapsed"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CirBreakPopCont_OnButton::IsEnabled%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/Boolean",
+                  "value": false
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CirBreakPopCont_OffButton::IsEnabled%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/Boolean",
+                  "value": false
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>

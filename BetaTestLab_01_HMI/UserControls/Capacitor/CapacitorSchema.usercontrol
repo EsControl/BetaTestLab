@@ -1,0 +1,121 @@
+<div id="CapacitorSchema" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="85" data-tchmi-height="270" data-tchmi-width-unit="px" data-tchmi-height-unit="px" data-tchmi-creator-viewport-width="85" data-tchmi-creator-viewport-height="270" data-tchmi-min-height="270" data-tchmi-creator-locked="True">
+<div id="CapaSche_BaseContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-bottom="0" data-tchmi-right="0" data-tchmi-width="85">
+<div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="1" id="CapaSche_CustomLineTop" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height-unit="px" data-tchmi-left="29" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="3" data-tchmi-width-unit="px" data-tchmi-isvertical="true" data-tchmi-isactive="false" data-tchmi-bottom="205" data-tchmi-elinecolor="%pp%eTopLineColor%/pp%">
+                
+
+</div>
+                <div id="CapaSche_Contactor" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/Contactor/ContactorVertical.usercontrol" data-tchmi-top-unit="px" data-tchmi-width="75" data-tchmi-width-unit="px" data-tchmi-stcontactorhmi="%pp%stContactorHmi%/pp%" data-tchmi-bottom="170">
+                    <script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+                        {
+                        "color": "rgba(255, 0, 0, 1)"
+                        }
+                    </script>
+                    <script data-tchmi-target-attribute="data-tchmi-colorcenter" type="application/json">
+                        {
+                        "color": "rgba(255, 0, 0, 1)"
+                        }
+                    </script>
+
+                </div>
+                <div id="CapaSche_CustomLineBottom" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="35" data-tchmi-height-unit="px" data-tchmi-left="29" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top-unit="px" data-tchmi-width="3" data-tchmi-width-unit="px" data-tchmi-isvertical="true" data-tchmi-bottom="135" data-tchmi-elinecolor="%pp%eBottomLineColor%/pp%">
+                
+
+</div>
+                <div id="CapaSche_Ground" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="6" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="px" data-tchmi-width="50" data-tchmi-width-unit="px" data-tchmi-bottom="70">
+                </div>
+                <div id="CapaSche_ValueContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height="55" data-tchmi-height-unit="px" data-tchmi-left="17" data-tchmi-left-unit="px" data-tchmi-top-unit="px" data-tchmi-width="65" data-tchmi-width-unit="px" data-tchmi-bottom="10">
+                    <div id="CapaSche_VoltageValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-text="%f%%pp%stCompensationGroup::rPower%/pp%*%pp%stCompensationGroup::nQuantity%/pp%%/f%" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-width="20" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+                    </div>
+                    <div id="CapaSche_VoltageLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="30" data-tchmi-left-unit="px" data-tchmi-text="KVAR" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-width="30" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+                    </div>
+                    <div id="CapaSche_FrequencyValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="50" data-tchmi-top="30" data-tchmi-top-unit="px" data-tchmi-width="15" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+                    </div>
+                    <div id="CapaSche_FrequencyLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="30" data-tchmi-left-unit="px" data-tchmi-text="Hz" data-tchmi-top="30" data-tchmi-top-unit="px" data-tchmi-width="20" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
+                    </div>
+                </div>
+                <div id="CapaSche_Capacitor" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="15" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/Capacitor/CapacitorHorizontal.usercontrol" data-tchmi-top-unit="px" data-tchmi-width="40" data-tchmi-width-unit="px" data-tchmi-bottom="120" data-tchmi-color="%pp%eBottomLineColor%/pp%">
+                    <script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+
+                    </script>
+
+
+                    
+                
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "CapaSche_Capacitor.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "HVCP_CapacitorPopup",
+        "fn": "open",
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%HVCP_CapacitorPopup::TargetFile%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+          "value": {
+            "path": "UserControls/Capacitor/CapacitorPopupInfo.usercontrol",
+            "attributes": {
+              "data-tchmi-stcompensationgroup": "%pp%stCompensationGroup%/pp%"
+            }
+          }
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+                <div id="CapaSche_CustomLineBottom2" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="33" data-tchmi-height-unit="px" data-tchmi-left="29" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top-unit="px" data-tchmi-width="3" data-tchmi-width-unit="px" data-tchmi-isvertical="true" data-tchmi-isactive="%f%%ctrl%CapaSche_GroupCustomLineTop_1::IsActive%/ctrl%&& %s%PLC1.GVL_LVCP1.stGroup1_ContactorHMI::stStatus::ePosition%/s%==2%/f%" data-tchmi-bottom="90" data-tchmi-elinecolor="%pp%eBottomLineColor%/pp%">
+                </div>
+            </div>
+<div id="HVCP_CapacitorPopup" data-tchmi-type="TcHmi.Controls.System.TcHmiPopup" data-tchmi-height="500" data-tchmi-height-unit="px" data-tchmi-left-unit="px" data-tchmi-top="100" data-tchmi-top-unit="%" data-tchmi-width="500" data-tchmi-width-unit="px" data-tchmi-modal="false" data-tchmi-target-file-host-preload="false" data-tchmi-left="200" data-tchmi-restore-bounds="true">
+<script data-tchmi-target-attribute="data-tchmi-target-file" type="application/json">
+{
+  "path": "UserControls/Capacitor/CapacitorPopupInfo.usercontrol"
+}
+</script>
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "HVCP_CapacitorPopup.onAttached",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%HVCP_CapacitorPopup::Top%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/MeasurementValue",
+          "value": 0.0
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%HVCP_CapacitorPopup::Right%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/MeasurementValue",
+          "value": 0.0
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+</div>

@@ -1,0 +1,43 @@
+{
+  "parameters": [
+    {
+      "name": "data-tchmi-footertext",
+      "displayName": "FooterText",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/String",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "FooterText",
+      "propertySetterName": "setFooterText",
+      "propertyGetterName": "getFooterText",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-footerfontsize",
+      "displayName": "FooterFontSize",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/Number",
+      "category": "",
+      "description": "",
+      "defaultValue": 16.0,
+      "defaultValueInternal": 16.0,
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "FooterFontSize",
+      "propertySetterName": "setFooterFontSize",
+      "propertyGetterName": "getFooterFontSize",
+      "refTo": ""
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.762.46/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

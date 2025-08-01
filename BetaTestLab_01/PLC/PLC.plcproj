@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <FileVersion>1.0.0.0</FileVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{448bb4e8-a075-4420-b493-7235f19108e9}</ProjectGuid>
+    <SubObjectsSortedByName>True</SubObjectsSortedByName>
+    <DownloadApplicationInfo>true</DownloadApplicationInfo>
+    <WriteProductVersion>true</WriteProductVersion>
+    <GenerateTpy>false</GenerateTpy>
+    <Name>PLC</Name>
+    <ProgramVersion>3.1.4024.0</ProgramVersion>
+    <Application>{0a61fd5b-01df-411a-a301-f5e05814b46d}</Application>
+    <TypeSystem>{ded36526-6e04-40af-be07-c9475fe54c5e}</TypeSystem>
+    <Implicit_Task_Info>{856f83bd-acf9-4501-a078-73a074bd2da1}</Implicit_Task_Info>
+    <Implicit_KindOfTask>{bad4d44b-0221-4d0d-bf39-7b45e44baf34}</Implicit_KindOfTask>
+    <Implicit_Jitter_Distribution>{bb73c36a-479f-4213-8480-bf26086abe87}</Implicit_Jitter_Distribution>
+    <LibraryReferences>{2546d75a-2bd3-497c-b8d1-e30f32c3334a}</LibraryReferences>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="PlcTask.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Alarm\GVL_Alarm.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="POUs\EL3453\FB_EL3453.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\EL3453\stEL3453.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\EL3453\stEL3453_ch.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\EL3453\stEL3453_tot.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Example\GVL_HMI.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="POUs\Example\GVL_IO.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="POUs\Example\GVL_Safety.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="POUs\Example\GVL_System.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="POUs\Example\PRG_CircuitBreakerExample.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Example\PRG_ContactorExample.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Example\PRG_DisconnectorExample.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\Example\PRG_Simulation.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\GVL_HVCP3.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_14CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_16CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_18CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_20CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_22CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_24CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_26CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_28CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_30CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_32CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_34CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_36CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_38CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_40CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_42CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_44CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_46CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_48CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_50CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_52CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_54CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_56CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_10CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP3\PRG_HVCP3_12CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP5\GVL_HVCP5.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="POUs\HVCP5\PRG_HVCP5.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP5\PRG_HVCP5_12CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP5\PRG_HVCP5_14CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP5\PRG_HVCP5_16CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP5\PRG_HVCP5_18CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP5\PRG_HVCP5_20CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP5\PRG_HVCP5_22CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP5\PRG_HVCP5_24CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP5\PRG_HVCP5_26CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP5\PRG_HVCP5_28CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP5\PRG_HVCP5_30CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP5\PRG_HVCP5_32CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP5\PRG_HVCP5_34CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP5\PRG_HVCP5_36CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP5\PRG_HVCP5_38CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\HVCP5\PRG_HVCP5_10CB1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP1\GVL_LVCP1.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="POUs\LVCP1\PRG_LVCP1_Colors.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP1\PRG_LVCP1_CompensationCalculate.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP1\PRG_LVCP1_Group1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP1\PRG_LVCP1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP1\PRG_LVCP1_Group2.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP1\PRG_LVCP1_Group3.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP1\PRG_LVCP1_Group4.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP1\PRG_LVCP1_Group5.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP1\PRG_LVCP1_Group10.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP1\PRG_LVCP1_Group9.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP1\PRG_LVCP1_Group8.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP1\PRG_LVCP1_Group7.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP1\PRG_LVCP1_Group6.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP1\PRG_LVCP1_MainDisconnector.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP1\PRG_LVCP1_PowerMeasurement.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP2\GVL_LVCP2.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="POUs\LVCP2\PRG_LVCP2_Colors.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP2\PRG_LVCP2_PowerMeasurement.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP2\PRG_LVCP2.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP2\PRG_LVCP2_CompensationCalculate.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP2\PRG_LVCP2_Group10.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP2\PRG_LVCP2_Group1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP2\PRG_LVCP2_Group2.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP2\PRG_LVCP2_Group3.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP2\PRG_LVCP2_Group4.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP2\PRG_LVCP2_Group5.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP2\PRG_LVCP2_Group6.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP2\PRG_LVCP2_Group7.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP2\PRG_LVCP2_Group8.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP2\PRG_LVCP2_Group9.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP2\PRG_LVCP2_MainDisconnector.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP5\GVL_LVCP5.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="POUs\LVCP5\PRG_LVCP5_PowerMeasurement.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP5\PRG_LVCP5_CompensationCalculate.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP5\PRG_LVCP5_Group7.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP5\PRG_LVCP5_Group6.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP5\PRG_LVCP5_Group5.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP5\PRG_LVCP5_Group4.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP5\PRG_LVCP5_Group3.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP5\PRG_LVCP5_Group2.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP5\PRG_LVCP5_Group1.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP5\PRG_LVCP5.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\LVCP5\PRG_LVCP5_MainCircuitBreaker.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\MAIN.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\11_Disconnector\Enum\E_DisconnectorControlMode.TcTLEO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\11_Disconnector\Enum\E_DisconnectorFault.TcTLEO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\11_Disconnector\Enum\E_DisconnectorPosition.TcTLEO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\11_Disconnector\Enum\E_DisconnectorStatus.TcTLEO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\11_Disconnector\FB_DisconnectorControl.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\11_Disconnector\Structure\ST_DisconnectorCommand.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\11_Disconnector\Structure\ST_DisconnectorConfig.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\11_Disconnector\Structure\ST_DisconnectorHMI.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\11_Disconnector\Structure\ST_DisconnectorIO.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\11_Disconnector\Structure\ST_DisconnectorOperationRecord.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\11_Disconnector\Structure\ST_DisconnectorStatistics.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\11_Disconnector\Structure\ST_DisconnectorStatus.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\12_Contactor\Enum\E_ContactorControlMode.TcTLEO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\12_Contactor\Enum\E_ContactorFault.TcTLEO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\12_Contactor\Enum\E_ContactorPosition.TcTLEO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\12_Contactor\Enum\E_ContactorStatus.TcTLEO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\12_Contactor\FB_ContactorControl.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\12_Contactor\Structure\ST_ContactorCommand.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\12_Contactor\Structure\ST_ContactorConfig.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\12_Contactor\Structure\ST_ContactorHMI.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\12_Contactor\Structure\ST_ContactorIO.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\12_Contactor\Structure\ST_ContactorOperationRecord.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\12_Contactor\Structure\ST_ContactorStatistics.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\12_Contactor\Structure\ST_ContactorStatus.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\13_CircuitBreaker\Enum\E_CircuitBreakerControlMode.TcTLEO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\13_CircuitBreaker\Enum\E_CircuitBreakerFault.TcTLEO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\13_CircuitBreaker\Enum\E_CircuitBreakerPosition.TcTLEO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\13_CircuitBreaker\Enum\E_CircuitBreakerStatus.TcTLEO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\13_CircuitBreaker\FB_CircuitBreaker.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\13_CircuitBreaker\Structure\ST_CircuitBreakerCommand.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\13_CircuitBreaker\Structure\ST_CircuitBreakerConfig.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\13_CircuitBreaker\Structure\ST_CircuitBreakerHMI.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\13_CircuitBreaker\Structure\ST_CircuitBreakerIO.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\13_CircuitBreaker\Structure\ST_CircuitBreakerOperationRecord.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\13_CircuitBreaker\Structure\ST_CircuitBreakerStatistics.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\13_CircuitBreaker\Structure\ST_CircuitBreakerStatus.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\14_CompensationGroup\Enum\E_CompensationError.TcTLEO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\14_CompensationGroup\FB_CompensationCalculator.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\14_CompensationGroup\GVL_CompensationGroup.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
+    </Compile>
+    <Compile Include="_ES\14_CompensationGroup\Structure\ST_CompensationConfigInfo.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\14_CompensationGroup\Structure\ST_CompensationDiagnostic.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\14_CompensationGroup\Structure\ST_CompensationGroup.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\14_CompensationGroup\Structure\ST_CompensationGroupDetails.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\14_CompensationGroup\Structure\ST_CompensationHMI.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\14_CompensationGroup\Structure\ST_CompensationSummary.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\15_LineColor\E_LineColors.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DUTs" />
+    <Folder Include="GVLs" />
+    <Folder Include="POUs\EL3453" />
+    <Folder Include="POUs\Example" />
+    <Folder Include="POUs\HVCP5" />
+    <Folder Include="POUs\LVCP1" />
+    <Folder Include="POUs\Alarm" />
+    <Folder Include="POUs\LVCP2" />
+    <Folder Include="POUs\LVCP5" />
+    <Folder Include="POUs\HVCP3" />
+    <Folder Include="_ES" />
+    <Folder Include="VISUs" />
+    <Folder Include="POUs" />
+    <Folder Include="_ES\11_Disconnector" />
+    <Folder Include="_ES\11_Disconnector\Enum" />
+    <Folder Include="_ES\11_Disconnector\Structure" />
+    <Folder Include="_ES\12_Contactor" />
+    <Folder Include="_ES\12_Contactor\Enum" />
+    <Folder Include="_ES\12_Contactor\Structure" />
+    <Folder Include="_ES\13_CircuitBreaker" />
+    <Folder Include="_ES\13_CircuitBreaker\Enum" />
+    <Folder Include="_ES\13_CircuitBreaker\Structure" />
+    <Folder Include="_ES\14_CompensationGroup" />
+    <Folder Include="_ES\14_CompensationGroup\Enum" />
+    <Folder Include="_ES\14_CompensationGroup\Structure" />
+    <Folder Include="_ES\15_LineColor" />
+  </ItemGroup>
+  <ItemGroup>
+    <PlaceholderReference Include="Tc2_Standard">
+      <DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_Standard</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc2_System">
+      <DefaultResolution>Tc2_System, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_System</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc3_Module">
+      <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc3_Module</Namespace>
+    </PlaceholderReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PLC.tmc">
+      <SubType>Content</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <SubObject Include="FB_EL3453.AddElement" />
+    <SubObject Include="FB_EL3453.AddElementULINT" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <PlcProjectOptions>
+      <XmlArchive>
+        <Data>
+          <o xml:space="preserve" t="OptionKey">
+      <v n="Name">"&lt;ProjectRoot&gt;"</v>
+      <d n="SubKeys" t="Hashtable" />
+      <d n="Values" t="Hashtable" />
+    </o>
+        </Data>
+        <TypeList>
+          <Type n="Hashtable">System.Collections.Hashtable</Type>
+          <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
+          <Type n="String">System.String</Type>
+        </TypeList>
+      </XmlArchive>
+    </PlcProjectOptions>
+  </ProjectExtensions>
+</Project>

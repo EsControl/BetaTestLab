@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="ST_DisconnectorHMI" Id="{402a2e24-48f7-40c9-a8c8-88352b644ded}">
+    <Declaration><![CDATA[TYPE ST_DisconnectorHMI :
+STRUCT
+    stCommand: ST_DisconnectorCommand;          // Komutlar
+    stStatus: ST_DisconnectorStatus;            // Durum bilgileri
+    stConfig: ST_DisconnectorConfig;            // Konfigürasyon
+    stStatistics: ST_DisconnectorStatistics;    // İstatistik verileri
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

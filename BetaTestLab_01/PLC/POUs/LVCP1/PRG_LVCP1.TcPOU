@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.14">
+  <POU Name="PRG_LVCP1" Id="{0304955c-4377-4d31-9ad2-31d77e8321af}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_LVCP1
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[	PRG_LVCP1_PowerMeasurement();	
+
+	PRG_LVCP1_CompensationCalculate();
+
+	PRG_LVCP1_MainDisconnector();
+	
+	PRG_Lvcp1_Colors();
+	
+	PRG_LVCP1_Group1();
+	
+	PRG_LVCP1_Group2();
+	
+	PRG_LVCP1_Group3();	
+	
+	PRG_LVCP1_Group4();	
+
+	PRG_LVCP1_Group5();	
+
+	PRG_LVCP1_Group6();	
+
+	PRG_LVCP1_Group7();	
+
+	PRG_LVCP1_Group8();	
+
+	PRG_LVCP1_Group9();	
+
+	PRG_LVCP1_Group10();		]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_LVCP1">
+      <LineId Id="12" Count="0" />
+      <LineId Id="38" Count="0" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="13" Count="2" />
+      <LineId Id="43" Count="0" />
+      <LineId Id="42" Count="0" />
+      <LineId Id="16" Count="1" />
+      <LineId Id="10" Count="0" />
+      <LineId Id="18" Count="3" />
+      <LineId Id="23" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="28" Count="0" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="32" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

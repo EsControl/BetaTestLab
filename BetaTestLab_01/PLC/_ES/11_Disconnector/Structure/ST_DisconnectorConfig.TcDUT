@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="ST_DisconnectorConfig" Id="{49d6e0f9-13d4-45ea-964f-45517dc580d4}">
+    <Declaration><![CDATA[TYPE ST_DisconnectorConfig :
+STRUCT
+    // Kimlik Bilgileri
+    sProjectCode: STRING[20] := '';             // Proje kodu (örn: +EP1-23D1)
+    sProductCode: STRING[50] := '';             // Ürün kodu/modeli
+    
+    // Elektriksel Özellikler
+    rRatedCurrent: REAL := 0.0;                 // Nominal akım (A)
+    rRatedVoltage: REAL := 0.0;                 // Nominal gerilim (kV)
+    nPhaseCount: INT := 3;                      // Faz sayısı (1 veya 3)
+    bGrounded: BOOL := FALSE;                   // Topraklı tip mi?
+    
+    // Operasyonel Parametreler
+    tMotionTimeout: TIME := T#30S;              // Hareket zaman aşımı
+    tContactorDelay: TIME := T#500MS;           // Kontaktör geri bildirim gecikmesi
+    bContactorFeedbackRequired: BOOL := FALSE;   // Kontaktör geri bildirimi gerekli mi?
+    bEarthSwitchExists: BOOL;                   // Toprak bıçağı mevcut mu?
+    bInterlockEnable: BOOL;                     // Interlock kontrolü aktif mi?
+    dwOperationLimit: DWORD := 10000;           // Bakım operasyon limiti
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

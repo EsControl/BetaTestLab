@@ -1,0 +1,67 @@
+<div id="DisconnectorPopup" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500">
+
+<div id="DiscPop_TabNavigation" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTabNavigation" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-visibility="Visible">
+<script data-tchmi-target-attribute="data-tchmi-tabs" type="application/json">
+[
+  {
+    "name": "Control",
+    "displayName": "Kontrol",
+    "targetFile": {
+      "path": "UserControls/Disconnector/Popups/DisconnectorPopupControl.usercontrol",
+      "attributes": {
+        "data-tchmi-stdisconnectorhmi": "%pp%stDisconnectorHmi%/pp%"
+      }
+    },
+    "targetFileHostPreload": false,
+    "targetFileHostPreAttach": false,
+    "targetFileHostKeepAlive": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center"
+  },
+  {
+    "name": "Statistics",
+    "displayName": "İstatistik",
+    "targetFile": {
+      "path": "UserControls/Disconnector/Popups/DisconnectorPopupStatistics.usercontrol",
+      "attributes": {
+        "data-tchmi-stdisconnectorstatistics": "%pp%stDisconnectorHmi::stStatistics%/pp%"
+      }
+    },
+    "targetFileHostPreload": false,
+    "targetFileHostPreAttach": false,
+    "targetFileHostKeepAlive": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center"
+  },
+  {
+    "name": "Config",
+    "displayName": "Yapılandırma",
+    "targetFile": {
+      "path": "UserControls/Disconnector/Popups/DisconnectorPopupConfig.usercontrol",
+      "attributes": {
+        "data-tchmi-stdisconnectorconfig": "%pp%stDisconnectorHmi::stConfig%/pp%"
+      }
+    },
+    "targetFileHostPreload": false,
+    "targetFileHostPreAttach": false,
+    "targetFileHostKeepAlive": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center"
+  },
+  {
+    "name": "Documentation",
+    "displayName": "Dökümantasyon",
+    "targetFile": {
+      "path": "UserControls/Disconnector/Popups/DisconnectorPopupDocumentation.usercontrol"
+    },
+    "targetFileHostPreload": false,
+    "targetFileHostPreAttach": false,
+    "targetFileHostKeepAlive": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center"
+  }
+]
+</script>
+
+</div>
+</div>

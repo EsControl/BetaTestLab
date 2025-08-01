@@ -1,0 +1,612 @@
+<div id="ContactorPopupConfig" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500" data-tchmi-creator-locked="True">
+
+<div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="0" id="ContPopConf_BaseContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="0">
+<script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                {
+                "left": "Solid",
+                "right": "Solid",
+                "top": "Solid",
+                "bottom": "Solid"
+                }
+            </script>
+
+            <!-- Operasyon Başlığı -->
+            <div id="ContPopConf_Header" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="OPERASYON İSTATİSTİKLERİ" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="10" data-tchmi-height="40" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-font-size="14">
+
+                
+
+                
+
+                
+
+                
+
+                <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                    {
+                    "left": "Solid",
+                    "right": "Solid",
+                    "top": "Solid",
+                    "bottom": "Solid"
+                    }
+                </script>
+            </div>
+
+            <!-- Operasyon İstatistik Grid -->
+            <div id="ContPopConf_Grid" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="45" data-tchmi-top-unit="px" data-tchmi-right="10" data-tchmi-height="320">
+
+                <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+[
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+
+                <!-- Toplam Açma -->
+                <div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="0" id="ContPopConf_ProjectCodeContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="ContPopConf_ProjectCodeLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Projedeki Kodu" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="ContPopConf_ProjectCodeValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="%pp%stContactorConfig::sProjectCode%/pp%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <!-- Toplam Kapama -->
+                <div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="ContPopConf_ProductCodeContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="ContPopConf_ProductCodeLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Ürün Modeli" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="ContPopConf_ProductCodeValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="%pp%stContactorConfig::sProductCode%/pp%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <!-- Toplam Reset -->
+                <div data-tchmi-grid-row-index="2" data-tchmi-grid-column-index="0" id="ContPopConf_RatedCurrentContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="ContPopConf_RatedCurrentLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Nominal Akım" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="ContPopConf_RatedCurrentValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="%pp%stContactorConfig::rRatedCurrent%/pp%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <!-- Çalışma Süresi -->
+                <div data-tchmi-grid-row-index="3" data-tchmi-grid-column-index="0" id="ContPopConf_RatedVoltageContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="ContPopConf_RatedVoltageLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Nominal Gerilim" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="ContPopConf_RatedVoltageValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="%pp%stContactorConfig::rRatedVoltage%/pp%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <!-- Son İşlem -->
+                <div data-tchmi-grid-row-index="4" data-tchmi-grid-column-index="0" id="ContPopConf_PhaseCountContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="ContPopConf_PhaseCountLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Faz Sayısı" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="ContPopConf_PhaseCountValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="%pp%stContactorConfig::nPhaseCount%/pp%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    
+
+</div>
+                </div>
+            <div data-tchmi-grid-row-index="5" data-tchmi-grid-column-index="0" id="ContPopConf_FeedbackDelayContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="ContPopConf_FeedbackDelayLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Geri Bildirim Gecikmesi" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="ContPopConf_FeedbackDelayValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="%pp%stContactorConfig::tFeedbackDelay%/pp%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    
+
+</div>
+                </div>
+<div data-tchmi-grid-row-index="6" data-tchmi-grid-column-index="0" id="ContPopConf_WeledDelayContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="ContPopConf_WeledDelayLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Yapışma kontrolü gecikmesi" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="ContPopConf_WeledDelayValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="%pp%stContactorConfig::tWeldedDelay%/pp%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    
+
+</div>
+                </div>
+<div data-tchmi-grid-row-index="7" data-tchmi-grid-column-index="0" id="ContPopConf_OperationLimitContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="2" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="2" data-tchmi-bottom="2">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="ContPopConf_OperationLimitLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Bakım Operasyon Limiti" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="ContPopConf_OperationLimitValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="%pp%stContactorConfig::dwOperationLimit%/pp%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    
+
+
+
+</div>
+                </div>
+</div>
+        </div>
+</div>

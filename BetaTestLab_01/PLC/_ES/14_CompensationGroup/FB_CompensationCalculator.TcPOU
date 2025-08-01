@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="FB_CompensationCalculator" Id="{ec09634c-52b9-48c1-bfa5-158db3d9436f}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_CompensationCalculator
+
+VAR_INPUT
+    bExecute : BOOL;                                                                            // Hesaplama tetikleme
+    bGroupActive : ARRAY[0..GVL_CompensationGroup.MAX_COMPENSATION_GROUPS-1] OF BOOL;          // Grup aktif durumları
+    stGroupConfig : ARRAY[0..GVL_CompensationGroup.MAX_COMPENSATION_GROUPS-1] OF ST_CompensationGroup;  // Grup konfigürasyonları
+    nActiveGroups : INT;                                                                        // Kullanımdaki grup sayısı
+END_VAR
+
+VAR_OUTPUT
+    stHMI : ST_CompensationHMI;                                                                // HMI için tüm bilgiler
+    asActiveCapacitorTags : ARRAY[0..GVL_CompensationGroup.MAX_TOTAL_CAPACITORS-1] OF STRING(GVL_CompensationGroup.MAX_TAG_LENGTH); // Aktif kondansatör etiketleri
+    nActiveCapacitorCount : INT;                                                                // asActiveCapacitorTags dizisindeki geçerli eleman sayısı
+END_VAR
+
+VAR
+    i : INT;                                                                                    // Döngü değişkeni
+    j : INT;                                                                                    // İç döngü değişkeni
+    nTagIndex : INT;                                                                            // Etiket dizisi indeksi
+    bExecuteOld : BOOL;                                                                         // Execute rising edge detection
+    bInitialized : BOOL;                                                                        // İlk çalışma kontrolü
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// İlk çalışmada veya Execute rising edge'de init ve kontrol yap
+IF NOT bInitialized OR (bExecute AND NOT bExecuteOld) THEN
+    // Initialization
+    M_Init();
+    
+    // Hata kontrolü
+    IF NOT M_CheckErrors() THEN
+        bInitialized := TRUE;
+        bExecuteOld := bExecute;
+        RETURN;
+    END_IF
+    
+    // Config bilgilerini kopyala
+    stHMI.stConfig.nConfiguredGroups := nActiveGroups;
+    FOR i := 0 TO nActiveGroups - 1 DO
+        stHMI.stConfig.astGroupConfig[i] := stGroupConfig[i];
+    END_FOR
+    
+    bInitialized := TRUE;
+END_IF
+
+// Her çevrimde sadece hesaplama yap
+IF bInitialized AND NOT stHMI.stDiagnostic.bError THEN
+    M_Calculate();
+END_IF
+
+bExecuteOld := bExecute;]]></ST>
+    </Implementation>
+    <Method Name="M_Calculate" Id="{e347c082-803b-4ec7-9d4e-10c1fa5e2f64}">
+      <Declaration><![CDATA[METHOD M_Calculate : BOOL
+VAR
+    i : INT;
+    j : INT;
+    rGroupTotalPower : REAL;
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[
+// Her grubu kontrol et ve hesapla
+FOR i := 0 TO nActiveGroups - 1 DO
+    // Grup aktif mi?
+    IF bGroupActive[i] THEN
+        // Bu gruptaki kondansatör sayısını toplama ekle
+        stHMI.stSummary.nTotalActiveCapacitors := stHMI.stSummary.nTotalActiveCapacitors + stGroupConfig[i].nQuantity;
+        
+        // Bu grubun toplam gücünü hesapla
+        rGroupTotalPower := stGroupConfig[i].rPower * stGroupConfig[i].nQuantity;
+        stHMI.stGroupDetails.arGroupPower[i] := rGroupTotalPower;
+        stHMI.stSummary.rTotalActivePower := stHMI.stSummary.rTotalActivePower + rGroupTotalPower;
+        
+        // Grup detaylarını güncelle
+        stHMI.stGroupDetails.abGroupActive[i] := TRUE;
+        stHMI.stGroupDetails.anGroupCapacitorCount[i] := stGroupConfig[i].nQuantity;
+        stHMI.stSummary.nActiveGroupCount := stHMI.stSummary.nActiveGroupCount + 1;
+        
+        // Etiketleri oluştur
+        FOR j := 1 TO stGroupConfig[i].nQuantity DO
+            IF nTagIndex < GVL_CompensationGroup.MAX_TOTAL_CAPACITORS THEN
+                asActiveCapacitorTags[nTagIndex] := CONCAT(stGroupConfig[i].sTagPrefix, CONCAT('_', INT_TO_STRING(j)));
+                nTagIndex := nTagIndex + 1;
+            END_IF
+        END_FOR
+    END_IF
+END_FOR
+
+nActiveCapacitorCount := nTagIndex;
+M_Calculate := TRUE;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="M_CheckErrors" Id="{32ece9d6-1ebc-480b-8fc8-fdf23730fc6c}">
+      <Declaration><![CDATA[METHOD M_CheckErrors : BOOL
+VAR
+    i : INT;
+    bErrorFound : BOOL := FALSE;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[
+// Input kontrolü - grup sayısı
+IF nActiveGroups < 0 OR nActiveGroups > GVL_CompensationGroup.MAX_COMPENSATION_GROUPS THEN
+    stHMI.stDiagnostic.bError := TRUE;
+    stHMI.stDiagnostic.eError := E_CompensationError.ERROR_INVALID_GROUP_COUNT;
+    stHMI.stDiagnostic.wsErrorMessage := "Geçersiz grup sayısı";
+    M_CheckErrors := FALSE;
+    RETURN;
+END_IF
+
+// Her grup için config kontrolü
+FOR i := 0 TO nActiveGroups - 1 DO
+    // Negatif kondansatör sayısı kontrolü
+    IF stGroupConfig[i].nQuantity < 0 THEN
+        stHMI.stDiagnostic.bError := TRUE;
+        stHMI.stDiagnostic.eError := E_CompensationError.ERROR_NEGATIVE_QUANTITY;
+        stHMI.stDiagnostic.wsErrorMessage := WCONCAT("Grup ", WCONCAT(INT_TO_WSTRING(i+1), " için negatif kondansatör sayısı"));
+        M_CheckErrors := FALSE;
+        RETURN;
+    END_IF
+    
+    // Negatif güç kontrolü
+    IF stGroupConfig[i].rPower < 0 THEN
+        stHMI.stDiagnostic.bError := TRUE;
+        stHMI.stDiagnostic.eError := E_CompensationError.ERROR_NEGATIVE_POWER;
+        stHMI.stDiagnostic.wsErrorMessage := WCONCAT("Grup ", WCONCAT(INT_TO_WSTRING(i+1), " için negatif güç değeri"));
+        M_CheckErrors := FALSE;
+        RETURN;
+    END_IF
+END_FOR
+
+// Maksimum kondansatör sayısı kontrolü (hesaplama sonrası kontrol için)
+IF stHMI.stSummary.nTotalActiveCapacitors > GVL_CompensationGroup.MAX_TOTAL_CAPACITORS THEN
+    stHMI.stDiagnostic.bError := TRUE;
+    stHMI.stDiagnostic.eError := E_CompensationError.ERROR_MAX_CAPACITOR_EXCEEDED;
+    stHMI.stDiagnostic.wsErrorMessage := WCONCAT("Maksimum kondansatör sayısı aşıldı: ", INT_TO_WSTRING(stHMI.stSummary.nTotalActiveCapacitors));
+    M_CheckErrors := FALSE;
+    RETURN;
+END_IF
+
+// Hata yok
+M_CheckErrors := TRUE;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="M_Init" Id="{58bfea8c-c1a2-4167-a639-3ded4192199c}">
+      <Declaration><![CDATA[METHOD M_Init : BOOL
+VAR
+    i : INT;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[// Başlangıç değerlerini sıfırla
+stHMI.stSummary.nTotalActiveCapacitors := 0;
+stHMI.stSummary.rTotalActivePower := 0;
+stHMI.stSummary.nActiveGroupCount := 0;
+
+stHMI.stDiagnostic.bError := FALSE;
+stHMI.stDiagnostic.eError := E_CompensationError.ERROR_NONE;
+stHMI.stDiagnostic.wsErrorMessage := "";
+
+nTagIndex := 0;
+nActiveCapacitorCount := 0;
+
+// Grup detaylarını sıfırla
+FOR i := 0 TO GVL_CompensationGroup.MAX_COMPENSATION_GROUPS - 1 DO
+    stHMI.stGroupDetails.abGroupActive[i] := FALSE;
+    stHMI.stGroupDetails.arGroupPower[i] := 0;
+    stHMI.stGroupDetails.anGroupCapacitorCount[i] := 0;
+END_FOR
+
+// Etiket dizisini temizle
+FOR i := 0 TO GVL_CompensationGroup.MAX_TOTAL_CAPACITORS - 1 DO
+    asActiveCapacitorTags[i] := '';
+END_FOR
+
+M_Init := TRUE;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="FB_CompensationCalculator">
+      <LineId Id="48" Count="25" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_CompensationCalculator.M_Calculate">
+      <LineId Id="237" Count="28" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_CompensationCalculator.M_CheckErrors">
+      <LineId Id="11" Count="40" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_CompensationCalculator.M_Init">
+      <LineId Id="11" Count="23" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

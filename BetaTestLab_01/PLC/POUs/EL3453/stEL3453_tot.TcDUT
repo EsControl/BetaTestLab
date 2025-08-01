@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="stEL3453_tot" Id="{e3679ff9-c98c-48e4-9c09-83adb00a9a61}">
+    <Declaration><![CDATA[TYPE stEL3453_tot :
+STRUCT
+	
+	fInrms				: REAL;	//[A]
+	fIerrrmsCalc		: REAL; //[A]
+	fPF					: REAL; //[ ]
+	fFreq				: REAL; //[Hz]
+	
+	fUL12				: REAL; //[V]
+	fUL23				: REAL; //[V]
+	fUL31				: REAL; //[V]
+	
+	fP					: REAL; //[W]
+	fP_avg				: REAL; //[W]
+	fP_min 				: REAL; //[W]
+	fP_max				: REAL; //[W]
+	
+	fS					: REAL; //[VA]
+	fS_avg				: REAL; //[VA]
+	fS_min	 			: REAL; //[VA]
+	fS_max				: REAL; //[VA]
+	
+	fQtot				: REAL; //[VAR]
+	fQtot_avg			: REAL; //[VAR]
+	fQtot_min 			: REAL; //[VAR]
+	fQtot_max			: REAL; //[VAR]
+	
+	lEP 				: LINT; //[mWh]
+	ulEP_pos			: ULINT; //[mWh]
+	ulEP_neg			: ULINT; //[mWh]
+	 lEP_int			: LINT; //[mWh]
+	ulEP_int_pos		: ULINT; //[mWh]
+	ulEP_int_neg		: ULINT; //[mWh]
+	
+	 lEP_fund 			: LINT; //[mWh]
+	ulEP_fund_pos		: ULINT; //[mWh]
+	ulEP_fund_neg		: ULINT; //[mWh]
+	 lEP_fund_int		: LINT; //[mWh]
+	ulEP_fund_int_pos	: ULINT; //[mWh]
+	ulEP_fund_int_neg	: ULINT; //[mWh]
+	
+	 lES 				: LINT; //[mVAh]
+	ulES_pos			: ULINT; //[mVAh]
+	ulES_neg			: ULINT; //[mVAh]
+	 lES_int			: LINT; //[mVAh]
+	ulES_int_pos		: ULINT; //[mVAh]
+	ulES_int_neg		: ULINT; //[mVAh]
+	
+	 lES_fund 			: LINT; //[mVAh]
+	ulES_fund_pos		: ULINT; //[mVAh]
+	ulES_fund_neg		: ULINT; //[mVAh]
+	 lES_fund_int		: LINT; //[mVAh]
+	ulES_fund_int_pos	: ULINT; //[mVAh]
+	ulES_fund_int_neg	: ULINT; //[mVAh]
+	
+	 lEQ				: LINT; //[mVARh]
+	ulEQ_pos			: ULINT; //[mVARh]
+	ulEQ_neg			: ULINT; //[mVARh]
+	 lEQ_int			: LINT; //[mVARh]
+	ulEQ_int_pos		: ULINT; //[mVARh]
+	ulEQ_int_neg		: ULINT; //[mVARh]
+			
+	 lEQ_fund 			: LINT; //[mVARh]
+	ulEQ_fund_pos		: ULINT; //[mVARh]
+	ulEQ_fund_neg		: ULINT; //[mVARh]
+	 lEQ_fund_int		: LINT; //[mVARh]
+	ulEQ_fund_int_pos	: ULINT; //[mVARh]
+	ulEQ_fund_int_neg	: ULINT; //[mVARh]
+	
+	fPhiL1L2			: REAL; //[°]
+	fPhiL1L3			: REAL; //[°]
+	fUnbalance			: REAL; //[%]
+	
+	fPQF				: REAL; //[%]
+	fPQF_avg			: REAL; //[%]
+	fPQF_min			: REAL; //[%]
+	fPQF_max			: REAL; //[%]
+	
+	fP_fund				: REAL; //[W]
+	fP_fund_avg			: REAL; //[W] 
+	fP_fund_min			: REAL; //[W]
+	fP_fund_max			: REAL; //[W]
+	
+	fS_fund				: REAL; //[VA]
+	fS_fund_avg			: REAL; //[VA]
+	fS_fund_min			: REAL; //[VA]
+	fS_fund_max			: REAL; //[VA]
+	
+	fQ_fund				: REAL;	//[VAR]
+	fQ_fund_avg			: REAL; //[VAR]
+	fQ_fund_min			: REAL; //[VAR]
+	fQ_fund_max			: REAL; //[VAR]
+	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

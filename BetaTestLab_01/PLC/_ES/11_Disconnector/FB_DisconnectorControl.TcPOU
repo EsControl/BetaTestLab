@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="FB_DisconnectorControl" Id="{97d328ba-ce39-4c4a-ad40-1a11c2277bd5}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_DisconnectorControl
+VAR_INPUT
+    // Fiziksel Girişler
+    bContactorOn_FB: BOOL;                      // ON kontaktörü geri bildirimi
+    bContactorOff_FB: BOOL;                     // OFF kontaktörü geri bildirimi
+    bLimitOn: BOOL;                             // ON pozisyon limit switch
+    bLimitOff: BOOL;                            // OFF pozisyon limit switch
+    bThermalFault: BOOL;                        // Motor termik koruma arızası
+    bEarthSwitchOn: BOOL;                       // Toprak bıçağı ON pozisyonu
+    bEarthSwitchOff: BOOL;                      // Toprak bıçağı OFF pozisyonu
+    bPLCControl: BOOL;                          // PLC kontrol seçici
+ 
+	// Güvenlik Girişleri
+	bSafetyLoop: BOOL;                          // Safety loop (Emergency stop chain)
+   
+    // Güvenlik Girişleri
+    bInterlock: BOOL;                           // Dış interlock sinyali
+    
+    // Sistem Girişleri
+    bMasterReset: BOOL;                         // Master reset (tüm arıza ve istatistikleri sıfırlar)
+END_VAR
+
+VAR_OUTPUT
+    // Fiziksel Çıkışlar
+    bContactorOn_Out: BOOL;                     // ON kontaktörü sürme
+    bContactorOff_Out: BOOL;                    // OFF kontaktörü sürme
+END_VAR
+
+VAR_IN_OUT
+    stHMI: ST_DisconnectorHMI;                 // HMI için tüm veriler
+END_VAR
+
+VAR
+    // State Machine
+    ePosition				: E_DisconnectorPosition;                // İç durum değişkeni
+    ePositionPrevious		: E_DisconnectorPosition;        // Önceki durum
+    eEarthSwitchPosition	: E_DisconnectorPosition;     // Toprak bıçağı durumu
+ 
+    // Blokaj değişkenleri
+    bBlockOn: BOOL;                             // ON hareketi blokaj
+    bBlockOff: BOOL;                            // OFF hareketi blokaj
+   
+    // Timer'lar
+    tonMotionTimeout: TON;                      // Hareket zaman aşımı timer'ı
+    tonContactorOn: TON;                        // ON kontaktör gecikme timer'ı
+    tonContactorOff: TON;                       // OFF kontaktör gecikme timer'ı
+    tonEarthSwitchCheckOn: TON;                 // Toprak bıçağı ON kontrolü timer'ı
+    tonEarthSwitchCheckOff: TON;                // Toprak bıçağı OFF kontrolü timer'ı
+    
+    // Edge Detection
+    rtrigOnCmd: R_TRIG;                         // ON komut yükselen kenar
+    rtrigOffCmd: R_TRIG;                        // OFF komut yükselen kenar
+    rtrigResetFault: R_TRIG;                    // Reset yükselen kenar
+    rtrigResetStatistics: R_TRIG;               // İstatistik reset yükselen kenar
+    rtrigMasterReset: R_TRIG;                   // Master reset yükselen kenar
+    
+    // İç Değişkenler
+    bOnRequest: BOOL;                           // Dahili ON isteği
+    bOffRequest: BOOL;                          // Dahili OFF isteği
+    tOperationStartTime: TIME;                  // Operasyon başlangıç zamanı
+    tCurrentTime: TIME;                         // Şu anki zaman
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Edge Detection
+rtrigOnCmd(CLK := bOnRequest);
+rtrigOffCmd(CLK := bOffRequest);
+rtrigResetFault(CLK := stHMI.stCommand.bResetFault OR bMasterReset);
+rtrigResetStatistics(CLK := stHMI.stCommand.bResetStatistics);
+rtrigMasterReset(CLK := bMasterReset);
+
+// Reset İşlemleri
+IF rtrigResetFault.Q THEN
+    A_ResetFault();
+END_IF
+
+IF rtrigResetStatistics.Q OR rtrigMasterReset.Q THEN
+    A_ResetStatistics();
+END_IF
+
+// Ana kontrol akışı
+A_ModeSelection();      // Mod seçimi ve komut belirleme
+A_PositionCheck();      // Pozisyon güncelleme
+A_FaultCheck();         // Arıza kontrolü
+A_Control();            // Çıkış kontrolü
+A_UpdateStatus();       // Status güncelleme
+
+// Timer'ları çalıştır (sadece geri bildirim gerekli ise)
+IF stHMI.stConfig.bContactorFeedbackRequired THEN
+    tonContactorOn(IN := bContactorOn_Out AND NOT bContactorOn_FB, PT := stHMI.stConfig.tContactorDelay);
+    tonContactorOff(IN := bContactorOff_Out AND NOT bContactorOff_FB, PT := stHMI.stConfig.tContactorDelay);
+END_IF
+
+tonMotionTimeout(IN := stHMI.stStatus.bTurningOn OR stHMI.stStatus.bTurningOff, PT := stHMI.stConfig.tMotionTimeout);
+
+// Toprak bıçağı kontrol timer'ları
+IF stHMI.stConfig.bEarthSwitchExists AND stHMI.stConfig.bGrounded THEN
+    tonEarthSwitchCheckOn(IN := (stHMI.stStatus.ePosition = E_DisconnectorPosition.ON) AND (eEarthSwitchPosition <> E_DisconnectorPosition.OFF), PT := T#5S);
+    tonEarthSwitchCheckOff(IN := (stHMI.stStatus.ePosition = E_DisconnectorPosition.OFF) AND (eEarthSwitchPosition <> E_DisconnectorPosition.ON), PT := T#5S);
+END_IF]]></ST>
+    </Implementation>
+    <Action Name="A_Control" Id="{8b7111d0-d403-4532-836f-4bf8e51ad9ff}">
+      <Implementation>
+        <ST><![CDATA[// ON hareketi blokaj şartları
+bBlockOn := bInterlock OR 
+            stHMI.stStatus.bFaultActive OR 
+            bLimitOn OR 
+            stHMI.stCommand.bStop OR 
+            NOT bSafetyLoop;
+
+// OFF hareketi blokaj şartları            
+bBlockOff := bInterlock OR 
+             stHMI.stStatus.bFaultActive OR 
+             bLimitOff OR 
+             stHMI.stCommand.bStop OR 
+             NOT bSafetyLoop;
+
+// ON kontaktör kontrolü
+M_OutputControl(
+    Invert      := FALSE, 
+    Momentary   := bOnRequest, 
+    Set         := FALSE,
+    Reset       := bBlockOn,  
+    Out         => bContactorOn_Out
+);
+
+// OFF kontaktör kontrolü  
+M_OutputControl(
+    Invert      := FALSE, 
+    Momentary   := bOffRequest, 
+    Set         := FALSE,
+    Reset       := bBlockOff,  
+    Out         => bContactorOff_Out
+);
+
+// Çıkışları status'e kopyala
+stHMI.stStatus.bContactorOn_Out := bContactorOn_Out;
+stHMI.stStatus.bContactorOff_Out := bContactorOff_Out;]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="A_FaultCheck" Id="{124fdf2f-80e4-42bd-8e55-fdf37eb6f85e}">
+      <Implementation>
+        <ST><![CDATA[// Her iki limit aktif
+IF bLimitOn AND bLimitOff THEN
+    ePosition := E_DisconnectorPosition.FAULT;
+    stHMI.stStatus.eFaultCode := E_DisconnectorFault.BOTH_LIMITS;
+    stHMI.stStatus.bFaultActive := TRUE;
+    stHMI.stStatus.wsStatusText := "ARIZA: Her iki limit switch aktif";
+END_IF
+
+// Termik arıza
+IF bThermalFault THEN
+    ePosition := E_DisconnectorPosition.FAULT;
+    stHMI.stStatus.eFaultCode := E_DisconnectorFault.THERMAL;
+    stHMI.stStatus.bFaultActive := TRUE;
+    stHMI.stStatus.wsStatusText := "ARIZA: Motor termik koruma aktif";
+END_IF
+
+// ON kontaktör geri bildirim kontrolü (eğer gerekli ise)
+IF stHMI.stConfig.bContactorFeedbackRequired THEN
+    tonContactorOn(IN := bContactorOn_Out AND NOT bContactorOn_FB, PT := stHMI.stConfig.tContactorDelay);
+    IF tonContactorOn.Q THEN
+        ePosition := E_DisconnectorPosition.FAULT;
+        stHMI.stStatus.eFaultCode := E_DisconnectorFault.CONTACTOR_ON;
+        stHMI.stStatus.bFaultActive := TRUE;
+        stHMI.stStatus.wsStatusText := "ARIZA: ON kontaktör geri bildirim hatası";
+    END_IF
+
+    // OFF kontaktör geri bildirim kontrolü
+    tonContactorOff(IN := bContactorOff_Out AND NOT bContactorOff_FB, PT := stHMI.stConfig.tContactorDelay);
+    IF tonContactorOff.Q THEN
+        ePosition := E_DisconnectorPosition.FAULT;
+        stHMI.stStatus.eFaultCode := E_DisconnectorFault.CONTACTOR_OFF;
+        stHMI.stStatus.bFaultActive := TRUE;
+        stHMI.stStatus.wsStatusText := "ARIZA: OFF kontaktör geri bildirim hatası";
+    END_IF
+END_IF
+
+// Hareket zaman aşımı kontrolü
+tonMotionTimeout(IN := (ePosition = E_DisconnectorPosition.TURNING_ON) OR (ePosition = E_DisconnectorPosition.TURNING_OFF), PT := stHMI.stConfig.tMotionTimeout);
+IF tonMotionTimeout.Q THEN
+    ePosition := E_DisconnectorPosition.FAULT;
+    stHMI.stStatus.eFaultCode := E_DisconnectorFault.MOTION_TIMEOUT;
+    stHMI.stStatus.bFaultActive := TRUE;
+    stHMI.stStatus.wsStatusText := "ARIZA: Hareket zaman aşımı";
+END_IF
+
+// Toprak bıçağı senkronizasyon kontrolü
+IF stHMI.stConfig.bEarthSwitchExists AND stHMI.stConfig.bGrounded THEN
+    tonEarthSwitchCheckOn(IN := (ePosition = E_DisconnectorPosition.ON) AND (eEarthSwitchPosition <> E_DisconnectorPosition.OFF), PT := T#5S);
+    IF tonEarthSwitchCheckOn.Q THEN
+        ePosition := E_DisconnectorPosition.FAULT;
+        stHMI.stStatus.eFaultCode := E_DisconnectorFault.EARTH_SWITCH;
+        stHMI.stStatus.bFaultActive := TRUE;
+        stHMI.stStatus.wsStatusText := "ARIZA: Toprak bıçağı senkronizasyon hatası";
+    END_IF
+    
+    tonEarthSwitchCheckOff(IN := (ePosition = E_DisconnectorPosition.OFF) AND (eEarthSwitchPosition <> E_DisconnectorPosition.ON), PT := T#5S);
+    IF tonEarthSwitchCheckOff.Q THEN
+        ePosition := E_DisconnectorPosition.FAULT;
+        stHMI.stStatus.eFaultCode := E_DisconnectorFault.EARTH_SWITCH;
+        stHMI.stStatus.bFaultActive := TRUE;
+        stHMI.stStatus.wsStatusText := "ARIZA: Toprak bıçağı senkronizasyon hatası";
+    END_IF
+END_IF]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="A_ModeSelection" Id="{4cefe983-1708-479b-8d3b-4bf9fd7ef649}">
+      <Implementation>
+        <ST><![CDATA[
+// PLC kontrolü yoksa mod otomatik olarak REMOTE olur
+IF NOT bPLCControl THEN
+    stHMI.stStatus.eActiveMode := E_DisconnectorControlMode.REMOTE;
+    bOnRequest := FALSE;
+    bOffRequest := FALSE;
+    stHMI.stCommand.bManualOnCmd := FALSE;
+    stHMI.stCommand.bManualOffCmd := FALSE;
+    RETURN;
+END_IF
+
+// PLC kontrolü varsa komut edilen modu kullan (AUTO veya MANUAL)
+// REMOTE modu seçili olsa bile, PLC kontrol varsa AUTO'ya geç
+IF stHMI.stCommand.eControlMode = E_DisconnectorControlMode.REMOTE THEN
+    stHMI.stStatus.eActiveMode := E_DisconnectorControlMode.AUTO;
+ELSE
+    stHMI.stStatus.eActiveMode := stHMI.stCommand.eControlMode;
+END_IF
+
+// STOP komutu kontrolü - öncelikli
+IF stHMI.stCommand.bStop OR stHMI.stStatus.bFaultActive THEN
+    bOnRequest := FALSE;
+    bOffRequest := FALSE;
+    stHMI.stCommand.bManualOnCmd := FALSE;
+    stHMI.stCommand.bManualOffCmd := FALSE;	
+    RETURN;
+END_IF
+
+// Kontrol moduna göre komut seçimi
+CASE stHMI.stStatus.eActiveMode OF
+    E_DisconnectorControlMode.MANUAL:
+        bOnRequest := stHMI.stCommand.bManualOnCmd;
+        bOffRequest := stHMI.stCommand.bManualOffCmd;
+        
+    E_DisconnectorControlMode.AUTO:
+        bOnRequest := stHMI.stCommand.bAutoOnCmd;
+        bOffRequest := stHMI.stCommand.bAutoOffCmd;
+END_CASE
+
+// Çift komut kontrolü
+IF bOnRequest AND bOffRequest THEN
+    bOnRequest := FALSE;
+    bOffRequest := FALSE;
+END_IF]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="A_PositionCheck" Id="{32cce557-d106-4f0d-bb60-74464d3fc01a}">
+      <Implementation>
+        <ST><![CDATA[// Ayırıcı pozisyon kontrolü
+IF bLimitOn AND NOT bLimitOff THEN
+    ePosition := E_DisconnectorPosition.ON;
+ELSIF bLimitOff AND NOT bLimitOn THEN
+    ePosition := E_DisconnectorPosition.OFF;
+ELSIF NOT bLimitOn AND NOT bLimitOff THEN
+    ePosition := E_DisconnectorPosition.UNDEFINED;
+END_IF
+
+// Toprak bıçağı pozisyon kontrolü
+IF stHMI.stConfig.bEarthSwitchExists THEN
+    IF bEarthSwitchOn AND NOT bEarthSwitchOff THEN
+        eEarthSwitchPosition := E_DisconnectorPosition.ON;
+    ELSIF bEarthSwitchOff AND NOT bEarthSwitchOn THEN
+        eEarthSwitchPosition := E_DisconnectorPosition.OFF;
+    ELSIF NOT bEarthSwitchOn AND NOT bEarthSwitchOff THEN
+        eEarthSwitchPosition := E_DisconnectorPosition.UNDEFINED;
+    END_IF
+END_IF]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="A_ResetFault" Id="{b9e10b98-cd48-4e0f-993f-19ad64f895b5}">
+      <Implementation>
+        <ST><![CDATA[// Sadece arızaları temizle
+stHMI.stStatus.bFaultActive := FALSE;
+stHMI.stStatus.eFaultCode := E_DisconnectorFault.NONE;
+stHMI.stStatus.wsStatusText := "";  // Status text'i temizle
+
+// Timer'ları resetle
+tonMotionTimeout(IN := FALSE);
+tonContactorOn(IN := FALSE);
+tonContactorOff(IN := FALSE);]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="A_ResetStatistics" Id="{50b0ece3-d820-4039-9733-555d091ba2ec}">
+      <Implementation>
+        <ST><![CDATA[// Sadece istatistikleri sıfırla
+stHMI.stStatistics.dwOnCount := 0;
+stHMI.stStatistics.dwOffCount := 0;
+stHMI.stStatistics.dwOperationCount := 0;
+stHMI.stStatistics.dwTotalFaultCount := 0;
+stHMI.stStatistics.dwThermalFaultCount := 0;
+stHMI.stStatistics.dwMotionTimeoutCount := 0;
+stHMI.stStatistics.dwContactorFaultCount := 0;
+stHMI.stStatistics.dwInterlockFaultCount := 0;
+stHMI.stStatistics.tMaxOnTransitionTime := T#0S;
+stHMI.stStatistics.tMaxOffTransitionTime := T#0S;
+stHMI.stStatistics.tLastOnTransitionTime := T#0S;
+stHMI.stStatistics.tLastOffTransitionTime := T#0S;
+stHMI.stStatistics.bNewOperationFlag := FALSE;
+
+// Bakım sayacını sıfırla ve operasyon limitini yeniden yükle
+stHMI.stStatistics.dwRemainingOperations := stHMI.stConfig.dwOperationLimit;
+stHMI.stStatistics.bMaintenanceRequired := FALSE;]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="A_StateMachine" Id="{e9fb9044-1767-4768-88e9-88f1ed6069c4}">
+      <Implementation>
+        <ST><![CDATA[// Önceki durumu sakla
+ePositionPrevious := ePosition;
+
+// Interlock kontrolü
+IF bInterlock THEN
+    bOnRequest := FALSE;
+    bOffRequest := FALSE;
+END_IF
+
+// Sürekli pozisyon kontrolü
+IF bLimitOn AND bLimitOff THEN
+    // Her iki limit aktif - arıza
+    ePosition := E_DisconnectorPosition.FAULT;
+    stHMI.stStatus.eFaultCode := E_DisconnectorFault.BOTH_LIMITS;
+END_IF
+
+// Durum makinesi
+CASE ePosition OF
+    E_DisconnectorPosition.UNDEFINED:
+        // Pozisyon belirleme
+        IF bLimitOn AND NOT bLimitOff THEN
+            ePosition := E_DisconnectorPosition.ON;
+        ELSIF bLimitOff AND NOT bLimitOn THEN
+            ePosition := E_DisconnectorPosition.OFF;
+        ELSE
+            // Ara konumda - komut bekle
+            IF bOnRequest THEN
+                ePosition := E_DisconnectorPosition.TURNING_ON;
+                tOperationStartTime := TIME();
+            ELSIF bOffRequest THEN
+                ePosition := E_DisconnectorPosition.TURNING_OFF;
+                tOperationStartTime := TIME();
+            END_IF
+        END_IF
+        
+    E_DisconnectorPosition.OFF:
+        // OFF konumunda toprak bıçağı kontrolü
+        IF stHMI.stConfig.bEarthSwitchExists AND stHMI.stConfig.bGrounded AND NOT bEarthSwitchOn THEN
+            ePosition := E_DisconnectorPosition.FAULT;
+            stHMI.stStatus.eFaultCode := E_DisconnectorFault.EARTH_SWITCH;
+        END_IF
+        
+        // ON komutu kontrolü
+        IF bOnRequest AND NOT stHMI.stStatus.bFaultActive THEN
+            ePosition := E_DisconnectorPosition.TURNING_ON;
+            tOperationStartTime := TIME();
+        END_IF
+        
+    E_DisconnectorPosition.TURNING_ON:
+        // STOP komutu veya ters yön komutu
+        IF stHMI.stCommand.bStop OR bOffRequest THEN
+            ePosition := E_DisconnectorPosition.UNDEFINED;
+        END_IF
+        
+        // ON'a ulaşma kontrolü
+        IF bLimitOn THEN
+            ePosition := E_DisconnectorPosition.ON;
+            // İstatistik güncelle
+            stHMI.stStatistics.dwOnCount := stHMI.stStatistics.dwOnCount + 1;
+            stHMI.stStatistics.tLastOnTransitionTime := TIME() - tOperationStartTime;
+            
+            // ON konumuna ulaştığında toprak bıçağı kontrolü
+            IF stHMI.stConfig.bEarthSwitchExists AND stHMI.stConfig.bGrounded AND NOT bEarthSwitchOff THEN
+                ePosition := E_DisconnectorPosition.FAULT;
+                stHMI.stStatus.eFaultCode := E_DisconnectorFault.EARTH_SWITCH;
+            END_IF
+        END_IF
+        
+    E_DisconnectorPosition.ON:
+        // ON konumunda toprak bıçağı kontrolü
+        IF stHMI.stConfig.bEarthSwitchExists AND stHMI.stConfig.bGrounded AND NOT bEarthSwitchOff THEN
+            ePosition := E_DisconnectorPosition.FAULT;
+            stHMI.stStatus.eFaultCode := E_DisconnectorFault.EARTH_SWITCH;
+        END_IF
+        
+        // OFF komutu kontrolü
+        IF bOffRequest AND NOT stHMI.stStatus.bFaultActive THEN
+            ePosition := E_DisconnectorPosition.TURNING_OFF;
+            tOperationStartTime := TIME();
+        END_IF
+        
+    E_DisconnectorPosition.TURNING_OFF:
+        // STOP komutu veya ters yön komutu
+        IF stHMI.stCommand.bStop OR bOnRequest THEN
+            ePosition := E_DisconnectorPosition.UNDEFINED;
+        END_IF
+        
+        // OFF'a ulaşma kontrolü
+        IF bLimitOff THEN
+            ePosition := E_DisconnectorPosition.OFF;
+            // İstatistik güncelle
+            stHMI.stStatistics.dwOffCount := stHMI.stStatistics.dwOffCount + 1;
+            stHMI.stStatistics.tLastOffTransitionTime := TIME() - tOperationStartTime;
+            
+            // OFF konumuna ulaştığında toprak bıçağı kontrolü
+            IF stHMI.stConfig.bEarthSwitchExists AND stHMI.stConfig.bGrounded AND NOT bEarthSwitchOn THEN
+                ePosition := E_DisconnectorPosition.FAULT;
+                stHMI.stStatus.eFaultCode := E_DisconnectorFault.EARTH_SWITCH;
+            END_IF
+        END_IF
+        
+    E_DisconnectorPosition.FAULT:
+        // Arıza durumunda reset bekle
+        IF rtrigResetFault.Q THEN
+            ePosition := E_DisconnectorPosition.UNDEFINED;
+        END_IF
+END_CASE]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="A_UpdateStatus" Id="{1d57469d-7573-45b0-b978-369b835b0118}">
+      <Implementation>
+        <ST><![CDATA[// PLC Kontrol Durumu
+stHMI.stStatus.bPLCControlActive := bPLCControl;
+
+// Aktif Kontrol Modu
+stHMI.stStatus.eActiveMode := stHMI.stCommand.eControlMode;
+
+// Pozisyon bilgisini güncelle
+stHMI.stStatus.ePosition := ePosition;
+
+// Toprak bıçağı pozisyonunu status'e kopyala
+stHMI.stStatus.eEarthSwitchPosition := eEarthSwitchPosition;
+
+// Hareket durumları
+stHMI.stStatus.bTurningOn := (ePosition = E_DisconnectorPosition.TURNING_ON);
+stHMI.stStatus.bTurningOff := (ePosition = E_DisconnectorPosition.TURNING_OFF);
+
+// Kontaktör çıkışlarını status'e kopyala
+stHMI.stStatus.bContactorOn_Out := bContactorOn_Out;
+stHMI.stStatus.bContactorOff_Out := bContactorOff_Out;
+
+// Operasyonel durum belirleme
+IF stHMI.stStatus.bFaultActive THEN
+    stHMI.stStatus.eStatus := E_DisconnectorStatus.FAULTED;
+ELSIF NOT bPLCControl THEN
+    stHMI.stStatus.eStatus := E_DisconnectorStatus.NO_CONTROL;
+ELSIF bInterlock THEN
+    stHMI.stStatus.eStatus := E_DisconnectorStatus.INTERLOCKED;
+ELSIF stHMI.stStatus.bTurningOn OR stHMI.stStatus.bTurningOff THEN
+    stHMI.stStatus.eStatus := E_DisconnectorStatus.OPERATING;
+ELSIF stHMI.stStatistics.bMaintenanceRequired THEN
+    stHMI.stStatus.eStatus := E_DisconnectorStatus.MAINTENANCE;
+ELSE
+    stHMI.stStatus.eStatus := E_DisconnectorStatus.READY;
+END_IF
+
+// Status text güncelleme
+CASE stHMI.stStatus.eStatus OF
+    E_DisconnectorStatus.READY:
+        CASE ePosition OF
+            E_DisconnectorPosition.ON: stHMI.stStatus.wsStatusText := "Hazır - ON pozisyonunda";
+            E_DisconnectorPosition.OFF: stHMI.stStatus.wsStatusText := "Hazır - OFF pozisyonunda";
+            E_DisconnectorPosition.UNDEFINED: stHMI.stStatus.wsStatusText := "Hazır - Pozisyon belirsiz";
+        END_CASE
+        
+    E_DisconnectorStatus.OPERATING:
+        IF stHMI.stStatus.bTurningOn THEN
+            stHMI.stStatus.wsStatusText := "ON pozisyonuna gidiyor";
+        ELSE
+            stHMI.stStatus.wsStatusText := "OFF pozisyonuna gidiyor";
+        END_IF
+        
+    E_DisconnectorStatus.INTERLOCKED:
+        stHMI.stStatus.wsStatusText := "Interlock aktif - Komut bekliyor";
+        
+    E_DisconnectorStatus.NO_CONTROL:
+        stHMI.stStatus.wsStatusText := "PLC kontrolü yok - Remote modda";
+        
+    E_DisconnectorStatus.MAINTENANCE:
+        stHMI.stStatus.wsStatusText := "Bakım gerekli!";
+END_CASE]]></ST>
+      </Implementation>
+    </Action>
+    <Method Name="M_OutputControl" Id="{2f4b90c0-7469-4f7e-8c35-a5e9a3dd0ce8}">
+      <Declaration><![CDATA[METHOD M_OutputControl : BOOL
+VAR_INPUT
+    Reset: BOOL;
+    Invert: BOOL;
+    Momentary: BOOL;
+    Set: BOOL;
+END_VAR
+VAR_OUTPUT
+    Out: BOOL;
+END_VAR
+VAR
+    ActiveMode: INT;
+    OutLast: BOOL;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF Reset THEN
+    ActiveMode := 0;
+ELSIF Invert THEN
+    ActiveMode := 1;
+ELSIF Momentary THEN
+    ActiveMode := 2;
+ELSIF Set THEN
+    ActiveMode := 3;    
+END_IF
+
+CASE ActiveMode OF
+    0: //RESET
+        Out := FALSE;
+        
+    1: // INVERT
+        IF Invert AND NOT OutLast THEN
+            Out := NOT Out;
+        END_IF    
+        
+        OutLast := Invert;    
+                    
+    2: //PUSH BUTTON (MOMENTARY)
+        IF Momentary THEN
+            Out := TRUE;
+        ELSE
+            Out := FALSE;
+        END_IF
+    3: // SET
+        IF Set THEN
+            Out := TRUE;
+        END_IF    
+END_CASE
+
+M_OutputControl := TRUE;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="FB_DisconnectorControl">
+      <LineId Id="481" Count="22" />
+      <LineId Id="574" Count="3" />
+      <LineId Id="506" Count="0" />
+      <LineId Id="578" Count="0" />
+      <LineId Id="507" Count="5" />
+      <LineId Id="105" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_DisconnectorControl.A_Control">
+      <LineId Id="43" Count="33" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_DisconnectorControl.A_FaultCheck">
+      <LineId Id="66" Count="15" />
+      <LineId Id="126" Count="17" />
+      <LineId Id="98" Count="27" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_DisconnectorControl.A_ModeSelection">
+      <LineId Id="73" Count="7" />
+      <LineId Id="83" Count="14" />
+      <LineId Id="117" Count="0" />
+      <LineId Id="116" Count="0" />
+      <LineId Id="98" Count="17" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_DisconnectorControl.A_PositionCheck">
+      <LineId Id="24" Count="17" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_DisconnectorControl.A_ResetFault">
+      <LineId Id="4" Count="2" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="7" Count="3" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_DisconnectorControl.A_ResetStatistics">
+      <LineId Id="4" Count="16" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_DisconnectorControl.A_StateMachine">
+      <LineId Id="205" Count="105" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_DisconnectorControl.A_UpdateStatus">
+      <LineId Id="26" Count="7" />
+      <LineId Id="83" Count="1" />
+      <LineId Id="82" Count="0" />
+      <LineId Id="34" Count="47" />
+      <LineId Id="19" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_DisconnectorControl.M_OutputControl">
+      <LineId Id="80" Count="32" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

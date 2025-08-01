@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <EnumerationTextList Name="E_CompensationError" Id="{8f7b59d6-fb11-4564-bac7-2bdab9a8b9ea}">
+    <Declaration><![CDATA[// Hata kodları için ENUM
+TYPE E_CompensationError :
+(
+    ERROR_NONE := 0,                        // Hata yok
+    ERROR_INVALID_GROUP_COUNT := 1,         // Geçersiz grup sayısı
+    ERROR_NEGATIVE_POWER := 2,              // Negatif güç değeri
+    ERROR_NEGATIVE_QUANTITY := 3,           // Negatif kondansatör sayısı
+    ERROR_MAX_CAPACITOR_EXCEEDED := 4      // Maksimum kondansatör sayısı aşıldı
+);
+END_TYPE]]></Declaration>
+    <XmlArchive>
+      <Data>
+        <o xml:space="preserve" t="TextListEnumerationTextListObject">
+          <l n="TextList" t="ArrayList" cet="TextListRow">
+            <o>
+              <v n="TextID">"ERROR_NONE"</v>
+              <v n="TextDefault">"0"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"ERROR_INVALID_GROUP_COUNT"</v>
+              <v n="TextDefault">"1"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"ERROR_NEGATIVE_POWER"</v>
+              <v n="TextDefault">"2"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"ERROR_NEGATIVE_QUANTITY"</v>
+              <v n="TextDefault">"3"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"ERROR_MAX_CAPACITOR_EXCEEDED"</v>
+              <v n="TextDefault">"4"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">""</v>
+              <v n="TextDefault">""</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+          </l>
+          <l n="Languages" t="ArrayList" />
+          <v n="GuidInit">{f2321414-0e98-4d0a-a446-9d9f888ea8fe}</v>
+          <v n="GuidReInit">{6e7dbfc6-fff7-4f12-abc4-cf12663686f2}</v>
+          <v n="GuidExitX">{a6dd7ca2-26d6-40b3-bb6c-1a69758d676f}</v>
+        </o>
+      </Data>
+      <TypeList>
+        <Type n="ArrayList">System.Collections.ArrayList</Type>
+        <Type n="Guid">System.Guid</Type>
+        <Type n="String">System.String</Type>
+        <Type n="TextListEnumerationTextListObject">{4b60233c-f940-4beb-b331-82133b520151}</Type>
+        <Type n="TextListRow">{53da1be7-ad25-47c3-b0e8-e26286dad2e0}</Type>
+      </TypeList>
+    </XmlArchive>
+  </EnumerationTextList>
+</TcPlcObject>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="ST_CircuitBreakerOperationRecord" Id="{bd5b0ebd-9971-4329-bd21-8c15e7188330}">
+    <Declaration><![CDATA[TYPE ST_CircuitBreakerOperationRecord :
+STRUCT
+    dtTimestamp: DATE_AND_TIME;                 // İşlem zamanı
+    eOperation: E_CircuitBreakerPosition;       // İşlem tipi (ON/OFF/TRIPPED)
+    eControlMode: E_CircuitBreakerControlMode;  // Kontrol modu
+    eFaultCode: E_CircuitBreakerFault;          // Arıza kodu (varsa)
+    nBreakerID: INT;                            // Kesici ID
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

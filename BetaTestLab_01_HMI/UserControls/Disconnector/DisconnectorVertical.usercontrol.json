@@ -1,0 +1,70 @@
+{
+  "parameters": [
+    {
+      "name": "data-tchmi-color",
+      "displayName": "Color",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:framework#/definitions/Color",
+      "category": "",
+      "description": "",
+      "defaultValue": {
+        "color": "rgba(255, 0, 0, 1)"
+      },
+      "defaultValueInternal": {
+        "color": "rgba(255, 0, 0, 1)"
+      },
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "Color",
+      "propertySetterName": "setColor",
+      "propertyGetterName": "getColor",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-colorcenter",
+      "displayName": "ColorCenter",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:framework#/definitions/Color",
+      "category": "",
+      "description": "",
+      "defaultValue": {
+        "color": "rgba(255, 0, 0, 1)"
+      },
+      "defaultValueInternal": {
+        "color": "rgba(255, 0, 0, 1)"
+      },
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "ColorCenter",
+      "propertySetterName": "setColorCenter",
+      "propertyGetterName": "getColorCenter",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-stdisconnectorhmi",
+      "displayName": "stDisconnectorHmi",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:server#/definitions/PLC1.ST_DisconnectorHMI",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "stDisconnectorHmi",
+      "propertySetterName": "setStDisconnectorHmi",
+      "propertyGetterName": "getStDisconnectorHmi",
+      "refTo": ""
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.762.46/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

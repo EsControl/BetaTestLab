@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="PRG_DisconnectorExample" Id="{ede42cab-cfff-4fd7-b13d-ae6377f5da76}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_DisconnectorExample
+VAR
+    // Function Block Instance
+    fbDisconnector1: FB_DisconnectorControl;
+    
+    // Başlangıç konfigürasyonu için flag
+    bInitDone: BOOL;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+// Function Block Çağrısı
+fbDisconnector1(
+    // Fiziksel Girişler
+    bContactorOn_FB := stDisconnector1_IO.bContactorOn_FB,
+    bContactorOff_FB := stDisconnector1_IO.bContactorOff_FB,
+    bLimitOn := stDisconnector1_IO.bLimitOn,
+    bLimitOff := stDisconnector1_IO.bLimitOff,
+    bThermalFault := stDisconnector1_IO.bThermalFault,
+    bEarthSwitchOn := stDisconnector1_IO.bEarthSwitchOn,
+    bEarthSwitchOff := stDisconnector1_IO.bEarthSwitchOff,
+    bPLCControl := stDisconnector1_IO.bPLCControl,
+    
+    // Güvenlik Girişleri
+    bSafetyLoop := GVL_Safety.bSafetyLoop,
+    bInterlock := GVL_Safety.bDisconnector1_Interlock,
+    
+    // Sistem Girişleri
+    bMasterReset := GVL_System.bMasterReset,
+    
+    // HMI Bağlantısı
+    stHMI := GVL_HMI.stDisconnector1_HMI,
+    
+    // Fiziksel Çıkışlar
+    bContactorOn_Out => stDisconnector1_IO.bContactorOn_Out,
+    bContactorOff_Out => stDisconnector1_IO.bContactorOff_Out
+);]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_DisconnectorExample">
+      <LineId Id="99" Count="25" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

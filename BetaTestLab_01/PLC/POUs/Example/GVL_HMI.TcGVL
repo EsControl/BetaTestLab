@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <GVL Name="GVL_HMI" Id="{38ff5833-7e79-45ad-863a-8d1c21b82bec}">
+    <Declaration><![CDATA[VAR_GLOBAL
+    // Disconnector 1 HMI verileri
+    stDisconnector1_HMI: ST_DisconnectorHMI;
+    
+    // Contactor 1 HMI verileri
+    stContactor1_HMI: ST_ContactorHMI;
+	
+    // Circuit Breaker 1 HMI verileri
+    stCircuitBreaker1_HMI: ST_CircuitBreakerHMI;	
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

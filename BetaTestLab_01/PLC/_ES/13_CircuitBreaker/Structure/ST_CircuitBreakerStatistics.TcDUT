@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="ST_CircuitBreakerStatistics" Id="{2a86dcb7-1ddb-466e-bff1-5317168f1530}">
+    <Declaration><![CDATA[TYPE ST_CircuitBreakerStatistics :
+STRUCT
+    // Çalışma Sayaçları
+    dwOnCount: DWORD;                           // Toplam ON sayısı
+    dwOffCount: DWORD;                          // Toplam OFF sayısı
+    dwTripCount: DWORD;                         // Toplam TRIP sayısı
+    dwOperationCount: DWORD;                    // Toplam operasyon sayısı
+    
+    // Son İşlem Bilgisi (SQL buffer)
+    stLastOperation: ST_CircuitBreakerOperationRecord;  // SQL'e yazılacak son işlem
+    bNewOperationFlag: BOOL;                    // Yeni işlem var, SQL'e yaz
+    
+    // Arıza İstatistikleri
+    dwTotalFaultCount: DWORD;                   // Toplam arıza sayısı
+    dwSpringChargeFaultCount: DWORD;            // Yay kurma arıza sayısı
+    dwMotionTimeoutCount: DWORD;                // Hareket zaman aşımı sayısı
+    dwTripCoilFaultCount: DWORD;                // Trip bobini arıza sayısı
+    
+    // Bakım Bilgileri
+    bMaintenanceRequired: BOOL;                 // Bakım gerekli
+    dwRemainingOperations: DWORD;               // Kalan operasyon sayısı
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

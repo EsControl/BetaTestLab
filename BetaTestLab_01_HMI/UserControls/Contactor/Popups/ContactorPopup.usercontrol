@@ -1,0 +1,68 @@
+<div id="ContactorPopup" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="800" data-tchmi-creator-viewport-height="600">
+<div id="ContPop_TabNavigation" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTabNavigation" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-visibility="Visible">
+<script data-tchmi-target-attribute="data-tchmi-tabs" type="application/json">
+[
+  {
+    "name": "Control",
+    "displayName": "Kontrol",
+    "targetFile": {
+      "path": "UserControls/Contactor/Popups/ContactorPopupControl.usercontrol",
+      "attributes": {
+        "data-tchmi-stcontactorhmi": "%pp%stContactorHmi%/pp%"
+      }
+    },
+    "targetFileHostPreload": false,
+    "targetFileHostPreAttach": false,
+    "targetFileHostKeepAlive": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center"
+  },
+  {
+    "name": "Statistics",
+    "displayName": "İstatistik",
+    "targetFile": {
+      "path": "UserControls/Contactor/Popups/ContactorPopupStatistics.usercontrol",
+      "attributes": {
+        "data-tchmi-stcontactorstatistics": "%pp%stContactorHmi::stStatistics%/pp%"
+      }
+    },
+    "targetFileHostPreload": false,
+    "targetFileHostPreAttach": false,
+    "targetFileHostKeepAlive": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center"
+  },
+  {
+    "name": "Config",
+    "displayName": "Yapılandırma",
+    "targetFile": {
+      "path": "UserControls/Contactor/Popups/ContactorPopupConfig.usercontrol",
+      "attributes": {
+        "data-tchmi-stcontactorconfig": "%pp%stContactorHmi::stConfig%/pp%"
+      }
+    },
+    "targetFileHostPreload": false,
+    "targetFileHostPreAttach": false,
+    "targetFileHostKeepAlive": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center"
+  },
+  {
+    "name": "Documentation",
+    "displayName": "Dökümantasyon",
+    "targetFile": {
+      "path": "UserControls/Contactor/Popups/ContactorPopupDocumentation.usercontrol"
+    },
+    "targetFileHostPreload": false,
+    "targetFileHostPreAttach": false,
+    "targetFileHostKeepAlive": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center"
+  }
+]
+</script>
+
+</div>
+
+
+</div>

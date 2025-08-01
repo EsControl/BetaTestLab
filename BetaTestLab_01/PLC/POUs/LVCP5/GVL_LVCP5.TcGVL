@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <GVL Name="GVL_LVCP5" Id="{98bbf797-e6c2-4cca-b8a5-f9b2b6ffb24c}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL PERSISTENT
+    // Kompanzasyon grupları konfigürasyonu
+    astCompensationGroups : ARRAY[0..GVL_CompensationGroup.MAX_COMPENSATION_GROUPS-1] OF ST_CompensationGroup;  // Tüm grupların kondansatör bilgileri
+    nConfiguredGroups : INT;                                                                                    // Toplam konfigüre edilmiş grup sayısı
+    
+    // Grup aktif durumları
+    abGroupActive : ARRAY[0..GVL_CompensationGroup.MAX_COMPENSATION_GROUPS-1] OF BOOL;                         // Her grubun aktif/pasif durumu	
+
+    // Ana şalter HMI verileri
+    stMainCircuitBreakerHMI: ST_CircuitBreakerHMI;	
+	
+    // Grup 1 Kontaktör HMI bilgileri
+    stGroup1_ContactorHMI : ST_ContactorHMI;                                                                   // Grup 1 kontaktör durum ve kontrol bilgileri
+    
+    // Grup 2 Kontaktör HMI bilgileri
+    stGroup2_ContactorHMI : ST_ContactorHMI;                                                                   // Grup 2 kontaktör durum ve kontrol bilgileri
+    
+    // Grup 3 Kontaktör HMI bilgileri
+    stGroup3_ContactorHMI : ST_ContactorHMI;                                                                   // Grup 3 kontaktör durum ve kontrol bilgileri
+    
+    // Grup 4 Kontaktör HMI bilgileri
+    stGroup4_ContactorHMI : ST_ContactorHMI;                                                                   // Grup 4 kontaktör durum ve kontrol bilgileri
+    
+    // Grup 5 Kontaktör HMI bilgileri
+    stGroup5_ContactorHMI : ST_ContactorHMI;                                                                   // Grup 5 kontaktör durum ve kontrol bilgileri
+    
+    // Grup 6 Kontaktör HMI bilgileri
+    stGroup6_ContactorHMI : ST_ContactorHMI;                                                                   // Grup 6 kontaktör durum ve kontrol bilgileri
+   
+   // Grup 7 Kontaktör HMI bilgileri
+   stGroup7_ContactorHMI : ST_ContactorHMI;	
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

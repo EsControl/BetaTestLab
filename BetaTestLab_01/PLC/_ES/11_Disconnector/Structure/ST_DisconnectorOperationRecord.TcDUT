@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="ST_DisconnectorOperationRecord" Id="{64f774d4-1120-4412-845a-644c932ee32a}">
+    <Declaration><![CDATA[TYPE ST_DisconnectorOperationRecord :
+STRUCT
+    dtTimestamp: DATE_AND_TIME;                 // İşlem zamanı
+    eOperation: E_DisconnectorPosition;            // İşlem tipi (ON/OFF/FAULT)
+    eControlMode: E_DisconnectorControlMode;    // Kontrol modu
+    tTransitionTime: TIME;                      // Geçiş süresi
+    eFaultCode: E_DisconnectorFault;            // Arıza kodu (varsa)
+    nDisconnectorID: INT;                       // Ayırıcı ID
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

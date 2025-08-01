@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="ST_ContactorConfig" Id="{93388fdc-32f3-474f-93f3-0be449b483b1}">
+    <Declaration><![CDATA[TYPE ST_ContactorConfig :
+STRUCT
+    // Kimlik Bilgileri
+    sProjectCode: STRING[20] := '';             // Proje kodu (örn: +EP1-K1)
+    sProductCode: STRING[50] := '';             // Ürün kodu/modeli
+    
+    // Elektriksel Özellikler
+    rRatedCurrent: REAL := 0.0;                 // Nominal akım (A)
+    rRatedVoltage: REAL := 0.0;                 // Nominal gerilim (V)
+    nPhaseCount: INT := 3;                      // Faz sayısı (1 veya 3)
+    
+    // Operasyonel Parametreler
+    tFeedbackDelay: TIME := T#500MS;            // Geri bildirim gecikmesi
+    tWeldedDelay: TIME := T#2S;                 // Yapışma kontrolü gecikmesi
+    bFeedbackRequired: BOOL := FALSE;            // Geri bildirim gerekli mi?
+    dwOperationLimit: DWORD := 100000;          // Bakım operasyon limiti
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

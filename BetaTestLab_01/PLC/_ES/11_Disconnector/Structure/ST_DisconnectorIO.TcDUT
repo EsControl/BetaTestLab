@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="ST_DisconnectorIO" Id="{124f0edd-7f5f-4f51-9883-7a22a2535082}">
+    <Declaration><![CDATA[TYPE ST_DisconnectorIO :
+STRUCT
+    // Giriş Sinyalleri
+    bContactorOn_FB AT %I*: BOOL;      // ON kontaktörü geri bildirimi
+    bContactorOff_FB AT %I*: BOOL;     // OFF kontaktörü geri bildirimi
+    bLimitOn AT %I*: BOOL;             // ON pozisyon limit switch
+    bLimitOff AT %I*: BOOL;            // OFF pozisyon limit switch
+    bThermalFault AT %I*: BOOL;        // Motor termik koruma arızası
+    bEarthSwitchOn AT %I*: BOOL;       // Toprak bıçağı ON pozisyonu
+    bEarthSwitchOff AT %I*: BOOL;      // Toprak bıçağı OFF pozisyonu
+    bPLCControl AT %I*: BOOL;          // PLC kontrol seçici
+    
+    // Çıkış Sinyalleri
+    bContactorOn_Out AT %Q*: BOOL;     // ON kontaktörü sürme
+    bContactorOff_Out AT %Q*: BOOL;    // OFF kontaktörü sürme
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

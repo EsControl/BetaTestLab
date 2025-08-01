@@ -1,0 +1,68 @@
+{
+  "parameters": [
+    {
+      "name": "data-tchmi-color",
+      "displayName": "Color",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:framework#/definitions/Color",
+      "category": "",
+      "description": "",
+      "defaultValue": {
+        "color": "rgba(0, 255, 9, 1)"
+      },
+      "defaultValueInternal": {
+        "color": "rgba(0, 255, 9, 1)"
+      },
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "Color",
+      "propertySetterName": "setColor",
+      "propertyGetterName": "getColor",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-barthickness",
+      "displayName": "BarThickness",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/Number",
+      "category": "",
+      "description": "",
+      "defaultValue": 50.0,
+      "defaultValueInternal": 50.0,
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "BarThickness",
+      "propertySetterName": "setBarThickness",
+      "propertyGetterName": "getBarThickness",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-percentagevalue",
+      "displayName": "PercentageValue",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/Number",
+      "category": "",
+      "description": "",
+      "defaultValue": 48.3,
+      "defaultValueInternal": 48.3,
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "PercentageValue",
+      "propertySetterName": "setPercentageValue",
+      "propertyGetterName": "getPercentageValue",
+      "refTo": ""
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.762.46/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

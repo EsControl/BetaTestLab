@@ -1,0 +1,1730 @@
+<div id="LVCP_Compensation_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="1980" data-tchmi-creator-viewport-height="800" data-tchmi-creator-locked="True">
+
+    <div id="LVCP_TcHmiGrid_4" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="10">
+
+        <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+            [
+            {
+            "height": 1.0,
+            "heightUnit": "factor",
+            "heightMode": "Value",
+            "maxHeightUnit": "px",
+            "minHeightUnit": "px",
+            "overflow": false
+            },
+            {
+            "height": 1.0,
+            "heightUnit": "factor",
+            "heightMode": "Value",
+            "maxHeightUnit": "px",
+            "minHeightUnit": "px",
+            "overflow": false
+            }
+            ]
+        </script>
+        <div id="LVCP_TcHmiGrid_2" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="0">
+
+            <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+                [
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                }
+                ]
+            </script>
+        <div id="CompensationDisplay_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="2" data-tchmi-grid-row-index="0" data-tchmi-headerfontsize="16" data-tchmi-height="30" data-tchmi-height-unit="%" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CompensationDisplay.usercontrol" data-tchmi-top="35" data-tchmi-top-unit="%" data-tchmi-width="60" data-tchmi-width-unit="%" data-tchmi-right="0" data-tchmi-headertext="Voltaj Değerleri" data-tchmi-voltage="%pp%stCompensationHmi::stSummary::rTotalActivePower%/pp%">
+</div>
+<div id="CustomLine_17" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="2" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="20" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="0" data-tchmi-top="75" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%CustomLine_18::IsActive%/ctrl% && (%ctrl%LVCP_MainDisconnector_4::stDisconnectorHmi::stStatus::ePosition%/ctrl%== '3' )%/f%" data-tchmi-isvertical="true">
+</div>
+<div id="CustomLine_18" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="2" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="20" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="40" data-tchmi-width="2" data-tchmi-bottom-unit="%" data-tchmi-top="25" data-tchmi-isvertical="true" data-tchmi-isactive="true">
+</div>
+<div id="CustomLine_19" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="2" data-tchmi-grid-row-index="0" data-tchmi-height="2" data-tchmi-height-unit="px" data-tchmi-left="20" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="50" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="60" data-tchmi-right-unit="%" data-tchmi-isactive="true">
+</div>
+<div id="LVCP_MainDisconnector_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="2" data-tchmi-grid-row-index="0" data-tchmi-height="15" data-tchmi-height-unit="%" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Disconnector/Disconnector.usercontrol" data-tchmi-top-unit="px" data-tchmi-width="20" data-tchmi-width-unit="%" data-tchmi-bottom="25" data-tchmi-bottom-unit="%" data-tchmi-creator-visibility="Visible" data-tchmi-stdisconnectorhmi="%s%PLC1.GVL_LVCP1.stMainDisconnectorHMI%/s%" data-tchmi-isvertical="true">
+<script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+{
+  "color": "rgba(255, 0, 0, 1)"
+}
+</script>
+<script data-tchmi-target-attribute="data-tchmi-centercolor" type="application/json">
+{
+  "color": "rgba(255, 0, 0, 1)"
+}
+</script>
+
+</div>
+</div>
+
+        <div id="LVCP_TcHmiGrid_3" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="1" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom-unit="%" data-tchmi-bottom="0">
+
+            <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+                [
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                }
+                ]
+            </script>
+
+            <!-- Kolon 0 - Ground -->
+            <div id="LVCP_Ground_0" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="0" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="25" data-tchmi-bottom-unit="%" data-tchmi-right-unit="%" data-tchmi-top="50" data-tchmi-isactive="%ctrl%LVCP_CustomLine_0_Bottom_4::IsActive%/ctrl%">
+            </div>
+
+            <!-- Kolon 0 - Contactor -->
+            <div id="Contactor_0" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="0" data-tchmi-height="15" data-tchmi-height-unit="%" data-tchmi-islock="False" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Contactor/Contactor.usercontrol" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-isvertical="true" data-tchmi-right="10" data-tchmi-right-unit="%" data-tchmi-data="%s%PLC1.LVCP.arrLVCPContactors[0]%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup1_ContactorHMI%/s%">
+                <script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+                    {
+                    "color": "rgba(255, 0, 0, 1)"
+                    }
+                </script>
+            </div>
+
+            <!-- Kolon 0 - CustomLine Alt -->
+            <div id="LVCP_CustomLine_0_Bottom_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="0" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="45" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="50" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_0_Bottom_1::IsActive%/ctrl%%/f%" data-tchmi-isvertical="true">
+            </div>
+
+            <!-- Kolon 0 - CustomLine Üst -->
+            <div id="LVCP_CustomLine_0_Top_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="0" data-tchmi-height-unit="%" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-height="10" data-tchmi-isvertical="true" data-tchmi-isactive="%ctrl%CustomLine_16::IsActive%/ctrl%">
+            </div>
+
+            <!-- Kolon 1 - Ground -->
+            <div id="LVCP_Ground_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="1" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="25" data-tchmi-right-unit="%" data-tchmi-top="50" data-tchmi-bottom-unit="%" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_1_Bottom_4::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 1 - Contactor -->
+            <div id="Contactor_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="1" data-tchmi-height="15" data-tchmi-height-unit="%" data-tchmi-islock="False" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Contactor/Contactor.usercontrol" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-isvertical="true" data-tchmi-right="10" data-tchmi-right-unit="%" data-tchmi-data="%s%PLC1.LVCP.arrLVCPContactors[1]%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup2_ContactorHMI%/s%">
+                <script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+                    {
+                    "color": "rgba(255, 0, 0, 1)"
+                    }
+                </script>
+            </div>
+
+            <!-- Kolon 1 - CustomLine Alt -->
+            <div id="LVCP_CustomLine_1_Bottom_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="1" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="45" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="50" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_1_Bottom_1::IsActive%/ctrl%%/f%" data-tchmi-isvertical="true">
+            </div>
+
+            <!-- Kolon 1 - CustomLine Üst -->
+            <div id="LVCP_CustomLine_1_Top_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="1" data-tchmi-height-unit="%" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-height="10" data-tchmi-isvertical="true" data-tchmi-isactive="%ctrl%CustomLine_16::IsActive%/ctrl%">
+            </div>
+
+            <!-- Kolon 2 - Ground -->
+            <div id="LVCP_Ground_2" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="2" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="25" data-tchmi-right-unit="%" data-tchmi-top="50" data-tchmi-bottom-unit="%" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_2_Bottom_4::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 2 - Contactor -->
+            <div id="Contactor_2" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="2" data-tchmi-height="15" data-tchmi-height-unit="%" data-tchmi-islock="False" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Contactor/Contactor.usercontrol" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-isvertical="true" data-tchmi-right="10" data-tchmi-right-unit="%" data-tchmi-isopen="false" data-tchmi-data="%s%PLC1.LVCP.arrLVCPContactors[2]%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup3_ContactorHMI%/s%">
+                <script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+                    {
+                    "color": "rgba(255, 0, 0, 1)"
+                    }
+                </script>
+            </div>
+
+            <!-- Kolon 2 - CustomLine Alt -->
+            <div id="LVCP_CustomLine_2_Bottom_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="2" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="45" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="50" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isvertical="true" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_2_Bottom_1::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 2 - CustomLine Üst -->
+            <div id="LVCP_CustomLine_2_Top_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="2" data-tchmi-height-unit="%" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-height="10" data-tchmi-isvertical="true" data-tchmi-isactive="%ctrl%CustomLine_16::IsActive%/ctrl%">
+            </div>
+
+            <!-- Kolon 3 - Ground -->
+            <div id="LVCP_Ground_3" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="3" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="25" data-tchmi-right-unit="%" data-tchmi-top="50" data-tchmi-bottom-unit="%" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_3_Bottom_4::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 3 - Contactor -->
+            <div id="Contactor_3" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="3" data-tchmi-height="15" data-tchmi-height-unit="%" data-tchmi-islock="False" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Contactor/Contactor.usercontrol" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-isvertical="true" data-tchmi-right="10" data-tchmi-right-unit="%" data-tchmi-isopen="false" data-tchmi-data="%s%PLC1.LVCP.arrLVCPContactors[3]%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup4_ContactorHMI%/s%">
+                <script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+                    {
+                    "color": "rgba(255, 0, 0, 1)"
+                    }
+                </script>
+            </div>
+
+            <!-- Kolon 3 - CustomLine Alt -->
+            <div id="LVCP_CustomLine_3_Bottom_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="3" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="45" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="50" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isvertical="true" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_3_Bottom_1::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 3 - CustomLine Üst -->
+            <div id="LVCP_CustomLine_3_Top_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="3" data-tchmi-height-unit="%" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-height="10" data-tchmi-isvertical="true" data-tchmi-isactive="%ctrl%CustomLine_16::IsActive%/ctrl%">
+            </div>
+
+            <!-- Kolon 4 - Ground -->
+            <div id="LVCP_Ground_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="4" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="25" data-tchmi-right-unit="%" data-tchmi-top="50" data-tchmi-bottom-unit="%" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_4_Bottom_4::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 4 - Contactor -->
+            <div id="Contactor_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="4" data-tchmi-height="15" data-tchmi-height-unit="%" data-tchmi-islock="False" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Contactor/Contactor.usercontrol" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-isvertical="true" data-tchmi-right="10" data-tchmi-right-unit="%" data-tchmi-isopen="false" data-tchmi-data="%s%PLC1.LVCP.arrLVCPContactors[4]%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup5_ContactorHMI%/s%">
+                <script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+                    {
+                    "color": "rgba(255, 0, 0, 1)"
+                    }
+                </script>
+            </div>
+
+            <!-- Kolon 4 - CustomLine Alt -->
+            <div id="LVCP_CustomLine_4_Bottom_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="4" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="45" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="50" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isvertical="true" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_4_Bottom_1::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 4 - CustomLine Üst -->
+            <div id="LVCP_CustomLine_4_Top_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="4" data-tchmi-height-unit="%" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-height="10" data-tchmi-isvertical="true" data-tchmi-isactive="%ctrl%CustomLine_16::IsActive%/ctrl%">
+            </div>
+
+            <!-- Kolon 5 - Ground -->
+            <div id="LVCP_Ground_5" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="5" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="25" data-tchmi-right-unit="%" data-tchmi-top="50" data-tchmi-bottom-unit="%" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_5_Bottom_4::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 5 - Contactor -->
+            <div id="Contactor_5" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="5" data-tchmi-height="15" data-tchmi-height-unit="%" data-tchmi-islock="False" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Contactor/Contactor.usercontrol" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-isvertical="true" data-tchmi-right="10" data-tchmi-right-unit="%" data-tchmi-isopen="false" data-tchmi-data="%s%PLC1.LVCP.arrLVCPContactors[5]%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup6_ContactorHMI%/s%">
+                <script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+                    {
+                    "color": "rgba(255, 0, 0, 1)"
+                    }
+                </script>
+            </div>
+
+            <!-- Kolon 5 - CustomLine Alt -->
+            <div id="LVCP_CustomLine_5_Bottom_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="5" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="45" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="50" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isvertical="true" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_5_Bottom_1::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 5 - CustomLine Üst -->
+            <div id="LVCP_CustomLine_5_Top_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="5" data-tchmi-height-unit="%" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-height="10" data-tchmi-isvertical="true" data-tchmi-isactive="%ctrl%CustomLine_16::IsActive%/ctrl%">
+            </div>
+
+            <!-- Kolon 6 - Ground -->
+            <div id="LVCP_Ground_6" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="6" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="25" data-tchmi-right-unit="%" data-tchmi-top="50" data-tchmi-bottom-unit="%" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_6_Bottom_4::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 6 - Contactor -->
+            <div id="Contactor_6" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="6" data-tchmi-height="15" data-tchmi-height-unit="%" data-tchmi-islock="False" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Contactor/Contactor.usercontrol" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-isvertical="true" data-tchmi-right="10" data-tchmi-right-unit="%" data-tchmi-isopen="false" data-tchmi-data="%s%PLC1.LVCP.arrLVCPContactors[6]%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup7_ContactorHMI%/s%">
+                <script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+                    {
+                    "color": "rgba(255, 0, 0, 1)"
+                    }
+                </script>
+            </div>
+
+            <!-- Kolon 6 - CustomLine Alt -->
+            <div id="LVCP_CustomLine_6_Bottom_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="6" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="45" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="50" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isvertical="true" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_6_Bottom_1::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 6 - CustomLine Üst -->
+            <div id="LVCP_CustomLine_6_Top_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="6" data-tchmi-height-unit="%" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-height="10" data-tchmi-isvertical="true" data-tchmi-isactive="%ctrl%CustomLine_16::IsActive%/ctrl%">
+            </div>
+
+            <!-- Kolon 7 - Ground -->
+            <div id="LVCP_Ground_7" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="7" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="25" data-tchmi-right-unit="%" data-tchmi-top="50" data-tchmi-bottom-unit="%" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_7_Bottom_4::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 7 - Contactor -->
+            <div id="Contactor_7" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="7" data-tchmi-height="15" data-tchmi-height-unit="%" data-tchmi-islock="False" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Contactor/Contactor.usercontrol" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-isvertical="true" data-tchmi-right="10" data-tchmi-right-unit="%" data-tchmi-isopen="false" data-tchmi-data="%s%PLC1.LVCP.arrLVCPContactors[7]%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup8_ContactorHMI%/s%">
+                <script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+                    {
+                    "color": "rgba(255, 0, 0, 1)"
+                    }
+                </script>
+            </div>
+
+            <!-- Kolon 7 - CustomLine Alt -->
+            <div id="LVCP_CustomLine_7_Bottom_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="7" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="45" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="50" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isvertical="true" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_7_Bottom_1::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 7 - CustomLine Üst -->
+            <div id="LVCP_CustomLine_7_Top_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="7" data-tchmi-height-unit="%" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-height="10" data-tchmi-isvertical="true" data-tchmi-isactive="%ctrl%CustomLine_16::IsActive%/ctrl%">
+            </div>
+
+            <!-- Kolon 8 - Ground -->
+            <div id="LVCP_Ground_8" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="8" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="25" data-tchmi-right-unit="%" data-tchmi-top="50" data-tchmi-bottom-unit="%" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_8_Bottom_4::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 8 - Contactor -->
+            <div id="Contactor_8" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="8" data-tchmi-height="15" data-tchmi-height-unit="%" data-tchmi-islock="False" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Contactor/Contactor.usercontrol" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-isvertical="true" data-tchmi-right="10" data-tchmi-right-unit="%" data-tchmi-isopen="false" data-tchmi-data="%s%PLC1.LVCP.arrLVCPContactors[8]%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup9_ContactorHMI%/s%">
+                <script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+                    {
+                    "color": "rgba(255, 0, 0, 1)"
+                    }
+                </script>
+            </div>
+
+            <!-- Kolon 8 - CustomLine Alt -->
+            <div id="LVCP_CustomLine_8_Bottom_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="8" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="45" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="50" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isvertical="true" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_8_Bottom_1::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 8 - CustomLine Üst -->
+            <div id="LVCP_CustomLine_8_Top_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="8" data-tchmi-height-unit="%" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-height="10" data-tchmi-isvertical="true" data-tchmi-isactive="%ctrl%CustomLine_16::IsActive%/ctrl%">
+            </div>
+
+            <!-- Kolon 9 - Ground -->
+            <div id="LVCP_Ground_9" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="9" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="25" data-tchmi-right-unit="%" data-tchmi-top="50" data-tchmi-bottom-unit="%" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_9_Bottom_4::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 9 - Contactor -->
+            <div id="Contactor_9" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="9" data-tchmi-height="15" data-tchmi-height-unit="%" data-tchmi-islock="False" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Contactor/Contactor.usercontrol" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-isvertical="true" data-tchmi-right="10" data-tchmi-right-unit="%" data-tchmi-isopen="false" data-tchmi-data="%s%PLC1.LVCP.arrLVCPContactors[9]%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup10_ContactorHMI%/s%">
+                <script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+                    {
+                    "color": "rgba(255, 0, 0, 1)"
+                    }
+                </script>
+            </div>
+
+            <!-- Kolon 9 - CustomLine Alt -->
+            <div id="LVCP_CustomLine_9_Bottom_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="9" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="45" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="50" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isvertical="true" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_9_Bottom_1::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 9 - CustomLine Üst -->
+            <div id="LVCP_CustomLine_9_Top_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="9" data-tchmi-height-unit="%" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-height="10" data-tchmi-isvertical="true" data-tchmi-isactive="%ctrl%CustomLine_16::IsActive%/ctrl%">
+            </div>
+
+            <!-- Kolon 10 - Ground -->
+            <div id="LVCP_Ground_10" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="10" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="25" data-tchmi-right-unit="%" data-tchmi-top="50" data-tchmi-bottom-unit="%" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_10_Bottom_4::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 10 - Contactor -->
+            <div id="Contactor_10" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="10" data-tchmi-height="15" data-tchmi-height-unit="%" data-tchmi-islock="False" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Contactor/Contactor.usercontrol" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-isvertical="true" data-tchmi-right="10" data-tchmi-right-unit="%" data-tchmi-isopen="false" data-tchmi-data="%s%PLC1.LVCP.arrLVCPContactors[10]%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup11_ContactorHMI%/s%">
+                <script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+                    {
+                    "color": "rgba(255, 0, 0, 1)"
+                    }
+                </script>
+            </div>
+
+            <!-- Kolon 10 - CustomLine Alt -->
+            <div id="LVCP_CustomLine_10_Bottom_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="10" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="45" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="50" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isvertical="true" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_10_Bottom_1::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 10 - CustomLine Üst -->
+            <div id="LVCP_CustomLine_10_Top_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="10" data-tchmi-height-unit="%" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-height="10" data-tchmi-isvertical="true" data-tchmi-isactive="%ctrl%CustomLine_16::IsActive%/ctrl%">
+            </div>
+
+            <!-- Kolon 11 - Ground -->
+            <div id="LVCP_Ground_11" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="11" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="25" data-tchmi-right-unit="%" data-tchmi-top="50" data-tchmi-bottom-unit="%" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_11_Bottom_4::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 11 - Contactor -->
+            <div id="Contactor_11" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="11" data-tchmi-height="15" data-tchmi-height-unit="%" data-tchmi-islock="False" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Contactor/Contactor.usercontrol" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-isvertical="true" data-tchmi-right="10" data-tchmi-right-unit="%" data-tchmi-isopen="false" data-tchmi-data="%s%PLC1.LVCP.arrLVCPContactors[11]%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup12_ContactorHMI%/s%">
+                <script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+                    {
+                    "color": "rgba(255, 0, 0, 1)"
+                    }
+                </script>
+            </div>
+
+            <!-- Kolon 11 - CustomLine Alt -->
+            <div id="LVCP_CustomLine_11_Bottom_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="11" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="45" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="50" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isvertical="true" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_11_Bottom_1::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 11 - CustomLine Üst -->
+            <div id="LVCP_CustomLine_11_Top_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="11" data-tchmi-height-unit="%" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-height="10" data-tchmi-isvertical="true" data-tchmi-isactive="%ctrl%CustomLine_16::IsActive%/ctrl%">
+            </div>
+
+            <!-- Kolon 12 - Ground -->
+            <div id="LVCP_Ground_12" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="12" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="25" data-tchmi-right-unit="%" data-tchmi-top="50" data-tchmi-bottom-unit="%" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_12_Bottom_4::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 12 - Contactor -->
+            <div id="Contactor_12" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="12" data-tchmi-height="15" data-tchmi-height-unit="%" data-tchmi-islock="False" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Contactor/Contactor.usercontrol" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-isvertical="true" data-tchmi-right="10" data-tchmi-right-unit="%" data-tchmi-isopen="false" data-tchmi-data="%s%PLC1.LVCP.arrLVCPContactors[12]%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup13_ContactorHMI%/s%">
+                <script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+                    {
+                    "color": "rgba(255, 0, 0, 1)"
+                    }
+                </script>
+            </div>
+
+            <!-- Kolon 12 - CustomLine Alt -->
+            <div id="LVCP_CustomLine_12_Bottom_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="12" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="45" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="50" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isvertical="true" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_12_Bottom_1::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 12 - CustomLine Üst -->
+            <div id="LVCP_CustomLine_12_Top_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="12" data-tchmi-height-unit="%" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-height="10" data-tchmi-isvertical="true" data-tchmi-isactive="%ctrl%CustomLine_16::IsActive%/ctrl%">
+            </div>
+
+            <!-- Kolon 13 - Ground -->
+            <div id="LVCP_Ground_13" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="13" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="25" data-tchmi-right-unit="%" data-tchmi-top="50" data-tchmi-bottom-unit="%" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_13_Bottom_4::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 13 - Contactor -->
+            <div id="Contactor_13" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="13" data-tchmi-height="15" data-tchmi-height-unit="%" data-tchmi-islock="False" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Contactor/Contactor.usercontrol" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-isvertical="true" data-tchmi-right="10" data-tchmi-right-unit="%" data-tchmi-isopen="false" data-tchmi-data="%s%PLC1.LVCP.arrLVCPContactors[13]%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup14_ContactorHMI%/s%">
+                <script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+                    {
+                    "color": "rgba(255, 0, 0, 1)"
+                    }
+                </script>
+            </div>
+
+            <!-- Kolon 13 - CustomLine Alt -->
+            <div id="LVCP_CustomLine_13_Bottom_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="13" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="45" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="50" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isvertical="true" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_13_Bottom_1::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 13 - CustomLine Üst -->
+            <div id="LVCP_CustomLine_13_Top_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="13" data-tchmi-height-unit="%" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-height="10" data-tchmi-isvertical="true" data-tchmi-isactive="%ctrl%CustomLine_16::IsActive%/ctrl%">
+            </div>
+
+            <!-- Kolon 14 - Ground -->
+            <div id="LVCP_Ground_14" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="14" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="25" data-tchmi-right-unit="%" data-tchmi-top="50" data-tchmi-bottom-unit="%" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_14_Bottom_4::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 14 - Contactor -->
+            <div id="Contactor_14" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="14" data-tchmi-height="15" data-tchmi-height-unit="%" data-tchmi-islock="False" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Contactor/Contactor.usercontrol" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-isvertical="true" data-tchmi-right="10" data-tchmi-right-unit="%" data-tchmi-isopen="false" data-tchmi-data="%s%PLC1.LVCP.arrLVCPContactors[14]%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup15_ContactorHMI%/s%">
+                <script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+                    {
+                    "color": "rgba(255, 0, 0, 1)"
+                    }
+                </script>
+            </div>
+
+            <!-- Kolon 14 - CustomLine Alt -->
+            <div id="LVCP_CustomLine_14_Bottom_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="14" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="45" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="50" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isvertical="true" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_14_Bottom_1::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 14 - CustomLine Üst -->
+            <div id="LVCP_CustomLine_14_Top_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="14" data-tchmi-height-unit="%" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-height="10" data-tchmi-isvertical="true" data-tchmi-isactive="%ctrl%CustomLine_16::IsActive%/ctrl%">
+            </div>
+
+            <!-- Kolon 15 - Ground -->
+            <div id="LVCP_Ground_15" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="15" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="25" data-tchmi-right-unit="%" data-tchmi-top="50" data-tchmi-bottom-unit="%" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_15_Bottom_4::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 15 - Contactor -->
+            <div id="Contactor_15" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="15" data-tchmi-height="15" data-tchmi-height-unit="%" data-tchmi-islock="False" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Contactor/Contactor.usercontrol" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-isvertical="true" data-tchmi-right="10" data-tchmi-right-unit="%" data-tchmi-isopen="false" data-tchmi-data="%s%PLC1.LVCP.arrLVCPContactors[15]%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup16_ContactorHMI%/s%">
+                <script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+                    {
+                    "color": "rgba(255, 0, 0, 1)"
+                    }
+                </script>
+            </div>
+
+            <!-- Kolon 15 - CustomLine Alt -->
+            <div id="LVCP_CustomLine_15_Bottom_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="15" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="45" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="50" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isvertical="true" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_15_Bottom_1::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 15 - CustomLine Üst -->
+            <div id="LVCP_CustomLine_15_Top_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="15" data-tchmi-height-unit="%" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-height="10" data-tchmi-isvertical="true" data-tchmi-isactive="%ctrl%CustomLine_16::IsActive%/ctrl%">
+            </div>
+
+            <!-- Kolon 16 - Ground -->
+            <div id="LVCP_Ground_16" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="16" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="25" data-tchmi-right-unit="%" data-tchmi-top="50" data-tchmi-bottom-unit="%" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_16_Bottom_4::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 16 - Contactor -->
+            <div id="Contactor_16" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="16" data-tchmi-height="15" data-tchmi-height-unit="%" data-tchmi-islock="False" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Contactor/Contactor.usercontrol" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-isvertical="true" data-tchmi-right="10" data-tchmi-right-unit="%" data-tchmi-isopen="false" data-tchmi-data="%s%PLC1.LVCP.arrLVCPContactors[16]%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup17_ContactorHMI%/s%">
+                <script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+                    {
+                    "color": "rgba(255, 0, 0, 1)"
+                    }
+                </script>
+            </div>
+
+            <!-- Kolon 16 - CustomLine Alt -->
+            <div id="LVCP_CustomLine_16_Bottom_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="16" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="45" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="50" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isvertical="true" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_16_Bottom_1::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 16 - CustomLine Üst -->
+            <div id="LVCP_CustomLine_16_Top_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="16" data-tchmi-height-unit="%" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-height="10" data-tchmi-isvertical="true" data-tchmi-isactive="%ctrl%CustomLine_16::IsActive%/ctrl%">
+            </div>
+
+            <!-- Kolon 17 - Ground -->
+            <div id="LVCP_Ground_17" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="17" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="25" data-tchmi-right-unit="%" data-tchmi-top="50" data-tchmi-bottom-unit="%" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_17_Bottom_4::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 17 - Contactor -->
+            <div id="Contactor_17" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="17" data-tchmi-height="15" data-tchmi-height-unit="%" data-tchmi-islock="False" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Contactor/Contactor.usercontrol" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-isvertical="true" data-tchmi-right="10" data-tchmi-right-unit="%" data-tchmi-isopen="false" data-tchmi-data="%s%PLC1.LVCP.arrLVCPContactors[17]%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup18_ContactorHMI%/s%">
+                <script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+                    {
+                    "color": "rgba(255, 0, 0, 1)"
+                    }
+                </script>
+            </div>
+
+            <!-- Kolon 17 - CustomLine Alt -->
+            <div id="LVCP_CustomLine_17_Bottom_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="17" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="45" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="50" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isvertical="true" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_17_Bottom_1::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 17 - CustomLine Üst -->
+            <div id="LVCP_CustomLine_17_Top_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="17" data-tchmi-height-unit="%" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-height="10" data-tchmi-isvertical="true" data-tchmi-isactive="%ctrl%CustomLine_16::IsActive%/ctrl%">
+            </div>
+
+            <!-- Kolon 18 - Ground -->
+            <div id="LVCP_Ground_18" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="18" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="25" data-tchmi-right-unit="%" data-tchmi-top="50" data-tchmi-bottom-unit="%" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_18_Bottom_4::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 18 - Contactor -->
+            <div id="Contactor_18" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="18" data-tchmi-height="15" data-tchmi-height-unit="%" data-tchmi-islock="False" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Contactor/Contactor.usercontrol" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-isvertical="true" data-tchmi-right="10" data-tchmi-right-unit="%" data-tchmi-isopen="false" data-tchmi-data="%s%PLC1.LVCP.arrLVCPContactors[18]%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup19_ContactorHMI%/s%">
+                <script data-tchmi-target-attribute="data-tchmi-color" type="application/json">
+                    {
+                    "color": "rgba(255, 0, 0, 1)"
+                    }
+                </script>
+            </div>
+
+            <!-- Kolon 18 - CustomLine Alt -->
+            <div id="LVCP_CustomLine_18_Bottom_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="18" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="45" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="50" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isvertical="true" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_18_Bottom_1::IsActive%/ctrl%%/f%">
+            </div>
+
+            <!-- Kolon 18 - CustomLine Üst -->
+            <div id="LVCP_CustomLine_18_Top_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="18" data-tchmi-height-unit="%" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-height="10" data-tchmi-isvertical="true" data-tchmi-isactive="%ctrl%CustomLine_16::IsActive%/ctrl%">
+            </div>
+
+        <div id="TcHmiTextblock_60" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="2" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="60" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Right" data-tchmi-right-unit="%" data-tchmi-text="%pp%stCompensationHmi::stGroupDetails::arGroupPower[0]%/pp%">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 0,
+  "right": 5,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_61" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-text="50 Hz" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="5" data-tchmi-bottom-unit="%" data-tchmi-right="10" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-right-unit="%">
+</div>
+<div id="TcHmiTextblock_63" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-text="50 Hz" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="5" data-tchmi-bottom-unit="%" data-tchmi-right="10" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-right-unit="%" data-tchmi-grid-column-index="1">
+</div>
+<div id="TcHmiTextblock_65" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-text="50 Hz" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="5" data-tchmi-bottom-unit="%" data-tchmi-right="10" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-right-unit="%" data-tchmi-grid-column-index="2">
+</div>
+<div id="TcHmiTextblock_67" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-text="50 Hz" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="5" data-tchmi-bottom-unit="%" data-tchmi-right="10" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-right-unit="%" data-tchmi-grid-column-index="3">
+</div>
+<div id="TcHmiTextblock_69" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-text="50 Hz" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="5" data-tchmi-bottom-unit="%" data-tchmi-right="10" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-right-unit="%" data-tchmi-grid-column-index="4">
+</div>
+<div id="TcHmiTextblock_71" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-text="50 Hz" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="5" data-tchmi-bottom-unit="%" data-tchmi-right="10" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-right-unit="%" data-tchmi-grid-column-index="5">
+</div>
+<div id="TcHmiTextblock_73" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-text="50 Hz" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="5" data-tchmi-bottom-unit="%" data-tchmi-right="10" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-right-unit="%" data-tchmi-grid-column-index="7">
+</div>
+<div id="TcHmiTextblock_75" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-text="50 Hz" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="5" data-tchmi-bottom-unit="%" data-tchmi-right="10" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-right-unit="%" data-tchmi-grid-column-index="6">
+</div>
+<div id="TcHmiTextblock_77" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-text="50 Hz" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="5" data-tchmi-bottom-unit="%" data-tchmi-right="10" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-right-unit="%" data-tchmi-grid-column-index="8">
+</div>
+<div id="TcHmiTextblock_79" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-text="50 Hz" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="5" data-tchmi-bottom-unit="%" data-tchmi-right="10" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-right-unit="%" data-tchmi-grid-column-index="9">
+</div>
+<div id="TcHmiTextblock_81" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-text="50 Hz" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="5" data-tchmi-bottom-unit="%" data-tchmi-right="10" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-right-unit="%" data-tchmi-grid-column-index="10">
+</div>
+<div id="TcHmiTextblock_83" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-text="50 Hz" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="5" data-tchmi-bottom-unit="%" data-tchmi-right="10" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-right-unit="%" data-tchmi-grid-column-index="11">
+</div>
+<div id="TcHmiTextblock_85" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-text="50 Hz" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="5" data-tchmi-bottom-unit="%" data-tchmi-right="10" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-right-unit="%" data-tchmi-grid-column-index="12">
+</div>
+<div id="TcHmiTextblock_87" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-text="50 Hz" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="5" data-tchmi-bottom-unit="%" data-tchmi-right="10" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-right-unit="%" data-tchmi-grid-column-index="13">
+</div>
+<div id="TcHmiTextblock_89" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-text="50 Hz" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="5" data-tchmi-bottom-unit="%" data-tchmi-right="10" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-right-unit="%" data-tchmi-grid-column-index="14">
+</div>
+<div id="TcHmiTextblock_91" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-text="50 Hz" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="5" data-tchmi-bottom-unit="%" data-tchmi-right="10" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-right-unit="%" data-tchmi-grid-column-index="15">
+</div>
+<div id="TcHmiTextblock_93" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-text="50 Hz" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="5" data-tchmi-bottom-unit="%" data-tchmi-right="10" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-right-unit="%" data-tchmi-grid-column-index="16">
+</div>
+<div id="TcHmiTextblock_95" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-text="50 Hz" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="5" data-tchmi-bottom-unit="%" data-tchmi-right="10" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-right-unit="%" data-tchmi-grid-column-index="17">
+</div>
+<div id="TcHmiTextblock_97" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="10" data-tchmi-left-unit="%" data-tchmi-text="50 Hz" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="5" data-tchmi-bottom-unit="%" data-tchmi-right="10" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-right-unit="%" data-tchmi-grid-column-index="18">
+</div>
+<div id="TcHmiTextblock_138" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="40" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-right-unit="%" data-tchmi-text="KVAR">
+</div>
+<div id="TcHmiTextblock_139" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="60" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Right" data-tchmi-right-unit="%" data-tchmi-text="%pp%stCompensationHmi::stGroupDetails::arGroupPower[1]%/pp%" data-tchmi-grid-column-index="1">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 0,
+  "right": 5,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_140" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="40" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-right-unit="%" data-tchmi-text="KVAR" data-tchmi-grid-column-index="1">
+</div>
+<div id="TcHmiTextblock_141" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="60" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Right" data-tchmi-right-unit="%" data-tchmi-text="%pp%stCompensationHmi::stGroupDetails::arGroupPower[2]%/pp%" data-tchmi-grid-column-index="2">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 0,
+  "right": 5,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_142" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="40" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-right-unit="%" data-tchmi-text="KVAR" data-tchmi-grid-column-index="2">
+</div>
+<div id="TcHmiTextblock_143" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="60" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Right" data-tchmi-right-unit="%" data-tchmi-text="%pp%stCompensationHmi::stGroupDetails::arGroupPower[3]%/pp%" data-tchmi-grid-column-index="3">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 0,
+  "right": 5,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_144" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="40" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-right-unit="%" data-tchmi-text="KVAR" data-tchmi-grid-column-index="3">
+</div>
+<div id="TcHmiTextblock_145" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="60" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Right" data-tchmi-right-unit="%" data-tchmi-text="%pp%stCompensationHmi::stGroupDetails::arGroupPower[4]%/pp%" data-tchmi-grid-column-index="4">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 0,
+  "right": 5,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_146" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="40" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-right-unit="%" data-tchmi-text="KVAR" data-tchmi-grid-column-index="4">
+</div>
+<div id="TcHmiTextblock_147" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="60" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Right" data-tchmi-right-unit="%" data-tchmi-text="%pp%stCompensationHmi::stGroupDetails::arGroupPower[5]%/pp%" data-tchmi-grid-column-index="5">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 0,
+  "right": 5,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_148" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="40" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-right-unit="%" data-tchmi-text="KVAR" data-tchmi-grid-column-index="5">
+</div>
+<div id="TcHmiTextblock_149" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="60" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Right" data-tchmi-right-unit="%" data-tchmi-text="%pp%stCompensationHmi::stGroupDetails::arGroupPower[6]%/pp%" data-tchmi-grid-column-index="6">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 0,
+  "right": 5,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_150" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="40" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-right-unit="%" data-tchmi-text="KVAR" data-tchmi-grid-column-index="6" data-tchmi-bottom="15">
+</div>
+<div id="TcHmiTextblock_151" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="60" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Right" data-tchmi-right-unit="%" data-tchmi-text="%pp%stCompensationHmi::stGroupDetails::arGroupPower[7]%/pp%" data-tchmi-grid-column-index="7">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 0,
+  "right": 5,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_152" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="40" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-right-unit="%" data-tchmi-text="KVAR" data-tchmi-grid-column-index="7">
+</div>
+<div id="TcHmiTextblock_153" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="60" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Right" data-tchmi-right-unit="%" data-tchmi-text="%pp%stCompensationHmi::stGroupDetails::arGroupPower[8]%/pp%" data-tchmi-grid-column-index="8">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 0,
+  "right": 5,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_154" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="40" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-right-unit="%" data-tchmi-text="KVAR" data-tchmi-grid-column-index="8">
+</div>
+<div id="TcHmiTextblock_155" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="60" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Right" data-tchmi-right-unit="%" data-tchmi-text="%pp%stCompensationHmi::stGroupDetails::arGroupPower[9]%/pp%" data-tchmi-grid-column-index="9">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 0,
+  "right": 5,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_156" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="40" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-right-unit="%" data-tchmi-text="KVAR" data-tchmi-grid-column-index="9">
+</div>
+<div id="TcHmiTextblock_157" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="60" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Right" data-tchmi-right-unit="%" data-tchmi-text="%pp%stCompensationHmi::stGroupDetails::arGroupPower[10]%/pp%" data-tchmi-grid-column-index="10">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 0,
+  "right": 5,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_158" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="40" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-right-unit="%" data-tchmi-text="KVAR" data-tchmi-grid-column-index="10">
+</div>
+<div id="TcHmiTextblock_159" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="60" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Right" data-tchmi-right-unit="%" data-tchmi-text="%pp%stCompensationHmi::stGroupDetails::arGroupPower[11]%/pp%" data-tchmi-grid-column-index="11">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 0,
+  "right": 5,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_160" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="40" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-right-unit="%" data-tchmi-text="KVAR" data-tchmi-grid-column-index="11">
+</div>
+<div id="TcHmiTextblock_161" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="60" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Right" data-tchmi-right-unit="%" data-tchmi-text="%pp%stCompensationHmi::stGroupDetails::arGroupPower[12]%/pp%" data-tchmi-grid-column-index="12">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 0,
+  "right": 5,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_162" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="40" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-right-unit="%" data-tchmi-text="KVAR" data-tchmi-grid-column-index="12">
+</div>
+<div id="TcHmiTextblock_163" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="60" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Right" data-tchmi-right-unit="%" data-tchmi-text="%pp%stCompensationHmi::stGroupDetails::arGroupPower[13]%/pp%" data-tchmi-grid-column-index="13">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 0,
+  "right": 5,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_164" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="40" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-right-unit="%" data-tchmi-text="KVAR" data-tchmi-grid-column-index="13">
+</div>
+<div id="TcHmiTextblock_165" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="60" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Right" data-tchmi-right-unit="%" data-tchmi-text="%pp%stCompensationHmi::stGroupDetails::arGroupPower[14]%/pp%" data-tchmi-grid-column-index="14">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 0,
+  "right": 5,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_166" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="40" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-right-unit="%" data-tchmi-text="KVAR" data-tchmi-grid-column-index="14">
+</div>
+<div id="TcHmiTextblock_167" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="60" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Right" data-tchmi-right-unit="%" data-tchmi-text="%pp%stCompensationHmi::stGroupDetails::arGroupPower[15]%/pp%" data-tchmi-grid-column-index="15">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 0,
+  "right": 5,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_168" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="40" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-right-unit="%" data-tchmi-text="KVAR" data-tchmi-grid-column-index="15">
+</div>
+<div id="TcHmiTextblock_169" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="60" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Right" data-tchmi-right-unit="%" data-tchmi-text="%pp%stCompensationHmi::stGroupDetails::arGroupPower[16]%/pp%" data-tchmi-grid-column-index="16">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 0,
+  "right": 5,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_170" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="40" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-right-unit="%" data-tchmi-text="KVAR" data-tchmi-grid-column-index="16">
+</div>
+<div id="TcHmiTextblock_171" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="60" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Right" data-tchmi-right-unit="%" data-tchmi-text="%pp%stCompensationHmi::stGroupDetails::arGroupPower[17]%/pp%" data-tchmi-grid-column-index="17">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 0,
+  "right": 5,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_172" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="40" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-right-unit="%" data-tchmi-text="KVAR" data-tchmi-grid-column-index="17">
+</div>
+<div id="TcHmiTextblock_173" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="60" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Right" data-tchmi-right-unit="%" data-tchmi-text="%pp%stCompensationHmi::stGroupDetails::arGroupPower[18]%/pp%" data-tchmi-grid-column-index="18">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 0,
+  "right": 5,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_174" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="10" data-tchmi-height-unit="%" data-tchmi-left="40" data-tchmi-left-unit="%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-bottom="15" data-tchmi-bottom-unit="%" data-tchmi-right="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-right-unit="%" data-tchmi-text="KVAR" data-tchmi-grid-column-index="18">
+</div>
+<div id="LVCP_CustomLine_0_Bottom_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="0" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="60" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_0_Top_4::IsActive%/ctrl% && 
+(%ctrl%Contactor_0::stContactorHmi::stStatus::ePosition%/ctrl%=='2')%/f%" data-tchmi-isvertical="true">
+</div>
+<div id="LVCP_Condenser_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-left="15" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Condenser/CondenserHorizontal.usercontrol" data-tchmi-top="40" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="15" data-tchmi-isactive="%ctrl%LVCP_CustomLine_0_Bottom_1::IsActive%/ctrl%" data-tchmi-right-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "LVCP_Condenser_1.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "LVCP_Popup",
+        "fn": "open",
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%LVCP_Popup_4::TargetFile%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+          "value": {
+            "path": "UserControls/Compensation/CompensationPopup_Info.usercontrol",
+            "attributes": {
+              "data-tchmi-stcompensationgroup": "%s%PLC1.GVL_LVCP1.astCompensationGroups.0%/s%"
+            }
+          }
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="LVCP_CustomLine_1_Bottom_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="1" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="60" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_1_Top_4::IsActive%/ctrl% && (%ctrl%Contactor_1::stContactorHmi::stStatus::ePosition%/ctrl%=='2')%/f%" data-tchmi-isvertical="true">
+</div>
+<div id="LVCP_CustomLine_2_Bottom_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="2" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="60" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_2_Top_4::IsActive%/ctrl% && (%ctrl%Contactor_2::stContactorHmi::stStatus::ePosition%/ctrl%=='2')%/f%" data-tchmi-isvertical="true">
+</div>
+<div id="LVCP_CustomLine_3_Bottom_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="3" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="60" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_3_Top_4::IsActive%/ctrl% && (%ctrl%Contactor_3::stContactorHmi::stStatus::ePosition%/ctrl%=='2')%/f%" data-tchmi-isvertical="true">
+</div>
+<div id="LVCP_CustomLine_4_Bottom_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="4" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="60" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_4_Top_4::IsActive%/ctrl% && (%ctrl%Contactor_4::stContactorHmi::stStatus::ePosition%/ctrl%=='2')%/f%" data-tchmi-isvertical="true">
+</div>
+<div id="LVCP_CustomLine_5_Bottom_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="5" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="60" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_5_Top_4::IsActive%/ctrl% && (%ctrl%Contactor_5::stContactorHmi::stStatus::ePosition%/ctrl%=='2')%/f%" data-tchmi-isvertical="true">
+</div>
+<div id="LVCP_CustomLine_6_Bottom_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="6" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="60" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_6_Top_4::IsActive%/ctrl% && (%ctrl%Contactor_6::stContactorHmi::stStatus::ePosition%/ctrl%=='2')%/f%" data-tchmi-isvertical="true">
+</div>
+<div id="LVCP_CustomLine_7_Bottom_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="7" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="60" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_7_Top_4::IsActive%/ctrl% && (%ctrl%Contactor_7::stContactorHmi::stStatus::ePosition%/ctrl%=='2')%/f%" data-tchmi-isvertical="true">
+</div>
+<div id="LVCP_CustomLine_8_Bottom_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="8" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="60" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_8_Top_4::IsActive%/ctrl% && (%ctrl%Contactor_8::stContactorHmi::stStatus::ePosition%/ctrl%=='2')%/f%" data-tchmi-isvertical="true">
+</div>
+<div id="LVCP_CustomLine_9_Bottom_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="9" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="60" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_9_Top_4::IsActive%/ctrl% && (%ctrl%Contactor_9::stContactorHmi::stStatus::ePosition%/ctrl%=='2')%/f%" data-tchmi-isvertical="true">
+</div>
+<div id="LVCP_CustomLine_10_Bottom_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="10" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="60" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_10_Top_4::IsActive%/ctrl% && (%ctrl%Contactor_10::stContactorHmi::stStatus::ePosition%/ctrl%=='2')%/f%" data-tchmi-isvertical="true">
+</div>
+<div id="LVCP_CustomLine_11_Bottom_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="11" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="60" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_11_Top_4::IsActive%/ctrl% && (%ctrl%Contactor_11::stContactorHmi::stStatus::ePosition%/ctrl%=='2')%/f%" data-tchmi-isvertical="true">
+</div>
+<div id="LVCP_CustomLine_13_Bottom_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="13" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="60" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_13_Top_4::IsActive%/ctrl% && (%ctrl%Contactor_13::stContactorHmi::stStatus::ePosition%/ctrl%=='2')%/f%" data-tchmi-isvertical="true">
+</div>
+<div id="LVCP_CustomLine_12_Bottom_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="12" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="60" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_12_Top_4::IsActive%/ctrl% && (%ctrl%Contactor_12::stContactorHmi::stStatus::ePosition%/ctrl%=='2')%/f%" data-tchmi-isvertical="true">
+</div>
+<div id="LVCP_CustomLine_14_Bottom_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="14" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="60" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_14_Top_4::IsActive%/ctrl% && (%ctrl%Contactor_14::stContactorHmi::stStatus::ePosition%/ctrl%=='2')%/f%" data-tchmi-isvertical="true">
+</div>
+<div id="LVCP_CustomLine_15_Bottom_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="15" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="60" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_15_Top_4::IsActive%/ctrl% && (%ctrl%Contactor_15::stContactorHmi::stStatus::ePosition%/ctrl%=='2')%/f%" data-tchmi-isvertical="true">
+</div>
+<div id="LVCP_CustomLine_16_Bottom_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="16" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="60" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_16_Top_4::IsActive%/ctrl% && (%ctrl%Contactor_16::stContactorHmi::stStatus::ePosition%/ctrl%=='2')%/f%" data-tchmi-isvertical="true">
+</div>
+<div id="LVCP_CustomLine_17_Bottom_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="17" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="60" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_17_Top_4::IsActive%/ctrl% && (%ctrl%Contactor_17::stContactorHmi::stStatus::ePosition%/ctrl%=='2')%/f%" data-tchmi-isvertical="true">
+</div>
+<div id="LVCP_CustomLine_18_Bottom_1" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="18" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="25" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-bottom="60" data-tchmi-bottom-unit="%" data-tchmi-width="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_18_Top_4::IsActive%/ctrl% && (%ctrl%Contactor_18::stContactorHmi::stStatus::ePosition%/ctrl%=='2')%/f%" data-tchmi-isvertical="true">
+</div>
+<div id="LVCP_Condenser_2" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-left="15" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Condenser/CondenserHorizontal.usercontrol" data-tchmi-top="40" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="15" data-tchmi-grid-column-index="1" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_1_Bottom_1::IsActive%/ctrl%%/f%" data-tchmi-right-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "LVCP_Condenser_2.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "LVCP_Popup",
+        "fn": "open",
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%LVCP_Popup_4::TargetFile%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+          "value": {
+            "path": "UserControls/Compensation/CompensationPopup_Info.usercontrol",
+            "attributes": {
+              "data-tchmi-stcompensationgroup": "%s%PLC1.GVL_LVCP1.astCompensationGroups.1%/s%"
+            }
+          }
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="LVCP_Condenser_3" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-left="15" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Condenser/CondenserHorizontal.usercontrol" data-tchmi-top="40" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="15" data-tchmi-grid-column-index="2" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_2_Bottom_1::IsActive%/ctrl%%/f%" data-tchmi-right-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "LVCP_Condenser_3.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "LVCP_Popup",
+        "fn": "open",
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%LVCP_Popup_4::TargetFile%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+          "value": {
+            "path": "UserControls/Compensation/CompensationPopup_Info.usercontrol",
+            "attributes": {
+              "data-tchmi-stcompensationgroup": "%s%PLC1.GVL_LVCP1.astCompensationGroups.2%/s%"
+            }
+          }
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="LVCP_Condenser_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-left="15" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Condenser/CondenserHorizontal.usercontrol" data-tchmi-top="40" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="15" data-tchmi-grid-column-index="3" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_3_Bottom_1::IsActive%/ctrl%%/f%" data-tchmi-right-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "LVCP_Condenser_4.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "LVCP_Popup",
+        "fn": "open",
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%LVCP_Popup_4::TargetFile%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+          "value": {
+            "path": "UserControls/Compensation/CompensationPopup_Info.usercontrol",
+            "attributes": {
+              "data-tchmi-stcompensationgroup": "%s%PLC1.GVL_LVCP1.astCompensationGroups.3%/s%"
+            }
+          }
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="LVCP_Condenser_5" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-left="15" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Condenser/CondenserHorizontal.usercontrol" data-tchmi-top="40" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="15" data-tchmi-grid-column-index="4" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_4_Bottom_1::IsActive%/ctrl%%/f%" data-tchmi-right-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "LVCP_Condenser_5.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "LVCP_Popup",
+        "fn": "open",
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%LVCP_Popup_4::TargetFile%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+          "value": {
+            "path": "UserControls/Compensation/CompensationPopup_Info.usercontrol",
+            "attributes": {
+              "data-tchmi-stcompensationgroup": "%s%PLC1.GVL_LVCP1.astCompensationGroups.4%/s%"
+            }
+          }
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="LVCP_Condenser_6" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-left="15" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Condenser/CondenserHorizontal.usercontrol" data-tchmi-top="40" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="15" data-tchmi-grid-column-index="5" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_5_Bottom_1::IsActive%/ctrl%%/f%" data-tchmi-right-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "LVCP_Condenser_6.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "LVCP_Popup",
+        "fn": "open",
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%LVCP_Popup_4::TargetFile%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+          "value": {
+            "path": "UserControls/Compensation/CompensationPopup_Info.usercontrol",
+            "attributes": {
+              "data-tchmi-stcompensationgroup": "%s%PLC1.GVL_LVCP1.astCompensationGroups.5%/s%"
+            }
+          }
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="LVCP_Condenser_7" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-left="15" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Condenser/CondenserHorizontal.usercontrol" data-tchmi-top="40" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="15" data-tchmi-grid-column-index="6" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_6_Bottom_1::IsActive%/ctrl%%/f%" data-tchmi-right-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "LVCP_Condenser_7.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "LVCP_Popup",
+        "fn": "open",
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%LVCP_Popup_4::TargetFile%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+          "value": {
+            "path": "UserControls/Compensation/CompensationPopup_Info.usercontrol",
+            "attributes": {
+              "data-tchmi-stcompensationgroup": "%s%PLC1.GVL_LVCP1.astCompensationGroups.6%/s%"
+            }
+          }
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="LVCP_Condenser_8" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-left="15" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Condenser/CondenserHorizontal.usercontrol" data-tchmi-top="40" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="15" data-tchmi-grid-column-index="7" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_7_Bottom_1::IsActive%/ctrl%%/f%" data-tchmi-right-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "LVCP_Condenser_8.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "LVCP_Popup",
+        "fn": "open",
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%LVCP_Popup_4::TargetFile%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+          "value": {
+            "path": "UserControls/Compensation/CompensationPopup_Info.usercontrol",
+            "attributes": {
+              "data-tchmi-stcompensationgroup": "%s%PLC1.GVL_LVCP1.astCompensationGroups.7%/s%"
+            }
+          }
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="LVCP_Condenser_9" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-left="15" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Condenser/CondenserHorizontal.usercontrol" data-tchmi-top="40" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="15" data-tchmi-grid-column-index="8" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_8_Bottom_1::IsActive%/ctrl%%/f%" data-tchmi-right-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "LVCP_Condenser_9.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "LVCP_Popup",
+        "fn": "open",
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%LVCP_Popup_4::TargetFile%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+          "value": {
+            "path": "UserControls/Compensation/CompensationPopup_Info.usercontrol",
+            "attributes": {
+              "data-tchmi-stcompensationgroup": "%s%PLC1.GVL_LVCP1.astCompensationGroups.8%/s%"
+            }
+          }
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="LVCP_Condenser_10" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-left="15" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Condenser/CondenserHorizontal.usercontrol" data-tchmi-top="40" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="15" data-tchmi-grid-column-index="9" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_9_Bottom_1::IsActive%/ctrl%%/f%" data-tchmi-right-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "LVCP_Condenser_10.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "LVCP_Popup",
+        "fn": "open",
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%LVCP_Popup_4::TargetFile%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+          "value": {
+            "path": "UserControls/Compensation/CompensationPopup_Info.usercontrol",
+            "attributes": {
+              "data-tchmi-stcompensationgroup": "%s%PLC1.GVL_LVCP1.astCompensationGroups.9%/s%"
+            }
+          }
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="LVCP_Condenser_11" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-left="15" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Condenser/CondenserHorizontal.usercontrol" data-tchmi-top="40" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="15" data-tchmi-grid-column-index="10" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_10_Bottom_1::IsActive%/ctrl%%/f%" data-tchmi-right-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "LVCP_Condenser_11.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "LVCP_Popup",
+        "fn": "open",
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%LVCP_Popup_4::TargetFile%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+          "value": {
+            "path": "UserControls/Compensation/CompensationPopup_Info.usercontrol",
+            "attributes": {
+              "data-tchmi-stcompensationgroup": "%s%PLC1.GVL_LVCP1.astCompensationGroups.10%/s%"
+            }
+          }
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="LVCP_Condenser_12" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-left="15" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Condenser/CondenserHorizontal.usercontrol" data-tchmi-top="40" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="15" data-tchmi-grid-column-index="11" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_11_Bottom_1::IsActive%/ctrl%%/f%" data-tchmi-right-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "LVCP_Condenser_12.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "LVCP_Popup",
+        "fn": "open",
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%LVCP_Popup_4::TargetFile%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+          "value": {
+            "path": "UserControls/Compensation/CompensationPopup_Info.usercontrol",
+            "attributes": {
+              "data-tchmi-stcompensationgroup": "%s%PLC1.GVL_LVCP1.astCompensationGroups.11%/s%"
+            }
+          }
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="LVCP_Condenser_13" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-left="15" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Condenser/CondenserHorizontal.usercontrol" data-tchmi-top="40" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="15" data-tchmi-grid-column-index="12" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_12_Bottom_1::IsActive%/ctrl%%/f%" data-tchmi-right-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "LVCP_Condenser_13.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "LVCP_Popup",
+        "fn": "open",
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%LVCP_Popup_4::TargetFile%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+          "value": {
+            "path": "UserControls/Compensation/CompensationPopup_Info.usercontrol",
+            "attributes": {
+              "data-tchmi-stcompensationgroup": "%s%PLC1.GVL_LVCP1.astCompensationGroups.12%/s%"
+            }
+          }
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="LVCP_Condenser_14" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-left="15" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Condenser/CondenserHorizontal.usercontrol" data-tchmi-top="40" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="15" data-tchmi-grid-column-index="13" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_13_Bottom_1::IsActive%/ctrl%%/f%" data-tchmi-right-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "LVCP_Condenser_14.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "LVCP_Popup",
+        "fn": "open",
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%LVCP_Popup_4::TargetFile%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+          "value": {
+            "path": "UserControls/Compensation/CompensationPopup_Info.usercontrol",
+            "attributes": {
+              "data-tchmi-stcompensationgroup": "%s%PLC1.GVL_LVCP1.astCompensationGroups.13%/s%"
+            }
+          }
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="LVCP_Condenser_15" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-left="15" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Condenser/CondenserHorizontal.usercontrol" data-tchmi-top="40" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="15" data-tchmi-grid-column-index="14" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_14_Bottom_1::IsActive%/ctrl%%/f%" data-tchmi-right-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "LVCP_Condenser_15.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "LVCP_Popup",
+        "fn": "open",
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%LVCP_Popup_4::TargetFile%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+          "value": {
+            "path": "UserControls/Compensation/CompensationPopup_Info.usercontrol",
+            "attributes": {
+              "data-tchmi-stcompensationgroup": "%s%PLC1.GVL_LVCP1.astCompensationGroups.14%/s%"
+            }
+          }
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="LVCP_Condenser_16" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-left="15" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Condenser/CondenserHorizontal.usercontrol" data-tchmi-top="40" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="15" data-tchmi-grid-column-index="15" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_15_Bottom_1::IsActive%/ctrl%%/f%" data-tchmi-right-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "LVCP_Condenser_16.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "LVCP_Popup",
+        "fn": "open",
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%LVCP_Popup_4::TargetFile%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+          "value": {
+            "path": "UserControls/Compensation/CompensationPopup_Info.usercontrol",
+            "attributes": {
+              "data-tchmi-stcompensationgroup": "%s%PLC1.GVL_LVCP1.astCompensationGroups.15%/s%"
+            }
+          }
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="LVCP_Condenser_17" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-left="15" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Condenser/CondenserHorizontal.usercontrol" data-tchmi-top="40" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="15" data-tchmi-grid-column-index="16" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_16_Bottom_1::IsActive%/ctrl%%/f%" data-tchmi-right-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "LVCP_Condenser_17.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "LVCP_Popup",
+        "fn": "open",
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%LVCP_Popup_4::TargetFile%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+          "value": {
+            "path": "UserControls/Compensation/CompensationPopup_Info.usercontrol",
+            "attributes": {
+              "data-tchmi-stcompensationgroup": "%s%PLC1.GVL_LVCP1.astCompensationGroups.16%/s%"
+            }
+          }
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="LVCP_Condenser_18" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-left="15" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Condenser/CondenserHorizontal.usercontrol" data-tchmi-top="40" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="15" data-tchmi-grid-column-index="17" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_17_Bottom_1::IsActive%/ctrl%%/f%" data-tchmi-right-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "LVCP_Condenser_18.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "LVCP_Popup",
+        "fn": "open",
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%LVCP_Popup_4::TargetFile%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+          "value": {
+            "path": "UserControls/Compensation/CompensationPopup_Info.usercontrol",
+            "attributes": {
+              "data-tchmi-stcompensationgroup": "%s%PLC1.GVL_LVCP1.astCompensationGroups.17%/s%"
+            }
+          }
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div id="LVCP_Condenser_19" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="5" data-tchmi-height-unit="%" data-tchmi-left="15" data-tchmi-left-unit="%" data-tchmi-target-user-control="UserControls/Condenser/CondenserHorizontal.usercontrol" data-tchmi-top="40" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="15" data-tchmi-grid-column-index="18" data-tchmi-isactive="%f%%ctrl%LVCP_CustomLine_18_Bottom_1::IsActive%/ctrl%%/f%" data-tchmi-right-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "LVCP_Condenser_19.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "LVCP_Popup",
+        "fn": "open",
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%LVCP_Popup_4::TargetFile%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+          "value": {
+            "path": "UserControls/Compensation/CompensationPopup_Info.usercontrol",
+            "attributes": {
+              "data-tchmi-stcompensationgroup": "%s%PLC1.GVL_LVCP1.astCompensationGroups.18%/s%"
+            }
+          }
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+</div>
+
+    <div id="CustomLine_16" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="1" data-tchmi-height="2" data-tchmi-height-unit="px" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="3.3" data-tchmi-right-unit="%" data-tchmi-left-unit="%" data-tchmi-left="3.5" data-tchmi-isactive="%ctrl%CustomLine_17::IsActive%/ctrl%">
+</div>
+</div>
+<div id="LVCP_Popup_4" data-tchmi-type="TcHmi.Controls.System.TcHmiPopup" data-tchmi-height="500" data-tchmi-height-unit="px" data-tchmi-left-unit="px" data-tchmi-top="100" data-tchmi-top-unit="%" data-tchmi-width="500" data-tchmi-width-unit="px" data-tchmi-modal="true">
+
+<script data-tchmi-target-attribute="data-tchmi-target-file" type="application/json">
+{
+  "path": "UserControls/Compensation/CompensationPopup_Info.usercontrol"
+}
+</script>
+</div>
+</div>

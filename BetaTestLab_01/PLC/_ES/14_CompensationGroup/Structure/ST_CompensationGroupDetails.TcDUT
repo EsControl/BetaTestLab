@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="ST_CompensationGroupDetails" Id="{012d0dec-5168-4251-b5b4-031006db06f3}">
+    <Declaration><![CDATA[TYPE ST_CompensationGroupDetails :
+STRUCT
+    abGroupActive : ARRAY[0..GVL_CompensationGroup.MAX_COMPENSATION_GROUPS-1] OF BOOL;     // Hangi gruplar aktif
+    arGroupPower : ARRAY[0..GVL_CompensationGroup.MAX_COMPENSATION_GROUPS-1] OF REAL;      // Her grubun toplam gücü
+    anGroupCapacitorCount : ARRAY[0..GVL_CompensationGroup.MAX_COMPENSATION_GROUPS-1] OF INT; // Her gruptaki kondansatör sayısı
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

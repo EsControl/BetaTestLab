@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TcHmiEditor_SplitAreaStates>{
+  "EditorSettings": [
+    {
+      "Path": "Desktop.view",
+      "DesignAreaSplitSize": "Full",
+      "CodeAreaSplitSize": "Minimized",
+      "Orientation": "Horizontal",
+      "DesignAreaPosition": "Left",
+      "CodeAreaPosition": "Right",
+      "SplitPercentage": 0.5
+    },
+    {
+      "Path": "SingleLines\\SingleLine_TestBay3MediumPowerAndAcceptanceTestLab.content",
+      "DesignAreaSplitSize": "Full",
+      "CodeAreaSplitSize": "Minimized",
+      "Orientation": "Horizontal",
+      "DesignAreaPosition": "Left",
+      "CodeAreaPosition": "Right",
+      "SplitPercentage": 0.5
+    },
+    {
+      "Path": "SingleLines\\SingleLine_TestBay6DryTypeAndAcceptanceTestLab.content",
+      "DesignAreaSplitSize": "Full",
+      "CodeAreaSplitSize": "Minimized",
+      "Orientation": "Horizontal",
+      "DesignAreaPosition": "Left",
+      "CodeAreaPosition": "Right",
+      "SplitPercentage": 0.5
+    },
+    {
+      "Path": "Pages\\LVCP1.content",
+      "DesignAreaSplitSize": "Full",
+      "CodeAreaSplitSize": "Minimized",
+      "Orientation": "Horizontal",
+      "DesignAreaPosition": "Left",
+      "CodeAreaPosition": "Right",
+      "SplitPercentage": 0.5
+    },
+    {
+      "Path": "Pages\\LVCP5.content",
+      "DesignAreaSplitSize": "Full",
+      "CodeAreaSplitSize": "Minimized",
+      "Orientation": "Horizontal",
+      "DesignAreaPosition": "Left",
+      "CodeAreaPosition": "Right",
+      "SplitPercentage": 0.5
+    }
+  ]
+}</TcHmiEditor_SplitAreaStates>
+    <TcHmiEditor_SelectBindingWindowDimension>60;68;1139;672</TcHmiEditor_SelectBindingWindowDimension>
+    <TcHmiEditor_SelectBindingWindowColumnWidths_m_SymbolMappedTree>[
+  416.79999999999984,
+  50.0,
+  180.0,
+  80.0,
+  190.40000000000021,
+  100.0
+]</TcHmiEditor_SelectBindingWindowColumnWidths_m_SymbolMappedTree>
+    <TcHmiEditor_SelectBindingWindowColumnWidths_m_SymbolServerTree>[
+  280.0,
+  300.0,
+  356.00000000000006
+]</TcHmiEditor_SelectBindingWindowColumnWidths_m_SymbolServerTree>
+    <TcHmiEditor_SelectBindingWindowColumnWidths_m_SymbolInternalTree>[
+  300.0,
+  300.0,
+  100.0,
+  50.0,
+  65.0
+]</TcHmiEditor_SelectBindingWindowColumnWidths_m_SymbolInternalTree>
+    <TcHmiEditor_SelectBindingWindowColumnWidths_m_symbolLocalizedTree>[
+  300.0
+]</TcHmiEditor_SelectBindingWindowColumnWidths_m_symbolLocalizedTree>
+    <TcHmiEditor_SelectBindingWindowColumnWidths_m_extensionLocalizationsTree>[
+  300.0
+]</TcHmiEditor_SelectBindingWindowColumnWidths_m_extensionLocalizationsTree>
+    <TcHmiEditor_SelectBindingWindowColumnWidths_m_ControlsTree>[
+  300.0,
+  300.0
+]</TcHmiEditor_SelectBindingWindowColumnWidths_m_ControlsTree>
+    <TcHmiEditor_SelectBindingWindowColumnWidths_m_SymbolActionTemplateParametersTree>[
+  200.0,
+  300.0,
+  100.0
+]</TcHmiEditor_SelectBindingWindowColumnWidths_m_SymbolActionTemplateParametersTree>
+    <TcHmiEditor_SelectBindingWindowColumnWidths_m_SymbolUserControlParametersTree>[
+  200.0,
+  300.0,
+  200.0
+]</TcHmiEditor_SelectBindingWindowColumnWidths_m_SymbolUserControlParametersTree>
+    <TcHmiEditor_SelectBindingWindowColumnWidths_m_SymbolHistorizedTree>[
+  200.0,
+  50.0,
+  180.0,
+  80.0,
+  80.0,
+  80.0
+]</TcHmiEditor_SelectBindingWindowColumnWidths_m_SymbolHistorizedTree>
+    <TcHmiEditor_SelectBindingWindowColumnWidths_m_RecipesTree>[
+  300.0,
+  150.0
+]</TcHmiEditor_SelectBindingWindowColumnWidths_m_RecipesTree>
+    <TcHmiEditor_SelectBindingWindowColumnWidths_m_RecipeTypesTree>[
+  300.0,
+  180.0,
+  150.0,
+  70.0,
+  70.0
+]</TcHmiEditor_SelectBindingWindowColumnWidths_m_RecipeTypesTree>
+    <TcHmiEditor_SelectBindingWindowColumnWidths_m_ControlTypeAttributesTree>[
+  300.0,
+  300.0
+]</TcHmiEditor_SelectBindingWindowColumnWidths_m_ControlTypeAttributesTree>
+    <TcHmiEditor_SelectBindingWindowColumnWidths_m_ThemedResourceTree>[
+  200.0,
+  300.0
+]</TcHmiEditor_SelectBindingWindowColumnWidths_m_ThemedResourceTree>
+    <RecentColors>[
+  {
+    "counter": 0,
+    "color": "#FFE71515"
+  },
+  {
+    "counter": 0,
+    "color": "#FFFFFFFF"
+  },
+  {
+    "counter": 0,
+    "color": "#FF000000"
+  },
+  {
+    "counter": 0,
+    "color": "#509E9898"
+  },
+  {
+    "counter": 0,
+    "color": ""
+  },
+  {
+    "counter": 0,
+    "color": ""
+  },
+  {
+    "counter": 0,
+    "color": ""
+  },
+  {
+    "counter": 0,
+    "color": ""
+  },
+  {
+    "counter": 0,
+    "color": ""
+  },
+  {
+    "counter": 0,
+    "color": ""
+  },
+  {
+    "counter": 0,
+    "color": ""
+  },
+  {
+    "counter": 0,
+    "color": ""
+  },
+  {
+    "counter": 0,
+    "color": ""
+  },
+  {
+    "counter": 0,
+    "color": ""
+  },
+  {
+    "counter": 0,
+    "color": ""
+  },
+  {
+    "counter": 0,
+    "color": ""
+  },
+  {
+    "counter": 0,
+    "color": ""
+  },
+  {
+    "counter": 0,
+    "color": ""
+  },
+  {
+    "counter": 0,
+    "color": ""
+  },
+  {
+    "counter": 0,
+    "color": ""
+  }
+]</RecentColors>
+  </PropertyGroup>
+</Project>

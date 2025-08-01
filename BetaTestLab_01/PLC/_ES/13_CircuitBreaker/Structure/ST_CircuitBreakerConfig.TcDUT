@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="ST_CircuitBreakerConfig" Id="{986b850b-a9c2-4387-b109-199adc749add}">
+    <Declaration><![CDATA[TYPE ST_CircuitBreakerConfig :
+STRUCT
+    // Kimlik Bilgileri
+    sProjectCode: STRING[20] := '';             // Proje kodu (örn: +EP1-Q1)
+    sProductCode: STRING[50] := '';             // Ürün kodu/modeli
+    
+    // Elektriksel Özellikler
+    rRatedCurrent: REAL := 0.0;                 // Nominal akım (A)
+    rRatedVoltage: REAL := 0.0;                 // Nominal gerilim (kV)
+    nPhaseCount: INT := 3;                      // Faz sayısı (1 veya 3)
+    
+    // Operasyonel Parametreler
+    tMotionTimeout: TIME := T#5S;               // Hareket zaman aşımı
+    tSpringChargeTimeout: TIME := T#30S;        // Yay kurma zaman aşımı
+    bSpringChargeRequired: BOOL := TRUE;        // Yay kurma gerekli mi?
+    dwOperationLimit: DWORD := 10000;           // Bakım operasyon limiti
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

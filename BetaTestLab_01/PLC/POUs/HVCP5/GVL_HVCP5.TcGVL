@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <GVL Name="GVL_HVCP5" Id="{e463c874-a155-467d-bc21-cfecca12f665}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+    // Kompanzasyon grupları konfigürasyonu
+    astCompensationGroups : ARRAY[0..GVL_CompensationGroup.MAX_COMPENSATION_GROUPS-1] OF ST_CompensationGroup;  // Tüm grupların kondansatör bilgileri
+    nConfiguredGroups : INT;                                                                                    // Toplam konfigüre edilmiş grup sayısı
+    
+    // Grup aktif durumları
+    abGroupActive : ARRAY[0..GVL_CompensationGroup.MAX_COMPENSATION_GROUPS-1] OF BOOL;                         // Her grubun aktif/pasif durumu
+
+    // Ana kesici HMI bilgileri
+    st10CB1HMI : ST_DisconnectorHMI;                                                               // Ana kesici durum ve kontrol bilgileri	
+	
+	// 12CB1 kesici HMI bilgileri
+	st12CB1HMI : ST_DisconnectorHMI;		// 12CB1 kesici durum ve kontrol bilgileri		
+	
+	// 14CB1 kesici HMI bilgileri
+	st14CB1HMI : ST_DisconnectorHMI;		// 14CB1 kesici durum ve kontrol bilgileri	
+	
+	// 16CB1 kesici HMI bilgileri
+	st16CB1HMI : ST_DisconnectorHMI;		// 16CB1 kesici durum ve kontrol bilgileri
+	
+	// 18CB1 kesici HMI bilgileri
+	st18CB1HMI : ST_DisconnectorHMI;		// 18CB1 kesici durum ve kontrol bilgileri
+	
+	// 20CB1 kesici HMI bilgileri
+	st20CB1HMI : ST_DisconnectorHMI;		// 20CB1 kesici durum ve kontrol bilgileri
+	
+	// 22CB1 kesici HMI bilgileri
+	st22CB1HMI : ST_DisconnectorHMI;		// 22CB1 kesici durum ve kontrol bilgileri
+	
+	// 24CB1 kesici HMI bilgileri
+	st24CB1HMI : ST_DisconnectorHMI;		// 24CB1 kesici durum ve kontrol bilgileri
+	
+	// 26CB1 kesici HMI bilgileri
+	st26CB1HMI : ST_DisconnectorHMI;		// 26CB1 kesici durum ve kontrol bilgileri
+	
+	// 28CB1 kesici HMI bilgileri
+	st28CB1HMI : ST_DisconnectorHMI;		// 28CB1 kesici durum ve kontrol bilgileri
+	
+	// 30CB1 kesici HMI bilgileri
+	st30CB1HMI : ST_DisconnectorHMI;		// 30CB1 kesici durum ve kontrol bilgileri
+	
+	// 32CB1 kesici HMI bilgileri
+	st32CB1HMI : ST_DisconnectorHMI;		// 32CB1 kesici durum ve kontrol bilgileri
+	
+	// 34CB1 kesici HMI bilgileri
+	st34CB1HMI : ST_DisconnectorHMI;		// 34CB1 kesici durum ve kontrol bilgileri
+	
+	// 36CB1 kesici HMI bilgileri
+	st36CB1HMI : ST_DisconnectorHMI;		// 36CB1 kesici durum ve kontrol bilgileri
+	
+	// 38CB1 kesici HMI bilgileri
+	st38CB1HMI : ST_DisconnectorHMI;		// 38CB1 kesici durum ve kontrol bilgileri
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

@@ -1,0 +1,887 @@
+<div id="DisconnectorPopupConfig" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500" data-tchmi-creator-locked="True">
+
+<div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="0" id="DiscPopConf_BaseContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="0">
+<script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                {
+                "left": "Solid",
+                "right": "Solid",
+                "top": "Solid",
+                "bottom": "Solid"
+                }
+            </script>
+
+            <!-- Operasyon Başlığı -->
+            <div id="DiscPopConf_Header" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="OPERASYON İSTATİSTİKLERİ" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="10" data-tchmi-height="40" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-font-size="14">
+
+                
+
+                
+
+                
+
+                
+
+                <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                    {
+                    "left": "Solid",
+                    "right": "Solid",
+                    "top": "Solid",
+                    "bottom": "Solid"
+                    }
+                </script>
+            </div>
+
+            <!-- Operasyon İstatistik Grid -->
+            <div id="DiscPopConf_Grid" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="45" data-tchmi-top-unit="px" data-tchmi-right="10" data-tchmi-height="440">
+
+                <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+[
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+
+                <!-- Toplam Açma -->
+                <div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="0" id="DiscPopConf_ProjectCodeContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="DiscPopConf_ProjectCodeLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Projedeki Kodu" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="DiscPopConf_ProjectCodeValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="%pp%stDisconnectorConfig::sProjectCode%/pp%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <!-- Toplam Kapama -->
+                <div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="DiscPopConf_ProductCodeContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="DiscPopConf_ProductCodeLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Ürün Modeli" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="DiscPopConf_ProductCodeValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="%pp%stDisconnectorConfig::sProductCode%/pp%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <!-- Toplam Reset -->
+                <div data-tchmi-grid-row-index="2" data-tchmi-grid-column-index="0" id="DiscPopConf_RatedCurrentContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="DiscPopConf_RatedCurrentLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Nominal Akım" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="DiscPopConf_RatedCurrentValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="%pp%stDisconnectorConfig::rRatedCurrent%/pp%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <!-- Çalışma Süresi -->
+                <div data-tchmi-grid-row-index="3" data-tchmi-grid-column-index="0" id="DiscPopConf_RatedVoltageContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="DiscPopConf_RatedVoltageLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Nominal Gerilim" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="DiscPopConf_RatedVoltageValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="%pp%stDisconnectorConfig::rRatedVoltage%/pp%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <!-- Son İşlem -->
+                <div data-tchmi-grid-row-index="4" data-tchmi-grid-column-index="0" id="DiscPopConf_PhaseCountContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="DiscPopConf_PhaseCountLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Faz Sayısı" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="DiscPopConf_PhaseCountValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="%pp%stDisconnectorConfig::nPhaseCount%/pp%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    
+
+</div>
+                </div>
+            <div data-tchmi-grid-row-index="5" data-tchmi-grid-column-index="0" id="DiscPopConf_GroundedTypeContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="DiscPopConf_GroundedTypeLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Tip" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="DiscPopConf_GroundedTypeValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    
+
+
+
+</div>
+                </div>
+<div data-tchmi-grid-row-index="6" data-tchmi-grid-column-index="0" id="DiscPopConf_MotionTimeout" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="DiscPopConf_MotionTimeoutLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Hareket Zaman Aşımı" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="DiscPopConf_MotionTimeoutValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="%pp%stDisconnectorConfig::tMotionTimeout%/pp%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    
+
+</div>
+                </div>
+<div data-tchmi-grid-row-index="7" data-tchmi-grid-column-index="0" id="DiscPopConf_ContactorDelayContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="2" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="2" data-tchmi-bottom="2">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="DiscPopConf_ContactorDelayLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Kontaktör Geri Bildirim Gecikmesi" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="DiscPopConf_ContactorDelayValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text="%pp%stDisconnectorConfig::tContactorDelay%/pp%">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    
+
+</div>
+</div>
+<div data-tchmi-grid-row-index="8" data-tchmi-grid-column-index="0" id="DiscPopConf_EarthSwitchContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="2" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="2" data-tchmi-bottom="2">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="DiscPopConf_EarthSwitchLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Toprak Bıçağı" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="DiscPopConf_EarthSwitchValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    
+
+
+
+</div>
+                </div>
+<div data-tchmi-grid-row-index="9" data-tchmi-grid-column-index="0" id="DiscPopConf_InterlockContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="2" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="2" data-tchmi-bottom="2">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="DiscPopConf_InterlockLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Interlock Kontrolü" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="DiscPopConf_InterlockValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    
+
+</div>
+                </div>
+<div data-tchmi-grid-row-index="10" data-tchmi-grid-column-index="0" id="DiscPopConf_OperationLimitContainer2" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="2" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="2" data-tchmi-bottom="2">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="DiscPopConf_OperationLimitContainerLabel2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Bakım Operasyon Limiti" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="DiscPopConf_OperationLimitValue2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="%pp%stDisconnectorConfig::dwOperationLimit%/pp%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    
+
+</div>
+                </div>
+</div>
+        </div>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%pp%stDisconnectorConfig::bInterlockEnable%/pp%",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "symbolExpression": "%pp%stDisconnectorConfig::bGrounded%/pp%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": false
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%DiscPopConf_GroundedTypeLabel::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Normal Tip"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%DiscPopConf_GroundedTypeLabel::Text%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "value": "Topraklı Tip"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>

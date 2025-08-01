@@ -1,0 +1,537 @@
+{
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.762.46/runtimes/native1.12-tchmi/Schema/TchmiConfig.Schema.json",
+  "basePath": "./framework",
+  "scaleMode": "None",
+  "startupView": "Desktop.view",
+  "loginPage": "/Pages/LoginPage.html",
+  "tcHmiServer": {
+    "websocketIntervalTime": 500,
+    "websocketTimeout": 20000,
+    "websocketSystemTimeout": 60000,
+    "websocketSubscriptionMode": "Change"
+  },
+  "activeTheme": "Base-Dark",
+  "themes": {
+    "Base-Dark": {
+      "resources": [
+        {
+          "name": "Themes/Base-Dark/Base-DarkStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        },
+        {
+          "name": "Themes/Base-Dark/Base-Dark.theme",
+          "description": "",
+          "type": "ThemedValues"
+        }
+      ],
+      "replacesThemeForControls": [],
+      "replacesThemeForPackageComponents": []
+    },
+    "Base": {
+      "resources": [
+        {
+          "name": "Themes/Base/Base.theme",
+          "description": "",
+          "type": "ThemedValues"
+        },
+        {
+          "name": "Themes/Base/BaseStyle.css",
+          "description": "",
+          "type": "Stylesheet"
+        }
+      ],
+      "replacesThemeForControls": [],
+      "replacesThemeForPackageComponents": []
+    }
+  },
+  "dependencyFiles": [
+    {
+      "name": "Fonts/Fonts.css",
+      "description": "",
+      "type": "Stylesheet"
+    },
+    {
+      "name": "UserControls/DatePicker/Source/flatpickr-localization-tr.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "UserControls/DatePicker/Source/flatpickr.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "UserControls/DatePicker/Source/TemperatureDisplayDateInput.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "UserControls/DatePicker/Source/flatpick-dark.css",
+      "description": "",
+      "type": "Stylesheet"
+    }
+  ],
+  "userControls": [
+    {
+      "url": "UserControls/AppliedVoltage.usercontrol"
+    },
+    {
+      "url": "UserControls/Capacitor/CapacitorHorizontal.usercontrol"
+    },
+    {
+      "url": "UserControls/Capacitor/CapacitorPopupInfo.usercontrol"
+    },
+    {
+      "url": "UserControls/Capacitor/CapacitorSchema.usercontrol"
+    },
+    {
+      "url": "UserControls/Capacitor/CapacitorVertical.usercontrol"
+    },
+    {
+      "url": "UserControls/CircuitBreaker/CircuitBreaker.usercontrol"
+    },
+    {
+      "url": "UserControls/CircuitBreaker/CircuitBreakerHorizontal.usercontrol"
+    },
+    {
+      "url": "UserControls/CircuitBreaker/CircuitBreakerVertical.usercontrol"
+    },
+    {
+      "url": "UserControls/CircuitBreaker/Popups/CircuitBreakerPopup.usercontrol"
+    },
+    {
+      "url": "UserControls/CircuitBreaker/Popups/CircuitBreakerPopupConfig.usercontrol"
+    },
+    {
+      "url": "UserControls/CircuitBreaker/Popups/CircuitBreakerPopupControl.usercontrol"
+    },
+    {
+      "url": "UserControls/CircuitBreaker/Popups/CircuitBreakerPopupDocumentation.usercontrol"
+    },
+    {
+      "url": "UserControls/CircuitBreaker/Popups/CircuitBreakerPopupStatistics.usercontrol"
+    },
+    {
+      "url": "UserControls/CompensationDisplay.usercontrol"
+    },
+    {
+      "url": "UserControls/Contactor/Contactor.usercontrol"
+    },
+    {
+      "url": "UserControls/Contactor/ContactorHorizontal.usercontrol"
+    },
+    {
+      "url": "UserControls/Contactor/ContactorVertical.usercontrol"
+    },
+    {
+      "url": "UserControls/Contactor/Popups/ContactorPopup.usercontrol"
+    },
+    {
+      "url": "UserControls/Contactor/Popups/ContactorPopupConfig.usercontrol"
+    },
+    {
+      "url": "UserControls/Contactor/Popups/ContactorPopupControl.usercontrol"
+    },
+    {
+      "url": "UserControls/Contactor/Popups/ContactorPopupDocumentation.usercontrol"
+    },
+    {
+      "url": "UserControls/Contactor/Popups/ContactorPopupStatistics.usercontrol"
+    },
+    {
+      "url": "UserControls/Converter.usercontrol"
+    },
+    {
+      "url": "UserControls/ConverterDisplay.usercontrol"
+    },
+    {
+      "url": "UserControls/Converter/Converter.usercontrol"
+    },
+    {
+      "url": "UserControls/Converter/Popups/ConverterDocumentation.usercontrol"
+    },
+    {
+      "url": "UserControls/Converter/Popups/ConverterOperations.usercontrol"
+    },
+    {
+      "url": "UserControls/Converter/Popups/ConverterPopup.usercontrol"
+    },
+    {
+      "url": "UserControls/Converter/Popups/ConverterStatistics.usercontrol"
+    },
+    {
+      "url": "UserControls/CountdownTimer.usercontrol"
+    },
+    {
+      "url": "UserControls/CustomLine.usercontrol"
+    },
+    {
+      "url": "UserControls/DatePicker/DatePicker.usercontrol"
+    },
+    {
+      "url": "UserControls/Disconnector/Disconnector.usercontrol"
+    },
+    {
+      "url": "UserControls/Disconnector/DisconnectorHorizontal.usercontrol"
+    },
+    {
+      "url": "UserControls/Disconnector/DisconnectorVertical.usercontrol"
+    },
+    {
+      "url": "UserControls/Disconnector/Popups/DisconnectorPopup.usercontrol"
+    },
+    {
+      "url": "UserControls/Disconnector/Popups/DisconnectorPopupConfig.usercontrol"
+    },
+    {
+      "url": "UserControls/Disconnector/Popups/DisconnectorPopupControl.usercontrol"
+    },
+    {
+      "url": "UserControls/Disconnector/Popups/DisconnectorPopupDocumentation.usercontrol"
+    },
+    {
+      "url": "UserControls/Disconnector/Popups/DisconnectorPopupStatistics.usercontrol"
+    },
+    {
+      "url": "UserControls/Documentation.usercontrol"
+    },
+    {
+      "url": "UserControls/Emc_Filter.usercontrol"
+    },
+    {
+      "url": "UserControls/EmergencyStop.usercontrol"
+    },
+    {
+      "url": "UserControls/EnergyAnalyzer/CurrentAndVoltage/EnergyAnalyzerCurrentAndVoltage.usercontrol"
+    },
+    {
+      "url": "UserControls/EnergyAnalyzer/CurrentAndVoltage/Popups/EnergyAnalyzerCurrentAndVoltagePopup.usercontrol"
+    },
+    {
+      "url": "UserControls/EnergyAnalyzer/CurrentAndVoltage/Popups/EnergyAnalyzerCurrentAndVoltagePopupCurrentHarmonics.usercontrol"
+    },
+    {
+      "url": "UserControls/EnergyAnalyzer/CurrentAndVoltage/Popups/EnergyAnalyzerCurrentAndVoltagePopupInfo.usercontrol"
+    },
+    {
+      "url": "UserControls/EnergyAnalyzer/CurrentAndVoltage/Popups/EnergyAnalyzerCurrentAndVoltagePopupVoltageHarmonics.usercontrol"
+    },
+    {
+      "url": "UserControls/EnergyAnalyzer/OnlyCurrent/EnergyAnalyzerOnlyCurrent.usercontrol"
+    },
+    {
+      "url": "UserControls/EnergyAnalyzer/OnlyCurrent/Popups/EnergyAnalyzerOnlyCurrentPopup.usercontrol"
+    },
+    {
+      "url": "UserControls/EnergyAnalyzer/OnlyCurrent/Popups/EnergyAnalyzerOnlyCurrentPopupInfo.usercontrol"
+    },
+    {
+      "url": "UserControls/GlobalPanel.usercontrol"
+    },
+    {
+      "url": "UserControls/Ground.usercontrol"
+    },
+    {
+      "url": "UserControls/HVCP_Compensation.usercontrol"
+    },
+    {
+      "url": "UserControls/LVCP_Compensation.usercontrol"
+    },
+    {
+      "url": "UserControls/MeasurementDisplay3P.usercontrol"
+    },
+    {
+      "url": "UserControls/ProgressBar.usercontrol"
+    },
+    {
+      "url": "UserControls/Statistics.usercontrol"
+    },
+    {
+      "url": "UserControls/Symbol3P.usercontrol"
+    },
+    {
+      "url": "UserControls/TemperatureDisplay.usercontrol"
+    },
+    {
+      "url": "UserControls/Transformator.usercontrol"
+    },
+    {
+      "url": "UserControls/VariableTransformator.usercontrol"
+    },
+    {
+      "url": "UserControls/VariableTransformator/Popups/VariableTransformatorPopup.usercontrol"
+    },
+    {
+      "url": "UserControls/VariableTransformator/Popups/VariableTransformatorPopupControl.usercontrol"
+    },
+    {
+      "url": "UserControls/VariableTransformator/VariableTransformator.usercontrol"
+    },
+    {
+      "url": "UserControls/Variac1P.usercontrol"
+    }
+  ],
+  "content": [
+    {
+      "url": "Pages/AppliedVoltage.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Pages/LVCP5.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Pages/LVCP2.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Pages/LVCP1.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "SingleLines/SingleLine_BigPowerTransformerTestLab.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "SingleLines/SingleLine_OdtTestLaboratory.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "SingleLines/SingleLine_TestBay3MediumPowerAndAcceptanceTestLab.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "SingleLines/SingleLine_TestBay6DryTypeAndAcceptanceTestLab.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Pages/Events.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Pages/Settings.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Pages/StartPage.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    }
+  ],
+  "views": [
+    {
+      "url": "Desktop.view",
+      "preload": false,
+      "keepAlive": false,
+      "preloadBindings": false
+    }
+  ],
+  "userFunctions": [],
+  "symbols": {
+    "internal": {
+      "ErrorRed": {
+        "value": {
+          "color": "rgba(255, 0, 0, 1)"
+        },
+        "type": "tchmi:framework#/definitions/Color",
+        "persist": false,
+        "readonly": false
+      }
+    },
+    "themedResources": {
+      "TR_Icon_StartPage_normal": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "Normal Icon of page: Start Page",
+        "values": {
+          "Base": "Themes/Base/Images/Placeholder/placeholder_normal.svg",
+          "Base-Dark": "Themes/Base-Dark/Images/Placeholder/placeholder_normal.svg"
+        }
+      },
+      "TR_Icon_StartPage_pressed": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "Pressed Icon of page: Start Page",
+        "values": {
+          "Base": "Themes/Base/Images/Placeholder/placeholder_pressed.svg",
+          "Base-Dark": "Themes/Base-Dark/Images/Placeholder/placeholder_pressed.svg"
+        }
+      },
+      "TR_Icon_StartPage_active": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "Active Icon of page: Start Page",
+        "values": {
+          "Base": "Themes/Base/Images/Placeholder/placeholder_active.svg",
+          "Base-Dark": "Themes/Base-Dark/Images/Placeholder/placeholder_active.svg"
+        }
+      },
+      "TR_Icon_Events_normal": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "Normal Icon of page: Events",
+        "values": {
+          "Base": "Themes/Base/Images/Events/message_normal.svg",
+          "Base-Dark": "Themes/Base-Dark/Images/Events/message_normal.svg"
+        }
+      },
+      "TR_Icon_Events_pressed": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "Pressed Icon of page: Events",
+        "values": {
+          "Base": "Themes/Base/Images/Events/message_pressed.svg",
+          "Base-Dark": "Themes/Base-Dark/Images/Events/message_pressed.svg"
+        }
+      },
+      "TR_Icon_Events_active": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "Active Icon of page: Events",
+        "values": {
+          "Base": "Themes/Base/Images/Events/message_active.svg",
+          "Base-Dark": "Themes/Base-Dark/Images/Events/message_active.svg"
+        }
+      },
+      "TR_Icon_Settings_normal": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "Normal Icon of page: Settings",
+        "values": {
+          "Base": "Themes/Base/Images/Settings/settings_normal.svg",
+          "Base-Dark": "Themes/Base-Dark/Images/Settings/settings_normal.svg"
+        }
+      },
+      "TR_Icon_Settings_pressed": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "Pressed Icon of page: Settings",
+        "values": {
+          "Base": "Themes/Base/Images/Settings/settings_pressed.svg",
+          "Base-Dark": "Themes/Base-Dark/Images/Settings/settings_pressed.svg"
+        }
+      },
+      "TR_Icon_Settings_active": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "Active Icon of page: Settings",
+        "values": {
+          "Base": "Themes/Base/Images/Settings/settings_active.svg",
+          "Base-Dark": "Themes/Base-Dark/Images/Settings/settings_active.svg"
+        }
+      },
+      "TR_Icon_LVCP1_active": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "",
+        "values": {
+          "Base-Dark": "Themes/Base-Dark/Images/Events/message_active.svg",
+          "Base": "Themes/Base/Images/Placeholder/placeholder_active.svg"
+        }
+      },
+      "TR_Icon_LVCP1_normal": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "",
+        "values": {
+          "Base-Dark": "Themes/Base-Dark/Images/Placeholder/placeholder_normal.svg",
+          "Base": "Themes/Base/Images/Placeholder/placeholder_normal.svg"
+        }
+      },
+      "TR_Icon_LVCP1_pressed": {
+        "type": "tchmi:framework#/definitions/Path",
+        "description": "",
+        "values": {
+          "Base-Dark": "Themes/Base-Dark/Images/Placeholder/placeholder_pressed.svg",
+          "Base": "Themes/Base/Images/Placeholder/placeholder_pressed.svg"
+        }
+      }
+    }
+  },
+  "trigger": [],
+  "actionTemplates": [],
+  "languages": {
+    "de": "Localization/de.localization",
+    "en": "Localization/en.localization"
+  },
+  "languageFallback": "",
+  "disableLoadingOptimization": false,
+  "creatorSettings": {
+    "viewport": {
+      "defaultWidth": 1920,
+      "defaultHeight": 1080
+    }
+  },
+  "binding": {
+    "symbolError": "Ignore"
+  },
+  "packages": [
+    {
+      "name": "Beckhoff.TwinCAT.HMI.BaseTemplate",
+      "basePath": "/Beckhoff.TwinCAT.HMI.BaseTemplate"
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.Controls",
+      "basePath": "/Beckhoff.TwinCAT.HMI.Controls"
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.Framework",
+      "basePath": "/framework"
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.Functions",
+      "basePath": "/Beckhoff.TwinCAT.HMI.Functions"
+    }
+  ],
+  "keyboardLayouts": [
+    {
+      "url": "KeyboardLayouts/German - compact.keyboard.json"
+    },
+    {
+      "url": "KeyboardLayouts/Numpad (plusminus).keyboard.json"
+    },
+    {
+      "url": "KeyboardLayouts/US - compact.keyboard.json"
+    }
+  ],
+  "systemKeyboard": {
+    "providerName": "",
+    "projectKeyboardMapping": {
+      "de": {
+        "text": "KeyboardLayouts/German - compact.keyboard.json",
+        "decimal": "KeyboardLayouts/Numpad (plusminus).keyboard.json",
+        "numeric": ""
+      },
+      "en": {
+        "text": "KeyboardLayouts/US - compact.keyboard.json",
+        "decimal": "KeyboardLayouts/Numpad (plusminus).keyboard.json",
+        "numeric": ""
+      }
+    }
+  },
+  "systemPopups": {
+    "providerName": "Beckhoff.TcHmiPopups"
+  }
+}

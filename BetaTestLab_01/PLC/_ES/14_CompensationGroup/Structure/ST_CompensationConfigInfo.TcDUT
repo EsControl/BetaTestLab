@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="ST_CompensationConfigInfo" Id="{5e71ba42-6349-47ad-86d4-c69fd6f26d7d}">
+    <Declaration><![CDATA[TYPE ST_CompensationConfigInfo :
+STRUCT
+    astGroupConfig : ARRAY[0..GVL_CompensationGroup.MAX_COMPENSATION_GROUPS-1] OF ST_CompensationGroup;  // Tüm grup konfigürasyonları
+    nConfiguredGroups : INT;                                                                             // Konfigüre edilmiş grup sayısı
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

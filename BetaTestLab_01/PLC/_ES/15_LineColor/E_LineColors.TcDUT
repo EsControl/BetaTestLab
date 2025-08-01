@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="E_LineColors" Id="{69cb5240-8cdd-4605-b076-39140ffd6184}">
+    <Declaration><![CDATA[TYPE E_LineColors :
+(
+	Default := 0,
+	Energised_Red := 1,
+	Grounded_Green := 2,
+	Scnerio_SelectionPurple := 3,
+	Optional_SelectionOrange :=4,
+	Error := 5
+);
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

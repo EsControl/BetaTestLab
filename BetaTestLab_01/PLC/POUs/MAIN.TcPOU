@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.14">
+  <POU Name="MAIN" Id="{b4471795-9aa5-4506-a3bc-a219d6386ac6}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	lineColor : E_LineColors;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[PRG_DisconnectorExample();
+
+PRG_ContactorExample();
+
+PRG_CircuitBreakerExample();
+
+PRG_Simulation();
+
+PRG_LVCP1();
+
+PRG_LVCP2();
+
+PRG_LVCP5();
+
+PRG_HVCP3();
+
+PRG_HVCP5();]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="15" Count="2" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="8" Count="0" />
+      <LineId Id="25" Count="1" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="35" Count="0" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="40" Count="0" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="45" Count="0" />
+      <LineId Id="44" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

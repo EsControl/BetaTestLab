@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="PRG_HVCP3" Id="{c06fe482-79bd-41fa-bb32-421c396c1a2b}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_HVCP3
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[	PRG_HVCP3_10CB1();
+	
+PRG_HVCP3_12CB1();
+
+PRG_HVCP3_14CB1();	
+
+PRG_HVCP3_16CB1();
+
+PRG_HVCP3_18CB1();
+
+PRG_HVCP3_20CB1();
+
+PRG_HVCP3_22CB1();
+
+PRG_HVCP3_24CB1();
+
+PRG_HVCP3_26CB1();
+
+PRG_HVCP3_28CB1();
+
+PRG_HVCP3_30CB1();
+
+PRG_HVCP3_32CB1();
+
+PRG_HVCP3_34CB1();
+
+PRG_HVCP3_36CB1();
+
+PRG_HVCP3_38CB1();
+
+PRG_HVCP3_40CB1();
+
+PRG_HVCP3_42CB1();
+
+PRG_HVCP3_44CB1();
+
+PRG_HVCP3_46CB1();
+
+PRG_HVCP3_48CB1();
+
+PRG_HVCP3_50CB1();
+
+PRG_HVCP3_52CB1();
+
+PRG_HVCP3_54CB1();
+
+PRG_HVCP3_56CB1(); ]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_HVCP3">
+      <LineId Id="60" Count="45" />
+      <LineId Id="12" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
