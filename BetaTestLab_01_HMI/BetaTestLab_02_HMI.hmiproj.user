@@ -50,7 +50,7 @@
     }
   ]
 }</TcHmiEditor_SplitAreaStates>
-    <TcHmiEditor_SelectBindingWindowDimension>306;386;1139;639</TcHmiEditor_SelectBindingWindowDimension>
+    <TcHmiEditor_SelectBindingWindowDimension>192;372;1139;639</TcHmiEditor_SelectBindingWindowDimension>
     <TcHmiEditor_SelectBindingWindowColumnWidths_m_SymbolMappedTree>[
   416.79999999999984,
   50.0,
