@@ -6669,6 +6669,276 @@
             },
             "USEMAPPING": true
         },
+        "PLC1.GVL_LVCP2.astCompensationGroups.0": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP2::astCompensationGroups[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP2.astCompensationGroups.1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP2::astCompensationGroups[1]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP2.astCompensationGroups.2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP2::astCompensationGroups[2]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP2.astCompensationGroups.3": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP2::astCompensationGroups[3]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP2.astCompensationGroups.4": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP2::astCompensationGroups[4]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP2.astCompensationGroups.5": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP2::astCompensationGroups[5]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP2.astCompensationGroups.6": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP2::astCompensationGroups[6]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP2.astCompensationGroups.7": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP2::astCompensationGroups[7]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP2.astCompensationGroups.8": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP2::astCompensationGroups[8]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP2.astCompensationGroups.9": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP2::astCompensationGroups[9]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP2.stGroup10_ContactorHMI": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP2::stGroup10_ContactorHMI",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "comment": "Grup 10 kontaktör durum ve kontrol bilgileri"
+                    },
+                    {
+                        "$ref": "tchmi:server#/definitions/PLC1.ST_ContactorHMI"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP2.stGroup1_ContactorHMI": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP2::stGroup1_ContactorHMI",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "comment": "Grup 1 kontaktör durum ve kontrol bilgileri"
+                    },
+                    {
+                        "$ref": "tchmi:server#/definitions/PLC1.ST_ContactorHMI"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP2.stGroup2_ContactorHMI": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP2::stGroup2_ContactorHMI",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "comment": "Grup 2 kontaktör durum ve kontrol bilgileri"
+                    },
+                    {
+                        "$ref": "tchmi:server#/definitions/PLC1.ST_ContactorHMI"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP2.stGroup3_ContactorHMI": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP2::stGroup3_ContactorHMI",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "comment": "Grup 3 kontaktör durum ve kontrol bilgileri"
+                    },
+                    {
+                        "$ref": "tchmi:server#/definitions/PLC1.ST_ContactorHMI"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP2.stGroup4_ContactorHMI": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP2::stGroup4_ContactorHMI",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "comment": "Grup 4 kontaktör durum ve kontrol bilgileri"
+                    },
+                    {
+                        "$ref": "tchmi:server#/definitions/PLC1.ST_ContactorHMI"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP2.stGroup5_ContactorHMI": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP2::stGroup5_ContactorHMI",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "comment": "Grup 5 kontaktör durum ve kontrol bilgileri"
+                    },
+                    {
+                        "$ref": "tchmi:server#/definitions/PLC1.ST_ContactorHMI"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP2.stGroup6_ContactorHMI": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP2::stGroup6_ContactorHMI",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "comment": "Grup 6 kontaktör durum ve kontrol bilgileri"
+                    },
+                    {
+                        "$ref": "tchmi:server#/definitions/PLC1.ST_ContactorHMI"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP2.stGroup7_ContactorHMI": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP2::stGroup7_ContactorHMI",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "comment": "Grup 7 kontaktör durum ve kontrol bilgileri"
+                    },
+                    {
+                        "$ref": "tchmi:server#/definitions/PLC1.ST_ContactorHMI"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP2.stGroup8_ContactorHMI": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP2::stGroup8_ContactorHMI",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "comment": "Grup 8 kontaktör durum ve kontrol bilgileri"
+                    },
+                    {
+                        "$ref": "tchmi:server#/definitions/PLC1.ST_ContactorHMI"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP2.stGroup9_ContactorHMI": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP2::stGroup9_ContactorHMI",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "comment": "Grup 9 kontaktör durum ve kontrol bilgileri"
+                    },
+                    {
+                        "$ref": "tchmi:server#/definitions/PLC1.ST_ContactorHMI"
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
         "PLC1.PRG_LVCP1_Colors.LVCP_BaseTopCustomLines.0": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -7064,6 +7334,146 @@
             "DOMAIN": "ADS",
             "DYNAMIC": true,
             "MAPPING": "PLC1::PRG_LVCP2_Colors::LVCP_GroupCustomLineTop[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.E_LineColors"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.PRG_LVCP2_Colors.arrCapacitorSchemaColor.0": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::PRG_LVCP2_Colors::arrCapacitorSchemaColor[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CapacitorSchemaColorWithContactor"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.PRG_LVCP2_Colors.arrCapacitorSchemaColor.1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::PRG_LVCP2_Colors::arrCapacitorSchemaColor[1]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CapacitorSchemaColorWithContactor"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.PRG_LVCP2_Colors.arrCapacitorSchemaColor.2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::PRG_LVCP2_Colors::arrCapacitorSchemaColor[2]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CapacitorSchemaColorWithContactor"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.PRG_LVCP2_Colors.arrCapacitorSchemaColor.3": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::PRG_LVCP2_Colors::arrCapacitorSchemaColor[3]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CapacitorSchemaColorWithContactor"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.PRG_LVCP2_Colors.arrCapacitorSchemaColor.4": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::PRG_LVCP2_Colors::arrCapacitorSchemaColor[4]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CapacitorSchemaColorWithContactor"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.PRG_LVCP2_Colors.arrCapacitorSchemaColor.5": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::PRG_LVCP2_Colors::arrCapacitorSchemaColor[5]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CapacitorSchemaColorWithContactor"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.PRG_LVCP2_Colors.arrCapacitorSchemaColor.6": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::PRG_LVCP2_Colors::arrCapacitorSchemaColor[6]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CapacitorSchemaColorWithContactor"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.PRG_LVCP2_Colors.arrCapacitorSchemaColor.7": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::PRG_LVCP2_Colors::arrCapacitorSchemaColor[7]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CapacitorSchemaColorWithContactor"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.PRG_LVCP2_Colors.arrCapacitorSchemaColor.8": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::PRG_LVCP2_Colors::arrCapacitorSchemaColor[8]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CapacitorSchemaColorWithContactor"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.PRG_LVCP2_Colors.arrCapacitorSchemaColor.9": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::PRG_LVCP2_Colors::arrCapacitorSchemaColor[9]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CapacitorSchemaColorWithContactor"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.PRG_LVCP2_Colors.arrLine.0": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::PRG_LVCP2_Colors::arrLine[0]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.E_LineColors"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.PRG_LVCP2_Colors.arrLine.1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::PRG_LVCP2_Colors::arrLine[1]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.E_LineColors"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.PRG_LVCP2_Colors.arrLine.2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::PRG_LVCP2_Colors::arrLine[2]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.E_LineColors"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.PRG_LVCP2_Colors.arrLine.3": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::PRG_LVCP2_Colors::arrLine[3]",
             "SCHEMA": {
                 "$ref": "tchmi:server#/definitions/PLC1.E_LineColors"
             },
@@ -8015,7 +8425,24 @@
                 "PLC1.GVL_LVCP1.stMainDisconnectorHMI": 3,
                 "PLC1.GVL_LVCP2.astCompensationGroups.0": 3,
                 "PLC1.GVL_LVCP2.astCompensationGroups.1": 3,
+                "PLC1.GVL_LVCP2.astCompensationGroups.2": 3,
+                "PLC1.GVL_LVCP2.astCompensationGroups.3": 3,
+                "PLC1.GVL_LVCP2.astCompensationGroups.4": 3,
+                "PLC1.GVL_LVCP2.astCompensationGroups.5": 3,
+                "PLC1.GVL_LVCP2.astCompensationGroups.6": 3,
+                "PLC1.GVL_LVCP2.astCompensationGroups.7": 3,
+                "PLC1.GVL_LVCP2.astCompensationGroups.8": 3,
+                "PLC1.GVL_LVCP2.astCompensationGroups.9": 3,
+                "PLC1.GVL_LVCP2.stGroup10_ContactorHMI": 3,
                 "PLC1.GVL_LVCP2.stGroup1_ContactorHMI": 3,
+                "PLC1.GVL_LVCP2.stGroup2_ContactorHMI": 3,
+                "PLC1.GVL_LVCP2.stGroup3_ContactorHMI": 3,
+                "PLC1.GVL_LVCP2.stGroup4_ContactorHMI": 3,
+                "PLC1.GVL_LVCP2.stGroup5_ContactorHMI": 3,
+                "PLC1.GVL_LVCP2.stGroup6_ContactorHMI": 3,
+                "PLC1.GVL_LVCP2.stGroup7_ContactorHMI": 3,
+                "PLC1.GVL_LVCP2.stGroup8_ContactorHMI": 3,
+                "PLC1.GVL_LVCP2.stGroup9_ContactorHMI": 3,
                 "PLC1.MAIN.lineColor": 3,
                 "PLC1.MAIN.sad": 3,
                 "PLC1.MAIN.xx": 3,
@@ -8063,6 +8490,20 @@
                 "PLC1.PRG_LVCP1_Colors.arrLine.3": 3,
                 "PLC1.PRG_LVCP2_Colors.LVCP_GroupCustomLineBottom.0": 3,
                 "PLC1.PRG_LVCP2_Colors.LVCP_GroupCustomLineTop.0": 3,
+                "PLC1.PRG_LVCP2_Colors.arrCapacitorSchemaColor.0": 3,
+                "PLC1.PRG_LVCP2_Colors.arrCapacitorSchemaColor.1": 3,
+                "PLC1.PRG_LVCP2_Colors.arrCapacitorSchemaColor.2": 3,
+                "PLC1.PRG_LVCP2_Colors.arrCapacitorSchemaColor.3": 3,
+                "PLC1.PRG_LVCP2_Colors.arrCapacitorSchemaColor.4": 3,
+                "PLC1.PRG_LVCP2_Colors.arrCapacitorSchemaColor.5": 3,
+                "PLC1.PRG_LVCP2_Colors.arrCapacitorSchemaColor.6": 3,
+                "PLC1.PRG_LVCP2_Colors.arrCapacitorSchemaColor.7": 3,
+                "PLC1.PRG_LVCP2_Colors.arrCapacitorSchemaColor.8": 3,
+                "PLC1.PRG_LVCP2_Colors.arrCapacitorSchemaColor.9": 3,
+                "PLC1.PRG_LVCP2_Colors.arrLine.0": 3,
+                "PLC1.PRG_LVCP2_Colors.arrLine.1": 3,
+                "PLC1.PRG_LVCP2_Colors.arrLine.2": 3,
+                "PLC1.PRG_LVCP2_Colors.arrLine.3": 3,
                 "SetLocale": 3,
                 "SubscribeEvents": 3,
                 "TcHmiSqliteLogger.Diagnostics": 1,

@@ -59,6 +59,22 @@
     "widthUnit": "factor",
     "widthMode": "Value",
     "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  },
+  {
+    "width": 1.0,
+    "widthUnit": "factor",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  },
+  {
+    "width": 1.0,
+    "widthUnit": "factor",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
     "minWidth": 85.0,
     "minWidthUnit": "px",
     "overflow": false
@@ -122,7 +138,7 @@
                 }
                 ]
             </script>
-        <div id="LVCP_CapacitorSchema_39" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-ebottomlinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineBottom.0%/s%" data-tchmi-etoplinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineTop.0%/s%" data-tchmi-height="270" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/Capacitor/CapacitorSchema.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="85" data-tchmi-width-unit="px" data-tchmi-stcompensationgroup="%s%PLC1.GVL_LVCP1.astCompensationGroups.0%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup1_ContactorHMI%/s%" data-tchmi-grid-column-index="1">
+        <div id="LVCP_CapacitorSchema_39" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-ebottomlinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineBottom.0%/s%" data-tchmi-etoplinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineTop.0%/s%" data-tchmi-height="270" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/Capacitor/Schemas/CapacitorSchemaWithContactor.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="85" data-tchmi-width-unit="px" data-tchmi-stcompensationgroup="%s%PLC1.GVL_LVCP1.astCompensationGroups.0%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup1_ContactorHMI%/s%" data-tchmi-grid-column-index="1">
 </div>
 </div>
         <div id="LVCP_CenterGrid_59" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-creator-visibility="Visible" data-tchmi-grid-column-index="1">
@@ -154,7 +170,7 @@
                 }
                 ]
             </script>
-        <div id="LVCP_CapacitorSchema_40" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-ebottomlinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineBottom.1%/s%" data-tchmi-etoplinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineTop.1%/s%" data-tchmi-height="270" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/Capacitor/CapacitorSchema.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="85" data-tchmi-width-unit="px" data-tchmi-stcompensationgroup="%s%PLC1.GVL_LVCP1.astCompensationGroups.1%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup2_ContactorHMI%/s%" data-tchmi-grid-column-index="1">
+        <div id="LVCP_CapacitorSchema_40" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-ebottomlinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineBottom.1%/s%" data-tchmi-etoplinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineTop.1%/s%" data-tchmi-height="270" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/Capacitor/Schemas/CapacitorSchemaWithContactor.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="85" data-tchmi-width-unit="px" data-tchmi-stcompensationgroup="%s%PLC1.GVL_LVCP1.astCompensationGroups.1%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup2_ContactorHMI%/s%" data-tchmi-grid-column-index="1">
 </div>
 </div>
         <div id="LVCP_CenterGrid_60" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-creator-visibility="Visible" data-tchmi-grid-column-index="2">
@@ -186,7 +202,7 @@
                 }
                 ]
             </script>
-<div id="LVCP_CapacitorSchema_41" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-ebottomlinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineBottom.2%/s%" data-tchmi-etoplinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineTop.2%/s%" data-tchmi-height="270" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/Capacitor/CapacitorSchema.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="85" data-tchmi-width-unit="px" data-tchmi-stcompensationgroup="%s%PLC1.GVL_LVCP1.astCompensationGroups.2%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup3_ContactorHMI%/s%" data-tchmi-grid-column-index="1">
+<div id="LVCP_CapacitorSchema_41" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-ebottomlinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineBottom.2%/s%" data-tchmi-etoplinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineTop.2%/s%" data-tchmi-height="270" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/Capacitor/Schemas/CapacitorSchemaWithContactor.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="85" data-tchmi-width-unit="px" data-tchmi-stcompensationgroup="%s%PLC1.GVL_LVCP1.astCompensationGroups.2%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup3_ContactorHMI%/s%" data-tchmi-grid-column-index="1">
 </div>
 </div>
         <div id="LVCP_CenterGrid_61" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-creator-visibility="Visible" data-tchmi-grid-column-index="3">
@@ -218,7 +234,7 @@
                 }
                 ]
             </script>
-        <div id="LVCP_CapacitorSchema_42" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-ebottomlinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineBottom.3%/s%" data-tchmi-etoplinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineTop.3%/s%" data-tchmi-height="270" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/Capacitor/CapacitorSchema.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="85" data-tchmi-width-unit="px" data-tchmi-stcompensationgroup="%s%PLC1.GVL_LVCP1.astCompensationGroups.3%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup4_ContactorHMI%/s%" data-tchmi-grid-column-index="1">
+        <div id="LVCP_CapacitorSchema_42" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-ebottomlinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineBottom.3%/s%" data-tchmi-etoplinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineTop.3%/s%" data-tchmi-height="270" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/Capacitor/Schemas/CapacitorSchemaWithContactor.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="85" data-tchmi-width-unit="px" data-tchmi-stcompensationgroup="%s%PLC1.GVL_LVCP1.astCompensationGroups.3%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup4_ContactorHMI%/s%" data-tchmi-grid-column-index="1">
 </div>
 </div>
         <div id="LVCP_CenterGrid_62" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-creator-visibility="Visible" data-tchmi-grid-column-index="4">
@@ -250,10 +266,74 @@
                 }
                 ]
             </script>
-        <div id="LVCP_CapacitorSchema_43" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-ebottomlinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineBottom.4%/s%" data-tchmi-etoplinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineTop.4%/s%" data-tchmi-height="270" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/Capacitor/CapacitorSchema.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="85" data-tchmi-width-unit="px" data-tchmi-stcompensationgroup="%s%PLC1.GVL_LVCP1.astCompensationGroups.4%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup5_ContactorHMI%/s%" data-tchmi-grid-column-index="1">
+        <div id="LVCP_CapacitorSchema_43" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-ebottomlinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineBottom.4%/s%" data-tchmi-etoplinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineTop.4%/s%" data-tchmi-height="270" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/Capacitor/Schemas/CapacitorSchemaWithContactor.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="85" data-tchmi-width-unit="px" data-tchmi-stcompensationgroup="%s%PLC1.GVL_LVCP1.astCompensationGroups.4%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup5_ContactorHMI%/s%" data-tchmi-grid-column-index="1">
 </div>
 </div>
-    </div>
+    <div id="LVCP_CenterGrid_63" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-creator-visibility="Visible" data-tchmi-grid-column-index="5">
+<script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+                [
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Content",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                }
+                ]
+            </script>
+        <div id="LVCP_CapacitorSchema_44" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-ebottomlinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineBottom.4%/s%" data-tchmi-etoplinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineTop.4%/s%" data-tchmi-height="270" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/Capacitor/Schemas/CapacitorSchemaWithContactor.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="85" data-tchmi-width-unit="px" data-tchmi-stcompensationgroup="%s%PLC1.GVL_LVCP1.astCompensationGroups.4%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup5_ContactorHMI%/s%" data-tchmi-grid-column-index="1">
+</div>
+</div>
+<div id="LVCP_CenterGrid_64" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-creator-visibility="Visible" data-tchmi-grid-column-index="6">
+<script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+                [
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Content",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                }
+                ]
+            </script>
+        <div id="LVCP_CapacitorSchema_45" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-ebottomlinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineBottom.4%/s%" data-tchmi-etoplinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_GroupCustomLineTop.4%/s%" data-tchmi-height="270" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/Capacitor/Schemas/CapacitorSchemaWithContactor.usercontrol" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="85" data-tchmi-width-unit="px" data-tchmi-stcompensationgroup="%s%PLC1.GVL_LVCP1.astCompensationGroups.4%/s%" data-tchmi-stcontactorhmi="%s%PLC1.GVL_LVCP1.stGroup5_ContactorHMI%/s%" data-tchmi-grid-column-index="1">
+</div>
+</div>
+</div>
 
 <div id="LVCP_CustomContactor_4" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height="50" data-tchmi-height-unit="px" data-tchmi-left="922" data-tchmi-left-unit="px" data-tchmi-top="200" data-tchmi-top-unit="px" data-tchmi-width="75" data-tchmi-width-unit="px">
 <div id="ContactorVertical_BaseContainer_7" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-bottom-unit="%" data-tchmi-right-unit="%" data-tchmi-creator-visibility="Visible">
@@ -314,11 +394,11 @@
 </div>
 <div id="LVCP_BaseTopCustomLine_9" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="3" data-tchmi-height-unit="px" data-tchmi-left="946" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="150" data-tchmi-top-unit="px" data-tchmi-width="100" data-tchmi-width-unit="px" data-tchmi-isactive="true" data-tchmi-elinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_BaseTopCustomLines.1%/s%">
 </div>
-<div id="LVCP_BaseTopCustomLine_10" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="170" data-tchmi-height-unit="px" data-tchmi-left="946" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="45" data-tchmi-top-unit="px" data-tchmi-width="3" data-tchmi-width-unit="px" data-tchmi-isvertical="true" data-tchmi-isactive="true" data-tchmi-elinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_BaseTopCustomLines.0%/s%">
+<div id="LVCP_BaseTopCustomLine_10" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="170" data-tchmi-height-unit="px" data-tchmi-left="946" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="45" data-tchmi-top-unit="px" data-tchmi-width="3" data-tchmi-width-unit="px" data-tchmi-isvertical="true" data-tchmi-isactive="true">
 </div>
 <div id="LVCP_BaseTopCustomLine_11" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="70" data-tchmi-height-unit="px" data-tchmi-left="946" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top="250" data-tchmi-top-unit="px" data-tchmi-width="3" data-tchmi-width-unit="px" data-tchmi-isvertical="true" data-tchmi-isactive="true" data-tchmi-elinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_BaseTopCustomLines.2%/s%">
 </div>
-<div id="LVCP_BaseTopCustomLine_12" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="2" data-tchmi-height-unit="px" data-tchmi-left="51" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top-unit="px" data-tchmi-isactive="true" data-tchmi-right="76" data-tchmi-top="320" data-tchmi-elinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_BaseTopCustomLines.3%/s%">
+<div id="LVCP_BaseTopCustomLine_12" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="2" data-tchmi-height-unit="px" data-tchmi-left="140" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top-unit="px" data-tchmi-isactive="true" data-tchmi-right="160" data-tchmi-top="320" data-tchmi-elinecolor="%s%PLC1.PRG_LVCP1_Colors.LVCP_BaseTopCustomLines.3%/s%">
 </div>
 <div id="LVCP_EnergyAnalyzer_4" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-current="0" data-tchmi-headertext="Default Header" data-tchmi-height="90" data-tchmi-height-unit="px" data-tchmi-left="1045" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/EnergyAnalyzer/CurrentAndVoltage/EnergyAnalyzerCurrentAndVoltage.usercontrol" data-tchmi-top="110" data-tchmi-top-unit="px" data-tchmi-voltage="0" data-tchmi-width="150" data-tchmi-width-unit="px">
 </div>

@@ -1141,7 +1141,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{448BB4E8-A075-4420-B493-7235F19108E9}" Name="PLC" PrjFilePath="PLC\PLC.plcproj" TmcFilePath="PLC\PLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC\PLC.tmc" TmcHash="{70C9674F-3C5B-E63B-B064-4E1564CC2AC9}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC\PLC.tmc" TmcHash="{DFA54D1E-D470-C011-D42A-2423ADAC6708}">
 					<Name>PLC Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
@@ -1439,31 +1439,6 @@
 							<Type GUID="{F332C737-C140-9D9A-0048-0F40BD7B5BCA}">MDP5001_341_I_E4FC35CB</Type>
 						</Var>
 						<Var>
-							<Name>PRG_LVCP5_MainCircuitBreaker.stCircuitBreakerIO.bPositionOn</Name>
-							<Comment><![CDATA[ ON pozisyon geri bildirimi]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>PRG_LVCP5_MainCircuitBreaker.stCircuitBreakerIO.bPositionOff</Name>
-							<Comment><![CDATA[ OFF pozisyon geri bildirimi]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>PRG_LVCP5_MainCircuitBreaker.stCircuitBreakerIO.bPositionTripped</Name>
-							<Comment><![CDATA[ TRIP pozisyon geri bildirimi]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>PRG_LVCP5_MainCircuitBreaker.stCircuitBreakerIO.bSpringCharged</Name>
-							<Comment><![CDATA[ Yay kurulu bilgisi]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>PRG_LVCP5_MainCircuitBreaker.stCircuitBreakerIO.bPLCControl</Name>
-							<Comment><![CDATA[ PLC kontrol seçici]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>PRG_LVCP5_Group1.stContactor_IO.bFeedback</Name>
 							<Comment><![CDATA[ Kontaktör yardımcı kontak geri bildirimi]]></Comment>
 							<Type>BOOL</Type>
@@ -1530,6 +1505,31 @@
 						</Var>
 						<Var>
 							<Name>PRG_LVCP5_Group7.stContactor_IO.bPLCControl</Name>
+							<Comment><![CDATA[ PLC kontrol seçici]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>PRG_LVCP5_MainCircuitBreaker.stCircuitBreakerIO.bPositionOn</Name>
+							<Comment><![CDATA[ ON pozisyon geri bildirimi]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>PRG_LVCP5_MainCircuitBreaker.stCircuitBreakerIO.bPositionOff</Name>
+							<Comment><![CDATA[ OFF pozisyon geri bildirimi]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>PRG_LVCP5_MainCircuitBreaker.stCircuitBreakerIO.bPositionTripped</Name>
+							<Comment><![CDATA[ TRIP pozisyon geri bildirimi]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>PRG_LVCP5_MainCircuitBreaker.stCircuitBreakerIO.bSpringCharged</Name>
+							<Comment><![CDATA[ Yay kurulu bilgisi]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>PRG_LVCP5_MainCircuitBreaker.stCircuitBreakerIO.bPLCControl</Name>
 							<Comment><![CDATA[ PLC kontrol seçici]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -1774,6 +1774,10 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
+							<Name>GVL_Alarm.EP6_3X2_24VDC_OK</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>PRG_HVCP3_22CB1.stDisconnectorIO.bContactorOn_FB</Name>
 							<Comment><![CDATA[ ON kontaktörü geri bildirimi]]></Comment>
 							<Type>BOOL</Type>
@@ -1814,10 +1818,6 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Alarm.EP6_3X2_24VDC_OK</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_Alarm.EP6_UPS_24VDC_OK</Name>
 							<Type>BOOL</Type>
 						</Var>
@@ -1835,6 +1835,10 @@
 						</Var>
 						<Var>
 							<Name>GVL_Alarm.EP8_UPS_24VDC_OK</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Alarm.EP9_3X2_24VDC_OK</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -1878,10 +1882,6 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Alarm.EP9_3X2_24VDC_OK</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_Alarm.EP9_UPS_24VDC_OK</Name>
 							<Type>BOOL</Type>
 						</Var>
@@ -1891,6 +1891,16 @@
 						</Var>
 						<Var>
 							<Name>GVL_Alarm.EP10_UPS_24VDC_OK</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stContactor1_IO.bFeedback</Name>
+							<Comment><![CDATA[ Kontaktör yardımcı kontak geri bildirimi]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_IO.stContactor1_IO.bPLCControl</Name>
+							<Comment><![CDATA[ PLC kontrol seçici]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -1930,16 +1940,6 @@
 						</Var>
 						<Var>
 							<Name>PRG_HVCP3_26CB1.stDisconnectorIO.bPLCControl</Name>
-							<Comment><![CDATA[ PLC kontrol seçici]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stContactor1_IO.bFeedback</Name>
-							<Comment><![CDATA[ Kontaktör yardımcı kontak geri bildirimi]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stContactor1_IO.bPLCControl</Name>
 							<Comment><![CDATA[ PLC kontrol seçici]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -3348,16 +3348,6 @@
 							<Type GUID="{F332C738-C140-9D9A-0048-0F40BD7B5BCA}">MDP5001_341_O_E4FC35CB</Type>
 						</Var>
 						<Var>
-							<Name>PRG_LVCP5_MainCircuitBreaker.stCircuitBreakerIO.bOnCommand</Name>
-							<Comment><![CDATA[ ON komutu]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>PRG_LVCP5_MainCircuitBreaker.stCircuitBreakerIO.bOffCommand</Name>
-							<Comment><![CDATA[ OFF komutu]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>PRG_LVCP5_Group1.stContactor_IO.bOutput</Name>
 							<Comment><![CDATA[ Kontaktör bobini]]></Comment>
 							<Type>BOOL</Type>
@@ -3390,6 +3380,16 @@
 						<Var>
 							<Name>PRG_LVCP5_Group7.stContactor_IO.bOutput</Name>
 							<Comment><![CDATA[ Kontaktör bobini]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>PRG_LVCP5_MainCircuitBreaker.stCircuitBreakerIO.bOnCommand</Name>
+							<Comment><![CDATA[ ON komutu]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>PRG_LVCP5_MainCircuitBreaker.stCircuitBreakerIO.bOffCommand</Name>
+							<Comment><![CDATA[ OFF komutu]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -3473,6 +3473,11 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
+							<Name>GVL_IO.stContactor1_IO.bOutput</Name>
+							<Comment><![CDATA[ Kontaktör bobini]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>PRG_HVCP3_26CB1.stDisconnectorIO.bContactorOn_Out</Name>
 							<Comment><![CDATA[ ON kontaktörü sürme]]></Comment>
 							<Type>BOOL</Type>
@@ -3480,11 +3485,6 @@
 						<Var>
 							<Name>PRG_HVCP3_26CB1.stDisconnectorIO.bContactorOff_Out</Name>
 							<Comment><![CDATA[ OFF kontaktörü sürme]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_IO.stContactor1_IO.bOutput</Name>
-							<Comment><![CDATA[ Kontaktör bobini]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -13227,121 +13227,9 @@
 				<Link VarA="PlcTask Outputs^PRG_LVCP2_MainDisconnector.stDisconnectorIO.bContactorOff_Out" VarB="Channel 2^Output"/>
 				<Link VarA="PlcTask Outputs^PRG_LVCP2_MainDisconnector.stDisconnectorIO.bContactorOn_Out" VarB="Channel 1^Output"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^+EP8-11CP1 (EK1100)^+EP8-11AI1 (EL3453)">
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L1_Basic_Current" VarB="L1 Basic^Current"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L1_Basic_Voltage" VarB="L1 Basic^Voltage"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L1_Power_Active_Power" VarB="L1 Power^Active Power"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L1_Power_Apparent_Power" VarB="L1 Power^Apparent Power"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L1_Power_Power_Factor" VarB="L1 Power^Power Factor"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L1_Power_Reactive_Power" VarB="L1 Power^Reactive Power"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L1_Status_Current_Guard_Error" VarB="L1 Status^Current Guard Error"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L1_Status_Current_Guard_Warning" VarB="L1 Status^Current Guard Warning"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L1_Status_Inaccurate_Current" VarB="L1 Status^Inaccurate Current"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L1_Status_Inaccurate_Voltage" VarB="L1 Status^Inaccurate Voltage"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L1_Status_Overcurrent" VarB="L1 Status^Overcurrent"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L1_Status_Overvoltage" VarB="L1 Status^Overvoltage"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L1_Status_TxPDO_Toggle" VarB="L1 Status^TxPDO Toggle"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L1_Status_Voltage_Guard_Error" VarB="L1 Status^Voltage Guard Error"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L1_Status_Voltage_Guard_Warning" VarB="L1 Status^Voltage Guard Warning"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L1_Status_Voltage_Sign_Bit" VarB="L1 Status^Voltage Sign Bit"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L2_Basic_Current" VarB="L2 Basic^Current"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L2_Basic_Voltage" VarB="L2 Basic^Voltage"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L2_Power_Active_Power" VarB="L2 Power^Active Power"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L2_Power_Apparent_Power" VarB="L2 Power^Apparent Power"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L2_Power_Power_Factor" VarB="L2 Power^Power Factor"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L2_Power_Reactive_Power" VarB="L2 Power^Reactive Power"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L2_Status_Current_Guard_Error" VarB="L2 Status^Current Guard Error"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L2_Status_Current_Guard_Warning" VarB="L2 Status^Current Guard Warning"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L2_Status_Inaccurate_Current" VarB="L2 Status^Inaccurate Current"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L2_Status_Inaccurate_Voltage" VarB="L2 Status^Inaccurate Voltage"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L2_Status_Overcurrent" VarB="L2 Status^Overcurrent"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L2_Status_Overvoltage" VarB="L2 Status^Overvoltage"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L2_Status_TxPDO_Toggle" VarB="L2 Status^TxPDO Toggle"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L2_Status_Voltage_Guard_Error" VarB="L2 Status^Voltage Guard Error"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L2_Status_Voltage_Guard_Warning" VarB="L2 Status^Voltage Guard Warning"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L2_Status_Voltage_Sign_Bit" VarB="L2 Status^Voltage Sign Bit"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L3_Basic_Current" VarB="L3 Basic^Current"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L3_Basic_Voltage" VarB="L3 Basic^Voltage"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L3_Power_Active_Power" VarB="L3 Power^Active Power"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L3_Power_Apparent_Power" VarB="L3 Power^Apparent Power"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L3_Power_Power_Factor" VarB="L3 Power^Power Factor"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L3_Power_Reactive_Power" VarB="L3 Power^Reactive Power"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L3_Status_Current_Guard_Error" VarB="L3 Status^Current Guard Error"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L3_Status_Current_Guard_Warning" VarB="L3 Status^Current Guard Warning"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L3_Status_Inaccurate_Current" VarB="L3 Status^Inaccurate Current"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L3_Status_Inaccurate_Voltage" VarB="L3 Status^Inaccurate Voltage"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L3_Status_Overcurrent" VarB="L3 Status^Overcurrent"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L3_Status_Overvoltage" VarB="L3 Status^Overvoltage"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L3_Status_TxPDO_Toggle" VarB="L3 Status^TxPDO Toggle"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L3_Status_Voltage_Guard_Error" VarB="L3 Status^Voltage Guard Error"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L3_Status_Voltage_Guard_Warning" VarB="L3 Status^Voltage Guard Warning"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_L3_Status_Voltage_Sign_Bit" VarB="L3 Status^Voltage Sign Bit"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Basic_Calculated_Error_Current" VarB="Total Basic^Calculated Error Current"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Basic_Frequency" VarB="Total Basic^Frequency"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Basic_Neutral_Line_Current" VarB="Total Basic^Neutral Line Current"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Basic_Power_Factor" VarB="Total Basic^Power Factor"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Basic_ROCOF" VarB="Total Basic^ROCOF"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Status_Active_Power_Guard_Error" VarB="Total Status^Active Power Guard Error"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Status_Active_Power_Guard_Warning" VarB="Total Status^Active Power Guard Warning"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Status_Apparent_Power_Guard_Error" VarB="Total Status^Apparent Power Guard Error"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Status_Apparent_Power_Guard_Warning" VarB="Total Status^Apparent Power Guard Warning"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Status_Frequency_Guard_Error" VarB="Total Status^Frequency Guard Error"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Status_Frequency_Guard_Warning" VarB="Total Status^Frequency Guard Warning"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Status_Grid_Direction" VarB="Total Status^Grid Direction"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Status_Neutral_Current_Guard_Error" VarB="Total Status^Neutral Current Guard Error"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Status_Neutral_Current_Guard_Warning" VarB="Total Status^Neutral Current Guard Warning"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Status_Power_Quality_Factor" VarB="Total Status^Power Quality Factor"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Status_Power_Quality_Guard_Error" VarB="Total Status^Power Quality Guard Error"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Status_Power_Quality_Guard_Warning" VarB="Total Status^Power Quality Guard Warning"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Status_System_State" VarB="Total Status^System State"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Status_TxPDO_State" VarB="Total Status^TxPDO State"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Status_TxPDO_Toggle" VarB="Total Status^TxPDO Toggle"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Variant_Value_In_Index_1_REAL" VarB="Total Variant Value In^Index 1 REAL"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Variant_Value_In_Index_2_REAL" VarB="Total Variant Value In^Index 2 REAL"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Variant_Value_In_Index_3_REAL" VarB="Total Variant Value In^Index 3 REAL"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Variant_Value_In_Index_4_ULINT" VarB="Total Variant Value In^Index 4 ULINT"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Variant_Value_In_TxPDO_Toggle" VarB="Total Variant Value In^TxPDO Toggle"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Variant_Value_In_Value_1_REAL" VarB="Total Variant Value In^Value 1 REAL"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Variant_Value_In_Value_2_REAL" VarB="Total Variant Value In^Value 2 REAL"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Variant_Value_In_Value_3_REAL" VarB="Total Variant Value In^Value 3 REAL"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Input^MDP5001_341_Total_Variant_Value_In_Value_4_ULINT" VarB="Total Variant Value In^Value 4 ULINT"/>
-				<Link VarA="PlcTask Outputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Output^MDP5001_341_Total_Variant_Value_Out_Index_1_REAL" VarB="Total Variant Value Out^Index 1 REAL"/>
-				<Link VarA="PlcTask Outputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Output^MDP5001_341_Total_Variant_Value_Out_Index_2_REAL" VarB="Total Variant Value Out^Index 2 REAL"/>
-				<Link VarA="PlcTask Outputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Output^MDP5001_341_Total_Variant_Value_Out_Index_3_REAL" VarB="Total Variant Value Out^Index 3 REAL"/>
-				<Link VarA="PlcTask Outputs^PRG_LVCP5_PowerMeasurement.fbEL3453.EL3453.MDP5001_341_Output^MDP5001_341_Total_Variant_Value_Out_Index_4_ULINT" VarB="Total Variant Value Out^Index 4 ULINT"/>
-			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^+EP8-11CP1 (EK1100)^+EP8-11DI1 (EL1809)">
 				<Link VarA="PlcTask Inputs^GVL_Alarm.EP8_3X2_24VDC_OK" VarB="Channel 1^Input"/>
 				<Link VarA="PlcTask Inputs^GVL_Alarm.EP8_UPS_24VDC_OK" VarB="Channel 2^Input"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_Group1.stContactor_IO.bFeedback" VarB="Channel 6^Input"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_Group1.stContactor_IO.bPLCControl" VarB="Channel 7^Input"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_Group2.stContactor_IO.bFeedback" VarB="Channel 8^Input"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_Group2.stContactor_IO.bPLCControl" VarB="Channel 9^Input"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_Group3.stContactor_IO.bFeedback" VarB="Channel 10^Input"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_Group3.stContactor_IO.bPLCControl" VarB="Channel 11^Input"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_Group4.stContactor_IO.bFeedback" VarB="Channel 12^Input"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_Group4.stContactor_IO.bPLCControl" VarB="Channel 13^Input"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_Group5.stContactor_IO.bFeedback" VarB="Channel 14^Input"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_Group5.stContactor_IO.bPLCControl" VarB="Channel 15^Input"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_Group6.stContactor_IO.bFeedback" VarB="Channel 16^Input"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_MainCircuitBreaker.stCircuitBreakerIO.bPositionOff" VarB="Channel 4^Input"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_MainCircuitBreaker.stCircuitBreakerIO.bPositionOn" VarB="Channel 3^Input"/>
-			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^+EP8-11CP1 (EK1100)^+EP8-11DI2 (EL1809)">
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_Group6.stContactor_IO.bPLCControl" VarB="Channel 1^Input"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_Group7.stContactor_IO.bFeedback" VarB="Channel 2^Input"/>
-				<Link VarA="PlcTask Inputs^PRG_LVCP5_Group7.stContactor_IO.bPLCControl" VarB="Channel 3^Input"/>
-			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^+EP8-11CP1 (EK1100)^+EP8-11DQ1 (EL2809-0015)">
-				<Link VarA="PlcTask Outputs^PRG_LVCP5_Group1.stContactor_IO.bOutput" VarB="Channel 3^Output"/>
-				<Link VarA="PlcTask Outputs^PRG_LVCP5_Group2.stContactor_IO.bOutput" VarB="Channel 4^Output"/>
-				<Link VarA="PlcTask Outputs^PRG_LVCP5_Group3.stContactor_IO.bOutput" VarB="Channel 5^Output"/>
-				<Link VarA="PlcTask Outputs^PRG_LVCP5_Group4.stContactor_IO.bOutput" VarB="Channel 6^Output"/>
-				<Link VarA="PlcTask Outputs^PRG_LVCP5_Group5.stContactor_IO.bOutput" VarB="Channel 7^Output"/>
-				<Link VarA="PlcTask Outputs^PRG_LVCP5_Group6.stContactor_IO.bOutput" VarB="Channel 8^Output"/>
-				<Link VarA="PlcTask Outputs^PRG_LVCP5_Group7.stContactor_IO.bOutput" VarB="Channel 9^Output"/>
-				<Link VarA="PlcTask Outputs^PRG_LVCP5_MainCircuitBreaker.stCircuitBreakerIO.bOffCommand" VarB="Channel 2^Output"/>
-				<Link VarA="PlcTask Outputs^PRG_LVCP5_MainCircuitBreaker.stCircuitBreakerIO.bOnCommand" VarB="Channel 1^Output"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^+EP9-5CP5 (EK1100)^+EP9-5DI1 (EL1809)">
 				<Link VarA="PlcTask Inputs^GVL_Alarm.EP9_3X2_24VDC_OK" VarB="Channel 1^Input"/>

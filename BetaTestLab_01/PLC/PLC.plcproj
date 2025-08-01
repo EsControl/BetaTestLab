@@ -298,6 +298,9 @@
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
     </Compile>
+    <Compile Include="POUs\LVCP5\PRG_LVCP5_Colors.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\LVCP5\PRG_LVCP5_PowerMeasurement.TcPOU">
       <SubType>Code</SubType>
     </Compile>

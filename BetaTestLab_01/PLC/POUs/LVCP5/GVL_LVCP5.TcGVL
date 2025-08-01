@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
   <GVL Name="GVL_LVCP5" Id="{98bbf797-e6c2-4cca-b8a5-f9b2b6ffb24c}">
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL PERSISTENT

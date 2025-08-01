@@ -1,177 +1,76 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.14">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
   <POU Name="PRG_LVCP2_Colors" Id="{86f33a46-4c8f-4c19-9dd6-f7eb7827ae61}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_LVCP2_Colors
 VAR
-	scenario : INT;
-    i : INT; // Loop counter
-    
-    // Base lines as array
-    LVCP_BaseTopCustomLines : ARRAY[1..4] OF E_LineColors;
-    
-    // Group arrays - 19 groups
-    LVCP_GroupCustomLineTop : ARRAY[1..19] OF E_LineColors;
-    LVCP_GroupCustomLineBottom : ARRAY[1..19] OF E_LineColors;
-    LVCP_GroupCustomLineBottom2 : ARRAY[1..19] OF E_LineColors;
-    LVCP_Ground : ARRAY[1..19] OF E_LineColors;
-    LVCP_Capacitor : ARRAY[1..19] OF E_LineColors;
-    
-    // Contactor status array - GVL referanslarınızı buraya uyarlayın
-    ContactorStatus : ARRAY[1..19] OF E_ContactorPosition;
+	arrLine : ARRAY[1..4] OF E_LineColors;
+	arrCapacitorSchemaColor : ARRAY[1..10] OF ST_CapacitorSchemaColorWithContactor;
+
+	i : INT;
+	bInitDone : BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[ACT_TopLineColorConfigurations();
+      <ST><![CDATA[IF NOT bInitDone THEN
+	ACT_ContactorConfigurations();
+	bInitDone := TRUE;
+END_IF
 
-ACT_ContactorConfigurations();
+//line1
+arrLine[1] := E_LineColors.Energised_Red;
 
-ACT_GroupConfigurations();]]></ST>
+//line2
+arrLine[2] := arrLine[1];
+
+//line3
+arrLine[3] := arrLine[2];
+
+//line4
+arrLine[4] := arrLine[3];
+
+//şemaları kendi içerisinde kontrol edicez
+FOR i:=1 TO 10 DO
+	arrCapacitorSchemaColor[i].GroundColor := E_LineColors.Grounded_Green;
+	arrCapacitorSchemaColor[i].BottomLineColor2 := E_LineColors.Grounded_Green;
+
+	//topline
+	arrCapacitorSchemaColor[i].TopLineColor := arrLine[4];
+	
+	//bottomLine - şema üzerinde ayırıcının altındaki her iki line birbiri ile bağlantılı olduğu için tek yerden yönetiliyor
+	IF arrCapacitorSchemaColor[i].ContactorPosition = E_ContactorPosition.ON THEN
+		arrCapacitorSchemaColor[i].BottomLineColor := arrCapacitorSchemaColor[i].TopLineColor;
+	ELSE
+		arrCapacitorSchemaColor[i].BottomLineColor := E_LineColors.Default;
+	END_IF
+	
+	//capacitor
+	arrCapacitorSchemaColor[i].CapacitorColor := arrCapacitorSchemaColor[i].BottomLineColor;
+	
+END_FOR
+]]></ST>
     </Implementation>
     <Action Name="ACT_ContactorConfigurations" Id="{a5685274-0563-424a-955c-a8fd260ff2d8}">
       <Implementation>
-        <ST><![CDATA[ContactorStatus[1] := GVL_LVCP2.stGroup1_ContactorHMI.stStatus.ePosition;
-ContactorStatus[2] := GVL_LVCP2.stGroup2_ContactorHMI.stStatus.ePosition;
-ContactorStatus[3] := GVL_LVCP2.stGroup3_ContactorHMI.stStatus.ePosition;
-ContactorStatus[4] := GVL_LVCP2.stGroup4_ContactorHMI.stStatus.ePosition;
-ContactorStatus[5] := GVL_LVCP2.stGroup5_ContactorHMI.stStatus.ePosition;
-ContactorStatus[6] := GVL_LVCP2.stGroup6_ContactorHMI.stStatus.ePosition;
-ContactorStatus[7] := GVL_LVCP2.stGroup7_ContactorHMI.stStatus.ePosition;
-ContactorStatus[8] := GVL_LVCP2.stGroup8_ContactorHMI.stStatus.ePosition;
-ContactorStatus[9] := GVL_LVCP2.stGroup9_ContactorHMI.stStatus.ePosition;
-ContactorStatus[10] := GVL_LVCP2.stGroup10_ContactorHMI.stStatus.ePosition;
+        <ST><![CDATA[arrCapacitorSchemaColor[1].ContactorPosition := GVL_LVCP2.stGroup1_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[2].ContactorPosition := GVL_LVCP2.stGroup2_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[3].ContactorPosition := GVL_LVCP2.stGroup3_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[4].ContactorPosition := GVL_LVCP2.stGroup4_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[5].ContactorPosition := GVL_LVCP2.stGroup5_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[6].ContactorPosition := GVL_LVCP2.stGroup6_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[7].ContactorPosition := GVL_LVCP2.stGroup7_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[8].ContactorPosition := GVL_LVCP2.stGroup8_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[9].ContactorPosition := GVL_LVCP2.stGroup9_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[10].ContactorPosition := GVL_LVCP2.stGroup10_ContactorHMI.stStatus.ePosition;
 ]]></ST>
-      </Implementation>
-    </Action>
-    <Action Name="ACT_GroupConfigurations" Id="{594db0e6-9f22-400d-8191-18c4df301944}">
-      <Implementation>
-        <ST><![CDATA[FOR i := 1 TO 19 DO
-    // Top Line Logic
-    CASE LVCP_BaseTopCustomLines[1] OF
-		E_LineColors.Default:
-			LVCP_GroupCustomLineTop[i] := E_LineColors.Default;
-        E_LineColors.Energised_Red:
-            LVCP_GroupCustomLineTop[i] := E_LineColors.Energised_Red;
-        E_LineColors.Scnerio_SelectionPurple:
-            LVCP_GroupCustomLineTop[i] := E_LineColors.Scnerio_SelectionPurple;
-        E_LineColors.Grounded_Green:
-            LVCP_GroupCustomLineTop[i] := E_LineColors.Grounded_Green;
-        E_LineColors.Optional_SelectionOrange:
-            LVCP_GroupCustomLineTop[i] := E_LineColors.Optional_SelectionOrange;
-    END_CASE;
-    
-    // Bottom Line Logic
-    CASE LVCP_BaseTopCustomLines[1] OF
-        E_LineColors.Scnerio_SelectionPurple:
-            LVCP_GroupCustomLineBottom[i] := E_LineColors.Scnerio_SelectionPurple;
-        E_LineColors.Energised_Red:
-            IF ContactorStatus[i] = E_ContactorPosition.ON THEN
-                LVCP_GroupCustomLineBottom[i] := E_LineColors.Energised_Red;
-            ELSE
-                LVCP_GroupCustomLineBottom[i] := E_LineColors.Default;
-            END_IF;
-        E_LineColors.Default:
-            LVCP_GroupCustomLineBottom[i] := E_LineColors.Default;
-        E_LineColors.Grounded_Green:
-            IF ContactorStatus[i] = E_ContactorPosition.ON THEN
-                LVCP_GroupCustomLineBottom[i] := E_LineColors.Grounded_Green;
-            ELSE
-                LVCP_GroupCustomLineBottom[i] := E_LineColors.Default;
-            END_IF;
-    END_CASE;
-	
-	CASE LVCP_GroupCustomLineBottom[i] OF
-		E_LineColors.Default : 
-			LVCP_GroupCustomLineBottom2[i] := E_LineColors.Default;
-			LVCP_Capacitor[i] := E_LineColors.Default;
-		E_LineColors.Energised_Red:
-			LVCP_GroupCustomLineBottom2[i] := E_LineColors.Energised_Red;
-			LVCP_Capacitor[i] := E_LineColors.Energised_Red;
-		E_LineColors.Grounded_Green:
-			LVCP_GroupCustomLineBottom2[i] := E_LineColors.Grounded_Green;
-			LVCP_Capacitor[i] := E_LineColors.Grounded_Green;
-		E_LineColors.Scnerio_SelectionPurple:
-			LVCP_GroupCustomLineBottom2[i] := E_LineColors.Scnerio_SelectionPurple;
-			LVCP_Capacitor[i] := E_LineColors.Scnerio_SelectionPurple;
-	END_CASE
-	
-	IF LVCP_GroupCustomLineBottom2[i] = E_LineColors.Grounded_Green THEN
-		LVCP_Ground[i] := E_LineColors.Grounded_Green;
-	ELSE
-		LVCP_Ground[i] := E_LineColors.Default;
-	END_IF
-
-END_FOR;
-]]></ST>
-      </Implementation>
-    </Action>
-    <Action Name="ACT_TopLineColorConfigurations" Id="{d28d6075-f971-4468-9ff3-959d1d7c3aa6}">
-      <Implementation>
-        <ST><![CDATA[//LVCP_BaseTopCustomLines[1] := E_LineColors.Scnerio_SelectionPurple;
-
-CASE LVCP_BaseTopCustomLines[1] OF 	
-	E_LineColors.Energised_Red:
-		LVCP_BaseTopCustomLines[2] := E_LineColors.Energised_Red;
-		LVCP_BaseTopCustomLines[3] := E_LineColors.Energised_Red;
-		LVCP_BaseTopCustomLines[4] := E_LineColors.Energised_Red;
-	E_LineColors.Scnerio_SelectionPurple: 
-		LVCP_BaseTopCustomLines[2] := E_LineColors.Scnerio_SelectionPurple;
-		LVCP_BaseTopCustomLines[3] := E_LineColors.Scnerio_SelectionPurple;
-		LVCP_BaseTopCustomLines[4] := E_LineColors.Scnerio_SelectionPurple;
-	E_LineColors.Grounded_Green:
-		LVCP_BaseTopCustomLines[2] := E_LineColors.Grounded_Green;
-		LVCP_BaseTopCustomLines[3] := E_LineColors.Grounded_Green;
-		LVCP_BaseTopCustomLines[4] := E_LineColors.Grounded_Green;
-	E_LineColors.Optional_SelectionOrange:
-		LVCP_BaseTopCustomLines[2] := E_LineColors.Optional_SelectionOrange;
-		LVCP_BaseTopCustomLines[3] := E_LineColors.Optional_SelectionOrange;
-		LVCP_BaseTopCustomLines[4] := E_LineColors.Optional_SelectionOrange;
-END_CASE;]]></ST>
       </Implementation>
     </Action>
     <LineIds Name="PRG_LVCP2_Colors">
-      <LineId Id="249" Count="3" />
+      <LineId Id="275" Count="35" />
       <LineId Id="137" Count="0" />
     </LineIds>
     <LineIds Name="PRG_LVCP2_Colors.ACT_ContactorConfigurations">
       <LineId Id="3" Count="9" />
       <LineId Id="1" Count="0" />
-    </LineIds>
-    <LineIds Name="PRG_LVCP2_Colors.ACT_GroupConfigurations">
-      <LineId Id="2" Count="2" />
-      <LineId Id="72" Count="1" />
-      <LineId Id="5" Count="28" />
-      <LineId Id="36" Count="2" />
-      <LineId Id="40" Count="0" />
-      <LineId Id="51" Count="0" />
-      <LineId Id="41" Count="1" />
-      <LineId Id="52" Count="0" />
-      <LineId Id="43" Count="1" />
-      <LineId Id="53" Count="0" />
-      <LineId Id="46" Count="1" />
-      <LineId Id="54" Count="0" />
-      <LineId Id="39" Count="0" />
-      <LineId Id="59" Count="0" />
-      <LineId Id="66" Count="1" />
-      <LineId Id="69" Count="2" />
-      <LineId Id="62" Count="0" />
-      <LineId Id="34" Count="0" />
-      <LineId Id="1" Count="0" />
-    </LineIds>
-    <LineIds Name="PRG_LVCP2_Colors.ACT_TopLineColorConfigurations">
-      <LineId Id="13" Count="1" />
-      <LineId Id="4" Count="0" />
-      <LineId Id="19" Count="0" />
-      <LineId Id="6" Count="0" />
-      <LineId Id="16" Count="1" />
-      <LineId Id="7" Count="0" />
-      <LineId Id="21" Count="1" />
-      <LineId Id="18" Count="0" />
-      <LineId Id="9" Count="0" />
-      <LineId Id="23" Count="1" />
-      <LineId Id="10" Count="1" />
-      <LineId Id="25" Count="1" />
-      <LineId Id="12" Count="0" />
-      <LineId Id="3" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

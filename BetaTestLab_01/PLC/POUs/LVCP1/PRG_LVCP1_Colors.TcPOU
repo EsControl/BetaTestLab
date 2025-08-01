@@ -52,15 +52,15 @@ END_FOR
     <Action Name="ACT_ContactorConfigurations" Id="{2a37403b-2f7d-4a72-b61e-243bad327620}">
       <Implementation>
         <ST><![CDATA[arrCapacitorSchemaColor[1].ContactorPosition := GVL_LVCP1.stGroup1_ContactorHMI.stStatus.ePosition;
-arrCapacitorSchemaColor[1].ContactorPosition := GVL_LVCP1.stGroup2_ContactorHMI.stStatus.ePosition;
-arrCapacitorSchemaColor[1].ContactorPosition := GVL_LVCP1.stGroup3_ContactorHMI.stStatus.ePosition;
-arrCapacitorSchemaColor[1].ContactorPosition := GVL_LVCP1.stGroup4_ContactorHMI.stStatus.ePosition;
-arrCapacitorSchemaColor[1].ContactorPosition := GVL_LVCP1.stGroup5_ContactorHMI.stStatus.ePosition;
-arrCapacitorSchemaColor[1].ContactorPosition := GVL_LVCP1.stGroup6_ContactorHMI.stStatus.ePosition;
-arrCapacitorSchemaColor[1].ContactorPosition := GVL_LVCP1.stGroup7_ContactorHMI.stStatus.ePosition;
-arrCapacitorSchemaColor[1].ContactorPosition := GVL_LVCP1.stGroup8_ContactorHMI.stStatus.ePosition;
-arrCapacitorSchemaColor[1].ContactorPosition := GVL_LVCP1.stGroup9_ContactorHMI.stStatus.ePosition;
-arrCapacitorSchemaColor[1].ContactorPosition := GVL_LVCP1.stGroup10_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[2].ContactorPosition := GVL_LVCP1.stGroup2_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[3].ContactorPosition := GVL_LVCP1.stGroup3_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[4].ContactorPosition := GVL_LVCP1.stGroup4_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[5].ContactorPosition := GVL_LVCP1.stGroup5_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[6].ContactorPosition := GVL_LVCP1.stGroup6_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[7].ContactorPosition := GVL_LVCP1.stGroup7_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[8].ContactorPosition := GVL_LVCP1.stGroup8_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[9].ContactorPosition := GVL_LVCP1.stGroup9_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[10].ContactorPosition := GVL_LVCP1.stGroup10_ContactorHMI.stStatus.ePosition;
 ]]></ST>
       </Implementation>
     </Action>

@@ -37,7 +37,7 @@
       "Orientation": "Horizontal",
       "DesignAreaPosition": "Left",
       "CodeAreaPosition": "Right",
-      "SplitPercentage": 0.5
+      "SplitPercentage": 0.79038224414303326
     },
     {
       "Path": "Pages\\LVCP5.content",
@@ -47,19 +47,10 @@
       "DesignAreaPosition": "Left",
       "CodeAreaPosition": "Right",
       "SplitPercentage": 0.5
-    },
-    {
-      "Path": "Pages\\LVCP2.content",
-      "DesignAreaSplitSize": "Full",
-      "CodeAreaSplitSize": "Minimized",
-      "Orientation": "Horizontal",
-      "DesignAreaPosition": "Left",
-      "CodeAreaPosition": "Right",
-      "SplitPercentage": 0.5
     }
   ]
 }</TcHmiEditor_SplitAreaStates>
-    <TcHmiEditor_SelectBindingWindowDimension>285;360;1139;639</TcHmiEditor_SelectBindingWindowDimension>
+    <TcHmiEditor_SelectBindingWindowDimension>306;386;1139;639</TcHmiEditor_SelectBindingWindowDimension>
     <TcHmiEditor_SelectBindingWindowColumnWidths_m_SymbolMappedTree>[
   416.79999999999984,
   50.0,

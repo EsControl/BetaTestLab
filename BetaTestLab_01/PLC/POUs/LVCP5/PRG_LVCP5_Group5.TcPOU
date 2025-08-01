@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
   <POU Name="PRG_LVCP5_Group5" Id="{7582d22e-2c8d-4f9b-b379-37f5ffbd5256}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_LVCP5_Group5
 VAR
@@ -15,9 +15,7 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-
-	M_Contactor();
+      <ST><![CDATA[	M_Contactor();
 	
 	M_Capacitor();]]></ST>
     </Implementation>
@@ -53,7 +51,8 @@ VAR_INPUT
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[IF NOT bContactorInitDone THEN
+        <ST><![CDATA[bContactorInitDone := bContactorInitDone;
+IF NOT bContactorInitDone THEN
     // Konfigürasyon parametreleri
     GVL_LVCP5.stGroup5_ContactorHMI.stConfig.sProjectCode := '+EP8-29K1';
     GVL_LVCP5.stGroup5_ContactorHMI.stConfig.sProductCode := 'SCH LC1D40A3P7';
@@ -94,7 +93,7 @@ M_Contactor := TRUE;]]></ST>
       </Implementation>
     </Method>
     <LineIds Name="PRG_LVCP5_Group5">
-      <LineId Id="18" Count="3" />
+      <LineId Id="20" Count="1" />
       <LineId Id="5" Count="0" />
     </LineIds>
     <LineIds Name="PRG_LVCP5_Group5.M_Capacitor">
@@ -102,6 +101,7 @@ M_Contactor := TRUE;]]></ST>
       <LineId Id="5" Count="0" />
     </LineIds>
     <LineIds Name="PRG_LVCP5_Group5.M_Contactor">
+      <LineId Id="48" Count="0" />
       <LineId Id="8" Count="36" />
       <LineId Id="5" Count="0" />
     </LineIds>

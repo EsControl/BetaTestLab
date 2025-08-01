@@ -77,6 +77,21 @@
       "url": "UserControls/AppliedVoltage.usercontrol"
     },
     {
+      "url": "UserControls/Capacitor/CapacitorHorizontal.usercontrol"
+    },
+    {
+      "url": "UserControls/Capacitor/CapacitorPopupInfo.usercontrol"
+    },
+    {
+      "url": "UserControls/Capacitor/CapacitorVertical.usercontrol"
+    },
+    {
+      "url": "UserControls/Capacitor/Schemas/CapacitorSchemaWithContactor.usercontrol"
+    },
+    {
+      "url": "UserControls/Capacitor/Schemas/CapacitorSchemaWithDisconnector.usercontrol"
+    },
+    {
       "url": "UserControls/CircuitBreaker/CircuitBreaker.usercontrol"
     },
     {
@@ -152,6 +167,9 @@
       "url": "UserControls/CountdownTimer.usercontrol"
     },
     {
+      "url": "UserControls/CustomLine.usercontrol"
+    },
+    {
       "url": "UserControls/DatePicker/DatePicker.usercontrol"
     },
     {
@@ -215,6 +233,9 @@
       "url": "UserControls/GlobalPanel.usercontrol"
     },
     {
+      "url": "UserControls/Ground.usercontrol"
+    },
+    {
       "url": "UserControls/HVCP_Compensation.usercontrol"
     },
     {
@@ -252,27 +273,6 @@
     },
     {
       "url": "UserControls/Variac1P.usercontrol"
-    },
-    {
-      "url": "UserControls/CustomLine.usercontrol"
-    },
-    {
-      "url": "UserControls/Ground.usercontrol"
-    },
-    {
-      "url": "UserControls/Capacitor/CapacitorHorizontal.usercontrol"
-    },
-    {
-      "url": "UserControls/Capacitor/CapacitorPopupInfo.usercontrol"
-    },
-    {
-      "url": "UserControls/Capacitor/CapacitorVertical.usercontrol"
-    },
-    {
-      "url": "UserControls/Capacitor/Schemas/CapacitorSchemaWithContactor.usercontrol"
-    },
-    {
-      "url": "UserControls/Capacitor/Schemas/CapacitorSchemaWithDisconnector.usercontrol"
     }
   ],
   "content": [
