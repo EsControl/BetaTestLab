@@ -21,7 +21,7 @@
                 
 
 </div>
-                <div id="CapaSche_Ground" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="6" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="px" data-tchmi-width="50" data-tchmi-width-unit="px" data-tchmi-bottom="70">
+                <div id="CapaSche_Ground" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="6" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/Ground.usercontrol" data-tchmi-top-unit="px" data-tchmi-width="50" data-tchmi-width-unit="px" data-tchmi-bottom="70" data-tchmi-color="2">
                 </div>
                 <div id="CapaSche_ValueContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height="55" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top-unit="px" data-tchmi-width="65" data-tchmi-width-unit="px" data-tchmi-bottom="10">
                     <div id="CapaSche_VoltageValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="20" data-tchmi-height-unit="px" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-text="%f%%pp%stCompensationGroup::rPower%/pp%*%pp%stCompensationGroup::nQuantity%/pp%%/f%" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-width="25" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
@@ -74,7 +74,7 @@
 ]
 </script>
 </div>
-                <div id="CapaSche_CustomLineBottom2" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="33" data-tchmi-height-unit="px" data-tchmi-left="29" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top-unit="px" data-tchmi-width="3" data-tchmi-width-unit="px" data-tchmi-isvertical="true" data-tchmi-isactive="%f%%ctrl%CapaSche_GroupCustomLineTop_1::IsActive%/ctrl%&& %s%PLC1.GVL_LVCP1.stGroup1_ContactorHMI::stStatus::ePosition%/s%==2%/f%" data-tchmi-bottom="90" data-tchmi-elinecolor="%pp%eBottomLineColor%/pp%">
+                <div id="CapaSche_CustomLineBottom2" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControlHost" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-left="29" data-tchmi-left-unit="px" data-tchmi-target-user-control="UserControls/CustomLine.usercontrol" data-tchmi-top-unit="px" data-tchmi-width="3" data-tchmi-width-unit="px" data-tchmi-isvertical="true" data-tchmi-isactive="%f%%ctrl%CapaSche_GroupCustomLineTop_1::IsActive%/ctrl%&& %s%PLC1.GVL_LVCP1.stGroup1_ContactorHMI::stStatus::ePosition%/s%==2%/f%" data-tchmi-bottom="90" data-tchmi-elinecolor="2">
                 </div>
             </div>
 <div id="HVCP_CapacitorPopup" data-tchmi-type="TcHmi.Controls.System.TcHmiPopup" data-tchmi-height="500" data-tchmi-height-unit="px" data-tchmi-left-unit="px" data-tchmi-top="100" data-tchmi-top-unit="%" data-tchmi-width="500" data-tchmi-width-unit="px" data-tchmi-modal="false" data-tchmi-target-file-host-preload="false" data-tchmi-left="200" data-tchmi-restore-bounds="true">

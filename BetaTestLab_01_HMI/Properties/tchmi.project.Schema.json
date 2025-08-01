@@ -81,14 +81,6 @@
       "type": "object",
       "id": "tchmi:project#/definitions/HVCP_Compensation"
     },
-    "Ground": {
-      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
-      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
-      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
-      "frameworkUserControlConfig": "UserControls\\Ground.usercontrol.json",
-      "type": "object",
-      "id": "tchmi:project#/definitions/Ground"
-    },
     "GlobalPanel": {
       "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
       "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
@@ -112,14 +104,6 @@
       "frameworkUserControlConfig": "UserControls\\Documentation.usercontrol.json",
       "type": "object",
       "id": "tchmi:project#/definitions/Documentation"
-    },
-    "CustomLine": {
-      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
-      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
-      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
-      "frameworkUserControlConfig": "UserControls\\CustomLine.usercontrol.json",
-      "type": "object",
-      "id": "tchmi:project#/definitions/CustomLine"
     },
     "CountdownTimer": {
       "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
@@ -528,6 +512,22 @@
       "frameworkUserControlConfig": "UserControls\\Emc_Filter.usercontrol.json",
       "id": "tchmi:project#/definitions/EMC_Filter",
       "type": "object"
+    },
+    "CustomLine": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\CustomLine.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CustomLine"
+    },
+    "Ground": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Ground.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Ground"
     }
   }
 }

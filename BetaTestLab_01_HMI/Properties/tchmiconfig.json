@@ -164,9 +164,6 @@
       "url": "UserControls/CountdownTimer.usercontrol"
     },
     {
-      "url": "UserControls/CustomLine.usercontrol"
-    },
-    {
       "url": "UserControls/DatePicker/DatePicker.usercontrol"
     },
     {
@@ -230,9 +227,6 @@
       "url": "UserControls/GlobalPanel.usercontrol"
     },
     {
-      "url": "UserControls/Ground.usercontrol"
-    },
-    {
       "url": "UserControls/HVCP_Compensation.usercontrol"
     },
     {
@@ -270,6 +264,12 @@
     },
     {
       "url": "UserControls/Variac1P.usercontrol"
+    },
+    {
+      "url": "UserControls/CustomLine.usercontrol"
+    },
+    {
+      "url": "UserControls/Ground.usercontrol"
     }
   ],
   "content": [

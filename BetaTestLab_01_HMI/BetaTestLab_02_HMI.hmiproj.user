@@ -47,10 +47,19 @@
       "DesignAreaPosition": "Left",
       "CodeAreaPosition": "Right",
       "SplitPercentage": 0.5
+    },
+    {
+      "Path": "UserControls\\Capacitor\\CapacitorSchema.usercontrol",
+      "DesignAreaSplitSize": "Full",
+      "CodeAreaSplitSize": "Minimized",
+      "Orientation": "Horizontal",
+      "DesignAreaPosition": "Left",
+      "CodeAreaPosition": "Right",
+      "SplitPercentage": 0.5
     }
   ]
 }</TcHmiEditor_SplitAreaStates>
-    <TcHmiEditor_SelectBindingWindowDimension>197;432;1139;639</TcHmiEditor_SelectBindingWindowDimension>
+    <TcHmiEditor_SelectBindingWindowDimension>285;360;1139;639</TcHmiEditor_SelectBindingWindowDimension>
     <TcHmiEditor_SelectBindingWindowColumnWidths_m_SymbolMappedTree>[
   416.79999999999984,
   50.0,
@@ -121,6 +130,70 @@
     <RecentColors>[
   {
     "counter": 0,
+    "color": "#FF8E00FF"
+  },
+  {
+    "counter": 0,
+    "color": "#FF0014FF"
+  },
+  {
+    "counter": 0,
+    "color": "#FFFF00FF"
+  },
+  {
+    "counter": 0,
+    "color": "#FF1900FF"
+  },
+  {
+    "counter": 0,
+    "color": "#FFC100FF"
+  },
+  {
+    "counter": 0,
+    "color": "#FF00FFFF"
+  },
+  {
+    "counter": 0,
+    "color": "#FF0019FF"
+  },
+  {
+    "counter": 0,
+    "color": "#FF0000FF"
+  },
+  {
+    "counter": 0,
+    "color": "#19FF00FF"
+  },
+  {
+    "counter": 0,
+    "color": "#00FF00FF"
+  },
+  {
+    "counter": 0,
+    "color": "#FFFF0019"
+  },
+  {
+    "counter": 0,
+    "color": "#FFFF0000"
+  },
+  {
+    "counter": 0,
+    "color": "#FF190000"
+  },
+  {
+    "counter": 0,
+    "color": "#FF00FF00"
+  },
+  {
+    "counter": 0,
+    "color": "#FF001900"
+  },
+  {
+    "counter": 0,
+    "color": "#FFFFAD00"
+  },
+  {
+    "counter": 0,
     "color": "#FFE71515"
   },
   {
@@ -134,70 +207,6 @@
   {
     "counter": 0,
     "color": "#509E9898"
-  },
-  {
-    "counter": 0,
-    "color": ""
-  },
-  {
-    "counter": 0,
-    "color": ""
-  },
-  {
-    "counter": 0,
-    "color": ""
-  },
-  {
-    "counter": 0,
-    "color": ""
-  },
-  {
-    "counter": 0,
-    "color": ""
-  },
-  {
-    "counter": 0,
-    "color": ""
-  },
-  {
-    "counter": 0,
-    "color": ""
-  },
-  {
-    "counter": 0,
-    "color": ""
-  },
-  {
-    "counter": 0,
-    "color": ""
-  },
-  {
-    "counter": 0,
-    "color": ""
-  },
-  {
-    "counter": 0,
-    "color": ""
-  },
-  {
-    "counter": 0,
-    "color": ""
-  },
-  {
-    "counter": 0,
-    "color": ""
-  },
-  {
-    "counter": 0,
-    "color": ""
-  },
-  {
-    "counter": 0,
-    "color": ""
-  },
-  {
-    "counter": 0,
-    "color": ""
   }
 ]</RecentColors>
   </PropertyGroup>

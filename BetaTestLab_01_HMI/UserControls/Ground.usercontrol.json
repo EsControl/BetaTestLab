@@ -1,20 +1,22 @@
 {
   "parameters": [
     {
-      "name": "data-tchmi-isactive",
-      "displayName": "IsActive",
+      "name": "data-tchmi-color",
+      "displayName": "Color",
       "allowSymbolExpressionsInObject": false,
       "visible": true,
-      "type": "tchmi:general#/definitions/BOOL",
+      "type": "tchmi:server#/definitions/PLC1.E_LineColors",
       "category": "",
       "description": "",
+      "defaultValue": 0,
+      "defaultValueInternal": 0,
       "requiredOnCompile": false,
       "readOnly": false,
       "bindable": true,
       "heritable": true,
-      "propertyName": "IsActive",
-      "propertySetterName": "setIsActive",
-      "propertyGetterName": "getIsActive",
+      "propertyName": "Color",
+      "propertySetterName": "setColor",
+      "propertyGetterName": "getColor",
       "refTo": ""
     }
   ],

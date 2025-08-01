@@ -1130,8 +1130,8 @@
 	</ImageDatas>
 	<Project ProjectGUID="{28C24EDB-12F2-43F2-AB92-72FC7051E4F2}" Target64Bit="true" ShowHideConfigurations="#x6">
 		<System>
-			<Settings MaxCpus="16" NonWinCpus="1">
-				<Cpu CpuId="15"/>
+			<Settings MaxCpus="12" NonWinCpus="1">
+				<Cpu CpuId="11"/>
 			</Settings>
 			<Tasks>
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
@@ -1141,7 +1141,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{448BB4E8-A075-4420-B493-7235F19108E9}" Name="PLC" PrjFilePath="PLC\PLC.plcproj" TmcFilePath="PLC\PLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC\PLC.tmc" TmcHash="{97D35BE1-3F0F-BE02-AC01-4B7AEBF36EC7}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC\PLC.tmc" TmcHash="{4ECC8F0E-7492-9F7F-8051-30204782B077}">
 					<Name>PLC Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
