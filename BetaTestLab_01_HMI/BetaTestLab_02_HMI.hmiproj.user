@@ -50,7 +50,7 @@
     }
   ]
 }</TcHmiEditor_SplitAreaStates>
-    <TcHmiEditor_SelectBindingWindowDimension>60;68;1139;672</TcHmiEditor_SelectBindingWindowDimension>
+    <TcHmiEditor_SelectBindingWindowDimension>197;432;1139;639</TcHmiEditor_SelectBindingWindowDimension>
     <TcHmiEditor_SelectBindingWindowColumnWidths_m_SymbolMappedTree>[
   416.79999999999984,
   50.0,
@@ -60,7 +60,7 @@
   100.0
 ]</TcHmiEditor_SelectBindingWindowColumnWidths_m_SymbolMappedTree>
     <TcHmiEditor_SelectBindingWindowColumnWidths_m_SymbolServerTree>[
-  280.0,
+  376.0,
   300.0,
   356.00000000000006
 ]</TcHmiEditor_SelectBindingWindowColumnWidths_m_SymbolServerTree>

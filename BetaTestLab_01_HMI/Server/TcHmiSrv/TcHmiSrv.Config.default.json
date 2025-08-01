@@ -1115,7 +1115,7 @@
                             "$ref": "tchmi:general#/definitions/INT"
                         },
                         {
-                            "comment": "Gruptaki kondansatör sayisi",
+                            "comment": "Gruptaki kondansatör sayýsý",
                             "propertyOrder": 3
                         }
                     ]
@@ -1232,7 +1232,7 @@
                             "$ref": "tchmi:general#/definitions/BOOL"
                         },
                         {
-                            "comment": "Istatistik reset sinyali",
+                            "comment": "Ýstatistik reset sinyali",
                             "propertyOrder": 7
                         }
                     ]
@@ -1270,7 +1270,7 @@
                             "$ref": "tchmi:general#/definitions/DWORD"
                         },
                         {
-                            "comment": "Bakim operasyon limiti",
+                            "comment": "Bakým operasyon limiti",
                             "propertyOrder": 9
                         }
                     ]
@@ -1281,7 +1281,7 @@
                             "$ref": "tchmi:general#/definitions/INT"
                         },
                         {
-                            "comment": "Faz sayisi (1 veya 3)",
+                            "comment": "Faz sayýsý (1 veya 3)",
                             "propertyOrder": 5
                         }
                     ]
@@ -1292,7 +1292,7 @@
                             "$ref": "tchmi:general#/definitions/REAL"
                         },
                         {
-                            "comment": "Nominal akim (A)",
+                            "comment": "Nominal akým (A)",
                             "propertyOrder": 3
                         }
                     ]
@@ -1349,7 +1349,7 @@
                             "$ref": "tchmi:general#/definitions/TIME"
                         },
                         {
-                            "comment": "Yapisma kontrolü gecikmesi",
+                            "comment": "Yapýþma kontrolü gecikmesi",
                             "propertyOrder": 7
                         }
                     ]
@@ -1387,7 +1387,7 @@
                             "$ref": "#/definitions/PLC1.ST_ContactorStatistics"
                         },
                         {
-                            "comment": "Istatistik verileri",
+                            "comment": "Ýstatistik verileri",
                             "propertyOrder": 4
                         }
                     ]
@@ -1414,7 +1414,7 @@
                             "$ref": "tchmi:general#/definitions/DATE_AND_TIME"
                         },
                         {
-                            "comment": "Islem zamani",
+                            "comment": "Ýþlem zamaný",
                             "propertyOrder": 1
                         }
                     ]
@@ -1436,7 +1436,7 @@
                             "$ref": "#/definitions/PLC1.E_ContactorFault"
                         },
                         {
-                            "comment": "Ariza kodu (varsa)",
+                            "comment": "Arýza kodu (varsa)",
                             "propertyOrder": 4
                         }
                     ]
@@ -1447,7 +1447,7 @@
                             "$ref": "#/definitions/PLC1.E_ContactorPosition"
                         },
                         {
-                            "comment": "Islem tipi (ON/OFF)",
+                            "comment": "Ýþlem tipi (ON/OFF)",
                             "propertyOrder": 2
                         }
                     ]
@@ -1474,7 +1474,7 @@
                             "$ref": "tchmi:general#/definitions/BOOL"
                         },
                         {
-                            "comment": "Bakim gerekli",
+                            "comment": "Bakým gerekli",
                             "propertyOrder": 9
                         }
                     ]
@@ -1485,7 +1485,7 @@
                             "$ref": "tchmi:general#/definitions/BOOL"
                         },
                         {
-                            "comment": "Yeni islem var, SQL'e yaz",
+                            "comment": "Yeni iþlem var, SQL'e yaz",
                             "propertyOrder": 5
                         }
                     ]
@@ -1496,7 +1496,7 @@
                             "$ref": "tchmi:general#/definitions/DWORD"
                         },
                         {
-                            "comment": "Geri besleme ariza sayisi",
+                            "comment": "Geri besleme arýza sayýsý",
                             "propertyOrder": 7
                         }
                     ]
@@ -1507,7 +1507,7 @@
                             "$ref": "tchmi:general#/definitions/DWORD"
                         },
                         {
-                            "comment": "Toplam OFF sayisi",
+                            "comment": "Toplam OFF sayýsý",
                             "propertyOrder": 2
                         }
                     ]
@@ -1518,7 +1518,7 @@
                             "$ref": "tchmi:general#/definitions/DWORD"
                         },
                         {
-                            "comment": "Toplam ON sayisi",
+                            "comment": "Toplam ON sayýsý",
                             "propertyOrder": 1
                         }
                     ]
@@ -1529,7 +1529,7 @@
                             "$ref": "tchmi:general#/definitions/DWORD"
                         },
                         {
-                            "comment": "Toplam operasyon sayisi",
+                            "comment": "Toplam operasyon sayýsý",
                             "propertyOrder": 3
                         }
                     ]
@@ -1540,7 +1540,7 @@
                             "$ref": "tchmi:general#/definitions/DWORD"
                         },
                         {
-                            "comment": "Kalan operasyon sayisi",
+                            "comment": "Kalan operasyon sayýsý",
                             "propertyOrder": 10
                         }
                     ]
@@ -1551,7 +1551,7 @@
                             "$ref": "tchmi:general#/definitions/DWORD"
                         },
                         {
-                            "comment": "Toplam ariza sayisi",
+                            "comment": "Toplam arýza sayýsý",
                             "propertyOrder": 6
                         }
                     ]
@@ -1562,7 +1562,7 @@
                             "$ref": "tchmi:general#/definitions/DWORD"
                         },
                         {
-                            "comment": "Yapisma ariza sayisi",
+                            "comment": "Yapýþma arýza sayýsý",
                             "propertyOrder": 8
                         }
                     ]
@@ -1573,7 +1573,7 @@
                             "$ref": "#/definitions/PLC1.ST_ContactorOperationRecord"
                         },
                         {
-                            "comment": "SQL'e yazilacak son islem",
+                            "comment": "SQL'e yazýlacak son iþlem",
                             "propertyOrder": 4
                         }
                     ]
@@ -1589,7 +1589,7 @@
                             "$ref": "tchmi:general#/definitions/BOOL"
                         },
                         {
-                            "comment": "Ariza durumu",
+                            "comment": "Arýza durumu",
                             "propertyOrder": 4
                         }
                     ]
@@ -1600,7 +1600,7 @@
                             "$ref": "tchmi:general#/definitions/BOOL"
                         },
                         {
-                            "comment": "Kontaktör çikisi",
+                            "comment": "Kontaktör çýkýþý",
                             "propertyOrder": 7
                         }
                     ]
@@ -1633,7 +1633,7 @@
                             "$ref": "#/definitions/PLC1.E_ContactorFault"
                         },
                         {
-                            "comment": "Ariza kodu",
+                            "comment": "Arýza kodu",
                             "propertyOrder": 5
                         }
                     ]
@@ -1663,7 +1663,7 @@
                 "wsStatusText": {
                     "allOf": [
                         {
-                            "comment": "Durum açiklama metni",
+                            "comment": "Durum açýklama metni",
                             "maxLength": 100,
                             "propertyOrder": 8
                         },
@@ -6317,20 +6317,103 @@
             },
             "USEMAPPING": true
         },
-        "PLC1.GVL_LVCP1.astCompensationGroups": {
+        "PLC1.GVL_LVCP1.astCompensationGroups.0": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
             "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_LVCP1::astCompensationGroups",
+            "MAPPING": "PLC1::GVL_LVCP1::astCompensationGroups[0]",
             "SCHEMA": {
-                "allOf": [
-                    {
-                        "comment": "Tüm gruplarin kondansatör bilgileri"
-                    },
-                    {
-                        "$ref": "tchmi:server#/definitions/PLC1.ARRAY_0..19_OF-ST_CompensationGroup"
-                    }
-                ]
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP1.astCompensationGroups.1": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP1::astCompensationGroups[1]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP1.astCompensationGroups.2": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP1::astCompensationGroups[2]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP1.astCompensationGroups.3": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP1::astCompensationGroups[3]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP1.astCompensationGroups.4": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP1::astCompensationGroups[4]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP1.astCompensationGroups.5": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP1::astCompensationGroups[5]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP1.astCompensationGroups.6": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP1::astCompensationGroups[6]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP1.astCompensationGroups.7": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP1::astCompensationGroups[7]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP1.astCompensationGroups.8": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP1::astCompensationGroups[8]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_LVCP1.astCompensationGroups.9": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_LVCP1::astCompensationGroups[9]",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
             },
             "USEMAPPING": true
         },
@@ -6346,23 +6429,6 @@
                     },
                     {
                         "comment": "Toplam konfigüre edilmis grup sayisi"
-                    }
-                ]
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_LVCP1.stGroup10_ContactorHMI": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_LVCP1::stGroup10_ContactorHMI",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "comment": "Grup 10 kontaktör durum ve kontrol bilgileri"
-                    },
-                    {
-                        "$ref": "tchmi:server#/definitions/PLC1.ST_ContactorHMI"
                     }
                 ]
             },
@@ -6394,179 +6460,6 @@
                 "allOf": [
                     {
                         "comment": "Grup 2 kontaktör durum ve kontrol bilgileri"
-                    },
-                    {
-                        "$ref": "tchmi:server#/definitions/PLC1.ST_ContactorHMI"
-                    }
-                ]
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_LVCP1.stGroup3_ContactorHMI": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_LVCP1::stGroup3_ContactorHMI",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "comment": "Grup 3 kontaktör durum ve kontrol bilgileri"
-                    },
-                    {
-                        "$ref": "tchmi:server#/definitions/PLC1.ST_ContactorHMI"
-                    }
-                ]
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_LVCP1.stGroup4_ContactorHMI": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_LVCP1::stGroup4_ContactorHMI",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "comment": "Grup 4 kontaktör durum ve kontrol bilgileri"
-                    },
-                    {
-                        "$ref": "tchmi:server#/definitions/PLC1.ST_ContactorHMI"
-                    }
-                ]
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_LVCP1.stGroup5_ContactorHMI": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_LVCP1::stGroup5_ContactorHMI",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "comment": "Grup 5 kontaktör durum ve kontrol bilgileri"
-                    },
-                    {
-                        "$ref": "tchmi:server#/definitions/PLC1.ST_ContactorHMI"
-                    }
-                ]
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_LVCP1.stGroup6_ContactorHMI": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_LVCP1::stGroup6_ContactorHMI",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "comment": "Grup 6 kontaktör durum ve kontrol bilgileri"
-                    },
-                    {
-                        "$ref": "tchmi:server#/definitions/PLC1.ST_ContactorHMI"
-                    }
-                ]
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_LVCP1.stGroup7_ContactorHMI": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_LVCP1::stGroup7_ContactorHMI",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "comment": "Grup 7 kontaktör durum ve kontrol bilgileri"
-                    },
-                    {
-                        "$ref": "tchmi:server#/definitions/PLC1.ST_ContactorHMI"
-                    }
-                ]
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_LVCP1.stGroup8_ContactorHMI": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_LVCP1::stGroup8_ContactorHMI",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "comment": "Grup 8 kontaktör durum ve kontrol bilgileri"
-                    },
-                    {
-                        "$ref": "tchmi:server#/definitions/PLC1.ST_ContactorHMI"
-                    }
-                ]
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_LVCP1.stGroup9_ContactorHMI": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_LVCP1::stGroup9_ContactorHMI",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "comment": "Grup 9 kontaktör durum ve kontrol bilgileri"
-                    },
-                    {
-                        "$ref": "tchmi:server#/definitions/PLC1.ST_ContactorHMI"
-                    }
-                ]
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_LVCP1.stMainDisconnectorHMI": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_LVCP1::stMainDisconnectorHMI",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "comment": "Ana kesici durum ve kontrol bilgileri"
-                    },
-                    {
-                        "$ref": "tchmi:server#/definitions/PLC1.ST_DisconnectorHMI"
-                    }
-                ]
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_LVCP2.astCompensationGroups.0": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_LVCP2::astCompensationGroups[0]",
-            "SCHEMA": {
-                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_LVCP2.astCompensationGroups.1": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_LVCP2::astCompensationGroups[1]",
-            "SCHEMA": {
-                "$ref": "tchmi:server#/definitions/PLC1.ST_CompensationGroup"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_LVCP2.stGroup1_ContactorHMI": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_LVCP2::stGroup1_ContactorHMI",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "comment": "Grup 1 kontaktör durum ve kontrol bilgileri"
                     },
                     {
                         "$ref": "tchmi:server#/definitions/PLC1.ST_ContactorHMI"
@@ -7546,6 +7439,14 @@
                 "PLC1.GVL_LVCP1.astCompensationGroups": 3,
                 "PLC1.GVL_LVCP1.astCompensationGroups.0": 3,
                 "PLC1.GVL_LVCP1.astCompensationGroups.1": 3,
+                "PLC1.GVL_LVCP1.astCompensationGroups.2": 3,
+                "PLC1.GVL_LVCP1.astCompensationGroups.3": 3,
+                "PLC1.GVL_LVCP1.astCompensationGroups.4": 3,
+                "PLC1.GVL_LVCP1.astCompensationGroups.5": 3,
+                "PLC1.GVL_LVCP1.astCompensationGroups.6": 3,
+                "PLC1.GVL_LVCP1.astCompensationGroups.7": 3,
+                "PLC1.GVL_LVCP1.astCompensationGroups.8": 3,
+                "PLC1.GVL_LVCP1.astCompensationGroups.9": 3,
                 "PLC1.GVL_LVCP1.nConfiguredGroups": 3,
                 "PLC1.GVL_LVCP1.stGroup10_ContactorHMI": 3,
                 "PLC1.GVL_LVCP1.stGroup1_ContactorHMI": 3,
