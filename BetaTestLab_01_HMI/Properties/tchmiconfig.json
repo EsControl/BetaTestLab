@@ -77,18 +77,6 @@
       "url": "UserControls/AppliedVoltage.usercontrol"
     },
     {
-      "url": "UserControls/Capacitor/CapacitorHorizontal.usercontrol"
-    },
-    {
-      "url": "UserControls/Capacitor/CapacitorPopupInfo.usercontrol"
-    },
-    {
-      "url": "UserControls/Capacitor/CapacitorSchema.usercontrol"
-    },
-    {
-      "url": "UserControls/Capacitor/CapacitorVertical.usercontrol"
-    },
-    {
       "url": "UserControls/CircuitBreaker/CircuitBreaker.usercontrol"
     },
     {
@@ -270,6 +258,21 @@
     },
     {
       "url": "UserControls/Ground.usercontrol"
+    },
+    {
+      "url": "UserControls/Capacitor/CapacitorHorizontal.usercontrol"
+    },
+    {
+      "url": "UserControls/Capacitor/CapacitorPopupInfo.usercontrol"
+    },
+    {
+      "url": "UserControls/Capacitor/CapacitorVertical.usercontrol"
+    },
+    {
+      "url": "UserControls/Capacitor/Schemas/CapacitorSchemaWithContactor.usercontrol"
+    },
+    {
+      "url": "UserControls/Capacitor/Schemas/CapacitorSchemaWithDisconnector.usercontrol"
     }
   ],
   "content": [

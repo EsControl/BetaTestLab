@@ -470,7 +470,16 @@
     <Compile Include="_ES\14_CompensationGroup\Structure\ST_CompensationSummary.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="_ES\15_LineColor\E_LineColors.TcDUT">
+    <Compile Include="_ES\xx_Line\Enum\E_LineColors.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\xx_Line\Structure\ST_CapacitorSchemaColorBase.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\xx_Line\Structure\ST_CapacitorSchemaColorWithContactor.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="_ES\xx_Line\Structure\ST_CapacitorSchemaColorWithDisconnector.TcDUT">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -500,7 +509,9 @@
     <Folder Include="_ES\14_CompensationGroup" />
     <Folder Include="_ES\14_CompensationGroup\Enum" />
     <Folder Include="_ES\14_CompensationGroup\Structure" />
-    <Folder Include="_ES\15_LineColor" />
+    <Folder Include="_ES\xx_Line" />
+    <Folder Include="_ES\xx_Line\Enum" />
+    <Folder Include="_ES\xx_Line\Structure" />
   </ItemGroup>
   <ItemGroup>
     <PlaceholderReference Include="Tc2_Standard">

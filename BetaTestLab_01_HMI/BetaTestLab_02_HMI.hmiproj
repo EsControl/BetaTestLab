@@ -153,19 +153,26 @@
       <SubType>Content</SubType>
       <DependentUpon>UserControls\Capacitor\CapacitorPopupInfo.usercontrol</DependentUpon>
     </Content>
-    <Content Include="UserControls\Capacitor\CapacitorSchema.usercontrol">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="UserControls\Capacitor\CapacitorSchema.usercontrol.json">
-      <SubType>Content</SubType>
-      <DependentUpon>UserControls\Capacitor\CapacitorSchema.usercontrol</DependentUpon>
-    </Content>
     <Content Include="UserControls\Capacitor\CapacitorVertical.usercontrol">
       <SubType>Content</SubType>
     </Content>
     <Content Include="UserControls\Capacitor\CapacitorVertical.usercontrol.json">
       <SubType>Content</SubType>
       <DependentUpon>UserControls\Capacitor\CapacitorVertical.usercontrol</DependentUpon>
+    </Content>
+    <Content Include="UserControls\Capacitor\Schemas\CapacitorSchemaWithContactor.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UserControls\Capacitor\Schemas\CapacitorSchemaWithContactor.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>UserControls\Capacitor\Schemas\CapacitorSchemaWithContactor.usercontrol</DependentUpon>
+    </Content>
+    <Content Include="UserControls\Capacitor\Schemas\CapacitorSchemaWithDisconnector.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UserControls\Capacitor\Schemas\CapacitorSchemaWithDisconnector.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>UserControls\Capacitor\Schemas\CapacitorSchemaWithDisconnector.usercontrol</DependentUpon>
     </Content>
     <Content Include="UserControls\CircuitBreaker\CircuitBreaker.usercontrol">
       <SubType>Content</SubType>
@@ -971,6 +978,7 @@
     <Folder Include="Themes\Base\Images\Placeholder\" />
     <Folder Include="Themes\Base\Images\Settings\" />
     <Folder Include="UserControls\Capacitor" />
+    <Folder Include="UserControls\Capacitor\Schemas" />
     <Folder Include="UserControls\CircuitBreaker" />
     <Folder Include="UserControls\CircuitBreaker\Popups" />
     <Folder Include="UserControls\Contactor" />

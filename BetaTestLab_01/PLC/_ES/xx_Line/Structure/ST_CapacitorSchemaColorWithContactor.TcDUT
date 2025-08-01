@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="ST_CapacitorSchemaColorWithContactor" Id="{9a8f42a3-8bf0-4735-ad6a-6a5c36d86d4d}">
+    <Declaration><![CDATA[TYPE ST_CapacitorSchemaColorWithContactor EXTENDS ST_CapacitorSchemaColorBase :
+STRUCT
+		ContactorPosition : E_ContactorPosition;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

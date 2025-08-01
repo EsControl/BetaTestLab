@@ -169,38 +169,6 @@
       "type": "object",
       "id": "tchmi:project#/definitions/VariableTransformatorPopupControl"
     },
-    "CapacitorHorizontal": {
-      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
-      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
-      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
-      "frameworkUserControlConfig": "UserControls\\Capacitor\\CapacitorHorizontal.usercontrol.json",
-      "type": "object",
-      "id": "tchmi:project#/definitions/CapacitorHorizontal"
-    },
-    "CapacitorPopupInfo": {
-      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
-      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
-      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
-      "frameworkUserControlConfig": "UserControls\\Capacitor\\CapacitorPopupInfo.usercontrol.json",
-      "type": "object",
-      "id": "tchmi:project#/definitions/CapacitorPopupInfo"
-    },
-    "CapacitorSchema": {
-      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
-      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
-      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
-      "frameworkUserControlConfig": "UserControls\\Capacitor\\CapacitorSchema.usercontrol.json",
-      "type": "object",
-      "id": "tchmi:project#/definitions/CapacitorSchema"
-    },
-    "CapacitorVertical": {
-      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
-      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
-      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
-      "frameworkUserControlConfig": "UserControls\\Capacitor\\CapacitorVertical.usercontrol.json",
-      "type": "object",
-      "id": "tchmi:project#/definitions/CapacitorVertical"
-    },
     "CircuitBreaker": {
       "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
       "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
@@ -528,6 +496,46 @@
       "frameworkUserControlConfig": "UserControls\\Ground.usercontrol.json",
       "type": "object",
       "id": "tchmi:project#/definitions/Ground"
+    },
+    "CapacitorHorizontal": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Capacitor\\CapacitorHorizontal.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CapacitorHorizontal"
+    },
+    "CapacitorPopupInfo": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Capacitor\\CapacitorPopupInfo.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CapacitorPopupInfo"
+    },
+    "CapacitorVertical": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Capacitor\\CapacitorVertical.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CapacitorVertical"
+    },
+    "CapacitorSchemaWithContactor": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Capacitor\\Schemas\\CapacitorSchemaWithContactor.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CapacitorSchemaWithContactor"
+    },
+    "CapacitorSchemaWithDisconnector": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Capacitor\\Schemas\\CapacitorSchemaWithDisconnector.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CapacitorSchemaWithDisconnector"
     }
   }
 }

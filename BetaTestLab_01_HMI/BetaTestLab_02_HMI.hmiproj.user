@@ -49,7 +49,7 @@
       "SplitPercentage": 0.5
     },
     {
-      "Path": "UserControls\\Capacitor\\CapacitorSchema.usercontrol",
+      "Path": "Pages\\LVCP2.content",
       "DesignAreaSplitSize": "Full",
       "CodeAreaSplitSize": "Minimized",
       "Orientation": "Horizontal",
