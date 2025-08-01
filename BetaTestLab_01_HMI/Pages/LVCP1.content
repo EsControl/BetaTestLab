@@ -1,4 +1,4 @@
-<div id="LVCP_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="1920" data-tchmi-height="800" data-tchmi-creator-viewport-height="800" data-tchmi-width-unit="px" data-tchmi-height-unit="px" data-tchmi-creator-locked="True">
+<div id="LVCP_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="1920" data-tchmi-height="870" data-tchmi-creator-viewport-height="800" data-tchmi-width-unit="px" data-tchmi-height-unit="px" data-tchmi-creator-locked="True">
 
 <div id="LVCP_CapacitorPopup_2" data-tchmi-type="TcHmi.Controls.System.TcHmiPopup" data-tchmi-height="500" data-tchmi-height-unit="px" data-tchmi-left-unit="%" data-tchmi-top="100" data-tchmi-top-unit="%" data-tchmi-width="500" data-tchmi-width-unit="px" data-tchmi-modal="false" data-tchmi-target-file-host-preload="false" data-tchmi-left="45" data-tchmi-restore-bounds="true">
 <script data-tchmi-target-attribute="data-tchmi-target-file" type="application/json">
