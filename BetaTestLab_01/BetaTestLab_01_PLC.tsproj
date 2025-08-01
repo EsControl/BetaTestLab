@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.64">
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.60">
 	<DataTypes>
 		<DataType>
 			<Name GUID="{F332C737-C140-9D9A-0048-0F40BD7B5BCA}" AutoDeleteType="true" ForceIecDecl="true">MDP5001_341_I_E4FC35CB</Name>
@@ -1130,8 +1130,8 @@
 	</ImageDatas>
 	<Project ProjectGUID="{28C24EDB-12F2-43F2-AB92-72FC7051E4F2}" Target64Bit="true" ShowHideConfigurations="#x6">
 		<System>
-			<Settings MaxCpus="16" NonWinCpus="1">
-				<Cpu CpuId="15"/>
+			<Settings MaxCpus="12" NonWinCpus="1">
+				<Cpu CpuId="11"/>
 			</Settings>
 			<Tasks>
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
@@ -1141,7 +1141,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{448BB4E8-A075-4420-B493-7235F19108E9}" Name="PLC" PrjFilePath="PLC\PLC.plcproj" TmcFilePath="PLC\PLC.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC\PLC.tmc" TmcHash="{1B311990-BBA7-DA3A-78B4-C17BF225BB7D}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLC\PLC.tmc" TmcHash="{97D35BE1-3F0F-BE02-AC01-4B7AEBF36EC7}">
 					<Name>PLC Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
@@ -1295,16 +1295,6 @@
 							<Type GUID="{F332C737-C140-9D9A-0048-0F40BD7B5BCA}">MDP5001_341_I_E4FC35CB</Type>
 						</Var>
 						<Var>
-							<Name>PRG_LVCP2_Group1.stContactor_IO.bFeedback</Name>
-							<Comment><![CDATA[ Kontaktör yardımcı kontak geri bildirimi]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>PRG_LVCP2_Group1.stContactor_IO.bPLCControl</Name>
-							<Comment><![CDATA[ PLC kontrol seçici]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>PRG_LVCP2_MainDisconnector.stDisconnectorIO.bContactorOn_FB</Name>
 							<Comment><![CDATA[ ON kontaktörü geri bildirimi]]></Comment>
 							<Type>BOOL</Type>
@@ -1341,6 +1331,16 @@
 						</Var>
 						<Var>
 							<Name>PRG_LVCP2_MainDisconnector.stDisconnectorIO.bPLCControl</Name>
+							<Comment><![CDATA[ PLC kontrol seçici]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>PRG_LVCP2_Group1.stContactor_IO.bFeedback</Name>
+							<Comment><![CDATA[ Kontaktör yardımcı kontak geri bildirimi]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>PRG_LVCP2_Group1.stContactor_IO.bPLCControl</Name>
 							<Comment><![CDATA[ PLC kontrol seçici]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -1830,6 +1830,14 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
+							<Name>GVL_Alarm.EP8_3X2_24VDC_OK</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Alarm.EP8_UPS_24VDC_OK</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>PRG_HVCP3_24CB1.stDisconnectorIO.bContactorOn_FB</Name>
 							<Comment><![CDATA[ ON kontaktörü geri bildirimi]]></Comment>
 							<Type>BOOL</Type>
@@ -1867,14 +1875,6 @@
 						<Var>
 							<Name>PRG_HVCP3_24CB1.stDisconnectorIO.bPLCControl</Name>
 							<Comment><![CDATA[ PLC kontrol seçici]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Alarm.EP8_3X2_24VDC_OK</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Alarm.EP8_UPS_24VDC_OK</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
@@ -3284,11 +3284,6 @@
 							<Type GUID="{F332C738-C140-9D9A-0048-0F40BD7B5BCA}">MDP5001_341_O_E4FC35CB</Type>
 						</Var>
 						<Var>
-							<Name>PRG_LVCP2_Group1.stContactor_IO.bOutput</Name>
-							<Comment><![CDATA[ Kontaktör bobini]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>PRG_LVCP2_MainDisconnector.stDisconnectorIO.bContactorOn_Out</Name>
 							<Comment><![CDATA[ ON kontaktörü sürme]]></Comment>
 							<Type>BOOL</Type>
@@ -3296,6 +3291,11 @@
 						<Var>
 							<Name>PRG_LVCP2_MainDisconnector.stDisconnectorIO.bContactorOff_Out</Name>
 							<Comment><![CDATA[ OFF kontaktörü sürme]]></Comment>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>PRG_LVCP2_Group1.stContactor_IO.bOutput</Name>
+							<Comment><![CDATA[ Kontaktör bobini]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
