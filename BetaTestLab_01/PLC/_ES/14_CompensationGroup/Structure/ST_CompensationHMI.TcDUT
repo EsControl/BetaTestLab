@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="ST_CompensationHMI" Id="{d4dc068d-f0a1-46e7-bd12-cd71bf0ca21b}">
+    <Declaration><![CDATA[TYPE ST_CompensationHMI :
+STRUCT
+    stSummary : ST_CompensationSummary;            // Özet bilgiler
+    stDiagnostic : ST_CompensationDiagnostic;      // Diagnostik bilgiler
+    stGroupDetails : ST_CompensationGroupDetails;   // Grup detayları
+    stConfig : ST_CompensationConfigInfo;           // Konfigürasyon bilgileri
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

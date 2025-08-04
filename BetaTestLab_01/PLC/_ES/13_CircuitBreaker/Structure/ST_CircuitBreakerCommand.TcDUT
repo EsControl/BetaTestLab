@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="ST_CircuitBreakerCommand" Id="{1c1243ea-8d2d-4002-a6a2-8bc1fa19216a}">
+    <Declaration><![CDATA[TYPE ST_CircuitBreakerCommand :
+STRUCT
+    eControlMode: E_CircuitBreakerControlMode;  // Kontrol modu seçimi
+    bAutoOnCmd: BOOL;                           // Otomatik ON komutu
+    bAutoOffCmd: BOOL;                          // Otomatik OFF komutu
+    bManualOnCmd: BOOL;                         // Manuel ON komutu
+    bManualOffCmd: BOOL;                        // Manuel OFF komutu
+    bResetTrip: BOOL;                           // Trip reset komutu
+    bResetFault: BOOL;                          // Hata reset sinyali
+    bResetStatistics: BOOL;                     // İstatistik reset sinyali
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

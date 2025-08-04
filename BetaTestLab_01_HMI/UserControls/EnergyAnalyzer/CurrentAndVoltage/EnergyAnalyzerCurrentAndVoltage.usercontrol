@@ -1,0 +1,192 @@
+<div id="EnergyAnalyzerCurrentAndVoltage" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="150" data-tchmi-height="90" data-tchmi-width-unit="px" data-tchmi-height-unit="px" data-tchmi-creator-viewport-width="150" data-tchmi-creator-viewport-height="90">
+
+<div id="EnergyAnalyzerCurrentAndVoltage_Header" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text="%pp%HeaderText%/pp%">
+</div>
+<div id="EnergyAnalyzerCurrentAndVoltage_BaseContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="25" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="0">
+<div id="EnergyAnalyzerCurrentAndVoltage_CurrentContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-right="5" data-tchmi-right-unit="px" data-tchmi-height="25">
+<div id="EnergyAnalyzerCurrentAndVoltage_CurrentValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="%f%(%pp%stEL3453::Lx[0]::fIrms%/pp%+%pp%stEL3453::Lx[1]::fIrms%/pp%+%pp%stEL3453::Lx[2]::fIrms%/pp%)/3%/f%" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Right" data-tchmi-text-vertical-alignment="Center" data-tchmi-right="50" data-tchmi-right-unit="%">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 5,
+  "right": 5,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="EnergyAnalyzerCurrentAndVoltage_CurrentLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="A" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-right="0">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 5,
+  "right": 0,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+
+<script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+{
+  "left": 1,
+  "right": 1,
+  "top": 1,
+  "bottom": 1,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+{
+  "left": "Solid",
+  "right": "Solid",
+  "top": "Solid",
+  "bottom": "Solid"
+}
+</script>
+</div>
+<div id="EnergyAnalyzerCurrentAndVoltage_VoltageContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-top="35" data-tchmi-top-unit="px" data-tchmi-right="5" data-tchmi-right-unit="px" data-tchmi-height="25">
+<div id="EnergyAnalyzerCurrentAndVoltage_VoltageValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="%f%(%pp%stEL3453::Lx[0]::fULrms%/pp%+%pp%stEL3453::Lx[1]::fIrms%/pp%+%pp%stEL3453::Lx[2]::fIrms%/pp%)/3%/f%" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Right" data-tchmi-text-vertical-alignment="Center" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-creator-visibility="Visible">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 5,
+  "right": 5,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="EnergyAnalyzerCurrentAndVoltage_VoltageLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="25" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="V" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-right="0" data-tchmi-creator-visibility="Visible">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 5,
+  "right": 0,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+
+<script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+{
+  "left": 1,
+  "right": 1,
+  "top": 1,
+  "bottom": 1,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+{
+  "left": "Solid",
+  "right": "Solid",
+  "top": "Solid",
+  "bottom": "Solid"
+}
+</script>
+</div>
+</div>
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+{
+  "left": 1,
+  "right": 1,
+  "top": 1,
+  "bottom": 1,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+{
+  "left": "Solid",
+  "right": "Solid",
+  "top": "Solid",
+  "bottom": "Solid"
+}
+</script>
+
+
+<div id="EnergyAnalyzerCurrentAndVoltage_Popup" data-tchmi-type="TcHmi.Controls.System.TcHmiPopup" data-tchmi-height="500" data-tchmi-height-unit="px" data-tchmi-left="158" data-tchmi-left-unit="px" data-tchmi-top="177" data-tchmi-top-unit="px" data-tchmi-width="500" data-tchmi-width-unit="px">
+
+<script data-tchmi-target-attribute="data-tchmi-target-file" type="application/json">
+{
+  "path": "UserControls/EnergyAnalyzer/CurrentAndVoltage/Popups/EnergyAnalyzerCurrentAndVoltagePopup.usercontrol",
+  "attributes": {
+    "data-tchmi-stel3453": "%pp%stEL3453%/pp%"
+  }
+}
+</script>
+</div>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "EnergyAnalyzerCurrentAndVoltage.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "EnergyAnalyzerCurrentAndVoltage_Popup",
+        "fn": "open",
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "EnergyAnalyzerCurrentAndVoltage.onAttached",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%EnergyAnalyzerCurrentAndVoltage_Popup::Right%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/MeasurementValue",
+          "value": 0.0
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%EnergyAnalyzerCurrentAndVoltage_Popup::Top%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:framework#/definitions/MeasurementValue",
+          "value": 0.0
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>

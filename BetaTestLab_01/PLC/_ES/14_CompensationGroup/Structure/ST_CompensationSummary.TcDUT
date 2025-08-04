@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="ST_CompensationSummary" Id="{da015f38-03cc-4a8c-925f-84f521aa7712}">
+    <Declaration><![CDATA[TYPE ST_CompensationSummary :
+STRUCT
+    nTotalActiveCapacitors : INT;           // Toplam aktif kondansatör sayısı
+    rTotalActivePower : REAL;               // Toplam aktif güç (kVAr)
+    nActiveGroupCount : INT;                // Aktif grup sayısı
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="PRG_LVCP2_PowerMeasurement" Id="{7e5628c9-edef-4634-8dff-23dd194ebd67}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_LVCP2_PowerMeasurement
+VAR
+	// Enerji Yönetimi
+	fbEL3453	: FB_EL3453;	
+	stEL3453	: stEL3453;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+	fbEL3453(pOut := ADR(stEL3453));]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_LVCP2_PowerMeasurement">
+      <LineId Id="6" Count="0" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

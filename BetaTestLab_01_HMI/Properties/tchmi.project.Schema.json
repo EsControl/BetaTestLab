@@ -1,0 +1,525 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "Variac1P": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Variac1P.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Variac1P"
+    },
+    "VariableTransformator": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\VariableTransformator.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/VariableTransformator"
+    },
+    "Transformator": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Transformator.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Transformator"
+    },
+    "TemperatureDisplay": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\TemperatureDisplay.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/TemperatureDisplay"
+    },
+    "Symbol3P": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Symbol3P.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Symbol3P"
+    },
+    "Statistics": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Statistics.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Statistics"
+    },
+    "ProgressBar": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\ProgressBar.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/ProgressBar"
+    },
+    "MeasurementDisplay3P": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\MeasurementDisplay3P.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/MeasurementDisplay3P"
+    },
+    "GlobalPanel": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\GlobalPanel.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/GlobalPanel"
+    },
+    "EmergencyStop": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\EmergencyStop.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/EmergencyStop"
+    },
+    "Documentation": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Documentation.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Documentation"
+    },
+    "CountdownTimer": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\CountdownTimer.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CountdownTimer"
+    },
+    "ConverterDisplay": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\ConverterDisplay.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/ConverterDisplay"
+    },
+    "Converter": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Converter.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Converter"
+    },
+    "CompensationDisplay": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\CompensationDisplay.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CompensationDisplay"
+    },
+    "AppliedVoltage": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\AppliedVoltage.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/AppliedVoltage"
+    },
+    "VariableTransformator_0": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\VariableTransformator\\VariableTransformator.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/VariableTransformator_0"
+    },
+    "VariableTransformatorPopup": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\VariableTransformator\\Popups\\VariableTransformatorPopup.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/VariableTransformatorPopup"
+    },
+    "VariableTransformatorPopupControl": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\VariableTransformator\\Popups\\VariableTransformatorPopupControl.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/VariableTransformatorPopupControl"
+    },
+    "CircuitBreaker": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\CircuitBreaker\\CircuitBreaker.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CircuitBreaker"
+    },
+    "CircuitBreakerHorizontal": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\CircuitBreaker\\CircuitBreakerHorizontal.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CircuitBreakerHorizontal"
+    },
+    "CircuitBreakerVertical": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\CircuitBreaker\\CircuitBreakerVertical.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CircuitBreakerVertical"
+    },
+    "CircuitBreakerPopup": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\CircuitBreaker\\Popups\\CircuitBreakerPopup.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CircuitBreakerPopup"
+    },
+    "CircuitBreakerPopupConfig": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\CircuitBreaker\\Popups\\CircuitBreakerPopupConfig.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CircuitBreakerPopupConfig"
+    },
+    "CircuitBreakerPopupControl": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\CircuitBreaker\\Popups\\CircuitBreakerPopupControl.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CircuitBreakerPopupControl"
+    },
+    "CircuitBreakerPopupDocumentation": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\CircuitBreaker\\Popups\\CircuitBreakerPopupDocumentation.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CircuitBreakerPopupDocumentation"
+    },
+    "CircuitBreakerPopupStatistics": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\CircuitBreaker\\Popups\\CircuitBreakerPopupStatistics.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CircuitBreakerPopupStatistics"
+    },
+    "Contactor": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Contactor\\Contactor.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Contactor"
+    },
+    "ContactorHorizontal": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Contactor\\ContactorHorizontal.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/ContactorHorizontal"
+    },
+    "ContactorVertical": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Contactor\\ContactorVertical.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/ContactorVertical"
+    },
+    "ContactorPopup": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Contactor\\Popups\\ContactorPopup.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/ContactorPopup"
+    },
+    "ContactorPopupConfig": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Contactor\\Popups\\ContactorPopupConfig.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/ContactorPopupConfig"
+    },
+    "ContactorPopupControl": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Contactor\\Popups\\ContactorPopupControl.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/ContactorPopupControl"
+    },
+    "ContactorPopupDocumentation": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Contactor\\Popups\\ContactorPopupDocumentation.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/ContactorPopupDocumentation"
+    },
+    "ContactorPopupStatistics": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Contactor\\Popups\\ContactorPopupStatistics.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/ContactorPopupStatistics"
+    },
+    "Converter_0": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Converter\\Converter.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Converter_0"
+    },
+    "ConverterDocumentation": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Converter\\Popups\\ConverterDocumentation.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/ConverterDocumentation"
+    },
+    "ConverterOperations": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Converter\\Popups\\ConverterOperations.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/ConverterOperations"
+    },
+    "ConverterPopup": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Converter\\Popups\\ConverterPopup.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/ConverterPopup"
+    },
+    "ConverterStatistics": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Converter\\Popups\\ConverterStatistics.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/ConverterStatistics"
+    },
+    "DatePicker": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\DatePicker\\DatePicker.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/DatePicker"
+    },
+    "Disconnector": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Disconnector\\Disconnector.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Disconnector"
+    },
+    "DisconnectorHorizontal": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Disconnector\\DisconnectorHorizontal.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/DisconnectorHorizontal"
+    },
+    "DisconnectorVertical": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Disconnector\\DisconnectorVertical.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/DisconnectorVertical"
+    },
+    "DisconnectorPopup": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Disconnector\\Popups\\DisconnectorPopup.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/DisconnectorPopup"
+    },
+    "DisconnectorPopupConfig": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Disconnector\\Popups\\DisconnectorPopupConfig.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/DisconnectorPopupConfig"
+    },
+    "DisconnectorPopupControl": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Disconnector\\Popups\\DisconnectorPopupControl.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/DisconnectorPopupControl"
+    },
+    "DisconnectorPopupDocumentation": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Disconnector\\Popups\\DisconnectorPopupDocumentation.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/DisconnectorPopupDocumentation"
+    },
+    "DisconnectorPopupStatistics": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Disconnector\\Popups\\DisconnectorPopupStatistics.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/DisconnectorPopupStatistics"
+    },
+    "EnergyAnalyzerCurrentAndVoltage": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\EnergyAnalyzer\\CurrentAndVoltage\\EnergyAnalyzerCurrentAndVoltage.usercontrol.json",
+      "id": "tchmi:project#/definitions/EnergyAnalyzerCurrentAndVoltage",
+      "type": "object"
+    },
+    "EnergyAnalyzerCurrentAndVoltagePopup": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\EnergyAnalyzer\\CurrentAndVoltage\\Popups\\EnergyAnalyzerCurrentAndVoltagePopup.usercontrol.json",
+      "id": "tchmi:project#/definitions/EnergyAnalyzerCurrentAndVoltagePopup",
+      "type": "object"
+    },
+    "EnergyAnalyzerCurrentAndVoltagePopupCurrentHarmonics": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\EnergyAnalyzer\\CurrentAndVoltage\\Popups\\EnergyAnalyzerCurrentAndVoltagePopupCurrentHarmonics.usercontrol.json",
+      "id": "tchmi:project#/definitions/EnergyAnalyzerCurrentAndVoltagePopupCurrentHarmonics",
+      "type": "object"
+    },
+    "EnergyAnalyzerCurrentAndVoltagePopupInfo": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\EnergyAnalyzer\\CurrentAndVoltage\\Popups\\EnergyAnalyzerCurrentAndVoltagePopupInfo.usercontrol.json",
+      "id": "tchmi:project#/definitions/EnergyAnalyzerCurrentAndVoltagePopupInfo",
+      "type": "object"
+    },
+    "EnergyAnalyzerCurrentAndVoltagePopupVoltageHarmonics": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\EnergyAnalyzer\\CurrentAndVoltage\\Popups\\EnergyAnalyzerCurrentAndVoltagePopupVoltageHarmonics.usercontrol.json",
+      "id": "tchmi:project#/definitions/EnergyAnalyzerCurrentAndVoltagePopupVoltageHarmonics",
+      "type": "object"
+    },
+    "EnergyAnalyzerOnlyCurrent": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\EnergyAnalyzer\\OnlyCurrent\\EnergyAnalyzerOnlyCurrent.usercontrol.json",
+      "id": "tchmi:project#/definitions/EnergyAnalyzerOnlyCurrent",
+      "type": "object"
+    },
+    "EnergyAnalyzerOnlyCurrentPopup": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\EnergyAnalyzer\\OnlyCurrent\\Popups\\EnergyAnalyzerOnlyCurrentPopup.usercontrol.json",
+      "id": "tchmi:project#/definitions/EnergyAnalyzerOnlyCurrentPopup",
+      "type": "object"
+    },
+    "EnergyAnalyzerOnlyCurrentPopupInfo": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\EnergyAnalyzer\\OnlyCurrent\\Popups\\EnergyAnalyzerOnlyCurrentPopupInfo.usercontrol.json",
+      "id": "tchmi:project#/definitions/EnergyAnalyzerOnlyCurrentPopupInfo",
+      "type": "object"
+    },
+    "EMC_Filter": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Emc_Filter.usercontrol.json",
+      "id": "tchmi:project#/definitions/EMC_Filter",
+      "type": "object"
+    },
+    "CustomLine": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\CustomLine.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CustomLine"
+    },
+    "Ground": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Ground.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/Ground"
+    },
+    "CapacitorHorizontal": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Capacitor\\CapacitorHorizontal.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CapacitorHorizontal"
+    },
+    "CapacitorPopupInfo": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Capacitor\\CapacitorPopupInfo.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CapacitorPopupInfo"
+    },
+    "CapacitorVertical": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Capacitor\\CapacitorVertical.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CapacitorVertical"
+    },
+    "CapacitorSchemaWithContactor": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Capacitor\\Schemas\\CapacitorSchemaWithContactor.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CapacitorSchemaWithContactor"
+    },
+    "CapacitorSchemaWithDisconnector": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\Capacitor\\Schemas\\CapacitorSchemaWithDisconnector.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/CapacitorSchemaWithDisconnector"
+    }
+  }
+}

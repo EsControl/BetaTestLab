@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <EnumerationTextList Name="E_DisconnectorFault" Id="{8941a61c-7cdd-4082-90a5-807e4cf2989b}">
+    <Declaration><![CDATA[TYPE E_DisconnectorFault :
+(
+    NONE := 0,                  // Arıza yok
+    THERMAL := 1,               // Termik arıza
+    CONTACTOR_ON := 2,          // ON kontaktör geri bildirim hatası
+    CONTACTOR_OFF := 3,         // OFF kontaktör geri bildirim hatası
+    MOTION_TIMEOUT := 4,        // Hareket zaman aşımı
+    BOTH_LIMITS := 5,           // Her iki limit aktif
+    INTERLOCK := 6,             // Toprak bıçağı interlock hatası
+    EARTH_SWITCH := 7           // Toprak bıçağı senkronizasyon hatası
+);
+END_TYPE]]></Declaration>
+    <XmlArchive>
+      <Data>
+        <o xml:space="preserve" t="TextListEnumerationTextListObject">
+          <l n="TextList" t="ArrayList" cet="TextListRow">
+            <o>
+              <v n="TextID">"NONE"</v>
+              <v n="TextDefault">"0"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"THERMAL"</v>
+              <v n="TextDefault">"1"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"CONTACTOR_ON"</v>
+              <v n="TextDefault">"2"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"CONTACTOR_OFF"</v>
+              <v n="TextDefault">"3"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"MOTION_TIMEOUT"</v>
+              <v n="TextDefault">"4"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"BOTH_LIMITS"</v>
+              <v n="TextDefault">"5"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"INTERLOCK"</v>
+              <v n="TextDefault">"6"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"EARTH_SWITCH"</v>
+              <v n="TextDefault">"7"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">""</v>
+              <v n="TextDefault">""</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+          </l>
+          <l n="Languages" t="ArrayList" />
+          <v n="GuidInit">{4046e909-cd99-4d56-a7fa-829030df43a4}</v>
+          <v n="GuidReInit">{15de404b-d748-4a6f-aed2-8b13b88dfcc1}</v>
+          <v n="GuidExitX">{2329306b-1995-405e-a09b-5dc2854ed722}</v>
+        </o>
+      </Data>
+      <TypeList>
+        <Type n="ArrayList">System.Collections.ArrayList</Type>
+        <Type n="Guid">System.Guid</Type>
+        <Type n="String">System.String</Type>
+        <Type n="TextListEnumerationTextListObject">{4b60233c-f940-4beb-b331-82133b520151}</Type>
+        <Type n="TextListRow">{53da1be7-ad25-47c3-b0e8-e26286dad2e0}</Type>
+      </TypeList>
+    </XmlArchive>
+  </EnumerationTextList>
+</TcPlcObject>

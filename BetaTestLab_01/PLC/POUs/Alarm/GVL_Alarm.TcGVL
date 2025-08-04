@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <GVL Name="GVL_Alarm" Id="{9f02c9db-48bf-4f4e-a896-e8d15dda983f}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	bMasterReset		: BOOL;
+	bSafetyLoop			: BOOL;
+	
+	EP6_3X2_24VDC_OK	AT %I*	: BOOL;
+	EP6_UPS_24VDC_OK	AT %I*	: BOOL;
+	
+	EP7_3X2_24VDC_OK	AT %I*	: BOOL;
+	EP7_UPS_24VDC_OK	AT %I*	: BOOL;	
+	
+	EP8_3X2_24VDC_OK	AT %I*	: BOOL;
+	EP8_UPS_24VDC_OK	AT %I*	: BOOL;		
+	
+	EP9_3X2_24VDC_OK	AT %I*	: BOOL;
+	EP9_UPS_24VDC_OK	AT %I*	: BOOL;		
+	
+	EP10_3X2_24VDC_OK	AT %I*	: BOOL;
+	EP10_UPS_24VDC_OK	AT %I*	: BOOL;		
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

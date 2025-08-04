@@ -1,0 +1,709 @@
+<div id="Disconnector" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-height="100" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="200" data-tchmi-creator-viewport-height="200" data-tchmi-width="100" data-tchmi-width-unit="%">
+
+
+
+
+
+
+
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+{
+  "left": "Dashed",
+  "right": "Dashed",
+  "top": "Dashed",
+  "bottom": "Dashed"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "Disconnector.onPressed",
+    "actions": [
+      {
+        "objectType": "ControlApiFunction",
+        "active": true,
+        "control": "DisconnectorBasePopup",
+        "fn": "open",
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "%pp%stDisconnectorHmi%/pp%",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                  "symbolExpression": "%pp%stDisconnectorHmi::stStatus::ePosition%/pp%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                  "value": 5
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%DisconnectorRectanglesContainer::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Collapsed"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%DisconnectorRectangleFaultContainer::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Visible"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%DisconnectorRectanglesContainer::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Visible"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%DisconnectorRectangleFaultContainer::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Collapsed"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "Condition",
+                "active": true,
+                "parts": [
+                  {
+                    "if": [
+                      {
+                        "compare1": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "symbolExpression": "%pp%IsVertical%/pp%"
+                        },
+                        "compare2": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:general#/definitions/BOOL",
+                          "value": false
+                        },
+                        "compareOperator": "==",
+                        "logic": null
+                      }
+                    ],
+                    "then": [
+                      {
+                        "objectType": "Comment",
+                        "comment": "Yatay konumda, dikeydekileri gizle"
+                      },
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%DisconnectorRectangle_Top::Visibility%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:framework#/definitions/Visibility",
+                          "value": "Collapsed"
+                        },
+                        "asyncWait": true
+                      },
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%DisconnectorRectangle_Bottom::Visibility%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:framework#/definitions/Visibility",
+                          "value": "Collapsed"
+                        },
+                        "asyncWait": true
+                      },
+                      {
+                        "objectType": "Condition",
+                        "active": true,
+                        "parts": [
+                          {
+                            "if": [
+                              {
+                                "compare1": {
+                                  "objectType": "Symbol",
+                                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                                  "symbolExpression": "%pp%stDisconnectorHmi::stStatus::ePosition%/pp%"
+                                },
+                                "compare2": {
+                                  "objectType": "StaticValue",
+                                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                                  "value": 3
+                                },
+                                "compareOperator": "==",
+                                "logic": null
+                              },
+                              {
+                                "compare1": {
+                                  "objectType": "Symbol",
+                                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                                  "symbolExpression": "%pp%stDisconnectorHmi::stStatus::ePosition%/pp%"
+                                },
+                                "compare2": {
+                                  "objectType": "StaticValue",
+                                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                                  "value": 2
+                                },
+                                "compareOperator": "==",
+                                "logic": "OR"
+                              }
+                            ],
+                            "then": [
+                              {
+                                "objectType": "Comment",
+                                "comment": "Anahtar kapalı durumda, akım geçiyor"
+                              },
+                              {
+                                "objectType": "WriteToSymbol",
+                                "active": true,
+                                "symbolExpression": "%ctrl%DisconnectorRectangle_Vertical::Visibility%/ctrl%",
+                                "value": {
+                                  "objectType": "StaticValue",
+                                  "valueType": "tchmi:framework#/definitions/Visibility",
+                                  "value": "Collapsed"
+                                },
+                                "asyncWait": true
+                              },
+                              {
+                                "objectType": "WriteToSymbol",
+                                "active": true,
+                                "symbolExpression": "%ctrl%DisconnectorRectangle_Horizontal::Visibility%/ctrl%",
+                                "value": {
+                                  "objectType": "StaticValue",
+                                  "valueType": "tchmi:framework#/definitions/Visibility",
+                                  "value": "Visible"
+                                },
+                                "asyncWait": true
+                              }
+                            ]
+                          },
+                          {
+                            "elseif": [
+                              {
+                                "compare1": {
+                                  "objectType": "Symbol",
+                                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                                  "symbolExpression": "%pp%stDisconnectorHmi::stStatus::ePosition%/pp%"
+                                },
+                                "compare2": {
+                                  "objectType": "StaticValue",
+                                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                                  "value": 1
+                                },
+                                "compareOperator": "==",
+                                "logic": null
+                              },
+                              {
+                                "compare1": {
+                                  "objectType": "Symbol",
+                                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                                  "symbolExpression": "%pp%stDisconnectorHmi::stStatus::ePosition%/pp%"
+                                },
+                                "compare2": {
+                                  "objectType": "StaticValue",
+                                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                                  "value": 4
+                                },
+                                "compareOperator": "==",
+                                "logic": "OR"
+                              }
+                            ],
+                            "then": [
+                              {
+                                "objectType": "Comment",
+                                "comment": "Anahtar açık durumda, akım geçişi yok"
+                              },
+                              {
+                                "objectType": "WriteToSymbol",
+                                "active": true,
+                                "symbolExpression": "%ctrl%DisconnectorRectangle_Horizontal::Visibility%/ctrl%",
+                                "value": {
+                                  "objectType": "StaticValue",
+                                  "valueType": "tchmi:framework#/definitions/Visibility",
+                                  "value": "Collapsed"
+                                },
+                                "asyncWait": true
+                              },
+                              {
+                                "objectType": "WriteToSymbol",
+                                "active": true,
+                                "symbolExpression": "%ctrl%DisconnectorRectangle_Vertical::Visibility%/ctrl%",
+                                "value": {
+                                  "objectType": "StaticValue",
+                                  "valueType": "tchmi:framework#/definitions/Visibility",
+                                  "value": "Visible"
+                                },
+                                "asyncWait": true
+                              }
+                            ]
+                          },
+                          {
+                            "else": []
+                          }
+                        ],
+                        "asyncWait": true
+                      }
+                    ]
+                  },
+                  {
+                    "else": [
+                      {
+                        "objectType": "Comment",
+                        "comment": "Dikey konumda, yataydakileri gizle"
+                      },
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%DisconnectorRectangle_Right::Visibility%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:framework#/definitions/Visibility",
+                          "value": "Collapsed"
+                        },
+                        "asyncWait": true
+                      },
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%DisconnectorRectangle_Left::Visibility%/ctrl%",
+                        "value": {
+                          "objectType": "StaticValue",
+                          "valueType": "tchmi:framework#/definitions/Visibility",
+                          "value": "Collapsed"
+                        },
+                        "asyncWait": true
+                      },
+                      {
+                        "objectType": "Condition",
+                        "active": true,
+                        "parts": [
+                          {
+                            "if": [
+                              {
+                                "compare1": {
+                                  "objectType": "Symbol",
+                                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                                  "symbolExpression": "%pp%stDisconnectorHmi::stStatus::ePosition%/pp%"
+                                },
+                                "compare2": {
+                                  "objectType": "StaticValue",
+                                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                                  "value": 3
+                                },
+                                "compareOperator": "==",
+                                "logic": null
+                              },
+                              {
+                                "compare1": {
+                                  "objectType": "Symbol",
+                                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                                  "symbolExpression": "%pp%stDisconnectorHmi::stStatus::ePosition%/pp%"
+                                },
+                                "compare2": {
+                                  "objectType": "StaticValue",
+                                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                                  "value": 2
+                                },
+                                "compareOperator": "==",
+                                "logic": "OR"
+                              }
+                            ],
+                            "then": [
+                              {
+                                "objectType": "Comment",
+                                "comment": "Connector aktif, akım geçiyor"
+                              },
+                              {
+                                "objectType": "WriteToSymbol",
+                                "active": true,
+                                "symbolExpression": "%ctrl%DisconnectorRectangle_Horizontal::Visibility%/ctrl%",
+                                "value": {
+                                  "objectType": "StaticValue",
+                                  "valueType": "tchmi:framework#/definitions/Visibility",
+                                  "value": "Collapsed"
+                                },
+                                "asyncWait": true
+                              },
+                              {
+                                "objectType": "WriteToSymbol",
+                                "active": true,
+                                "symbolExpression": "%ctrl%DisconnectorRectangle_Vertical::Visibility%/ctrl%",
+                                "value": {
+                                  "objectType": "StaticValue",
+                                  "valueType": "tchmi:framework#/definitions/Visibility",
+                                  "value": "Visible"
+                                },
+                                "asyncWait": true
+                              }
+                            ]
+                          },
+                          {
+                            "elseif": [
+                              {
+                                "compare1": {
+                                  "objectType": "Symbol",
+                                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                                  "symbolExpression": "%pp%stDisconnectorHmi::stStatus::ePosition%/pp%"
+                                },
+                                "compare2": {
+                                  "objectType": "StaticValue",
+                                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                                  "value": 1
+                                },
+                                "compareOperator": "==",
+                                "logic": null
+                              },
+                              {
+                                "compare1": {
+                                  "objectType": "Symbol",
+                                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                                  "symbolExpression": "%pp%stDisconnectorHmi::stStatus::ePosition%/pp%"
+                                },
+                                "compare2": {
+                                  "objectType": "StaticValue",
+                                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                                  "value": 4
+                                },
+                                "compareOperator": "==",
+                                "logic": "OR"
+                              }
+                            ],
+                            "then": [
+                              {
+                                "objectType": "WriteToSymbol",
+                                "active": true,
+                                "symbolExpression": "%ctrl%DisconnectorRectangle_Vertical::Visibility%/ctrl%",
+                                "value": {
+                                  "objectType": "StaticValue",
+                                  "valueType": "tchmi:framework#/definitions/Visibility",
+                                  "value": "Collapsed"
+                                },
+                                "asyncWait": true
+                              },
+                              {
+                                "objectType": "WriteToSymbol",
+                                "active": true,
+                                "symbolExpression": "%ctrl%DisconnectorRectangle_Horizontal::Visibility%/ctrl%",
+                                "value": {
+                                  "objectType": "StaticValue",
+                                  "valueType": "tchmi:framework#/definitions/Visibility",
+                                  "value": "Visible"
+                                },
+                                "asyncWait": true
+                              }
+                            ]
+                          },
+                          {
+                            "else": []
+                          }
+                        ],
+                        "asyncWait": true
+                      }
+                    ]
+                  }
+                ],
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "%pp%stDisconnectorHmi::stStatus::ePosition%/pp%",
+    "actions": [
+      {
+        "objectType": "Comment",
+        "comment": "Pozisyon değişimi olduğunda renk düzenlemeleri yapılıyor"
+      },
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                  "symbolExpression": "%pp%stDisconnectorHmi::stStatus::ePosition%/pp%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                  "value": 2
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%pp%CenterColor%/pp%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%i%ColorYellow%/i%"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%pp%Color%/pp%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%i%ErrorRed%/i%"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "elseif": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                  "symbolExpression": "%pp%stDisconnectorHmi::stStatus::ePosition%/pp%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                  "value": 1
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%pp%CenterColor%/pp%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%i%SuccessGreen%/i%"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%pp%Color%/pp%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%i%SuccessGreen%/i%"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "elseif": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%pp%stDisconnectorHmi::stStatus::ePosition%/pp%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:server#/definitions/PLC1.E_DisconnectorPosition",
+                  "value": 4
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%pp%CenterColor%/pp%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%i%ColorYellow%/i%"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%pp%Color%/pp%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%i%SuccessGreen%/i%"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%pp%CenterColor%/pp%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%i%ErrorRed%/i%"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%pp%Color%/pp%",
+                "value": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%i%ErrorRed%/i%"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+<div id="DisconnectorContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-bottom-unit="%" data-tchmi-right-unit="%" data-tchmi-creator-visibility="Visible">
+<div id="DisconnectorLock" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="40" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="🔒" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-width="30" data-tchmi-width-unit="%" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-visibility="%f%if(%pp%IsLock%/pp%) { 'Visible' }
+else { 'Hidden' }%/f%" data-tchmi-creator-visibility="Visible">
+</div>
+<div id="DisconnectorNonLocked" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="40" data-tchmi-height-unit="%" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="🔓" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="30" data-tchmi-width-unit="%" data-tchmi-word-wrap="true" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-vertical-alignment="Center" data-tchmi-visibility="%f%if(%pp%IsLock%/pp%) { 'Hidden' }
+else { 'Visible' }%/f%" data-tchmi-creator-visibility="Visible">
+</div>
+<div id="DisconnectorEmergencyStop" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="40" data-tchmi-height-unit="%" data-tchmi-left-unit="px" data-tchmi-text="🚨" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="30" data-tchmi-width-unit="%" data-tchmi-word-wrap="true" data-tchmi-right="0" data-tchmi-visibility="%f%if(%i%EmergencyStop%/i%){'Visible'}
+else { 'Hidden' }%/f%">
+</div>
+<div id="DisconnectorBasePopup" data-tchmi-type="TcHmi.Controls.System.TcHmiPopup" data-tchmi-height="500" data-tchmi-height-unit="px" data-tchmi-left="300" data-tchmi-left-unit="px" data-tchmi-top="90" data-tchmi-top-unit="px" data-tchmi-modal="true" data-tchmi-width="500" data-tchmi-width-unit="px">
+<script data-tchmi-target-attribute="data-tchmi-target-file" type="application/json">
+{
+  "path": "UserControls/Disconnector/DisconnectorPopups/DisconnectorPopup.usercontrol",
+  "attributes": {
+    "data-tchmi-stdisconnectorhmi": "%pp%stDisconnectorHmi%/pp%"
+  }
+}
+</script>
+
+
+</div>
+<div id="DisconnectorRectanglesContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-creator-visibility="Visible">
+<div id="DisconnectorRectangle_Left" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height-unit="%" data-tchmi-left="2" data-tchmi-left-unit="%" data-tchmi-top="44" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-background-color="%pp%Color%/pp%" data-tchmi-stroke-color="%pp%Color%/pp%" data-tchmi-bottom="44" data-tchmi-bottom-unit="%" data-tchmi-right="80" data-tchmi-right-unit="%">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(0, 0, 0, 1)"
+}
+</script>
+</div>
+<div id="DisconnectorRectangle_Bottom" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height-unit="%" data-tchmi-left="44" data-tchmi-left-unit="%" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-background-color="%pp%Color%/pp%" data-tchmi-stroke-color="%pp%Color%/pp%" data-tchmi-bottom="2" data-tchmi-bottom-unit="%" data-tchmi-right="44" data-tchmi-right-unit="%" data-tchmi-top="80">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(0, 0, 0, 1)"
+}
+</script>
+</div>
+<div id="DisconnectorRectangle_Top" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height-unit="%" data-tchmi-left="44" data-tchmi-left-unit="%" data-tchmi-top="2" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-background-color="%pp%Color%/pp%" data-tchmi-stroke-color="%pp%Color%/pp%" data-tchmi-bottom="80" data-tchmi-bottom-unit="%" data-tchmi-right="44" data-tchmi-right-unit="%">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(0, 0, 0, 1)"
+}
+</script>
+</div>
+<div id="DisconnectorRectangle_Right" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height-unit="%" data-tchmi-left-unit="%" data-tchmi-top="44" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-left="80" data-tchmi-background-color="%pp%Color%/pp%" data-tchmi-stroke-color="%pp%Color%/pp%" data-tchmi-bottom="44" data-tchmi-bottom-unit="%" data-tchmi-right="2">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(0, 0, 0, 1)"
+}
+</script>
+</div>
+<div id="DisconnectorRectangle_Vertical" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height="40" data-tchmi-height-unit="%" data-tchmi-left="44" data-tchmi-left-unit="%" data-tchmi-top="30" data-tchmi-top-unit="%" data-tchmi-width="12" data-tchmi-width-unit="%" data-tchmi-stroke-color="%pp%CenterColor%/pp%" data-tchmi-background-color="%pp%CenterColor%/pp%">
+</div>
+<div id="DisconnectorRectangle_Horizontal" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height-unit="%" data-tchmi-left="30" data-tchmi-left-unit="%" data-tchmi-top="44" data-tchmi-top-unit="%" data-tchmi-width-unit="%" data-tchmi-background-color="%pp%CenterColor%/pp%" data-tchmi-stroke-color="%pp%CenterColor%/pp%" data-tchmi-bottom="44" data-tchmi-bottom-unit="%" data-tchmi-right="30" data-tchmi-right-unit="%">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(0, 0, 0, 1)"
+}
+</script>
+</div>
+</div>
+<div id="DisconnectorRectangleFaultContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-creator-visibility="Collapsed">
+<div id="DisconnectorRectangle_Fault_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height-unit="%" data-tchmi-left="44" data-tchmi-left-unit="%" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-width="12" data-tchmi-width-unit="%" data-tchmi-stroke-color="%i%ErrorRed%/i%" data-tchmi-background-color="%i%ErrorRed%/i%" data-tchmi-bottom="10" data-tchmi-bottom-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-transform" type="application/json">
+[
+  {
+    "transformType": "Rotate",
+    "angle": 45.0
+  }
+]
+</script>
+</div>
+<div id="DisconnectorRectangle_Fault_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRectangle" data-tchmi-height-unit="%" data-tchmi-left="44" data-tchmi-left-unit="%" data-tchmi-top="10" data-tchmi-top-unit="%" data-tchmi-width="12" data-tchmi-width-unit="%" data-tchmi-stroke-color="%i%ErrorRed%/i%" data-tchmi-bottom="10" data-tchmi-bottom-unit="%" data-tchmi-background-color="%i%ErrorRed%/i%">
+<script data-tchmi-target-attribute="data-tchmi-transform" type="application/json">
+[
+  {
+    "transformType": "Rotate",
+    "angle": -45.0
+  }
+]
+</script>
+</div>
+</div>
+</div>
+</div>

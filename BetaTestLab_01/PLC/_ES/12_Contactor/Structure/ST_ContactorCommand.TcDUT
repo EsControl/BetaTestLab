@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="ST_ContactorCommand" Id="{e19ca60d-4d49-406f-bdce-e0394ecf44bd}">
+    <Declaration><![CDATA[TYPE ST_ContactorCommand :
+STRUCT
+    eControlMode: E_ContactorControlMode;       // Kontrol modu seçimi
+    bAutoOnCmd: BOOL;                          // Otomatik ON komutu
+    bAutoOffCmd: BOOL;                         // Otomatik OFF komutu
+    bManualOnCmd: BOOL;                        // Manuel ON komutu
+    bManualOffCmd: BOOL;                       // Manuel OFF komutu
+    bResetFault: BOOL;                         // Hata reset sinyali
+    bResetStatistics: BOOL;                    // İstatistik reset sinyali
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

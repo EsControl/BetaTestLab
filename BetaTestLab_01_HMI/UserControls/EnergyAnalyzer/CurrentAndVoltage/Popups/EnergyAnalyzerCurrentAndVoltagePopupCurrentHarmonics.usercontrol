@@ -1,0 +1,437 @@
+<div id="EnergyAnalyzerCurrentAndVoltagePopupCurrentHarmonics" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500">
+
+<div id="EnergAnalCurAndVoltPop_HarmonicsDataGrid" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiDatagrid" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-src-data="%pp%stArrayData%/pp%">
+<script data-tchmi-target-attribute="data-tchmi-src-column" type="application/json">
+[
+  {
+    "name": "L1",
+    "label": "L1",
+    "control": "TextBlock",
+    "width": 1,
+    "widthUnit": "factor",
+    "resize": true,
+    "sortable": false,
+    "minWidth": 100,
+    "minWidthUnit": "px",
+    "editable": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false,
+    "autoFocusOut": true,
+    "autoSelectText": false
+  },
+  {
+    "name": "L2",
+    "label": "L2",
+    "control": "TextBlock",
+    "width": 1,
+    "widthUnit": "factor",
+    "resize": true,
+    "sortable": false,
+    "minWidth": 70,
+    "minWidthUnit": "px",
+    "editable": false,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false,
+    "autoFocusOut": true,
+    "autoSelectText": false
+  },
+  {
+    "name": "L3",
+    "label": "L3",
+    "control": "TextBlock",
+    "width": 1,
+    "widthUnit": "factor",
+    "resize": true,
+    "sortable": false,
+    "minWidth": 70,
+    "minWidthUnit": "px",
+    "editable": true,
+    "horizontalAlignment": "Center",
+    "verticalAlignment": "Center",
+    "headerHorizontalAlignment": "Center",
+    "headerVerticalAlignment": "Center",
+    "ignoreEscapeSequences": false,
+    "autoFocusOut": true,
+    "autoSelectText": false
+  }
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-src-data" type="application/json">
+[
+  {
+    "Test1": "Example Data",
+    "Test2": 42,
+    "Test3": true,
+    "Test4": "Editable Data"
+  },
+  {
+    "Test1": "Example Data",
+    "Test2": 3.1415,
+    "Test3": false,
+    "Test4": "Editable Data"
+  }
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-cell-content-padding" type="application/json">
+{
+  "left": 3,
+  "leftUnit": "px",
+  "right": 3,
+  "rightUnit": "px",
+  "top": 0,
+  "topUnit": "px",
+  "bottom": 0,
+  "bottomUnit": "px"
+}
+</script>
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+    [
+    {
+    "event": "%pp%stEL3453%/pp%",
+    "actions": [
+    {
+    "objectType": "WriteToSymbol",
+    "active": true,
+    "symbolExpression": "%pp%stArrayData%/pp%",
+    "value": {
+    "objectType": "StaticValue",
+    "valueType": "tchmi:project#/definitions/Array(0..63) OF CustomPhaseValueObject",
+    "value": [
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[0]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[0]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[0]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[1]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[1]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[1]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[2]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[2]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[2]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[3]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[3]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[3]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[4]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[4]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[4]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[5]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[5]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[5]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[6]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[6]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[6]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[7]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[7]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[7]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[8]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[8]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[8]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[9]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[9]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[9]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[10]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[10]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[10]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[11]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[11]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[11]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[12]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[12]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[12]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[13]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[13]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[13]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[14]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[14]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[14]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[15]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[15]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[15]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[16]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[16]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[16]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[17]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[17]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[17]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[18]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[18]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[18]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[19]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[19]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[19]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[20]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[20]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[20]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[21]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[21]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[21]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[22]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[22]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[22]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[23]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[23]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[23]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[24]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[24]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[24]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[25]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[25]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[25]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[26]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[26]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[26]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[27]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[27]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[27]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[28]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[28]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[28]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[29]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[29]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[29]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[30]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[30]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[30]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[31]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[31]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[31]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[32]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[32]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[32]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[33]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[33]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[33]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[34]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[34]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[34]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[35]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[35]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[35]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[36]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[36]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[36]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[37]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[37]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[37]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[38]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[38]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[38]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[39]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[39]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[39]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[40]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[40]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[40]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[41]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[41]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[41]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[42]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[42]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[42]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[43]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[43]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[43]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[44]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[44]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[44]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[45]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[45]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[45]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[46]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[46]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[46]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[47]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[47]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[47]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[48]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[48]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[48]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[49]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[49]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[49]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[50]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[50]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[50]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[51]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[51]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[51]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[52]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[52]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[52]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[53]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[53]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[53]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[54]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[54]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[54]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[55]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[55]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[55]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[56]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[56]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[56]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[57]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[57]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[57]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[58]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[58]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[58]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[59]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[59]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[59]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[60]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[60]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[60]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[61]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[61]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[61]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[62]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[62]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[62]%/pp%"
+    },
+    {
+    "L1": "%pp%stEL3453::Lx[0]::fIL_harm[63]%/pp%",
+    "L2": "%pp%stEL3453::Lx[1]::fIL_harm[63]%/pp%",
+    "L3": "%pp%stEL3453::Lx[2]::fIL_harm[63]%/pp%"
+    }
+    ]
+    },
+    "asyncWait": true
+    }
+    ]
+    }
+    ]
+</script>
+</div>
+</div>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="ST_ContactorStatistics" Id="{69f1495e-7926-4c34-b784-40908ecc5295}">
+    <Declaration><![CDATA[TYPE ST_ContactorStatistics :
+STRUCT
+    // Çalışma Sayaçları
+    dwOnCount: DWORD;                           // Toplam ON sayısı
+    dwOffCount: DWORD;                          // Toplam OFF sayısı
+    dwOperationCount: DWORD;                    // Toplam operasyon sayısı
+    
+    // Son İşlem Bilgisi (SQL buffer)
+    stLastOperation: ST_ContactorOperationRecord; // SQL'e yazılacak son işlem
+    bNewOperationFlag: BOOL;                    // Yeni işlem var, SQL'e yaz
+    
+    // Arıza İstatistikleri
+    dwTotalFaultCount: DWORD;                   // Toplam arıza sayısı
+    dwFeedbackFaultCount: DWORD;                // Geri besleme arıza sayısı
+    dwWeldedFaultCount: DWORD;                  // Yapışma arıza sayısı
+    
+    // Bakım Bilgileri
+    bMaintenanceRequired: BOOL;                 // Bakım gerekli
+    dwRemainingOperations: DWORD;               // Kalan operasyon sayısı
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

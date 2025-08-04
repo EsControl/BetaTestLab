@@ -1,0 +1,40 @@
+<div id="EnergyAnalyzerOnlyCurrentPopup" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500">
+
+<div id="EnergAnalOnlyCurPop_TabNavigation" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTabNavigation" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0">
+<script data-tchmi-target-attribute="data-tchmi-tabs" type="application/json">
+[
+  {
+    "name": "values",
+    "displayName": "Değerler",
+    "targetFile": {
+      "path": "UserControls/EnergyAnalyzer/OnlyCurrent/Popups/EnergyAnalyzerOnlyCurrentPopupInfo.usercontrol",
+      "attributes": {
+        "data-tchmi-stel3453": "%pp%stEL3453%/pp%"
+      }
+    },
+    "targetFileHostPreload": false,
+    "targetFileHostPreAttach": false,
+    "targetFileHostKeepAlive": false,
+    "horizontalAlignment": "Left",
+    "verticalAlignment": "Center"
+  },
+  {
+    "name": "harmonics",
+    "displayName": "Harmonikler",
+    "targetFile": {
+      "path": "UserControls/EnergyAnalyzer/CurrentAndVoltage/Popups/EnergyAnalyzerCurrentAndVoltagePopupCurrentHarmonics.usercontrol",
+      "attributes": {
+        "data-tchmi-stel3453": "%pp%stEL3453%/pp%"
+      }
+    },
+    "targetFileHostPreload": false,
+    "targetFileHostPreAttach": false,
+    "targetFileHostKeepAlive": false,
+    "horizontalAlignment": "Left",
+    "verticalAlignment": "Center"
+  }
+]
+</script>
+
+</div>
+</div>

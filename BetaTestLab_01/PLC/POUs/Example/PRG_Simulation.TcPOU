@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="PRG_Simulation" Id="{75d3a5d6-7e43-473a-96f5-d8e4a7fcfa52}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_Simulation
+VAR
+    // Simülasyon kontrol
+    bSimulationEnable: BOOL := TRUE;
+    
+    // Disconnector simülasyon komutları
+    bSimOnCmd: BOOL;
+    bSimOffCmd: BOOL;
+    bSimThermalFault: BOOL;
+    bSimInterlock: BOOL;
+    bSimEarthSwitchError: BOOL;
+    
+    // Contactor simülasyon komutları
+    bSimContactor1_OnCmd: BOOL;
+    bSimContactor1_OffCmd: BOOL;
+    bSimContactor1_FeedbackFault: BOOL;
+    bSimContactor1_Welded: BOOL;
+    bSimContactor1_Interlock: BOOL;
+    
+    // Simülasyon parametreleri
+    tOnDelay: TIME := T#2S;
+    tOffDelay: TIME := T#2S;
+    tContactorResponseDelay: TIME := T#200MS;
+    tContactorFeedbackDelay: TIME := T#100MS;
+	
+    // Circuit Breaker simülasyon komutları
+    bSimBreaker1_OnCmd: BOOL;
+    bSimBreaker1_OffCmd: BOOL;
+    bSimBreaker1_Trip: BOOL;
+    bSimBreaker1_SpringNotCharged: BOOL;
+    bSimBreaker1_Interlock: BOOL;
+    
+    // Circuit Breaker simülasyon parametreleri
+    tBreakerMotionDelay: TIME := T#3S;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// =====================================================
+// ANA GÖVDE
+// =====================================================
+
+IF bSimulationEnable THEN
+    
+    // ============= DISCONNECTOR 1 SIMULATION =============
+    M_SimulateDisconnector(
+        sDisconnectorName := 'Disconnector1',
+        i_bSimEnable := TRUE,
+        i_bSimThermalFault := bSimThermalFault,
+        i_bSimEarthSwitchError := bSimEarthSwitchError,
+        i_tOnDelay := tOnDelay,
+        i_tOffDelay := tOffDelay,
+        i_tContactorDelay := tContactorResponseDelay,
+        io_stIO := stDisconnector1_IO
+    );
+    
+    // Disconnector Interlock simülasyonu
+    GVL_Safety.bDisconnector1_Interlock := bSimInterlock;
+    
+    // Disconnector HMI komut simülasyonu
+    IF bSimOnCmd THEN
+        GVL_HMI.stDisconnector1_HMI.stCommand.bManualOnCmd := TRUE;
+        GVL_HMI.stDisconnector1_HMI.stCommand.bManualOffCmd := FALSE;
+    ELSIF bSimOffCmd THEN
+        GVL_HMI.stDisconnector1_HMI.stCommand.bManualOnCmd := FALSE;
+        GVL_HMI.stDisconnector1_HMI.stCommand.bManualOffCmd := TRUE;
+    ELSE
+        GVL_HMI.stDisconnector1_HMI.stCommand.bManualOnCmd := FALSE;
+        GVL_HMI.stDisconnector1_HMI.stCommand.bManualOffCmd := FALSE;
+    END_IF
+    
+    // Disconnector mod seçimi
+    GVL_HMI.stDisconnector1_HMI.stCommand.eControlMode := E_DisconnectorControlMode.MANUAL;
+    
+    // ============= CONTACTOR 1 SIMULATION =============
+	M_SimulateContactor(
+		sContactorName := 'Contactor1',
+		i_bSimEnable := TRUE,
+		i_bSimFeedbackFault := bSimContactor1_FeedbackFault,
+		i_bSimWelded := bSimContactor1_Welded,
+		i_tFeedbackDelay := tContactorFeedbackDelay,
+		io_stIO := stContactor1_IO
+	);
+		
+    // Contactor Interlock simülasyonu
+    GVL_Safety.bContactor1_Interlock := bSimContactor1_Interlock;
+    
+    // Contactor HMI komut simülasyonu
+    IF bSimContactor1_OnCmd THEN
+        GVL_HMI.stContactor1_HMI.stCommand.bManualOnCmd := TRUE;
+        GVL_HMI.stContactor1_HMI.stCommand.bManualOffCmd := FALSE;
+    ELSIF bSimContactor1_OffCmd THEN
+        GVL_HMI.stContactor1_HMI.stCommand.bManualOnCmd := FALSE;
+        GVL_HMI.stContactor1_HMI.stCommand.bManualOffCmd := TRUE;
+    ELSE
+        GVL_HMI.stContactor1_HMI.stCommand.bManualOnCmd := FALSE;
+        GVL_HMI.stContactor1_HMI.stCommand.bManualOffCmd := FALSE;
+    END_IF
+    
+    // Contactor mod seçimi
+    GVL_HMI.stContactor1_HMI.stCommand.eControlMode := E_ContactorControlMode.MANUAL;
+    
+    // ============= GENEL SAFETY SIMULATION =============
+    // Safety loop simülasyonu (normalde TRUE)
+    GVL_Safety.bSafetyLoop := TRUE;
+    
+    // Master reset simülasyonu
+    GVL_System.bMasterReset := FALSE;
+    
+END_IF
+
+// =====================================================
+// DURUM GÖSTERIMI (Debug için)
+// =====================================================
+// Disconnector Status: GVL_HMI.stDisconnector1_HMI.stStatus.sStatusText
+// Disconnector Position: GVL_HMI.stDisconnector1_HMI.stStatus.ePosition
+// Disconnector Fault: GVL_HMI.stDisconnector1_HMI.stStatus.eFaultCode
+// 
+// Contactor Status: GVL_HMI.stContactor1_HMI.stStatus.sStatusText
+// Contactor Position: GVL_HMI.stContactor1_HMI.stStatus.ePosition
+// Contactor Fault: GVL_HMI.stContactor1_HMI.stStatus.eFaultCode
+
+
+// ============= CIRCUIT BREAKER 1 SIMULATION =============
+    M_SimulateCircuitBreaker(
+        sBreakerName := 'CircuitBreaker1',
+        i_bSimEnable := TRUE,
+        i_bSimTrip := bSimBreaker1_Trip,
+        i_bSimSpringNotCharged := bSimBreaker1_SpringNotCharged,
+        i_tMotionDelay := tBreakerMotionDelay,
+        io_stIO := GVL_IO.stCircuitBreaker1_IO
+    );
+    
+    // Circuit Breaker Interlock simülasyonu
+    GVL_Safety.bCircuitBreaker1_Interlock := bSimBreaker1_Interlock;
+    
+    // Circuit Breaker HMI komut simülasyonu
+    IF bSimBreaker1_OnCmd THEN
+        GVL_HMI.stCircuitBreaker1_HMI.stCommand.bManualOnCmd := TRUE;
+        GVL_HMI.stCircuitBreaker1_HMI.stCommand.bManualOffCmd := FALSE;
+    ELSIF bSimBreaker1_OffCmd THEN
+        GVL_HMI.stCircuitBreaker1_HMI.stCommand.bManualOnCmd := FALSE;
+        GVL_HMI.stCircuitBreaker1_HMI.stCommand.bManualOffCmd := TRUE;
+    ELSE
+        GVL_HMI.stCircuitBreaker1_HMI.stCommand.bManualOnCmd := FALSE;
+        GVL_HMI.stCircuitBreaker1_HMI.stCommand.bManualOffCmd := FALSE;
+    END_IF
+    
+    // Circuit Breaker mod seçimi
+    GVL_HMI.stCircuitBreaker1_HMI.stCommand.eControlMode := E_CircuitBreakerControlMode.MANUAL;]]></ST>
+    </Implementation>
+    <Method Name="M_SimulateCircuitBreaker" Id="{8af375c9-f84a-4329-83a7-c9bf5c073818}">
+      <Declaration><![CDATA[METHOD M_SimulateCircuitBreaker : BOOL
+VAR_INPUT
+    sBreakerName: STRING;                   // Kesici adı
+    i_bSimEnable: BOOL;                     // Simülasyon aktif mi?
+    i_bSimTrip: BOOL;                       // Trip simülasyonu
+    i_bSimSpringNotCharged: BOOL;           // Yay kurulu değil simülasyonu
+    i_tMotionDelay: TIME;                   // Hareket gecikmesi
+END_VAR
+VAR_IN_OUT
+    io_stIO: ST_CircuitBreakerIO;           // IO structure
+END_VAR
+VAR_STAT
+    tonOnDelay: TON;                        // ON gecikme timer'ı
+    tonOffDelay: TON;                       // OFF gecikme timer'ı
+    bLastOnCmd: BOOL;                       // Önceki ON komutu
+    bLastOffCmd: BOOL;                      // Önceki OFF komutu
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[
+IF NOT i_bSimEnable THEN
+    M_SimulateCircuitBreaker := FALSE;
+    RETURN;
+END_IF
+
+// Trip simülasyonu - öncelikli
+IF i_bSimTrip THEN
+    io_stIO.bPositionOn := FALSE;
+    io_stIO.bPositionOff := FALSE;
+    io_stIO.bPositionTripped := TRUE;
+ELSE
+    // Normal pozisyon simülasyonu
+    // ON komutu yükselen kenar
+    IF io_stIO.bOnCommand AND NOT bLastOnCmd THEN
+        tonOnDelay(IN := TRUE, PT := i_tMotionDelay);
+        tonOffDelay(IN := FALSE);
+    END_IF
+    
+    // OFF komutu yükselen kenar
+    IF io_stIO.bOffCommand AND NOT bLastOffCmd THEN
+        tonOffDelay(IN := TRUE, PT := i_tMotionDelay);
+        tonOnDelay(IN := FALSE);
+    END_IF
+    
+    // Pozisyon güncelleme
+    IF tonOnDelay.Q THEN
+        io_stIO.bPositionOn := TRUE;
+        io_stIO.bPositionOff := FALSE;
+        io_stIO.bPositionTripped := FALSE;
+        tonOnDelay(IN := FALSE);
+    ELSIF tonOffDelay.Q THEN
+        io_stIO.bPositionOn := FALSE;
+        io_stIO.bPositionOff := TRUE;
+        io_stIO.bPositionTripped := FALSE;
+        tonOffDelay(IN := FALSE);
+    END_IF
+    
+    // Hareket halinde
+    IF (tonOnDelay.IN OR tonOffDelay.IN) AND NOT tonOnDelay.Q AND NOT tonOffDelay.Q THEN
+        io_stIO.bPositionOn := FALSE;
+        io_stIO.bPositionOff := FALSE;
+        io_stIO.bPositionTripped := FALSE;
+    END_IF
+END_IF
+
+// Yay durumu simülasyonu
+IF i_bSimSpringNotCharged THEN
+    io_stIO.bSpringCharged := FALSE;
+ELSE
+    // OFF konumunda yay otomatik kurulur
+    io_stIO.bSpringCharged := io_stIO.bPositionOff OR io_stIO.bPositionOn;
+END_IF
+
+// PLC kontrol simülasyonu
+io_stIO.bPLCControl := TRUE;
+
+// Önceki komutları sakla
+bLastOnCmd := io_stIO.bOnCommand;
+bLastOffCmd := io_stIO.bOffCommand;
+
+M_SimulateCircuitBreaker := TRUE;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="M_SimulateContactor" Id="{885b72f9-4372-46b6-8473-33ccae7a37c8}">
+      <Declaration><![CDATA[METHOD M_SimulateContactor : BOOL
+VAR_INPUT
+    sContactorName: STRING;         // Kontaktör adı
+    i_bSimEnable: BOOL;             // Simülasyon aktif mi?
+    i_bSimFeedbackFault: BOOL;      // Geri besleme hatası simülasyonu
+    i_bSimWelded: BOOL;             // Yapışma hatası simülasyonu
+    i_tFeedbackDelay: TIME;         // Geri besleme gecikmesi
+END_VAR
+VAR_IN_OUT
+    io_stIO: ST_ContactorIO;        // IO structure
+END_VAR
+VAR_STAT
+    tonFeedbackDelay: TON;          // Geri besleme gecikme timer'ı
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[
+IF NOT i_bSimEnable THEN
+    M_SimulateContactor := FALSE;
+    RETURN;
+END_IF
+
+// Kontaktör geri besleme simülasyonu
+tonFeedbackDelay(IN := io_stIO.bOutput, PT := i_tFeedbackDelay);
+
+IF i_bSimFeedbackFault THEN
+    // Geri besleme hatası - feedback gelmiyor
+    io_stIO.bFeedback := FALSE;
+ELSIF i_bSimWelded THEN
+    // Yapışma hatası - feedback sürekli TRUE
+    io_stIO.bFeedback := TRUE;
+ELSE
+    // Normal çalışma
+    io_stIO.bFeedback := tonFeedbackDelay.Q;
+END_IF
+
+// PLC kontrol simülasyonu (normalde TRUE)
+io_stIO.bPLCControl := TRUE;
+
+M_SimulateContactor := TRUE;]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="M_SimulateDisconnector" Id="{5d113510-7b0c-4d14-8deb-19eea282141c}">
+      <Declaration><![CDATA[METHOD M_SimulateDisconnector : BOOL
+VAR_INPUT
+    sDisconnectorName: STRING;              // Ayırıcı adı (örn: 'Disconnector1')
+    i_bSimEnable: BOOL;                     // Simülasyon aktif mi?
+    i_bSimThermalFault: BOOL;               // Termik hata simülasyonu
+    i_bSimEarthSwitchError: BOOL;           // Toprak bıçağı hata simülasyonu
+    i_tOnDelay: TIME;                       // ON geçiş süresi
+    i_tOffDelay: TIME;                      // OFF geçiş süresi
+    i_tContactorDelay: TIME;                // Kontaktör geri bildirim gecikmesi
+END_VAR
+VAR_IN_OUT
+    io_stIO: ST_DisconnectorIO;             // IO structure
+END_VAR
+VAR_STAT
+    tonOnDelay: TON;                        // ON gecikme timer'ı
+    tonOffDelay: TON;                       // OFF gecikme timer'ı
+    tonContactorDelay: TON;                 // Kontaktör gecikme timer'ı
+END_VAR]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[
+IF NOT i_bSimEnable THEN
+    M_SimulateDisconnector := FALSE;
+    RETURN;
+END_IF
+
+// ON hareketi simülasyonu
+tonOnDelay(IN := io_stIO.bContactorOn_Out, PT := i_tOnDelay);
+
+// OFF hareketi simülasyonu
+tonOffDelay(IN := io_stIO.bContactorOff_Out, PT := i_tOffDelay);
+
+// Limit switch simülasyonu
+IF tonOnDelay.Q THEN
+    io_stIO.bLimitOn := TRUE;
+    io_stIO.bLimitOff := FALSE;
+ELSIF tonOffDelay.Q THEN
+    io_stIO.bLimitOn := FALSE;
+    io_stIO.bLimitOff := TRUE;
+END_IF
+
+// Ara pozisyon simülasyonu
+IF (io_stIO.bContactorOn_Out OR io_stIO.bContactorOff_Out) AND NOT tonOnDelay.Q AND NOT tonOffDelay.Q THEN
+    io_stIO.bLimitOn := FALSE;
+    io_stIO.bLimitOff := FALSE;
+END_IF
+
+// Kontaktör geri bildirim simülasyonu
+tonContactorDelay(IN := io_stIO.bContactorOn_Out OR io_stIO.bContactorOff_Out, PT := i_tContactorDelay);
+
+IF tonContactorDelay.Q THEN
+    io_stIO.bContactorOn_FB := io_stIO.bContactorOn_Out;
+    io_stIO.bContactorOff_FB := io_stIO.bContactorOff_Out;
+END_IF
+
+// Toprak bıçağı simülasyonu (ters çalışma)
+IF NOT i_bSimEarthSwitchError THEN
+    io_stIO.bEarthSwitchOn := io_stIO.bLimitOff;
+    io_stIO.bEarthSwitchOff := io_stIO.bLimitOn;
+ELSE
+    // Hata simülasyonu
+    io_stIO.bEarthSwitchOn := FALSE;
+    io_stIO.bEarthSwitchOff := FALSE;
+END_IF
+
+// Termik hata simülasyonu
+io_stIO.bThermalFault := i_bSimThermalFault;
+
+// PLC kontrol simülasyonu (normalde TRUE)
+io_stIO.bPLCControl := TRUE;
+
+M_SimulateDisconnector := TRUE;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="PRG_Simulation">
+      <LineId Id="168" Count="36" />
+      <LineId Id="285" Count="6" />
+      <LineId Id="213" Count="37" />
+      <LineId Id="140" Count="0" />
+      <LineId Id="327" Count="27" />
+      <LineId Id="326" Count="0" />
+    </LineIds>
+    <LineIds Name="PRG_Simulation.M_SimulateCircuitBreaker">
+      <LineId Id="23" Count="60" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="PRG_Simulation.M_SimulateContactor">
+      <LineId Id="126" Count="22" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="PRG_Simulation.M_SimulateDisconnector">
+      <LineId Id="24" Count="50" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

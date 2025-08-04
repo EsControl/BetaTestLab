@@ -1,0 +1,471 @@
+<div id="AppliedVoltage_3" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="1000" data-tchmi-creator-viewport-height="500">
+
+<div id="TcHmiGrid_22" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0">
+
+<script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+[
+  {
+    "width": 1.0,
+    "widthUnit": "factor",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  },
+  {
+    "width": 1.0,
+    "widthUnit": "factor",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+<div id="TcHmiGrid_23" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="50" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="40" data-tchmi-bottom-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+[
+  {
+    "width": 1.0,
+    "widthUnit": "factor",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  },
+  {
+    "width": 1.0,
+    "widthUnit": "factor",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+[
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+<div id="TcHmiTextblock_104" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height-unit="px" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-text=" 🔌 Akım Limiti" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="5" data-tchmi-bottom="5" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="14">
+</div>
+<div id="TcHmiTextblock_106" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="1" data-tchmi-height-unit="px" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-text="⚡Gerilim Limiti" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="5" data-tchmi-bottom="5" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="14">
+</div>
+<div id="TcHmiTextblock_108" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="2" data-tchmi-height-unit="px" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-text="⏲️ Test Süresi" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="5" data-tchmi-bottom="5" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="14">
+</div>
+<div id="TcHmiTextblock_112" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="mA" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="5" data-tchmi-bottom="5" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-font-size="14">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 5,
+  "right": 0,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_113" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="1" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="kV" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="5" data-tchmi-bottom="5" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-font-size="14">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 5,
+  "right": 0,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiTextblock_114" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="2" data-tchmi-height-unit="px" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="sn" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="5" data-tchmi-bottom="5" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-font-size="14">
+
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "left": 5,
+  "right": 0,
+  "top": 0,
+  "bottom": 0,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+</div>
+<div id="TcHmiNumericInput_11" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-max-value="100" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-value="0" data-tchmi-width-unit="px" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="5" data-tchmi-value-horizontal-alignment="Right" data-tchmi-value-font-size="14">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+<div id="TcHmiNumericInput_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="1" data-tchmi-height-unit="px" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-max-value="100" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-value="0" data-tchmi-width-unit="px" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="5" data-tchmi-value-horizontal-alignment="Right" data-tchmi-value-font-size="14">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+<div id="TcHmiNumericInput_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiNumericInput" data-tchmi-auto-focus-out="true" data-tchmi-decimal-digits="0" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="2" data-tchmi-height-unit="px" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-max-value="100" data-tchmi-min-value="0" data-tchmi-reset-to-last-valid-value="true" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-value="%s%PLC1.P_CountdownTimer.nSetTime|BindingMode=TwoWay%/s%" data-tchmi-width-unit="px" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="5" data-tchmi-value-horizontal-alignment="Right" data-tchmi-value-font-size="14">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+</div>
+</div>
+<div id="TcHmiTextblock_103" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="TEST AYARLARI" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="10" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+</div>
+<div id="TcHmiGrid_24" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="50" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="10">
+
+<script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+[
+  {
+    "width": 1.0,
+    "widthUnit": "factor",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  },
+  {
+    "width": 1.0,
+    "widthUnit": "factor",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+<div id="TcHmiTachometer_4" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTachometer" data-tchmi-base-animation-time="1000" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-label-range="100" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-show-labels="false" data-tchmi-show-ticks="true" data-tchmi-show-value-text="true" data-tchmi-top="%f%//(%ctrl%TcHmiTachometer_4::RenderedWidth%/ctrl%/2) -20%/f%" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="%f%//%ctrl%TcHmiTachometer_4::RenderedWidth%/ctrl%/2%/f%" data-tchmi-max-value="400" data-tchmi-ignore-invalid-values="false" data-tchmi-needle-length="70" data-tchmi-label-position="Inside" data-tchmi-value-font-size="20" data-tchmi-value="%pp%Frequency%/pp%">
+<script data-tchmi-target-attribute="data-tchmi-range" type="application/json">
+[
+  {
+    "color": {
+      "color": "rgba(0, 128, 0, 1)"
+    },
+    "start": 0.0,
+    "end": 300.0
+  },
+  {
+    "color": {
+      "color": "rgba(255, 165, 0, 1)"
+    },
+    "start": 300.0,
+    "end": 350.0
+  },
+  {
+    "color": {
+      "color": "rgba(255, 0, 0, 1)"
+    },
+    "start": 350.0,
+    "end": 400.0
+  }
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-value-format" type="application/json">
+    {
+    "objectType": "Function",
+    "fn": "GaugeValueFormatter",
+    "fnParams": [maxDecimals]
+    }
+</script>
+<script data-tchmi-target-attribute="data-tchmi-tick-definition" type="application/json">
+{
+  "mainTickRange": 20,
+  "subTickRange": 5
+}
+</script>
+
+</div>
+<div id="TcHmiTachometer_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTachometer" data-tchmi-base-animation-time="1000" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-label-range="20" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-show-labels="false" data-tchmi-show-ticks="true" data-tchmi-show-value-text="true" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-value="%pp%Voltage%/pp%" data-tchmi-unit="" data-tchmi-gauge-alignment="Center">
+<script data-tchmi-target-attribute="data-tchmi-range" type="application/json">
+[
+  {
+    "color": {
+      "color": "rgba(0, 128, 0, 1)"
+    },
+    "start": 0,
+    "end": 35
+  },
+  {
+    "color": {
+      "color": "rgba(255, 165, 0, 1)"
+    },
+    "start": 35,
+    "end": 70
+  },
+  {
+    "color": {
+      "color": "rgba(255, 0, 0, 1)"
+    },
+    "start": 70,
+    "end": 100
+  }
+]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-value-format" type="application/json">
+    {
+    "objectType": "Function",
+    "fn": "GaugeValueFormatter",
+    "fnParams": [maxDecimals]
+    }
+</script>
+<script data-tchmi-target-attribute="data-tchmi-tick-definition" type="application/json">
+{
+  "mainTickRange": 20,
+  "subTickRange": 5
+}
+</script>
+
+</div>
+<div id="TcHmiTextblock_115" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="AKIM (mA)" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="0" data-tchmi-top="%f%%ctrl%TcHmiTachometer_4::RenderedHeight%/ctrl%+%ctrl%TcHmiTachometer_4::RenderedTop%/ctrl%%/f%" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+</div>
+<div id="TcHmiTextblock_117" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="GERİLİM (kV)" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="0" data-tchmi-top="%f%%ctrl%TcHmiTachometer_4::RenderedHeight%/ctrl%+%ctrl%TcHmiTachometer_4::RenderedTop%/ctrl%%/f%" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-grid-column-index="1">
+</div>
+</div>
+<div id="TcHmiTextblock_116" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-height="40" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="ANLIK DEĞERLER" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="10" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+</div>
+<div id="TimerDisplaySection_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="82" data-tchmi-top-unit="%" data-tchmi-right="10" data-tchmi-bottom="0">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                {
+                "color": "rgba(54, 54, 54, 1)"
+                }
+            </script>
+
+            <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                {
+                "left": 2,
+                "right": 2,
+                "top": 2,
+                "bottom": 2,
+                "leftUnit": "px",
+                "rightUnit": "px",
+                "topUnit": "px",
+                "bottomUnit": "px"
+                }
+            </script>
+
+            <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                {
+                "color": "rgba(0, 212, 255, 1)"
+                }
+            </script>
+
+            <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                {
+                "left": "Solid",
+                "right": "Solid",
+                "top": "Solid",
+                "bottom": "Solid"
+                }
+            </script>
+
+            <!-- Kalan Süre Display -->
+            <div id="RemainingTimeDisplay_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="%s%PLC1.P_CountdownTimer.nRemainingTime|BindingMode=TwoWay%/s%" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-font-size="48" data-tchmi-text-font-weight="Bold">
+
+                <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                    {
+                    "color": "rgba(0, 255, 136, 1)"
+                    }
+                </script>
+
+                <!-- PLC'den kalan süreyi al ve formatla -->
+                <script data-tchmi-target-attribute="data-tchmi-text" type="application/json">
+                    {
+                    "symbol": "PLC1.MAIN.P_CountdownTimer.nRemainingTime",
+                    "formatter": {
+                    "objectType": "FormatterProject",
+                    "name": "SecondsToMinutesSeconds"
+                    }
+                    }
+                </script>
+            </div>
+        </div>
+<div id="TcHmiGrid_27" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="60" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="20" data-tchmi-bottom-unit="%">
+
+<script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+[
+  {
+    "width": 1.0,
+    "widthUnit": "factor",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  },
+  {
+    "width": 1.0,
+    "widthUnit": "factor",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  },
+  {
+    "width": 1.0,
+    "widthUnit": "factor",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+<div data-tchmi-grid-column-index="0" id="StartButton_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-text="▶️ BAŞLAT" data-tchmi-top="5" data-tchmi-top-unit="%" data-tchmi-right="5" data-tchmi-bottom="5" data-tchmi-text-font-size="14" data-tchmi-text-font-weight="Bold" data-tchmi-grid-row-index="0" data-tchmi-bottom-unit="%" data-tchmi-right-unit="%">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                    {
+                    "color": "rgba(56, 142, 60, 1)"
+                    }
+                </script>
+
+                <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                    {
+                    "color": "rgba(255, 255, 255, 1)"
+                    }
+                </script>
+
+                <!-- PLC'deki start sinyaline bağla -->
+                <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "StartButton_1.onPressed",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.P_CountdownTimer.bStart%/s%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/BOOL",
+          "value": true
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+            </div>
+<div data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" id="StopButton_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-text="⏸️ DURDUR" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-right="5" data-tchmi-bottom="5" data-tchmi-text-font-size="14" data-tchmi-text-font-weight="Bold">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                    {
+                    "color": "rgba(255, 152, 0, 1)"
+                    }
+                </script>
+
+                <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                    {
+                    "color": "rgba(255, 255, 255, 1)"
+                    }
+                </script>
+
+                <!-- PLC'deki stop sinyaline bağla -->
+                
+            
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "StopButton_1.onPressed",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.P_CountdownTimer.bStop%/s%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/BOOL",
+          "value": true
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+<div data-tchmi-grid-column-index="2" id="ResetButton_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-text="🔄 SIFIRLA" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-right="5" data-tchmi-bottom="5" data-tchmi-text-font-size="14" data-tchmi-text-font-weight="Bold">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                    {
+                    "color": "rgba(211, 47, 47, 1)"
+                    }
+                </script>
+
+                <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                    {
+                    "color": "rgba(255, 255, 255, 1)"
+                    }
+                </script>
+
+                <!-- PLC'deki reset sinyaline bağla -->
+                
+            
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "ResetButton_1.onPressed",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%s%PLC1.P_CountdownTimer.bReset%/s%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/BOOL",
+          "value": true
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+</div>
+</div>
+</div>

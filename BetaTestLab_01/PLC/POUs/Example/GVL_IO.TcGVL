@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <GVL Name="GVL_IO" Id="{a3bfcdbb-eddf-4706-a021-5158f869c8d3}">
+    <Declaration><![CDATA[VAR_GLOBAL
+    // Disconnector 1 IO Structure
+    stDisconnector1_IO: ST_DisconnectorIO;
+    
+    // Contactor 1 IO Structure  
+    stContactor1_IO: ST_ContactorIO;
+	
+    // IO Structure
+    stCircuitBreaker1_IO: ST_CircuitBreakerIO;	
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

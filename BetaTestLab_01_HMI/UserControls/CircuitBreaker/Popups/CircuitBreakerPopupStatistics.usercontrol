@@ -1,0 +1,1324 @@
+<div id="CircuitBreakerStatisticsPopup" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="700" data-tchmi-creator-locked="True">
+<div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="CirBreakStatistics_ContentGrid" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-creator-visibility="Visible" data-tchmi-height-mode="Value" data-tchmi-bottom="0" data-tchmi-cell-wrap="true" data-tchmi-height="680">
+<script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+            [
+            {
+            "width": 1.0,
+            "widthUnit": "factor",
+            "widthMode": "Value",
+            "maxWidthUnit": "px",
+            "minWidthUnit": "px",
+            "overflow": false
+            }
+            ]
+        </script>
+
+        <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+[
+  {
+    "height": 240.0,
+    "heightUnit": "px",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 240.0,
+    "heightUnit": "px",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 200.0,
+    "heightUnit": "px",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+
+        <!-- Sol Üst - Operasyon İstatistikleri -->
+        <!-- Sol Üst - Operasyon İstatistikleri -->
+        <div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="0" id="CirBreakStatistics_OperationsPanel" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="0">
+
+            
+
+            
+
+            
+
+            <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                {
+                "left": "Solid",
+                "right": "Solid",
+                "top": "Solid",
+                "bottom": "Solid"
+                }
+            </script>
+
+            <!-- Operasyon Başlığı -->
+            <div id="CirBreakStatistics_OpHeader" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="OPERASYON İSTATİSTİKLERİ" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="10" data-tchmi-height="40" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-font-size="14">
+
+                
+
+                
+
+                
+
+                
+
+                <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                    {
+                    "left": "Solid",
+                    "right": "Solid",
+                    "top": "Solid",
+                    "bottom": "Solid"
+                    }
+                </script>
+            </div>
+
+            <!-- Operasyon İstatistik Grid -->
+            <div id="CirBreakStatistics_OpGrid" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="45" data-tchmi-top-unit="px" data-tchmi-right="10" data-tchmi-bottom="0">
+
+                <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+                    [
+                    {
+                    "height": 1.0,
+                    "heightUnit": "factor",
+                    "heightMode": "Value",
+                    "maxHeightUnit": "px",
+                    "minHeightUnit": "px",
+                    "overflow": false
+                    },
+                    {
+                    "height": 1.0,
+                    "heightUnit": "factor",
+                    "heightMode": "Value",
+                    "maxHeightUnit": "px",
+                    "minHeightUnit": "px",
+                    "overflow": false
+                    },
+                    {
+                    "height": 1.0,
+                    "heightUnit": "factor",
+                    "heightMode": "Value",
+                    "maxHeightUnit": "px",
+                    "minHeightUnit": "px",
+                    "overflow": false
+                    },
+                    {
+                    "height": 1.0,
+                    "heightUnit": "factor",
+                    "heightMode": "Value",
+                    "maxHeightUnit": "px",
+                    "minHeightUnit": "px",
+                    "overflow": false
+                    },
+                    {
+                    "height": 1.0,
+                    "heightUnit": "factor",
+                    "heightMode": "Value",
+                    "maxHeightUnit": "px",
+                    "minHeightUnit": "px",
+                    "overflow": false
+                    }
+                    ]
+                </script>
+
+                <!-- Toplam Açma -->
+                <div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="0" id="CirBreakStatistics_TotalOnCard" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="CirBreakStatistics_TotalOnLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Toplam Açma" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="CirBreakStatistics_TotalOnValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="%pp%stCircuitBreakerStatistics::dwOnCount%/pp%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="16" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <!-- Toplam Kapama -->
+                <div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="CirBreakStatistics_TotalOffCard" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="CirBreakStatistics_TotalOffLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Toplam Kapama" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="CirBreakStatistics_TotalOffValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="%pp%stCircuitBreakerStatistics::dwOffCount%/pp%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="16" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <!-- Toplam Reset -->
+                <div data-tchmi-grid-row-index="2" data-tchmi-grid-column-index="0" id="CirBreakStatistics_TotalResetCard" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="CirBreakStatistics_TotalResetLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Toplam Reset" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="CirBreakStatistics_TotalResetValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="847" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="16" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <!-- Çalışma Süresi -->
+                <div data-tchmi-grid-row-index="3" data-tchmi-grid-column-index="0" id="CirBreakStatistics_OperationTimeCard" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="CirBreakStatistics_OperationTimeLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Çalışma Süresi" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="CirBreakStatistics_OperationTimeValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="3247h 15m" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <!-- Son İşlem -->
+                <div data-tchmi-grid-row-index="4" data-tchmi-grid-column-index="0" id="CirBreakStatistics_LastOperationCard" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(45, 45, 45, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(85, 85, 85, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="CirBreakStatistics_LastOperationLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Son İşlem" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="CirBreakStatistics_LastOperationValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="AÇMA 16:47" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="12" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    
+
+</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sağ Üst - Hata ve Alarm İstatistikleri -->
+        <div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="CirBreakStatistics_ErrorAlarmPanel" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="0">
+
+            
+
+            
+
+            
+
+            <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                {
+                "left": "Solid",
+                "right": "Solid",
+                "top": "Solid",
+                "bottom": "Solid"
+                }
+            </script>
+
+            <!-- Hata Alarm Başlığı -->
+            <div id="CirBreakStatistics_ErrorAlarmHeader" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="HATA & ALARM İSTATİSTİKLERİ" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="10" data-tchmi-height="40" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-font-size="16">
+
+                
+
+                
+
+                
+
+                
+
+                <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                    {
+                    "left": "Solid",
+                    "right": "Solid",
+                    "top": "Solid",
+                    "bottom": "Solid"
+                    }
+                </script>
+            </div>
+
+            <!-- Hata Alarm İstatistik Grid -->
+            <div id="CirBreakStatistics_ErrorAlarmGrid" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="45" data-tchmi-top-unit="px" data-tchmi-right="10" data-tchmi-bottom="0">
+
+                <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+                    [
+                    {
+                    "height": 1.0,
+                    "heightUnit": "factor",
+                    "heightMode": "Value",
+                    "maxHeightUnit": "px",
+                    "minHeightUnit": "px",
+                    "overflow": false
+                    },
+                    {
+                    "height": 1.0,
+                    "heightUnit": "factor",
+                    "heightMode": "Value",
+                    "maxHeightUnit": "px",
+                    "minHeightUnit": "px",
+                    "overflow": false
+                    },
+                    {
+                    "height": 1.0,
+                    "heightUnit": "factor",
+                    "heightMode": "Value",
+                    "maxHeightUnit": "px",
+                    "minHeightUnit": "px",
+                    "overflow": false
+                    },
+                    {
+                    "height": 1.0,
+                    "heightUnit": "factor",
+                    "heightMode": "Value",
+                    "maxHeightUnit": "px",
+                    "minHeightUnit": "px",
+                    "overflow": false
+                    },
+                    {
+                    "height": 1.0,
+                    "heightUnit": "factor",
+                    "heightMode": "Value",
+                    "maxHeightUnit": "px",
+                    "minHeightUnit": "px",
+                    "overflow": false
+                    }
+                    ]
+                </script>
+
+                <!-- Toplam Hata -->
+                <div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="0" id="CirBreakStatistics_TotalErrorCard" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+{
+  "left": 1,
+  "right": 1,
+  "top": 1,
+  "bottom": 1,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+
+                    
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="CirBreakStatistics_TotalErrorLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Toplam Hata" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                            {
+                            "color": "rgba(224, 224, 224, 1)"
+                            }
+                        </script>
+                    </div>
+
+                    <div id="CirBreakStatistics_TotalErrorValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="%pp%stCircuitBreakerStatistics::dwTotalFaultCount%/pp%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="18" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    </div>
+                
+<script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+{
+  "color": "rgba(85, 85, 85, 1)"
+}
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(45, 45, 45, 1)"
+}
+</script>
+</div>
+
+                <!-- Toplam Alarm -->
+                <div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="CirBreakStatistics_TotalAlarmCard" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+{
+  "left": 1,
+  "right": 1,
+  "top": 1,
+  "bottom": 1,
+  "leftUnit": "px",
+  "rightUnit": "px",
+  "topUnit": "px",
+  "bottomUnit": "px"
+}
+</script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+{
+  "color": "rgba(85, 85, 85, 1)"
+}
+</script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="CirBreakStatistics_TotalAlarmLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Toplam Alarm" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                            {
+                            "color": "rgba(224, 224, 224, 1)"
+                            }
+                        </script>
+                    </div>
+
+                    <div id="CirBreakStatistics_TotalAlarmValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="234" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="16" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    </div>
+                
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(45, 45, 45, 1)"
+}
+</script>
+</div>
+
+                <!-- Kritik Hata -->
+                <div data-tchmi-grid-row-index="2" data-tchmi-grid-column-index="0" id="CirBreakStatistics_CriticalErrorCard" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+{
+  "color": "rgba(85, 85, 85, 1)"
+}
+</script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="CirBreakStatistics_CriticalErrorLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Kritik Hata" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                            {
+                            "color": "rgba(224, 224, 224, 1)"
+                            }
+                        </script>
+                    </div>
+
+                    <div id="CirBreakStatistics_CriticalErrorValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="12" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="16" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+                    </div>
+                
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(45, 45, 45, 1)"
+}
+</script>
+</div>
+
+                <!-- Son Hata -->
+                <div data-tchmi-grid-row-index="3" data-tchmi-grid-column-index="0" id="CirBreakStatistics_LastErrorCard" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+{
+  "color": "rgba(85, 85, 85, 1)"
+}
+</script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="CirBreakStatistics_LastErrorLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Son Hata" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                            {
+                            "color": "rgba(224, 224, 224, 1)"
+                            }
+                        </script>
+                    </div>
+
+                    <div id="CirBreakStatistics_LastErrorValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="E007 - 09:32" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+                    </div>
+                
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(45, 45, 45, 1)"
+}
+</script>
+</div>
+
+                <!-- Son Alarm -->
+                <div data-tchmi-grid-row-index="4" data-tchmi-grid-column-index="0" id="CirBreakStatistics_LastAlarmCard" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+{
+  "color": "rgba(85, 85, 85, 1)"
+}
+</script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="CirBreakStatistics_LastAlarmLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="Son Alarm" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                            {
+                            "color": "rgba(224, 224, 224, 1)"
+                            }
+                        </script>
+                    </div>
+
+                    <div id="CirBreakStatistics_LastAlarmValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="A015 - 11:28" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+                    </div>
+                
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(45, 45, 45, 1)"
+}
+</script>
+</div>
+            </div>
+        </div>
+
+        <!-- Sol Alt - Performans & Bakım -->
+        <div data-tchmi-grid-row-index="2" data-tchmi-grid-column-index="0" id="CirBreakStatistics_PerformancePanel" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-right="5" data-tchmi-bottom="0">
+
+            
+
+            
+
+            
+
+            <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                {
+                "left": "Solid",
+                "right": "Solid",
+                "top": "Solid",
+                "bottom": "Solid"
+                }
+            </script>
+
+            <!-- Performans Başlığı -->
+            <div id="CirBreakStatistics_PerformanceHeader" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="BAKIM BİLGİLERİ" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="10" data-tchmi-height="40" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-font-size="16">
+
+                
+
+                
+
+                
+
+                
+
+                <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                    {
+                    "left": "Solid",
+                    "right": "Solid",
+                    "top": "Solid",
+                    "bottom": "Solid"
+                    }
+                </script>
+            </div>
+
+            <!-- Performans Grid -->
+            <div id="CirBreakStatistics_PerformanceGrid" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="45" data-tchmi-top-unit="px" data-tchmi-right="10" data-tchmi-bottom="0">
+
+                <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+                    [
+                    {
+                    "width": 1.0,
+                    "widthUnit": "factor",
+                    "widthMode": "Value",
+                    "maxWidthUnit": "px",
+                    "minWidthUnit": "px",
+                    "overflow": false
+                    }
+                    ]
+                </script>
+
+                <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+[
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+
+                <!-- Verimlilik -->
+                <!-- Güvenilirlik -->
+                <!-- Son Bakım -->
+                <div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="0" id="CirBreakStatistics_LastMaintenanceCard" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(45, 45, 45, 1)"
+}
+</script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+{
+  "color": "rgba(85, 85, 85, 1)"
+}
+</script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="CirBreakStatistics_LastMaintenanceLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Son Bakım" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="CirBreakStatistics_LastMaintenanceValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="15.03.2024" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <!-- Sonraki Bakım -->
+                <div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="CirBreakStatistics_NextMaintenanceCard" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(45, 45, 45, 1)"
+}
+</script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+{
+  "color": "rgba(85, 85, 85, 1)"
+}
+</script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="CirBreakStatistics_NextMaintenanceLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Sonraki Bakım" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                            {
+                            "color": "rgba(224, 224, 224, 1)"
+                            }
+                        </script>
+                    </div>
+
+                    <div id="CirBreakStatistics_NextMaintenanceValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="15.09.2024" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    
+
+</div>
+                </div>
+
+                <!-- Aşınma Oranı -->
+            <div data-tchmi-grid-row-index="2" data-tchmi-grid-column-index="0" id="CirBreakStatistics_MaintenanceStateContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(45, 45, 45, 1)"
+}
+</script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+{
+  "color": "rgba(85, 85, 85, 1)"
+}
+</script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="CirBreakStatistics_MaintenanceStateLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Bakım Durumu" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        
+                    </div>
+
+                    <div id="CirBreakStatistics_ShouldMaintenance" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="Gerekli Değil" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-creator-visibility="Visible">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(0, 153, 64, 1)"
+}
+</script>
+</div>
+                    <div id="CirBreakStatistics_ShouldntMaintenance" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="BAKIM GEREKLİ" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="12" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-creator-visibility="Visible" data-tchmi-visibility="Hidden">
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(255, 64, 64, 1)"
+}
+</script>
+</div>
+                </div>
+<div data-tchmi-grid-row-index="3" data-tchmi-grid-column-index="0" id="CirBreakStatistics_MaintenanceRemainingContainer" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+{
+  "color": "rgba(45, 45, 45, 1)"
+}
+</script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+{
+  "color": "rgba(85, 85, 85, 1)"
+}
+</script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+
+                    <div id="CirBreakStatistics_MaintenanceRemainingLabel" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="Bakıma Kalan Adım" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                        <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                            {
+                            "color": "rgba(224, 224, 224, 1)"
+                            }
+                        </script>
+                    </div>
+
+                    <div id="CirBreakStatistics_MaintenanceRemainingValue" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="%pp%stCircuitBreakerStatistics::dwRemainingOperations%/pp%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                        
+
+                        
+
+                        
+
+                        
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+                    
+
+</div>
+                </div>
+</div>
+        </div>
+
+        <!-- Sağ Alt - Sistem Durumu -->
+    </div>
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%pp%stCircuitBreakerStatistics::bMaintenanceRequired%/pp%",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/String",
+                  "symbolExpression": "%pp%stCircuitBreakerStatistics::bMaintenanceRequired%/pp%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/BOOL",
+                  "value": false
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CirBreakStatistics_ShouldMaintenance::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Visible"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CirBreakStatistics_ShouldntMaintenance::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Hidden"
+                },
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CirBreakStatistics_ShouldMaintenance::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Hidden"
+                },
+                "asyncWait": true
+              },
+              {
+                "objectType": "WriteToSymbol",
+                "active": true,
+                "symbolExpression": "%ctrl%CirBreakStatistics_ShouldntMaintenance::Visibility%/ctrl%",
+                "value": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:framework#/definitions/Visibility",
+                  "value": "Visible"
+                },
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>

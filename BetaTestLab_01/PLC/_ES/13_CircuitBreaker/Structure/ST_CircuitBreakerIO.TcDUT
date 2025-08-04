@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="ST_CircuitBreakerIO" Id="{43ff7361-5340-4215-a682-becbf0600be6}">
+    <Declaration><![CDATA[TYPE ST_CircuitBreakerIO :
+STRUCT
+    // Giriş Sinyalleri
+    bPositionOn AT %I*: BOOL;           // ON pozisyon geri bildirimi
+    bPositionOff AT %I*: BOOL;          // OFF pozisyon geri bildirimi
+    bPositionTripped AT %I*: BOOL;      // TRIP pozisyon geri bildirimi
+    bSpringCharged AT %I*: BOOL;        // Yay kurulu bilgisi
+    bPLCControl AT %I*: BOOL;           // PLC kontrol seçici
+    
+    // Çıkış Sinyalleri
+    bOnCommand AT %Q*: BOOL;            // ON komutu
+    bOffCommand AT %Q*: BOOL;           // OFF komutu
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

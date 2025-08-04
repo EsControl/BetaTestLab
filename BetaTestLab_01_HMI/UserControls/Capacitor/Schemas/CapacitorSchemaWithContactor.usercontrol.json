@@ -1,0 +1,58 @@
+{
+  "parameters": [
+    {
+      "name": "data-tchmi-stcompensationgroup",
+      "displayName": "stCompensationGroup",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:server#/definitions/PLC1.ST_CompensationGroup",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "stCompensationGroup",
+      "propertySetterName": "setStCompensationGroup",
+      "propertyGetterName": "getStCompensationGroup",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-stcontactorhmi",
+      "displayName": "stContactorHmi",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:server#/definitions/PLC1.ST_ContactorHMI",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "stContactorHmi",
+      "propertySetterName": "setStContactorHmi",
+      "propertyGetterName": "getStContactorHmi",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-stcapacitorschemacolorwithcontactor",
+      "displayName": "stCapacitorSchemaColorWithContactor",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:server#/definitions/PLC1.ST_CapacitorSchemaColorWithContactor",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "stCapacitorSchemaColorWithContactor",
+      "propertySetterName": "setStCapacitorSchemaColorWithContactor",
+      "propertyGetterName": "getStCapacitorSchemaColorWithContactor",
+      "refTo": ""
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.762.46/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

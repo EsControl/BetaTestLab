@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="FB_CircuitBreaker" Id="{cbb88db2-8337-4257-9b3f-9519e1161808}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_CircuitBreaker
+VAR_INPUT
+    // Fiziksel Girişler
+    bPositionOn: BOOL;                          // ON pozisyon geri bildirimi
+    bPositionOff: BOOL;                         // OFF pozisyon geri bildirimi
+    bPositionTripped: BOOL;                     // TRIP pozisyon geri bildirimi
+    bSpringCharged: BOOL;                       // Yay kurulu bilgisi
+    bPLCControl: BOOL;                          // PLC kontrol seçici
+    
+    // Güvenlik Girişleri
+    bSafetyLoop: BOOL;                          // Safety loop
+    bInterlock: BOOL;                           // Dış interlock sinyali
+    
+    // Sistem Girişleri
+    bMasterReset: BOOL;                         // Master reset
+END_VAR
+
+VAR_OUTPUT
+    // Fiziksel Çıkışlar
+    bOnCommand: BOOL;                           // ON komutu
+    bOffCommand: BOOL;                          // OFF komutu
+END_VAR
+
+VAR_IN_OUT
+    stHMI: ST_CircuitBreakerHMI;               // HMI için tüm veriler
+END_VAR
+
+VAR
+    // Position Machine
+    ePosition: E_CircuitBreakerPosition;        // İç pozisyon değişkeni
+    ePositionPrevious: E_CircuitBreakerPosition; // Önceki pozisyon
+    
+    // Timer'lar
+    tonMotionTimeout: TON;                      // Hareket zaman aşımı timer'ı
+    tonSpringChargeTimeout: TON;                // Yay kurma zaman aşımı timer'ı
+    
+    // Edge Detection
+    rtrigOnCmd: R_TRIG;                         // ON komut yükselen kenar
+    rtrigOffCmd: R_TRIG;                        // OFF komut yükselen kenar
+    rtrigResetTrip: R_TRIG;                     // Trip reset yükselen kenar
+    rtrigResetFault: R_TRIG;                    // Reset yükselen kenar
+    rtrigResetStatistics: R_TRIG;               // İstatistik reset yükselen kenar
+    rtrigMasterReset: R_TRIG;                   // Master reset yükselen kenar
+    
+    // İç Değişkenler
+    bOnRequest: BOOL;                           // Dahili ON isteği
+    bOffRequest: BOOL;                          // Dahili OFF isteği
+    bBlockOn: BOOL;                             // ON hareketi blokaj
+    bBlockOff: BOOL;                            // OFF hareketi blokaj
+    tOperationStartTime: TIME;                  // Operasyon başlangıç zamanı
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Edge Detection
+rtrigOnCmd(CLK := bOnRequest);
+rtrigOffCmd(CLK := bOffRequest);
+rtrigResetTrip(CLK := stHMI.stCommand.bResetTrip);
+rtrigResetFault(CLK := stHMI.stCommand.bResetFault OR bMasterReset);
+rtrigResetStatistics(CLK := stHMI.stCommand.bResetStatistics);
+rtrigMasterReset(CLK := bMasterReset);
+
+// Reset İşlemleri
+IF rtrigResetFault.Q OR rtrigResetTrip.Q THEN
+    A_ResetFault();
+END_IF
+
+IF rtrigResetStatistics.Q OR rtrigMasterReset.Q THEN
+    A_ResetStatistics();
+END_IF
+
+// Ana kontrol akışı
+A_ModeSelection();      // Mod seçimi ve komut belirleme
+A_PositionCheck();      // Pozisyon güncelleme
+A_FaultCheck();         // Arıza kontrolü
+A_Control();            // Çıkış kontrolü
+A_UpdateStatus();       // Status güncelleme
+
+// Önceki pozisyonu sakla
+ePositionPrevious := ePosition;
+
+// Operasyon zamanı hesaplama
+IF (bOnCommand OR bOffCommand) AND tOperationStartTime = T#0S THEN
+    tOperationStartTime := TIME();
+ELSIF NOT (bOnCommand OR bOffCommand) AND tOperationStartTime > T#0S THEN
+    // Operasyon tamamlandı
+    tOperationStartTime := T#0S;
+END_IF]]></ST>
+    </Implementation>
+    <Action Name="A_Control" Id="{b8dd81f1-26f8-441c-9027-030276e97596}">
+      <Implementation>
+        <ST><![CDATA[// ON hareketi blokaj şartları
+bBlockOn := bInterlock OR 
+            stHMI.stStatus.bFaultActive OR 
+            NOT bSafetyLoop OR
+            (ePosition = E_CircuitBreakerPosition.ON) OR
+            (ePosition = E_CircuitBreakerPosition.TRIPPED) OR
+            (stHMI.stConfig.bSpringChargeRequired AND NOT bSpringCharged);
+
+// OFF hareketi blokaj şartları            
+bBlockOff := bInterlock OR 
+             stHMI.stStatus.bFaultActive OR 
+             NOT bSafetyLoop OR
+             (ePosition = E_CircuitBreakerPosition.OFF) OR
+             (ePosition = E_CircuitBreakerPosition.TRIPPED);
+
+// ON komutu kontrolü
+M_OutputControl(
+    Invert      := FALSE, 
+    Momentary   := bOnRequest, 
+    Set         := FALSE,
+    Reset       := bBlockOn OR bOffRequest,  
+    Out         => bOnCommand
+);
+
+// OFF komutu kontrolü  
+M_OutputControl(
+    Invert      := FALSE, 
+    Momentary   := bOffRequest, 
+    Set         := FALSE,
+    Reset       := bBlockOff OR bOnRequest,  
+    Out         => bOffCommand
+);
+
+// Çıkışları status'e kopyala
+stHMI.stStatus.bOnCommand := bOnCommand;
+stHMI.stStatus.bOffCommand := bOffCommand;]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="A_FaultCheck" Id="{8e6ab263-a07c-45b0-8c1c-ee7612712c9d}">
+      <Implementation>
+        <ST><![CDATA[// Birden fazla pozisyon aktif - sensör hatası
+IF bPositionOn AND bPositionOff AND NOT bPositionTripped THEN
+    stHMI.stStatus.bFaultActive := TRUE;
+    stHMI.stStatus.eFaultCode := E_CircuitBreakerFault.FEEDBACK;
+    stHMI.stStatus.wsStatusText := "ARIZA: ON ve OFF pozisyonları aynı anda aktif";
+    
+ELSIF bPositionOn AND bPositionTripped AND NOT bPositionOff THEN
+    stHMI.stStatus.bFaultActive := TRUE;
+    stHMI.stStatus.eFaultCode := E_CircuitBreakerFault.FEEDBACK;
+    stHMI.stStatus.wsStatusText := "ARIZA: ON ve TRIP pozisyonları aynı anda aktif";
+    
+ELSIF bPositionOff AND bPositionTripped AND NOT bPositionOn THEN
+    stHMI.stStatus.bFaultActive := TRUE;
+    stHMI.stStatus.eFaultCode := E_CircuitBreakerFault.FEEDBACK;
+    stHMI.stStatus.wsStatusText := "ARIZA: OFF ve TRIP pozisyonları aynı anda aktif";
+    
+ELSIF bPositionOn AND bPositionOff AND bPositionTripped THEN
+    stHMI.stStatus.bFaultActive := TRUE;
+    stHMI.stStatus.eFaultCode := E_CircuitBreakerFault.FEEDBACK;
+    stHMI.stStatus.wsStatusText := "ARIZA: Tüm pozisyonlar aynı anda aktif";
+END_IF
+
+// TRIP durumu kontrolü
+IF ePosition = E_CircuitBreakerPosition.TRIPPED THEN
+    // TRIP durumunda - bu bir arıza değil ama özel durum
+    stHMI.stStatus.eStatus := E_CircuitBreakerStatus.TRIPPED;
+    stHMI.stStatus.wsStatusText := "DİKKAT: Kesici TRIP pozisyonunda";
+    // TRIP durumunda komutları blokla
+    bOnRequest := FALSE;
+    bOffRequest := FALSE;
+END_IF
+
+// Hareket zaman aşımı kontrolü
+tonMotionTimeout(IN := (bOnCommand OR bOffCommand) AND (ePosition = E_CircuitBreakerPosition.UNDEFINED), 
+                 PT := stHMI.stConfig.tMotionTimeout);
+IF tonMotionTimeout.Q THEN
+    stHMI.stStatus.bFaultActive := TRUE;
+    stHMI.stStatus.eFaultCode := E_CircuitBreakerFault.MOTION_TIMEOUT;
+    stHMI.stStatus.wsStatusText := "ARIZA: Hareket zaman aşımı";
+END_IF
+
+// Yay kurma arızası kontrolü (eğer gerekli ise)
+IF stHMI.stConfig.bSpringChargeRequired THEN
+    // ON komutu verildi ama yay kurulu değil
+    IF bOnRequest AND NOT bSpringCharged AND (ePosition = E_CircuitBreakerPosition.OFF) THEN
+        tonSpringChargeTimeout(IN := TRUE, PT := stHMI.stConfig.tSpringChargeTimeout);
+        IF tonSpringChargeTimeout.Q THEN
+            stHMI.stStatus.bFaultActive := TRUE;
+            stHMI.stStatus.eFaultCode := E_CircuitBreakerFault.SPRING_CHARGE;
+            stHMI.stStatus.wsStatusText := "ARIZA: Yay kurma hatası";
+        END_IF
+    ELSE
+        tonSpringChargeTimeout(IN := FALSE);
+    END_IF
+END_IF]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="A_ModeSelection" Id="{22609f46-32c2-4d87-be15-f3ad92bb0a4b}">
+      <Implementation>
+        <ST><![CDATA[// PLC kontrolü yoksa mod otomatik olarak REMOTE olur
+IF NOT bPLCControl THEN
+    stHMI.stStatus.eActiveMode := E_CircuitBreakerControlMode.REMOTE;
+    bOnRequest := FALSE;
+    bOffRequest := FALSE;
+    stHMI.stCommand.bManualOnCmd := FALSE;
+    stHMI.stCommand.bManualOffCmd := FALSE;
+    RETURN;
+END_IF
+
+// PLC kontrolü varsa komut edilen modu kullan
+IF stHMI.stCommand.eControlMode = E_CircuitBreakerControlMode.REMOTE THEN
+    stHMI.stStatus.eActiveMode := E_CircuitBreakerControlMode.AUTO;
+ELSE
+    stHMI.stStatus.eActiveMode := stHMI.stCommand.eControlMode;
+END_IF
+
+// Kontrol moduna göre komut seçimi
+CASE stHMI.stStatus.eActiveMode OF
+    E_CircuitBreakerControlMode.MANUAL:
+        bOnRequest := stHMI.stCommand.bManualOnCmd;
+        bOffRequest := stHMI.stCommand.bManualOffCmd;
+        
+    E_CircuitBreakerControlMode.AUTO:
+        bOnRequest := stHMI.stCommand.bAutoOnCmd;
+        bOffRequest := stHMI.stCommand.bAutoOffCmd;
+        
+    E_CircuitBreakerControlMode.REMOTE:
+        bOnRequest := stHMI.stCommand.bManualOnCmd;
+        bOffRequest := stHMI.stCommand.bManualOffCmd;
+END_CASE
+
+// Çift komut kontrolü
+IF bOnRequest AND bOffRequest THEN
+    bOnRequest := FALSE;
+    bOffRequest := FALSE;
+END_IF]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="A_PositionCheck" Id="{9d02a20d-f59d-4178-90d2-119f70127e3c}">
+      <Implementation>
+        <ST><![CDATA[// Kesici pozisyon kontrolü
+IF bPositionOn AND NOT bPositionOff AND NOT bPositionTripped THEN
+    ePosition := E_CircuitBreakerPosition.ON;
+ELSIF bPositionOff AND NOT bPositionOn AND NOT bPositionTripped THEN
+    ePosition := E_CircuitBreakerPosition.OFF;
+ELSIF bPositionTripped AND NOT bPositionOn AND NOT bPositionOff THEN
+    ePosition := E_CircuitBreakerPosition.TRIPPED;
+ELSE
+    // Birden fazla pozisyon aktif veya hiçbiri aktif değil
+    ePosition := E_CircuitBreakerPosition.UNDEFINED;
+END_IF
+
+// Yay durumunu status'e kopyala
+stHMI.stStatus.bSpringCharged := bSpringCharged;]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="A_ResetFault" Id="{b77833c5-d672-4cdd-837a-3015a35dc153}">
+      <Implementation>
+        <ST><![CDATA[// Arızaları temizle
+stHMI.stStatus.bFaultActive := FALSE;
+stHMI.stStatus.eFaultCode := E_CircuitBreakerFault.NONE;
+stHMI.stStatus.wsStatusText := "";
+
+// Timer'ları resetle
+tonMotionTimeout(IN := FALSE);
+tonSpringChargeTimeout(IN := FALSE);
+
+// Trip durumunu kontrol et - eğer hala TRIP pozisyonundaysa durumu güncelle
+IF bPositionTripped THEN
+    ePosition := E_CircuitBreakerPosition.TRIPPED;
+    stHMI.stStatus.eStatus := E_CircuitBreakerStatus.TRIPPED;
+END_IF]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="A_ResetStatistics" Id="{23888100-d74f-4703-afe2-853d01cfe30e}">
+      <Implementation>
+        <ST><![CDATA[// İstatistikleri sıfırla
+stHMI.stStatistics.dwOnCount := 0;
+stHMI.stStatistics.dwOffCount := 0;
+stHMI.stStatistics.dwTripCount := 0;
+stHMI.stStatistics.dwOperationCount := 0;
+stHMI.stStatistics.dwTotalFaultCount := 0;
+stHMI.stStatistics.dwSpringChargeFaultCount := 0;
+stHMI.stStatistics.dwMotionTimeoutCount := 0;
+stHMI.stStatistics.dwTripCoilFaultCount := 0;
+stHMI.stStatistics.bNewOperationFlag := FALSE;
+
+// Bakım sayacını sıfırla ve operasyon limitini yeniden yükle
+stHMI.stStatistics.dwRemainingOperations := stHMI.stConfig.dwOperationLimit;
+stHMI.stStatistics.bMaintenanceRequired := FALSE;]]></ST>
+      </Implementation>
+    </Action>
+    <Action Name="A_UpdateStatus" Id="{b8b6955e-1f9a-4a19-a93a-c5853bb35c08}">
+      <Implementation>
+        <ST><![CDATA[// PLC Kontrol Durumu
+stHMI.stStatus.bPLCControlActive := bPLCControl;
+
+// Aktif Kontrol Modu
+stHMI.stStatus.eActiveMode := stHMI.stCommand.eControlMode;
+
+// Pozisyon bilgisini güncelle
+stHMI.stStatus.ePosition := ePosition;
+
+// Yay durumu
+stHMI.stStatus.bSpringCharged := bSpringCharged;
+
+// Operasyonel durum belirleme
+IF stHMI.stStatus.bFaultActive THEN
+    stHMI.stStatus.eStatus := E_CircuitBreakerStatus.FAULTED;
+ELSIF ePosition = E_CircuitBreakerPosition.TRIPPED THEN
+    stHMI.stStatus.eStatus := E_CircuitBreakerStatus.TRIPPED;
+ELSIF NOT bPLCControl THEN
+    stHMI.stStatus.eStatus := E_CircuitBreakerStatus.NO_CONTROL;
+ELSIF bInterlock THEN
+    stHMI.stStatus.eStatus := E_CircuitBreakerStatus.INTERLOCKED;
+ELSIF bOnCommand OR bOffCommand THEN
+    stHMI.stStatus.eStatus := E_CircuitBreakerStatus.OPERATING;
+ELSIF stHMI.stStatistics.bMaintenanceRequired THEN
+    stHMI.stStatus.eStatus := E_CircuitBreakerStatus.MAINTENANCE;
+ELSE
+    stHMI.stStatus.eStatus := E_CircuitBreakerStatus.READY;
+END_IF
+
+// Status text güncelleme (arıza değilse)
+IF NOT stHMI.stStatus.bFaultActive AND (ePosition <> E_CircuitBreakerPosition.TRIPPED) THEN
+    CASE stHMI.stStatus.eStatus OF
+        E_CircuitBreakerStatus.READY:
+            CASE ePosition OF
+                E_CircuitBreakerPosition.ON: 
+                    stHMI.stStatus.wsStatusText := "Hazır - Kesici ON";
+                E_CircuitBreakerPosition.OFF: 
+                    IF stHMI.stConfig.bSpringChargeRequired AND NOT bSpringCharged THEN
+                        stHMI.stStatus.wsStatusText := "Hazır - Kesici OFF (Yay kurulu değil)";
+                    ELSE
+                        stHMI.stStatus.wsStatusText := "Hazır - Kesici OFF";
+                    END_IF
+                E_CircuitBreakerPosition.UNDEFINED: 
+                    stHMI.stStatus.wsStatusText := "Hazır - Pozisyon belirsiz";
+            END_CASE
+            
+        E_CircuitBreakerStatus.OPERATING:
+            IF bOnCommand THEN
+                stHMI.stStatus.wsStatusText := "ON pozisyonuna gidiyor";
+            ELSE
+                stHMI.stStatus.wsStatusText := "OFF pozisyonuna gidiyor";
+            END_IF
+            
+        E_CircuitBreakerStatus.INTERLOCKED:
+            stHMI.stStatus.wsStatusText := "Interlock aktif - Komut bekliyor";
+            
+        E_CircuitBreakerStatus.NO_CONTROL:
+            stHMI.stStatus.wsStatusText := "PLC kontrolü yok - Remote modda";
+            
+        E_CircuitBreakerStatus.MAINTENANCE:
+            stHMI.stStatus.wsStatusText := "Bakım gerekli!";
+    END_CASE
+END_IF
+
+// İstatistik güncelleme - pozisyon değişiminde
+IF ePosition <> ePositionPrevious THEN
+    CASE ePosition OF
+        E_CircuitBreakerPosition.ON:
+            stHMI.stStatistics.dwOnCount := stHMI.stStatistics.dwOnCount + 1;
+            stHMI.stStatistics.dwOperationCount := stHMI.stStatistics.dwOperationCount + 1;
+            
+        E_CircuitBreakerPosition.OFF:
+            IF ePositionPrevious = E_CircuitBreakerPosition.ON THEN
+                stHMI.stStatistics.dwOffCount := stHMI.stStatistics.dwOffCount + 1;
+                stHMI.stStatistics.dwOperationCount := stHMI.stStatistics.dwOperationCount + 1;
+            END_IF
+            
+        E_CircuitBreakerPosition.TRIPPED:
+            stHMI.stStatistics.dwTripCount := stHMI.stStatistics.dwTripCount + 1;
+    END_CASE
+    
+    // Bakım kontrolü
+    stHMI.stStatistics.dwRemainingOperations := stHMI.stConfig.dwOperationLimit - stHMI.stStatistics.dwOperationCount;
+    IF stHMI.stStatistics.dwRemainingOperations < 100 THEN
+        stHMI.stStatistics.bMaintenanceRequired := TRUE;
+    END_IF
+END_IF]]></ST>
+      </Implementation>
+    </Action>
+    <Method Name="M_OutputControl" Id="{be66c032-2849-4b06-975e-c92ed23515ab}">
+      <Declaration><![CDATA[METHOD M_OutputControl : BOOL
+VAR_INPUT
+    Reset: BOOL;
+    Invert: BOOL;
+    Momentary: BOOL;
+    Set: BOOL;
+END_VAR
+VAR_OUTPUT
+    Out: BOOL;
+END_VAR
+VAR
+    ActiveMode: INT;
+    OutLast: BOOL;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[IF Reset THEN
+    ActiveMode := 0;
+ELSIF Invert THEN
+    ActiveMode := 1;
+ELSIF Momentary THEN
+    ActiveMode := 2;
+ELSIF Set THEN
+    ActiveMode := 3;    
+END_IF
+
+CASE ActiveMode OF
+    0: //RESET
+        Out := FALSE;
+        
+    1: // INVERT
+        IF Invert AND NOT OutLast THEN
+            Out := NOT Out;
+        END_IF    
+        
+        OutLast := Invert;    
+                    
+    2: //PUSH BUTTON (MOMENTARY)
+        IF Momentary THEN
+            Out := TRUE;
+        ELSE
+            Out := FALSE;
+        END_IF
+    3: // SET
+        IF Set THEN
+            Out := TRUE;
+        END_IF    
+END_CASE
+
+M_OutputControl := TRUE;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="FB_CircuitBreaker">
+      <LineId Id="60" Count="32" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_CircuitBreaker.A_Control">
+      <LineId Id="4" Count="34" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_CircuitBreaker.A_FaultCheck">
+      <LineId Id="4" Count="53" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_CircuitBreaker.A_ModeSelection">
+      <LineId Id="4" Count="35" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_CircuitBreaker.A_PositionCheck">
+      <LineId Id="4" Count="12" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_CircuitBreaker.A_ResetFault">
+      <LineId Id="4" Count="12" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_CircuitBreaker.A_ResetStatistics">
+      <LineId Id="4" Count="12" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_CircuitBreaker.A_UpdateStatus">
+      <LineId Id="4" Count="85" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_CircuitBreaker.M_OutputControl">
+      <LineId Id="80" Count="32" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

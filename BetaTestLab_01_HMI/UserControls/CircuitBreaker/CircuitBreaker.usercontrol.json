@@ -1,0 +1,106 @@
+{
+  "parameters": [
+    {
+      "name": "data-tchmi-color",
+      "displayName": "Color",
+      "allowSymbolExpressionsInObject": false,
+      "visible": false,
+      "type": "tchmi:framework#/definitions/Color",
+      "category": "",
+      "description": "Açık kapalı olduğunda renklendirmeleri buradan ayarlıyorum.",
+      "defaultValue": {
+        "color": "rgba(255, 0, 0, 1)"
+      },
+      "defaultValueInternal": {
+        "color": "rgba(255, 0, 0, 1)"
+      },
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "Color",
+      "propertySetterName": "setColor",
+      "propertyGetterName": "getColor",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-centercolor",
+      "displayName": "CenterColor",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:framework#/definitions/Color",
+      "category": "",
+      "description": "",
+      "defaultValue": {
+        "color": "rgba(255, 0, 0, 1)"
+      },
+      "defaultValueInternal": {
+        "color": "rgba(255, 0, 0, 1)"
+      },
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "CenterColor",
+      "propertySetterName": "setCenterColor",
+      "propertyGetterName": "getCenterColor",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-isvertical",
+      "displayName": "IsVertical",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/BOOL",
+      "category": "",
+      "description": "Yatay mı dikey mi olduğunu bu parametreden ayarlıyorum.",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "IsVertical",
+      "propertySetterName": "setIsVertical",
+      "propertyGetterName": "getIsVertical",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-islock",
+      "displayName": "IsLock",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/BOOL",
+      "category": "",
+      "description": "Kilitli olup olmadığını ayarlıyorum. PLC'ye aktarılabilir.",
+      "defaultValue": false,
+      "defaultValueInternal": false,
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "IsLock",
+      "propertySetterName": "setIsLock",
+      "propertyGetterName": "getIsLock",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-stcircuitbreakerhmi",
+      "displayName": "stCircuitBreakerHmi",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:server#/definitions/PLC1.ST_CircuitBreakerHMI",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "stCircuitBreakerHmi",
+      "propertySetterName": "setStCircuitBreakerHmi",
+      "propertyGetterName": "getStCircuitBreakerHmi",
+      "refTo": ""
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.762.46/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

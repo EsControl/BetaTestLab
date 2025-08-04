@@ -1,0 +1,45 @@
+{
+  "parameters": [
+    {
+      "name": "data-tchmi-voltage",
+      "displayName": "Voltage",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/DINT",
+      "category": "",
+      "description": "",
+      "defaultValue": 0,
+      "defaultValueInternal": 0,
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "Voltage",
+      "propertySetterName": "setVoltage",
+      "propertyGetterName": "getVoltage",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-frequency",
+      "displayName": "Frequency",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/DINT",
+      "category": "",
+      "description": "",
+      "defaultValue": 0,
+      "defaultValueInternal": 0,
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "Frequency",
+      "propertySetterName": "setFrequency",
+      "propertyGetterName": "getFrequency",
+      "refTo": ""
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.762.46/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

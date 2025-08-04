@@ -1,0 +1,25 @@
+<div id="DatePicker" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="200" data-tchmi-creator-viewport-height="100">
+<div id="DatePicker_Container" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="5">
+<div id="DatePicker_Header" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="%pp%Header%/pp%" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="0" data-tchmi-text-vertical-alignment="Center">
+</div>
+<div id="DatePicker_HtmlHost" data-tchmi-type="TcHmi.Controls.System.TcHmiHtmlHost" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="26" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-grid-row-index="1">
+<label>
+            <input placeholder="Zamanı Seçin.." style="display:flex; height: 100%; width: 100%; background-color:black; color:white;" class=date />
+        </label>
+        <script>
+            var fp = flatpickr(".date", {
+                enableTime: true,
+                dateFormat: "Y-m-d H:i",
+                locale: "tr"
+        })
+        </script>
+    <script>
+
+        console.log("Test test test kardeşim");
+
+    </script>
+    </div>
+</div>
+<div id="DatePicker_HiddenTime" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="226" data-tchmi-left-unit="px" data-tchmi-text="%pp%Time|BindingMode=TwoWay%/pp%" data-tchmi-top="31" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-visibility="Collapsed">
+</div>
+</div>

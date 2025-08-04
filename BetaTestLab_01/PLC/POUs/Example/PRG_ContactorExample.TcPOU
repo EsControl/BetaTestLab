@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="PRG_ContactorExample" Id="{132ae761-9587-4e73-a5be-496a4c5a50cc}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_ContactorExample
+VAR
+    // Function Block Instance
+    fbContactor1: FB_ContactorControl;
+    
+    // Başlangıç konfigürasyonu için flag
+    bInitDone: BOOL;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+// İlk çalıştırma konfigürasyonu
+IF NOT bInitDone THEN
+    // Konfigürasyon parametreleri
+    GVL_HMI.stContactor1_HMI.stConfig.sProjectCode := '+EP1-K1';
+    GVL_HMI.stContactor1_HMI.stConfig.sProductCode := 'ABB A30-30-10 30A';
+    GVL_HMI.stContactor1_HMI.stConfig.rRatedCurrent := 30.0;
+    GVL_HMI.stContactor1_HMI.stConfig.rRatedVoltage := 400.0;
+    GVL_HMI.stContactor1_HMI.stConfig.nPhaseCount := 3;
+    GVL_HMI.stContactor1_HMI.stConfig.tFeedbackDelay := T#500MS;
+    GVL_HMI.stContactor1_HMI.stConfig.tWeldedDelay := T#2S;
+    GVL_HMI.stContactor1_HMI.stConfig.dwOperationLimit := 100000;
+    
+    // Başlangıç bakım sayacı
+    GVL_HMI.stContactor1_HMI.stStatistics.dwRemainingOperations := GVL_HMI.stContactor1_HMI.stConfig.dwOperationLimit;
+    
+    bInitDone := TRUE;
+END_IF
+
+// Function Block Çağrısı
+fbContactor1(
+    // Fiziksel Girişler
+    bFeedback := stContactor1_IO.bFeedback,
+    bPLCControl := stContactor1_IO.bPLCControl,
+    
+    // Güvenlik Girişleri
+    bSafetyLoop := GVL_Safety.bSafetyLoop,
+    bInterlock := GVL_Safety.bContactor1_Interlock,
+    
+    // Sistem Girişleri
+    bMasterReset := GVL_System.bMasterReset,
+    
+    // HMI Bağlantısı
+    stHMI := GVL_HMI.stContactor1_HMI,
+    
+    // Fiziksel Çıkış
+    bOutput => stContactor1_IO.bOutput
+);
+
+// SQL Kayıt İşlemi
+IF GVL_HMI.stContactor1_HMI.stStatistics.bNewOperationFlag THEN
+    // SQL kayıt fonksiyonunu çağır
+    GVL_HMI.stContactor1_HMI.stStatistics.bNewOperationFlag := FALSE;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_ContactorExample">
+      <LineId Id="75" Count="42" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

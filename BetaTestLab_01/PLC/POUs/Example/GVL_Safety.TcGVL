@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <GVL Name="GVL_Safety" Id="{92ea24cb-3ef0-4244-9ab5-0135cf48c6ca}">
+    <Declaration><![CDATA[VAR_GLOBAL
+    bSafetyLoop: BOOL;                          // Genel safety loop
+    bDisconnector1_Interlock: BOOL;             // Ayırıcı 1 interlock
+    bContactor1_Interlock: BOOL;                // Kontaktör 1 interlock
+    bCircuitBreaker1_Interlock: BOOL;           // Kesici 1 interlock
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

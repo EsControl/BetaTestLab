@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <EnumerationTextList Name="E_CircuitBreakerFault" Id="{d25b2458-a7f2-4be7-81f1-f0c02e2faccb}">
+    <Declaration><![CDATA[TYPE E_CircuitBreakerFault :
+(
+    NONE := 0,              // Arıza yok
+    SPRING_CHARGE := 1,     // Yay kurma arızası
+    FEEDBACK := 2,          // Geri besleme hatası
+    MOTION_TIMEOUT := 3,    // Hareket zaman aşımı
+    TRIP_COIL := 4,         // Trip bobini arızası
+    CONTROL_VOLTAGE := 5    // Kontrol gerilimi arızası
+);
+END_TYPE]]></Declaration>
+    <XmlArchive>
+      <Data>
+        <o xml:space="preserve" t="TextListEnumerationTextListObject">
+          <l n="TextList" t="ArrayList" cet="TextListRow">
+            <o>
+              <v n="TextID">"NONE"</v>
+              <v n="TextDefault">"0"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"SPRING_CHARGE"</v>
+              <v n="TextDefault">"1"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"FEEDBACK"</v>
+              <v n="TextDefault">"2"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"MOTION_TIMEOUT"</v>
+              <v n="TextDefault">"3"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"TRIP_COIL"</v>
+              <v n="TextDefault">"4"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"CONTROL_VOLTAGE"</v>
+              <v n="TextDefault">"5"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">""</v>
+              <v n="TextDefault">""</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+          </l>
+          <l n="Languages" t="ArrayList" />
+          <v n="GuidInit">{29f2f7d7-c99d-4722-8c01-e8573c6a963f}</v>
+          <v n="GuidReInit">{5b0a3b31-b250-4aec-ba10-e9da73e26c7b}</v>
+          <v n="GuidExitX">{429fa63a-fa57-4086-acfc-bd58e1d095a0}</v>
+        </o>
+      </Data>
+      <TypeList>
+        <Type n="ArrayList">System.Collections.ArrayList</Type>
+        <Type n="Guid">System.Guid</Type>
+        <Type n="String">System.String</Type>
+        <Type n="TextListEnumerationTextListObject">{4b60233c-f940-4beb-b331-82133b520151}</Type>
+        <Type n="TextListRow">{53da1be7-ad25-47c3-b0e8-e26286dad2e0}</Type>
+      </TypeList>
+    </XmlArchive>
+  </EnumerationTextList>
+</TcPlcObject>

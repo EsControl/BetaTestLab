@@ -1,0 +1,14 @@
+<div id="CondenserVertical" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="70" data-tchmi-height="100" data-tchmi-width-unit="px" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="300">
+<div id="CondenserVertical_Container" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-right-unit="px" data-tchmi-bottom-unit="px" data-tchmi-width="50" data-tchmi-bottom="10">
+<div id="Condenser_Vertical_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiLine" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="%" data-tchmi-top="0" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-x2="0" data-tchmi-y2="200" data-tchmi-stroke-thickness="2" data-tchmi-right-unit="%" data-tchmi-scale-mode="ScaleToFill" data-tchmi-bottom="0" data-tchmi-width="2">
+</div>
+<div id="Condenser_Vertical_2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiLine" data-tchmi-height-unit="px" data-tchmi-left-unit="%" data-tchmi-top-unit="%" data-tchmi-width-unit="px" data-tchmi-x2="0" data-tchmi-y2="200" data-tchmi-stroke-thickness="2" data-tchmi-right="0" data-tchmi-right-unit="%" data-tchmi-scale-mode="ScaleToFill" data-tchmi-bottom="0" data-tchmi-top="0" data-tchmi-width="2">
+</div>
+
+
+</div>
+
+
+
+
+</div>

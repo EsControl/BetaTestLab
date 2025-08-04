@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <GVL Name="GVL_System" Id="{b0bebe06-de5b-4958-9d15-5240a47dc133}">
+    <Declaration><![CDATA[VAR_GLOBAL
+    bMasterReset: BOOL;                               // Sistem master reset
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

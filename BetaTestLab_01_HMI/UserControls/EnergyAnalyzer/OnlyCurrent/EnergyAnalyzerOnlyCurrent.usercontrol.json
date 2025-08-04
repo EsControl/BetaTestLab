@@ -1,0 +1,43 @@
+{
+  "parameters": [
+    {
+      "name": "data-tchmi-headertext",
+      "displayName": "HeaderText",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/String",
+      "category": "",
+      "description": "",
+      "defaultValue": "Default Header",
+      "defaultValueInternal": "Default Header",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "HeaderText",
+      "propertySetterName": "setHeaderText",
+      "propertyGetterName": "getHeaderText",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-stel3453",
+      "displayName": "stEL3453",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:server#/definitions/PLC1.stEL3453",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "stEL3453",
+      "propertySetterName": "setStEL3453",
+      "propertyGetterName": "getStEL3453",
+      "refTo": ""
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.762.46/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

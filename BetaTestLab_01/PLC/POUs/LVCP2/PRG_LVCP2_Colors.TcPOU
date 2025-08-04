@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <POU Name="PRG_LVCP2_Colors" Id="{86f33a46-4c8f-4c19-9dd6-f7eb7827ae61}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_LVCP2_Colors
+VAR
+	arrLine : ARRAY[1..4] OF E_LineColors;
+	arrCapacitorSchemaColor : ARRAY[1..10] OF ST_CapacitorSchemaColorWithContactor;
+
+	i : INT;
+	bInitDone : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF NOT bInitDone THEN
+	ACT_ContactorConfigurations();
+	bInitDone := TRUE;
+END_IF
+
+//line1
+arrLine[1] := E_LineColors.Energised_Red;
+
+//line2
+arrLine[2] := arrLine[1];
+
+//line3
+arrLine[3] := arrLine[2];
+
+//line4
+arrLine[4] := arrLine[3];
+
+//şemaları kendi içerisinde kontrol edicez
+FOR i:=1 TO 10 DO
+	arrCapacitorSchemaColor[i].GroundColor := E_LineColors.Grounded_Green;
+	arrCapacitorSchemaColor[i].BottomLineColor2 := E_LineColors.Grounded_Green;
+
+	//topline
+	arrCapacitorSchemaColor[i].TopLineColor := arrLine[4];
+	
+	//bottomLine - şema üzerinde ayırıcının altındaki her iki line birbiri ile bağlantılı olduğu için tek yerden yönetiliyor
+	IF arrCapacitorSchemaColor[i].ContactorPosition = E_ContactorPosition.ON THEN
+		arrCapacitorSchemaColor[i].BottomLineColor := arrCapacitorSchemaColor[i].TopLineColor;
+	ELSE
+		arrCapacitorSchemaColor[i].BottomLineColor := E_LineColors.Default;
+	END_IF
+	
+	//capacitor
+	arrCapacitorSchemaColor[i].CapacitorColor := arrCapacitorSchemaColor[i].BottomLineColor;
+	
+END_FOR
+]]></ST>
+    </Implementation>
+    <Action Name="ACT_ContactorConfigurations" Id="{a5685274-0563-424a-955c-a8fd260ff2d8}">
+      <Implementation>
+        <ST><![CDATA[arrCapacitorSchemaColor[1].ContactorPosition := GVL_LVCP2.stGroup1_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[2].ContactorPosition := GVL_LVCP2.stGroup2_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[3].ContactorPosition := GVL_LVCP2.stGroup3_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[4].ContactorPosition := GVL_LVCP2.stGroup4_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[5].ContactorPosition := GVL_LVCP2.stGroup5_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[6].ContactorPosition := GVL_LVCP2.stGroup6_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[7].ContactorPosition := GVL_LVCP2.stGroup7_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[8].ContactorPosition := GVL_LVCP2.stGroup8_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[9].ContactorPosition := GVL_LVCP2.stGroup9_ContactorHMI.stStatus.ePosition;
+arrCapacitorSchemaColor[10].ContactorPosition := GVL_LVCP2.stGroup10_ContactorHMI.stStatus.ePosition;
+]]></ST>
+      </Implementation>
+    </Action>
+    <LineIds Name="PRG_LVCP2_Colors">
+      <LineId Id="275" Count="35" />
+      <LineId Id="137" Count="0" />
+    </LineIds>
+    <LineIds Name="PRG_LVCP2_Colors.ACT_ContactorConfigurations">
+      <LineId Id="3" Count="9" />
+      <LineId Id="1" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

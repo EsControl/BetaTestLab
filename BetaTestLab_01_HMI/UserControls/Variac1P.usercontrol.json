@@ -1,0 +1,58 @@
+{
+  "parameters": [
+    {
+      "name": "data-tchmi-headertext",
+      "displayName": "HeaderText",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/String",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "HeaderText",
+      "propertySetterName": "setHeaderText",
+      "propertyGetterName": "getHeaderText",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-footertext",
+      "displayName": "FooterText",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/String",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "FooterText",
+      "propertySetterName": "setFooterText",
+      "propertyGetterName": "getFooterText",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-islock",
+      "displayName": "IsLock",
+      "allowSymbolExpressionsInObject": false,
+      "visible": true,
+      "type": "tchmi:general#/definitions/BOOL",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "IsLock",
+      "propertySetterName": "setIsLock",
+      "propertyGetterName": "getIsLock",
+      "refTo": ""
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.762.46/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

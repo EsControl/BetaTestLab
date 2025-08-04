@@ -1,0 +1,2470 @@
+<div id="ConverterStatistics" data-tchmi-type="TcHmi.Controls.System.TcHmiUserControl" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="100" data-tchmi-height="100" data-tchmi-width-unit="%" data-tchmi-height-unit="%" data-tchmi-creator-viewport-width="500" data-tchmi-creator-viewport-height="500">
+
+<div id="SP_STAT_MainGrid_1" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-right="10" data-tchmi-bottom="10" data-tchmi-creator-visibility="Visible">
+<script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+            {
+            "color": "rgba(30, 30, 30, 1)"
+            }
+        </script>
+
+        <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+            [
+            {
+            "width": 1.0,
+            "widthUnit": "factor",
+            "widthMode": "Value",
+            "maxWidthUnit": "px",
+            "minWidthUnit": "px",
+            "overflow": false
+            }
+            ]
+        </script>
+
+        <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+[
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeight": 60.0,
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 10.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+
+        <!-- Başlık Bölümü -->
+        <div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="0" id="SP_STAT_HeaderPanel_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="10">
+
+            <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                {
+                "color": "rgba(45, 45, 45, 1)"
+                }
+            </script>
+
+            <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                {
+                "left": 1,
+                "right": 1,
+                "top": 1,
+                "bottom": 1,
+                "leftUnit": "px",
+                "rightUnit": "px",
+                "topUnit": "px",
+                "bottomUnit": "px"
+                }
+            </script>
+
+            <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                {
+                "color": "rgba(64, 64, 64, 1)"
+                }
+            </script>
+
+            <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                {
+                "left": "Solid",
+                "right": "Solid",
+                "top": "Solid",
+                "bottom": "Solid"
+                }
+            </script>
+
+            <!-- Kontaktör Bilgi Grid -->
+            <div id="SP_STAT_InfoGrid_1" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-left="20" data-tchmi-left-unit="px" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-right="20" data-tchmi-bottom="10">
+
+                <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+[
+  {
+    "width": 2.0,
+    "widthUnit": "factor",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  },
+  {
+    "width": 1.0,
+    "widthUnit": "factor",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  },
+  {
+    "width": 1.0,
+    "widthUnit": "factor",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  },
+  {
+    "width": 1.0,
+    "widthUnit": "factor",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+
+                <!-- Başlık -->
+                <div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="0" id="SP_STAT_Title_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="📊 KONVERTER İSTATİSTİKLERİ" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-font-size="18">
+
+                    <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                        {
+                        "color": "rgba(0, 212, 255, 1)"
+                        }
+                    </script>
+                </div>
+
+                <!-- Kontaktör ID -->
+                <div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="1" id="SP_STAT_ContactorInfo_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="KONTAKTÖR: M001" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-font-size="16">
+
+                    <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                        {
+                        "color": "rgba(255, 215, 0, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(51, 51, 17, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(255, 215, 0, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+                </div>
+
+                <!-- Durum -->
+                <div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="2" id="SP_STAT_Status_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="🟢 AKTİF" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-font-size="16">
+
+                    <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                        {
+                        "color": "rgba(0, 255, 136, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(26, 77, 48, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(0, 255, 136, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+                </div>
+
+                <!-- Çalışma Süresi -->
+                <div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="3" id="SP_STAT_RuntimeInfo_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-text="⏰ 3247h 15m" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-font-size="14">
+
+                    <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                        {
+                        "color": "rgba(0, 212, 255, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(26, 77, 92, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(0, 212, 255, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ana İçerik Bölümü -->
+        <div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="SP_STAT_ContentGrid_1" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-creator-visibility="Visible">
+
+            <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+                [
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                },
+                {
+                "width": 1.0,
+                "widthUnit": "factor",
+                "widthMode": "Value",
+                "maxWidthUnit": "px",
+                "minWidthUnit": "px",
+                "overflow": false
+                }
+                ]
+            </script>
+
+            <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+                [
+                {
+                "height": 1.0,
+                "heightUnit": "factor",
+                "heightMode": "Value",
+                "maxHeightUnit": "px",
+                "minHeightUnit": "px",
+                "overflow": false
+                },
+                {
+                "height": 1.0,
+                "heightUnit": "factor",
+                "heightMode": "Value",
+                "maxHeightUnit": "px",
+                "minHeightUnit": "px",
+                "overflow": false
+                }
+                ]
+            </script>
+
+            <!-- Sol Üst - Operasyon İstatistikleri -->
+            <div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="0" id="SP_STAT_OperationsPanel_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-right="5" data-tchmi-bottom="5">
+
+                <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                    {
+                    "color": "rgba(45, 45, 45, 1)"
+                    }
+                </script>
+
+                <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                    {
+                    "left": 1,
+                    "right": 1,
+                    "top": 1,
+                    "bottom": 1,
+                    "leftUnit": "px",
+                    "rightUnit": "px",
+                    "topUnit": "px",
+                    "bottomUnit": "px"
+                    }
+                </script>
+
+                <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                    {
+                    "color": "rgba(64, 64, 64, 1)"
+                    }
+                </script>
+
+                <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                    {
+                    "left": "Solid",
+                    "right": "Solid",
+                    "top": "Solid",
+                    "bottom": "Solid"
+                    }
+                </script>
+
+                <!-- Operasyon Başlığı -->
+                <div id="SP_STAT_OpHeader_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="⚙️ OPERASYON İSTATİSTİKLERİ" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="10" data-tchmi-height="40" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-font-size="16">
+
+                    <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                        {
+                        "color": "rgba(0, 255, 136, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(26, 77, 48, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(0, 255, 136, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+                </div>
+
+                <!-- Operasyon İstatistik Grid -->
+                <div id="SP_STAT_OpGrid_1" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="45" data-tchmi-top-unit="px" data-tchmi-right="10" data-tchmi-bottom="0">
+
+                    <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+[
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+
+                    <!-- Toplam Açma -->
+                    <div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="0" id="SP_STAT_TotalOnCard_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                        <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                            {
+                            "color": "rgba(54, 54, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 1,
+                            "right": 1,
+                            "top": 1,
+                            "bottom": 1,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                            {
+                            "color": "rgba(0, 255, 136, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+
+                        <div id="SP_STAT_TotalOnLabel_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="🔓 Toplam Açma" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(224, 224, 224, 1)"
+                                }
+                            </script>
+                        </div>
+
+                        <div id="SP_STAT_TotalOnValue_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="18,432" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="16" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(0, 255, 136, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                                {
+                                "color": "rgba(26, 77, 48, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                                {
+                                "left": 1,
+                                "right": 1,
+                                "top": 1,
+                                "bottom": 1,
+                                "leftUnit": "px",
+                                "rightUnit": "px",
+                                "topUnit": "px",
+                                "bottomUnit": "px"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                                {
+                                "color": "rgba(0, 255, 136, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                                {
+                                "left": "Solid",
+                                "right": "Solid",
+                                "top": "Solid",
+                                "bottom": "Solid"
+                                }
+                            </script>
+                        </div>
+                    </div>
+
+                    <!-- Toplam Kapama -->
+                    <div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="SP_STAT_TotalOffCard_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                        <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                            {
+                            "color": "rgba(54, 54, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 1,
+                            "right": 1,
+                            "top": 1,
+                            "bottom": 1,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                            {
+                            "color": "rgba(0, 255, 136, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+
+                        <div id="SP_STAT_TotalOffLabel_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="🔒 Toplam Kapama" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(224, 224, 224, 1)"
+                                }
+                            </script>
+                        </div>
+
+                        <div id="SP_STAT_TotalOffValue_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="18,429" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="16" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(0, 255, 136, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                                {
+                                "color": "rgba(26, 77, 48, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                                {
+                                "left": 1,
+                                "right": 1,
+                                "top": 1,
+                                "bottom": 1,
+                                "leftUnit": "px",
+                                "rightUnit": "px",
+                                "topUnit": "px",
+                                "bottomUnit": "px"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                                {
+                                "color": "rgba(0, 255, 136, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                                {
+                                "left": "Solid",
+                                "right": "Solid",
+                                "top": "Solid",
+                                "bottom": "Solid"
+                                }
+                            </script>
+                        </div>
+                    </div>
+
+                    <!-- Toplam Reset -->
+                    <div data-tchmi-grid-row-index="2" data-tchmi-grid-column-index="0" id="SP_STAT_TotalResetCard_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                        <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                            {
+                            "color": "rgba(54, 54, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 1,
+                            "right": 1,
+                            "top": 1,
+                            "bottom": 1,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                            {
+                            "color": "rgba(184, 148, 0, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+
+                        <div id="SP_STAT_TotalResetLabel_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="🔄 Toplam Reset" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(224, 224, 224, 1)"
+                                }
+                            </script>
+                        </div>
+
+                        <div id="SP_STAT_TotalResetValue_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="847" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="16" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(184, 148, 0, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                                {
+                                "color": "rgba(61, 49, 0, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                                {
+                                "left": 1,
+                                "right": 1,
+                                "top": 1,
+                                "bottom": 1,
+                                "leftUnit": "px",
+                                "rightUnit": "px",
+                                "topUnit": "px",
+                                "bottomUnit": "px"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                                {
+                                "color": "rgba(184, 148, 0, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                                {
+                                "left": "Solid",
+                                "right": "Solid",
+                                "top": "Solid",
+                                "bottom": "Solid"
+                                }
+                            </script>
+                        </div>
+                    </div>
+
+                    <!-- Çalışma Süresi -->
+                    <div data-tchmi-grid-row-index="3" data-tchmi-grid-column-index="0" id="SP_STAT_OperationTimeCard_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                        <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                            {
+                            "color": "rgba(54, 54, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 1,
+                            "right": 1,
+                            "top": 1,
+                            "bottom": 1,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                            {
+                            "color": "rgba(0, 212, 255, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+
+                        <div id="SP_STAT_OperationTimeLabel_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="⏱️ Çalışma Süresi" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="11">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(224, 224, 224, 1)"
+                                }
+                            </script>
+                        </div>
+
+                        <div id="SP_STAT_OperationTimeValue_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="3247h 15m" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="13" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(0, 212, 255, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                                {
+                                "color": "rgba(26, 77, 92, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                                {
+                                "left": 1,
+                                "right": 1,
+                                "top": 1,
+                                "bottom": 1,
+                                "leftUnit": "px",
+                                "rightUnit": "px",
+                                "topUnit": "px",
+                                "bottomUnit": "px"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                                {
+                                "color": "rgba(0, 212, 255, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                                {
+                                "left": "Solid",
+                                "right": "Solid",
+                                "top": "Solid",
+                                "bottom": "Solid"
+                                }
+                            </script>
+                        </div>
+                    </div>
+
+                    <!-- Son İşlem -->
+                    <div data-tchmi-grid-row-index="4" data-tchmi-grid-column-index="0" id="SP_STAT_LastOperationCard_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                        <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                            {
+                            "color": "rgba(54, 54, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 1,
+                            "right": 1,
+                            "top": 1,
+                            "bottom": 1,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                            {
+                            "color": "rgba(184, 148, 0, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+
+                        <div id="SP_STAT_LastOperationLabel_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="🕐 Son İşlem" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(224, 224, 224, 1)"
+                                }
+                            </script>
+                        </div>
+
+                        <div id="SP_STAT_LastOperationValue_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="AÇMA 16:47" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="12" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(184, 148, 0, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                                {
+                                "color": "rgba(61, 49, 0, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                                {
+                                "left": 1,
+                                "right": 1,
+                                "top": 1,
+                                "bottom": 1,
+                                "leftUnit": "px",
+                                "rightUnit": "px",
+                                "topUnit": "px",
+                                "bottomUnit": "px"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                                {
+                                "color": "rgba(184, 148, 0, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                                {
+                                "left": "Solid",
+                                "right": "Solid",
+                                "top": "Solid",
+                                "bottom": "Solid"
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sağ Üst - Hata ve Alarm İstatistikleri -->
+            <div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="1" id="SP_STAT_ErrorAlarmPanel_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="5">
+
+                <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                    {
+                    "color": "rgba(45, 45, 45, 1)"
+                    }
+                </script>
+
+                <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                    {
+                    "left": 1,
+                    "right": 1,
+                    "top": 1,
+                    "bottom": 1,
+                    "leftUnit": "px",
+                    "rightUnit": "px",
+                    "topUnit": "px",
+                    "bottomUnit": "px"
+                    }
+                </script>
+
+                <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                    {
+                    "color": "rgba(64, 64, 64, 1)"
+                    }
+                </script>
+
+                <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                    {
+                    "left": "Solid",
+                    "right": "Solid",
+                    "top": "Solid",
+                    "bottom": "Solid"
+                    }
+                </script>
+
+                <!-- Hata Alarm Başlığı -->
+                <div id="SP_STAT_ErrorAlarmHeader_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="🚨 HATA & ALARM İSTATİSTİKLERİ" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="10" data-tchmi-height="40" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-font-size="16">
+
+                    <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                        {
+                        "color": "rgba(255, 64, 129, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(77, 26, 48, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 2,
+                        "right": 2,
+                        "top": 2,
+                        "bottom": 2,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(255, 64, 129, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+                </div>
+
+                <!-- Hata Alarm İstatistik Grid -->
+                <div id="SP_STAT_ErrorAlarmGrid_1" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="45" data-tchmi-top-unit="px" data-tchmi-right="10" data-tchmi-bottom="0">
+
+                    <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+[
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+
+                    <!-- Toplam Hata -->
+                    <div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="0" id="SP_STAT_TotalErrorCard_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                        <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                            {
+                            "color": "rgba(54, 54, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 2,
+                            "right": 2,
+                            "top": 2,
+                            "bottom": 2,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                            {
+                            "color": "rgba(244, 67, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+
+                        <div id="SP_STAT_TotalErrorLabel_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="❌ Toplam Hata" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(224, 224, 224, 1)"
+                                }
+                            </script>
+                        </div>
+
+                        <div id="SP_STAT_TotalErrorValue_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="47" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="18" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(255, 255, 255, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                                {
+                                "color": "rgba(244, 67, 54, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                                {
+                                "left": 1,
+                                "right": 1,
+                                "top": 1,
+                                "bottom": 1,
+                                "leftUnit": "px",
+                                "rightUnit": "px",
+                                "topUnit": "px",
+                                "bottomUnit": "px"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                                {
+                                "color": "rgba(244, 67, 54, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                                {
+                                "left": "Solid",
+                                "right": "Solid",
+                                "top": "Solid",
+                                "bottom": "Solid"
+                                }
+                            </script>
+                        </div>
+                    </div>
+
+                    <!-- Toplam Alarm -->
+                    <div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="SP_STAT_TotalAlarmCard_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                        <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                            {
+                            "color": "rgba(54, 54, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 2,
+                            "right": 2,
+                            "top": 2,
+                            "bottom": 2,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                            {
+                            "color": "rgba(255, 152, 0, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+
+                        <div id="SP_STAT_TotalAlarmLabel_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="🔔 Toplam Alarm" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(224, 224, 224, 1)"
+                                }
+                            </script>
+                        </div>
+
+                        <div id="SP_STAT_TotalAlarmValue_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="234" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="16" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(30, 30, 30, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                                {
+                                "color": "rgba(255, 152, 0, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                                {
+                                "left": 1,
+                                "right": 1,
+                                "top": 1,
+                                "bottom": 1,
+                                "leftUnit": "px",
+                                "rightUnit": "px",
+                                "topUnit": "px",
+                                "bottomUnit": "px"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                                {
+                                "color": "rgba(255, 152, 0, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                                {
+                                "left": "Solid",
+                                "right": "Solid",
+                                "top": "Solid",
+                                "bottom": "Solid"
+                                }
+                            </script>
+                        </div>
+                    </div>
+
+                    <!-- Kritik Hata -->
+                    <div data-tchmi-grid-row-index="2" data-tchmi-grid-column-index="0" id="SP_STAT_CriticalErrorCard_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                        <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                            {
+                            "color": "rgba(54, 54, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 1,
+                            "right": 1,
+                            "top": 1,
+                            "bottom": 1,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                            {
+                            "color": "rgba(244, 67, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+
+                        <div id="SP_STAT_CriticalErrorLabel_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="🔥 Kritik Hata" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(224, 224, 224, 1)"
+                                }
+                            </script>
+                        </div>
+
+                        <div id="SP_STAT_CriticalErrorValue_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="12" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="16" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(255, 255, 255, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                                {
+                                "color": "rgba(244, 67, 54, 1)"
+                                }
+                            </script>
+                        </div>
+                    </div>
+
+                    <!-- Son Hata -->
+                    <div data-tchmi-grid-row-index="3" data-tchmi-grid-column-index="0" id="SP_STAT_LastErrorCard_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                        <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                            {
+                            "color": "rgba(54, 54, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 1,
+                            "right": 1,
+                            "top": 1,
+                            "bottom": 1,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                            {
+                            "color": "rgba(244, 67, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+
+                        <div id="SP_STAT_LastErrorLabel_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="🕐 Son Hata" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(224, 224, 224, 1)"
+                                }
+                            </script>
+                        </div>
+
+                        <div id="SP_STAT_LastErrorValue_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="E007 - 09:32" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="11" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(255, 255, 255, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                                {
+                                "color": "rgba(244, 67, 54, 1)"
+                                }
+                            </script>
+                        </div>
+                    </div>
+
+                    <!-- Son Alarm -->
+                    <div data-tchmi-grid-row-index="4" data-tchmi-grid-column-index="0" id="SP_STAT_LastAlarmCard_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                        <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                            {
+                            "color": "rgba(54, 54, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 1,
+                            "right": 1,
+                            "top": 1,
+                            "bottom": 1,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                            {
+                            "color": "rgba(255, 152, 0, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+
+                        <div id="SP_STAT_LastAlarmLabel_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="🕐 Son Alarm" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(224, 224, 224, 1)"
+                                }
+                            </script>
+                        </div>
+
+                        <div id="SP_STAT_LastAlarmValue_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="A015 - 11:28" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="11" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(30, 30, 30, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                                {
+                                "color": "rgba(255, 152, 0, 1)"
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sol Alt - Performans & Bakım -->
+            <div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="SP_STAT_PerformancePanel_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-right="5" data-tchmi-bottom="0">
+
+                <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                    {
+                    "color": "rgba(45, 45, 45, 1)"
+                    }
+                </script>
+
+                <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                    {
+                    "left": 1,
+                    "right": 1,
+                    "top": 1,
+                    "bottom": 1,
+                    "leftUnit": "px",
+                    "rightUnit": "px",
+                    "topUnit": "px",
+                    "bottomUnit": "px"
+                    }
+                </script>
+
+                <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                    {
+                    "color": "rgba(64, 64, 64, 1)"
+                    }
+                </script>
+
+                <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                    {
+                    "left": "Solid",
+                    "right": "Solid",
+                    "top": "Solid",
+                    "bottom": "Solid"
+                    }
+                </script>
+
+                <!-- Performans Başlığı -->
+                <div id="SP_STAT_PerformanceHeader_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="📈 PERFORMANS & BAKIM" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="10" data-tchmi-height="40" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-font-size="16">
+
+                    <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                        {
+                        "color": "rgba(0, 212, 255, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(26, 77, 92, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(0, 212, 255, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+                </div>
+
+                <!-- Performans Grid -->
+                <div id="SP_STAT_PerformanceGrid_1" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="45" data-tchmi-top-unit="px" data-tchmi-right="10" data-tchmi-bottom="0">
+
+                    <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+[
+  {
+    "width": 1.0,
+    "widthUnit": "factor",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+[
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+
+                    <!-- Verimlilik -->
+                    <div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="0" id="SP_STAT_EfficiencyCard_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                        <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                            {
+                            "color": "rgba(54, 54, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 1,
+                            "right": 1,
+                            "top": 1,
+                            "bottom": 1,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                            {
+                            "color": "rgba(0, 212, 255, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+
+                        <div id="SP_STAT_EfficiencyLabel_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="⚡ Verimlilik" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="11">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(224, 224, 224, 1)"
+                                }
+                            </script>
+                        </div>
+
+                        <div id="SP_STAT_EfficiencyValue_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="97.3%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="16" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(0, 212, 255, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                                {
+                                "color": "rgba(26, 77, 92, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                                {
+                                "left": 1,
+                                "right": 1,
+                                "top": 1,
+                                "bottom": 1,
+                                "leftUnit": "px",
+                                "rightUnit": "px",
+                                "topUnit": "px",
+                                "bottomUnit": "px"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                                {
+                                "color": "rgba(0, 212, 255, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                                {
+                                "left": "Solid",
+                                "right": "Solid",
+                                "top": "Solid",
+                                "bottom": "Solid"
+                                }
+                            </script>
+                        </div>
+                    </div>
+
+                    <!-- Güvenilirlik -->
+                    <div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="SP_STAT_ReliabilityCard_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                        <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                            {
+                            "color": "rgba(54, 54, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 1,
+                            "right": 1,
+                            "top": 1,
+                            "bottom": 1,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                            {
+                            "color": "rgba(0, 255, 136, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+
+                        <div id="SP_STAT_ReliabilityLabel_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="🛡️ Güvenilirlik" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="11">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(224, 224, 224, 1)"
+                                }
+                            </script>
+                        </div>
+
+                        <div id="SP_STAT_ReliabilityValue_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="99.7%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="16" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(0, 255, 136, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                                {
+                                "color": "rgba(26, 77, 48, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                                {
+                                "left": 1,
+                                "right": 1,
+                                "top": 1,
+                                "bottom": 1,
+                                "leftUnit": "px",
+                                "rightUnit": "px",
+                                "topUnit": "px",
+                                "bottomUnit": "px"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                                {
+                                "color": "rgba(0, 255, 136, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                                {
+                                "left": "Solid",
+                                "right": "Solid",
+                                "top": "Solid",
+                                "bottom": "Solid"
+                                }
+                            </script>
+                        </div>
+                    </div>
+
+                    <!-- Son Bakım -->
+                    <div data-tchmi-grid-row-index="2" data-tchmi-grid-column-index="0" id="SP_STAT_LastMaintenanceCard_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                        <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                            {
+                            "color": "rgba(54, 54, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 1,
+                            "right": 1,
+                            "top": 1,
+                            "bottom": 1,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                            {
+                            "color": "rgba(255, 193, 7, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+
+                        <div id="SP_STAT_LastMaintenanceLabel_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="🔧 Son Bakım" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="11">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(224, 224, 224, 1)"
+                                }
+                            </script>
+                        </div>
+
+                        <div id="SP_STAT_LastMaintenanceValue_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="15.03.2024" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="12" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(30, 30, 30, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                                {
+                                "color": "rgba(255, 193, 7, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                                {
+                                "left": 1,
+                                "right": 1,
+                                "top": 1,
+                                "bottom": 1,
+                                "leftUnit": "px",
+                                "rightUnit": "px",
+                                "topUnit": "px",
+                                "bottomUnit": "px"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                                {
+                                "color": "rgba(255, 193, 7, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                                {
+                                "left": "Solid",
+                                "right": "Solid",
+                                "top": "Solid",
+                                "bottom": "Solid"
+                                }
+                            </script>
+                        </div>
+                    </div>
+
+                    <!-- Sonraki Bakım -->
+                    <div data-tchmi-grid-row-index="3" data-tchmi-grid-column-index="0" id="SP_STAT_NextMaintenanceCard_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                        <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                            {
+                            "color": "rgba(54, 54, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 1,
+                            "right": 1,
+                            "top": 1,
+                            "bottom": 1,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                            {
+                            "color": "rgba(255, 193, 7, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+
+                        <div id="SP_STAT_NextMaintenanceLabel_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="📅 Sonraki Bakım" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="10">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(224, 224, 224, 1)"
+                                }
+                            </script>
+                        </div>
+
+                        <div id="SP_STAT_NextMaintenanceValue_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="15.09.2024" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="12" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(30, 30, 30, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                                {
+                                "color": "rgba(255, 193, 7, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                                {
+                                "left": 1,
+                                "right": 1,
+                                "top": 1,
+                                "bottom": 1,
+                                "leftUnit": "px",
+                                "rightUnit": "px",
+                                "topUnit": "px",
+                                "bottomUnit": "px"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                                {
+                                "color": "rgba(255, 193, 7, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                                {
+                                "left": "Solid",
+                                "right": "Solid",
+                                "top": "Solid",
+                                "bottom": "Solid"
+                                }
+                            </script>
+                        </div>
+                    </div>
+
+                    <!-- Aşınma Oranı -->
+                    <div data-tchmi-grid-row-index="4" data-tchmi-grid-column-index="0" id="SP_STAT_WearRateCard_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2" data-tchmi-grid-column-span="2">
+
+                        <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                            {
+                            "color": "rgba(54, 54, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 1,
+                            "right": 1,
+                            "top": 1,
+                            "bottom": 1,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                            {
+                            "color": "rgba(255, 87, 34, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+
+                        <div id="SP_STAT_WearRateLabel_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="📊 Aşınma Oranı" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="12">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(224, 224, 224, 1)"
+                                }
+                            </script>
+                        </div>
+
+                        <div id="SP_STAT_WearRateValue_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="Düşük - %23 (Normal)" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="14" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(30, 30, 30, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                                {
+                                "color": "rgba(255, 87, 34, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                                {
+                                "left": 1,
+                                "right": 1,
+                                "top": 1,
+                                "bottom": 1,
+                                "leftUnit": "px",
+                                "rightUnit": "px",
+                                "topUnit": "px",
+                                "bottomUnit": "px"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                                {
+                                "color": "rgba(255, 87, 34, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                                {
+                                "left": "Solid",
+                                "right": "Solid",
+                                "top": "Solid",
+                                "bottom": "Solid"
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sağ Alt - Sistem Durumu -->
+            <div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="1" id="SP_STAT_SystemStatusPanel_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-creator-visibility="Visible">
+
+                <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                    {
+                    "color": "rgba(45, 45, 45, 1)"
+                    }
+                </script>
+
+                <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                    {
+                    "left": 1,
+                    "right": 1,
+                    "top": 1,
+                    "bottom": 1,
+                    "leftUnit": "px",
+                    "rightUnit": "px",
+                    "topUnit": "px",
+                    "bottomUnit": "px"
+                    }
+                </script>
+
+                <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                    {
+                    "color": "rgba(64, 64, 64, 1)"
+                    }
+                </script>
+
+                <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                    {
+                    "left": "Solid",
+                    "right": "Solid",
+                    "top": "Solid",
+                    "bottom": "Solid"
+                    }
+                </script>
+
+                <!-- Sistem Durumu Başlığı -->
+                <div id="SP_STAT_SystemStatusHeader_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-text="🖥️ SİSTEM DURUMU" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="10" data-tchmi-height="40" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center" data-tchmi-text-font-size="16">
+
+                    <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                        {
+                        "color": "rgba(139, 195, 74, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                        {
+                        "color": "rgba(51, 69, 26, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                        {
+                        "left": 1,
+                        "right": 1,
+                        "top": 1,
+                        "bottom": 1,
+                        "leftUnit": "px",
+                        "rightUnit": "px",
+                        "topUnit": "px",
+                        "bottomUnit": "px"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                        {
+                        "color": "rgba(139, 195, 74, 1)"
+                        }
+                    </script>
+
+                    <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                        {
+                        "left": "Solid",
+                        "right": "Solid",
+                        "top": "Solid",
+                        "bottom": "Solid"
+                        }
+                    </script>
+                </div>
+
+                <!-- Sistem Durumu Grid -->
+                <div id="SP_STAT_SystemStatusGrid_1" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="45" data-tchmi-top-unit="px" data-tchmi-right="10" data-tchmi-bottom="0" data-tchmi-creator-visibility="Visible">
+
+                    <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
+[
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  },
+  {
+    "height": 1.0,
+    "heightUnit": "factor",
+    "heightMode": "Value",
+    "maxHeightUnit": "px",
+    "minHeightUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+
+                    <!-- Sistem Başlatma -->
+                    <div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="0" id="SP_STAT_SystemStartCard_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                        <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                            {
+                            "color": "rgba(54, 54, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 1,
+                            "right": 1,
+                            "top": 1,
+                            "bottom": 1,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                            {
+                            "color": "rgba(139, 195, 74, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+
+                        <div id="SP_STAT_SystemStartLabel_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="🚀 Sistem Başlatma" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="11">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(224, 224, 224, 1)"
+                                }
+                            </script>
+                        </div>
+
+                        <div id="SP_STAT_SystemStartValue_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="25.05.2024" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="12" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(139, 195, 74, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                                {
+                                "color": "rgba(51, 69, 26, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                                {
+                                "left": 1,
+                                "right": 1,
+                                "top": 1,
+                                "bottom": 1,
+                                "leftUnit": "px",
+                                "rightUnit": "px",
+                                "topUnit": "px",
+                                "bottomUnit": "px"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                                {
+                                "color": "rgba(139, 195, 74, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                                {
+                                "left": "Solid",
+                                "right": "Solid",
+                                "top": "Solid",
+                                "bottom": "Solid"
+                                }
+                            </script>
+                        </div>
+                    </div>
+
+                    <!-- CPU Kullanımı -->
+                    <div data-tchmi-grid-row-index="1" data-tchmi-grid-column-index="0" id="SP_STAT_CPUUsageCard_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                        <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                            {
+                            "color": "rgba(54, 54, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 1,
+                            "right": 1,
+                            "top": 1,
+                            "bottom": 1,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                            {
+                            "color": "rgba(33, 150, 243, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+
+                        <div id="SP_STAT_CPUUsageLabel_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="💻 CPU Kullanımı" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="11">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(224, 224, 224, 1)"
+                                }
+                            </script>
+                        </div>
+
+                        <div id="SP_STAT_CPUUsageValue_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="12%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="16" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(33, 150, 243, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                                {
+                                "color": "rgba(26, 51, 77, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                                {
+                                "left": 1,
+                                "right": 1,
+                                "top": 1,
+                                "bottom": 1,
+                                "leftUnit": "px",
+                                "rightUnit": "px",
+                                "topUnit": "px",
+                                "bottomUnit": "px"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                                {
+                                "color": "rgba(33, 150, 243, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                                {
+                                "left": "Solid",
+                                "right": "Solid",
+                                "top": "Solid",
+                                "bottom": "Solid"
+                                }
+                            </script>
+                        </div>
+                    </div>
+
+                    <!-- Hafıza Kullanımı -->
+                    <div data-tchmi-grid-row-index="2" data-tchmi-grid-column-index="0" id="SP_STAT_MemoryUsageCard_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                        <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                            {
+                            "color": "rgba(54, 54, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 1,
+                            "right": 1,
+                            "top": 1,
+                            "bottom": 1,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                            {
+                            "color": "rgba(156, 39, 176, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+
+                        <div id="SP_STAT_MemoryUsageLabel_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="🧠 Hafıza" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="11">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(224, 224, 224, 1)"
+                                }
+                            </script>
+                        </div>
+
+                        <div id="SP_STAT_MemoryUsageValue_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="34%" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="16" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(156, 39, 176, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                                {
+                                "left": 1,
+                                "right": 1,
+                                "top": 1,
+                                "bottom": 1,
+                                "leftUnit": "px",
+                                "rightUnit": "px",
+                                "topUnit": "px",
+                                "bottomUnit": "px"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                                {
+                                "color": "rgba(156, 39, 176, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                                {
+                                "left": "Solid",
+                                "right": "Solid",
+                                "top": "Solid",
+                                "bottom": "Solid"
+                                }
+                            </script>
+                        </div>
+                    </div>
+
+                    <!-- Network Durumu -->
+                    <div data-tchmi-grid-row-index="3" data-tchmi-grid-column-index="0" id="SP_STAT_NetworkStatusCard_1" data-tchmi-type="TcHmi.Controls.System.TcHmiContainer" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="2">
+
+                        <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                            {
+                            "color": "rgba(54, 54, 54, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                            {
+                            "left": 1,
+                            "right": 1,
+                            "top": 1,
+                            "bottom": 1,
+                            "leftUnit": "px",
+                            "rightUnit": "px",
+                            "topUnit": "px",
+                            "bottomUnit": "px"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                            {
+                            "color": "rgba(76, 175, 80, 1)"
+                            }
+                        </script>
+
+                        <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                            {
+                            "left": "Solid",
+                            "right": "Solid",
+                            "top": "Solid",
+                            "bottom": "Solid"
+                            }
+                        </script>
+
+                        <div id="SP_STAT_NetworkStatusLabel_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="15" data-tchmi-left-unit="px" data-tchmi-text="🌐 Network" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="50" data-tchmi-right-unit="%" data-tchmi-bottom="0" data-tchmi-text-horizontal-alignment="Left" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-font-size="11">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(224, 224, 224, 1)"
+                                }
+                            </script>
+                        </div>
+
+                        <div id="SP_STAT_NetworkStatusValue_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-left="50" data-tchmi-left-unit="%" data-tchmi-text="🟢 ONLİNE" data-tchmi-top="2" data-tchmi-top-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="2" data-tchmi-bottom="2" data-tchmi-text-font-size="12" data-tchmi-text-vertical-alignment="Center" data-tchmi-text-horizontal-alignment="Center">
+
+                            <script data-tchmi-target-attribute="data-tchmi-text-color" type="application/json">
+                                {
+                                "color": "rgba(76, 175, 80, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-background-color" type="application/json">
+                                {
+                                "color": "rgba(35, 69, 37, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-width" type="application/json">
+                                {
+                                "left": 1,
+                                "right": 1,
+                                "top": 1,
+                                "bottom": 1,
+                                "leftUnit": "px",
+                                "rightUnit": "px",
+                                "topUnit": "px",
+                                "bottomUnit": "px"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-color" type="application/json">
+                                {
+                                "color": "rgba(76, 175, 80, 1)"
+                                }
+                            </script>
+
+                            <script data-tchmi-target-attribute="data-tchmi-border-style" type="application/json">
+                                {
+                                "left": "Solid",
+                                "right": "Solid",
+                                "top": "Solid",
+                                "bottom": "Solid"
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="ST_CircuitBreakerStatus" Id="{20996c70-0758-471e-9c55-4de574ed94b4}">
+    <Declaration><![CDATA[TYPE ST_CircuitBreakerStatus :
+STRUCT
+    ePosition: E_CircuitBreakerPosition;        // Kesici pozisyonu
+    eStatus: E_CircuitBreakerStatus;            // Operasyonel durum
+    eActiveMode: E_CircuitBreakerControlMode;   // Aktif kontrol modu
+    bSpringCharged: BOOL;                       // Yay kurulu durumu
+    bFaultActive: BOOL;                         // Arıza durumu
+    eFaultCode: E_CircuitBreakerFault;         // Arıza kodu
+    bPLCControlActive: BOOL;                    // PLC kontrol durumu
+    bOnCommand: BOOL;                           // ON komut çıkışı
+    bOffCommand: BOOL;                          // OFF komut çıkışı
+    wsStatusText: WSTRING(100);                 // Durum açıklama metni
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="ST_DisconnectorCommand" Id="{4d184ee4-654c-468f-be7a-b09142e07c4e}">
+    <Declaration><![CDATA[TYPE ST_DisconnectorCommand :
+STRUCT
+    eControlMode: E_DisconnectorControlMode;    // Kontrol modu seçimi
+    bAutoOnCmd: BOOL;                           // Otomatik ON komutu
+    bAutoOffCmd: BOOL;                          // Otomatik OFF komutu
+    bResetFault: BOOL;                          // Hata reset sinyali
+    bResetStatistics: BOOL;                     // İstatistik reset sinyali
+    bManualOnCmd: BOOL;                         // Manuel ON komutu
+    bManualOffCmd: BOOL;                        // Manuel OFF komutu
+    bStop: BOOL;                                // Hareketi durdur komutu
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

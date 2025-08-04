@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.14">
+  <POU Name="PRG_LVCP2_CompensationCalculate" Id="{3f6ef17e-3a84-49f5-9743-49abe5aaac2b}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_LVCP2_CompensationCalculate
+VAR
+    fbCompensationCalc : FB_CompensationCalculator;
+    bCalculate : BOOL := TRUE;              // Sürekli hesaplama için
+    nActiveGroups : INT := 10;              // Toplam 10 grup
+    
+    // Outputs
+    stHMIData : ST_CompensationHMI;
+    asCapacitorTags : ARRAY[0..99] OF STRING(30);
+    nActiveTags : INT;
+    
+    // Özet bilgiler
+    rTotalPower : REAL;
+    nTotalCapacitors : INT;
+    nActiveGroupCount : INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[// Grup sayısını güncelle
+GVL_LVCP1.nConfiguredGroups := nActiveGroups;
+
+// Hesaplama
+fbCompensationCalc(
+    bExecute 				:= bCalculate,
+    bGroupActive 			:= GVL_LVCP2.abGroupActive,
+    stGroupConfig 			:= GVL_LVCP2.astCompensationGroups,
+    nActiveGroups 			:= GVL_LVCP2.nConfiguredGroups,
+    stHMI 					=> stHMIData,
+    asActiveCapacitorTags 	=> asCapacitorTags,
+    nActiveCapacitorCount 	=> nActiveTags
+);
+
+// Özet bilgiler
+rTotalPower 		:= stHMIData.stSummary.rTotalActivePower;
+nTotalCapacitors 	:= stHMIData.stSummary.nTotalActiveCapacitors;
+nActiveGroupCount 	:= stHMIData.stSummary.nActiveGroupCount;
+]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_LVCP2_CompensationCalculate">
+      <LineId Id="35" Count="16" />
+      <LineId Id="6" Count="0" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

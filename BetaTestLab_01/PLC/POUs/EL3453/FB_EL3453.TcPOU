@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="FB_EL3453" Id="{dd7aa35d-7d3c-4981-97db-8e092c5952be}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_EL3453
+VAR_INPUT
+	pOut : POINTER TO stEL3453;	
+END_VAR
+VAR
+	EL3453		: MDP5001_341_E4FC35CB;
+	
+	pSource1 	: UINT := 0;
+	AdrCh1	 	: UINT;
+	ChNr1		: UINT := 1;
+	
+	pSource2 	: UINT := 20;
+	AdrCh2	 	: UINT;
+	ChNr2		: UINT := 2;
+	
+	pSource3 	: UINT := 25;
+	AdrCh3	 	: UINT;
+	ChNr3		: UINT := 3;
+	
+	pSource4 	: UINT := 0;
+	AdrCh4	 	: UINT;
+	ChNr4		: UINT := 1;
+END_VAR
+
+
+
+VAR CONSTANT
+	sr  : ARRAY[0..32] OF UINT := [2,3,4,5,6,9,11,12,17,21,22,27,28,29,30,33,34,35,36,39,40,41,42,95,98,99,100,165,166,168,169,170,0];
+	sr4 : ARRAY[0..34] OF UINT := [15,26,27,28,29,32,33,34,35,38,39,40,41,70,71,72,80,81,82,83,130,131,132,133,136,137,138,139,142,143,144,145,0];
+	
+	usr : ARRAY[0..18] OF UINT := [3,10,45,46,47,51,52,53,57,58,59,63,64,65,69,75,76,77,0];
+	usr4: ARRAY[0..38] OF UINT := [45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,0];
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[EL3453.MDP5001_341_Output.MDP5001_341_Total_Variant_Value_Out_Index_1_REAL := SHL(ChNr1,8) OR AdrCh1;
+
+IF ChNr1 >= 1 AND ChNr1 <= 3 THEN 
+	IF AdrCh1 >= 100 AND AdrCh1 < 164  THEN
+		AdrCh1 := AdrCh1 + 1;
+	ELSIF AdrCh1 >= 170 AND AdrCh1 < 234 THEN
+		AdrCh1 := AdrCh1 + 1;
+	ELSE
+		
+		IF sr[pSource1] = 0 THEN
+			pSource1 := 0;
+			ChNr1 := ChNr1 + 1;
+		ELSE
+			AdrCh1 := sr[pSource1];
+			pSource1 := pSource1 + 1;
+		END_IF;
+	END_IF		
+ELSIF ChNr1 = 4 THEN
+	IF sr4[pSource1] = 0 THEN
+		pSource1 := 0;
+		ChNr1 := 1;
+	ELSE
+		AdrCh1 := sr4[pSource1];	
+		pSource1 := pSource1 + 1;
+	END_IF;
+
+END_IF
+AddElement( SHR(EL3453.MDP5001_341_Input.MDP5001_341_Total_Variant_Value_In_Index_1_REAL,8), EL3453.MDP5001_341_Input.MDP5001_341_Total_Variant_Value_In_Index_1_REAL AND 16#00FF, EL3453.MDP5001_341_Input.MDP5001_341_Total_Variant_Value_In_Value_1_REAL);
+pOut^.Lx[1].fULrms := EL3453.MDP5001_341_Input.MDP5001_341_L1_Basic_Voltage;	
+pOut^.Lx[1].fIrms :=EL3453.MDP5001_341_Input.MDP5001_341_L1_Basic_Current;	
+
+pOut^.Lx[1].fPF := EL3453.MDP5001_341_Input.MDP5001_341_L1_Power_Power_Factor;	
+pOut^.Lx[1].fP := EL3453.MDP5001_341_Input.MDP5001_341_L1_Power_Active_Power;		
+pOut^.Lx[1].fS := EL3453.MDP5001_341_Input.MDP5001_341_L1_Power_Apparent_Power;	
+pOut^.Lx[1].fQ := EL3453.MDP5001_341_Input.MDP5001_341_L1_Power_Reactive_Power;	
+
+pOut^.Total.fIerrrmsCalc := EL3453.MDP5001_341_Input.MDP5001_341_Total_Basic_Calculated_Error_Current;	
+pOut^.Total.fFreq := EL3453.MDP5001_341_Input.MDP5001_341_Total_Basic_Frequency;							
+pOut^.Total.fPF := EL3453.MDP5001_341_Input.MDP5001_341_Total_Basic_Power_Factor;						
+
+
+//VV2
+EL3453.MDP5001_341_Output.MDP5001_341_Total_Variant_Value_Out_Index_2_REAL  := SHL(ChNr2,8) OR AdrCh2;
+
+IF ChNr2 >= 1 AND ChNr2 <= 3 THEN 
+	IF AdrCh2 >= 100 AND AdrCh2 < 164  THEN
+		AdrCh2 := AdrCh2 + 1;
+	ELSIF AdrCh2 >= 170 AND AdrCh2 < 234 THEN
+		AdrCh2 := AdrCh2 + 1;
+	ELSE
+		IF sr[pSource2] = 0 THEN
+			pSource2 := 0;
+			ChNr2 := ChNr2 + 1;
+		ELSE
+			AdrCh2 := sr[pSource2];
+			pSource2 := pSource2 + 1;
+		END_IF;
+
+	END_IF		
+ELSIF ChNr2 = 4 THEN
+	IF sr4[pSource2] = 0 THEN
+		pSource2 := 0;
+		ChNr2 := 1;
+	ELSE
+		AdrCh2 := sr4[pSource2];	
+		pSource2 := pSource2 + 1;
+	END_IF;
+
+END_IF
+ 
+AddElement( SHR(EL3453.MDP5001_341_Input.MDP5001_341_Total_Variant_Value_In_Index_2_REAL,8), EL3453.MDP5001_341_Input.MDP5001_341_Total_Variant_Value_In_Index_2_REAL AND 16#00FF, EL3453.MDP5001_341_Input.MDP5001_341_Total_Variant_Value_In_Value_2_REAL);
+pOut^.Lx[2].fULrms := EL3453.MDP5001_341_Input.MDP5001_341_L2_Basic_Voltage;	
+pOut^.Lx[2].fIrms :=EL3453.MDP5001_341_Input.MDP5001_341_L2_Basic_Current;	
+
+pOut^.Lx[2].fPF := EL3453.MDP5001_341_Input.MDP5001_341_L2_Power_Power_Factor;	
+pOut^.Lx[2].fP := EL3453.MDP5001_341_Input.MDP5001_341_L2_Power_Active_Power;		
+pOut^.Lx[2].fS := EL3453.MDP5001_341_Input.MDP5001_341_L2_Power_Apparent_Power;	
+pOut^.Lx[2].fQ := EL3453.MDP5001_341_Input.MDP5001_341_L2_Power_Reactive_Power;	
+
+
+
+//VV3
+EL3453.MDP5001_341_Output.MDP5001_341_Total_Variant_Value_Out_Index_3_REAL  := SHL(ChNr3,8) OR AdrCh3;
+IF ChNr3 >= 1 AND ChNr3 <= 3 THEN 
+	IF AdrCh3 >= 100 AND AdrCh3 < 164  THEN
+		AdrCh3 := AdrCh3 + 1;
+	ELSIF AdrCh3 >= 170 AND AdrCh3 < 234 THEN
+		AdrCh3 := AdrCh3 + 1;
+	ELSE
+		IF sr[pSource3] = 0 THEN
+			pSource3 := 0;
+			ChNr3 := ChNr3 + 1;
+		ELSE
+			AdrCh3 := sr[pSource3];
+			pSource3 := pSource3 + 1;
+		END_IF;
+
+	END_IF		
+ELSIF ChNr3 = 4 THEN
+	IF sr4[pSource3] = 0 THEN
+		pSource3 := 0;
+		ChNr3 := 1;
+	ELSE
+		AdrCh3 := sr4[pSource3];	
+		pSource3 := pSource3 + 1;		
+	END_IF;
+
+END_IF
+ 
+AddElement( SHR(EL3453.MDP5001_341_Input.MDP5001_341_Total_Variant_Value_In_Index_3_REAL,8), EL3453.MDP5001_341_Input.MDP5001_341_Total_Variant_Value_In_Index_3_REAL AND 16#00FF, EL3453.MDP5001_341_Input.MDP5001_341_Total_Variant_Value_In_Value_3_REAL);
+pOut^.Lx[3].fULrms := EL3453.MDP5001_341_Input.MDP5001_341_L3_Basic_Voltage;	
+pOut^.Lx[3].fIrms :=EL3453.MDP5001_341_Input.MDP5001_341_L3_Basic_Current;	
+
+pOut^.Lx[3].fPF := EL3453.MDP5001_341_Input.MDP5001_341_L3_Power_Power_Factor;	
+pOut^.Lx[3].fP := EL3453.MDP5001_341_Input.MDP5001_341_L3_Power_Active_Power;		
+pOut^.Lx[3].fS := EL3453.MDP5001_341_Input.MDP5001_341_L3_Power_Apparent_Power;	
+pOut^.Lx[3].fQ := EL3453.MDP5001_341_Input.MDP5001_341_L3_Power_Reactive_Power;	
+
+
+
+//VV4
+EL3453.MDP5001_341_Output.MDP5001_341_Total_Variant_Value_Out_Index_4_ULINT  := SHL(ChNr4,8) OR AdrCh4;
+IF ChNr4 >= 1 AND ChNr4 <= 3 THEN 
+	IF usr[pSource4] = 0 THEN
+		pSource4 := 0;
+		ChNr4 := ChNr4 + 1;
+	ELSE
+		AdrCh4 := usr[pSource4];
+		pSource4 := pSource4 + 1;
+	END_IF;
+
+ELSIF ChNr4 = 4 THEN
+	IF usr4[pSource4] = 0 THEN
+		pSource4 := 0;
+		ChNr4 := 1;
+	ELSE
+		AdrCh4 := usr4[pSource4];	
+		pSource4 := pSource4 + 1;
+	END_IF;
+END_IF
+ 
+AddElementULINT( SHR(EL3453.MDP5001_341_Input.MDP5001_341_Total_Variant_Value_In_Index_4_ULINT,8), EL3453.MDP5001_341_Input.MDP5001_341_Total_Variant_Value_In_Index_4_ULINT AND 16#00FF, EL3453.MDP5001_341_Input.MDP5001_341_Total_Variant_Value_In_Value_4_ULINT);]]></ST>
+    </Implementation>
+    <Method Name="AddElement" Id="{0a43eedf-da9d-4c5f-ab9b-c67712049d01}">
+      <Declaration><![CDATA[METHOD AddElement : BOOL
+VAR_INPUT
+	ChNr : UINT;
+	Pos : UINT;
+	fElement : REAL;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[AddElement := TRUE;
+
+IF ChNr >= 1 AND ChNr <= 3 THEN
+	IF Pos >= 100 AND Pos <= 163 THEN
+		pOut^.Lx[ChNr].fUL_harm[Pos-100] := fElement;
+	ELSIF Pos >= 170 AND Pos <= 233 THEN
+		pOut^.Lx[ChNr].fIL_harm[Pos-170] := fElement;
+	ELSE	
+		CASE Pos OF
+			1: pOut^.Lx[ChNr].fULrms 		:= fElement;
+			2: pOut^.Lx[ChNr].fUL_peak 		:= fElement;
+			
+			4: pOut^.Lx[ChNr].fULrms_min 	:= fElement;
+			5: pOut^.Lx[ChNr].fULrms_max 	:= fElement;
+			//Special Case 6: ULL
+			6: 	IF ChNr = 1 THEN
+					pOut^.Total.fUL12 		:= fElement;
+				ELSIF ChNr = 2 THEN
+					pOut^.Total.fUL23		:= fElement;
+				ELSE
+					pOut^.Total.fUL31		:= fElement;
+				END_IF
+			
+			
+			8: pOut^.Lx[ChNr].fIrms 		:= fElement;
+			9: pOut^.Lx[ChNr].fI_peak 		:= fElement;
+			
+			11: pOut^.Lx[ChNr].fIrms_min 	:= fElement;
+			12: pOut^.Lx[ChNr].fIrms_max 	:= fElement;
+			
+			17: pOut^.Lx[ChNr].fFreq 		:= fElement;
+			
+			21: pOut^.Lx[ChNr].fPhi		 	:= fElement;
+			22: pOut^.Lx[ChNr].fCosPhi	 	:= fElement;
+			23: pOut^.Lx[ChNr].fPF		 	:= fElement;
+			
+			26: pOut^.Lx[ChNr].fP 			:= fElement;
+			27: pOut^.Lx[ChNr].fP_avg 		:= fElement;
+			28: pOut^.Lx[ChNr].fP_min 		:= fElement;
+			29: pOut^.Lx[ChNr].fP_max 		:= fElement;
+			30: pOut^.Lx[ChNr].fP_fund 		:= fElement;
+						
+			32: pOut^.Lx[ChNr].fS 			:= fElement;
+			33: pOut^.Lx[ChNr].fS_avg 		:= fElement;
+			34: pOut^.Lx[ChNr].fS_min 		:= fElement;
+			35: pOut^.Lx[ChNr].fS_max 		:= fElement;
+			36: pOut^.Lx[ChNr].fS_fund 		:= fElement;
+						
+			38: pOut^.Lx[ChNr].fQ 			:= fElement;
+			39: pOut^.Lx[ChNr].fQ_avg 		:= fElement;
+			40: pOut^.Lx[ChNr].fQ_min 		:= fElement;
+			41: pOut^.Lx[ChNr].fQ_max 		:= fElement;
+			42: pOut^.Lx[ChNr].fQ_fund 		:= fElement;
+			
+			95: pOut^.Lx[ChNr].fUL_THD	 	:= fElement;
+			98: pOut^.Lx[ChNr].fULrms_fund 	:= fElement;
+			99: pOut^.Lx[ChNr].fUL_harmrf 	:= fElement;
+			
+			165: pOut^.Lx[ChNr].fI_THD 		:= fElement;
+			166: pOut^.Lx[ChNr].fI_TDD 		:= fElement;
+			168: pOut^.Lx[ChNr].fIrms_fund	:= fElement;
+			169: pOut^.Lx[ChNr].fIL_harmrf	:= fElement;
+			
+			ELSE 
+				AddElement := FALSE;
+		END_CASE
+	END_IF
+ELSIF ChNr = 4 THEN
+	CASE Pos OF
+		8:  pOut^.Total.fIerrrmsCalc	:= fElement;
+		15: pOut^.Total.fInrms	 		:= fElement;
+		17: pOut^.Total.fFreq			:= fElement;
+		23: pOut^.Total.fPF		 		:= fElement;
+		
+		26: pOut^.Total.fP		 		:= fElement;
+		27: pOut^.Total.fP_avg	 		:= fElement; 
+		28: pOut^.Total.fP_min	 		:= fElement;
+		29: pOut^.Total.fP_max	 		:= fElement;
+		
+		32: pOut^.Total.fS		 		:= fElement;
+		33: pOut^.Total.fS_avg	 		:= fElement; 
+		34: pOut^.Total.fS_min	 		:= fElement;
+		35: pOut^.Total.fS_max	 		:= fElement;
+		
+		38: pOut^.Total.fQtot		 	:= fElement;
+		39: pOut^.Total.fQtot_avg	 	:= fElement; 
+		40: pOut^.Total.fQtot_min	 	:= fElement;
+		41: pOut^.Total.fQtot_max	 	:= fElement;
+		
+		70: pOut^.Total.fPhiL1L2	 	:= fElement;
+		71: pOut^.Total.fPhiL1L3	 	:= fElement;
+		72: pOut^.Total.fUnbalance		:= fElement;
+		
+		80: pOut^.Total.fPQF		 	:= fElement;
+		81: pOut^.Total.fPQF_avg	 	:= fElement;
+		82: pOut^.Total.fPQF_min	 	:= fElement;
+		83: pOut^.Total.fPQF_max	 	:= fElement;
+		
+		130: pOut^.Total.fP_fund		:= fElement;
+		131: pOut^.Total.fP_fund_avg	:= fElement;
+		132: pOut^.Total.fP_fund_min	:= fElement;
+		133: pOut^.Total.fP_fund_max	:= fElement;
+
+		136: pOut^.Total.fS_fund		:= fElement;
+		137: pOut^.Total.fS_fund_avg	:= fElement;
+		138: pOut^.Total.fS_fund_min	:= fElement;
+		139: pOut^.Total.fS_fund_max	:= fElement;
+		
+		142: pOut^.Total.fQ_fund		:= fElement;
+		143: pOut^.Total.fQ_fund_avg	:= fElement;
+		144: pOut^.Total.fQ_fund_min	:= fElement;
+		145: pOut^.Total.fQ_fund_max	:= fElement;
+		
+		ELSE 
+			AddElement := FALSE;
+		END_CASE
+ELSE
+	AddElement := FALSE;
+END_IF
+
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="AddElementULINT" Id="{994be852-1fe8-49ee-aebc-c4119a9a00ee}">
+      <Declaration><![CDATA[METHOD AddElementULINT : BOOL
+VAR_INPUT
+	ChNr : UINT;
+	Pos : UINT;
+	uElement : ULINT;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[AddElementULINT := TRUE;
+
+IF ChNr >= 1 AND ChNr <= 3 THEN
+	CASE Pos OF
+		3 :	pOut^.Lx[ChNr].ulUL_ZC 			:= uElement;
+		10:	pOut^.Lx[ChNr].ulI_ZC 			:= uElement;
+		
+		45: pOut^.Lx[ChNr].lEP	 			:= uElement;
+		46: pOut^.Lx[ChNr].ulEP_pos	 		:= uElement;
+		47: pOut^.Lx[ChNr].ulEP_neg	 		:= uElement;
+		
+		51: pOut^.Lx[ChNr].lES	 			:= uElement;
+		52: pOut^.Lx[ChNr].ulES_pos	 		:= uElement;
+		53: pOut^.Lx[ChNr].ulES_neg	 		:= uElement;
+		
+		57: pOut^.Lx[ChNr].lEQ	 			:= uElement;
+		58: pOut^.Lx[ChNr].ulEQ_pos			:= uElement;
+		59: pOut^.Lx[ChNr].ulEQ_neg			:= uElement;
+		
+		63: pOut^.Lx[ChNr].lEP_fund	 		:= uElement;
+		64: pOut^.Lx[ChNr].ulEP_fund_pos 	:= uElement;
+		65: pOut^.Lx[ChNr].ulEP_fund_neg 	:= uElement;
+		
+		69: pOut^.Lx[ChNr].lES_fund	 		:= uElement;
+		70: pOut^.Lx[ChNr].ulES_fund_pos 	:= uElement;
+		71: pOut^.Lx[ChNr].ulES_fund_neg 	:= uElement;
+		
+		75: pOut^.Lx[ChNr].lEQ_fund	 		:= uElement;
+		76: pOut^.Lx[ChNr].ulEQ_fund_pos	:= uElement;
+		77: pOut^.Lx[ChNr].ulEQ_fund_neg	:= uElement;
+		
+		
+		ELSE 
+			AddElementULINT := FALSE;
+	END_CASE
+ELSIF ChNr = 4 THEN
+	CASE Pos OF
+		
+		45 : pOut^.Total.lEP				:= uElement;
+		46 : pOut^.Total.ulEP_pos			:= uElement;
+		47 : pOut^.Total.ulEP_neg	 		:= uElement;
+		
+		48 : pOut^.Total.lEP_int 			:= uElement;
+		49 : pOut^.Total.ulEP_int_pos		:= uElement;
+		50 : pOut^.Total.ulEP_int_neg		:= uElement;
+		
+		51 : pOut^.Total.lES	 			:= uElement;
+		52 : pOut^.Total.ulES_pos			:= uElement;
+		53 : pOut^.Total.ulES_neg			:= uElement;
+		
+		54 : pOut^.Total.lES_int	 		:= uElement;
+		55 : pOut^.Total.ulES_int_pos		:= uElement;
+		56 : pOut^.Total.ulES_int_neg		:= uElement;
+
+		57 : pOut^.Total.lEQ	 			:= uElement;
+		58 : pOut^.Total.ulEQ_pos			:= uElement;
+		59 : pOut^.Total.ulEQ_neg			:= uElement;		
+		
+		60 : pOut^.Total.lEQ_int	 		:= uElement;
+		61 : pOut^.Total.ulEQ_int_pos		:= uElement;
+		62 : pOut^.Total.ulEQ_int_neg		:= uElement;
+										
+		100: pOut^.Total.lEP_fund	 		:= uElement;
+		101: pOut^.Total.ulEP_fund_pos		:= uElement;
+		102: pOut^.Total.ulEP_fund_neg	 	:= uElement;
+		
+		103: pOut^.Total.lEP_fund_int 		:= uElement;
+		104: pOut^.Total.ulEP_fund_int_pos	:= uElement;
+		105: pOut^.Total.ulEP_fund_int_neg	:= uElement;
+		
+		106: pOut^.Total.lES_fund	 		:= uElement;
+		107: pOut^.Total.ulES_fund_pos		:= uElement;
+		108: pOut^.Total.ulES_fund_neg		:= uElement;
+		
+		109: pOut^.Total.lES_fund_int	 	:= uElement;
+		110: pOut^.Total.ulES_fund_int_pos	:= uElement;
+		111: pOut^.Total.ulES_fund_int_neg	:= uElement;
+
+		112: pOut^.Total.lEQ_fund	 		:= uElement;
+		113: pOut^.Total.ulEQ_fund_pos		:= uElement;
+		114: pOut^.Total.ulEQ_fund_neg		:= uElement;		
+		
+		115: pOut^.Total.lEQ_fund_int	 	:= uElement;
+		116: pOut^.Total.ulEQ_fund_int_pos	:= uElement;
+		117: pOut^.Total.ulEQ_fund_int_neg	:= uElement;
+		
+		ELSE 
+				AddElementULINT := FALSE;
+		END_CASE
+ELSE
+	AddElementULINT := FALSE;
+END_IF
+
+]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="FB_EL3453">
+      <LineId Id="3" Count="140" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_EL3453.AddElement">
+      <LineId Id="3" Count="119" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+    <LineIds Name="FB_EL3453.AddElementULINT">
+      <LineId Id="3" Count="92" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

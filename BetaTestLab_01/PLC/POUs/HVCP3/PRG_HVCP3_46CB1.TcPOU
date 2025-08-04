@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <POU Name="PRG_HVCP3_46CB1" Id="{68a5e7c3-e575-4c65-919e-c11afec5b66a}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_HVCP3_46CB1
+VAR
+    // Function Block Instance
+    fbDisconnector		: FB_DisconnectorControl;
+	
+	stDisconnectorIO	: ST_DisconnectorIO;
+	
+    
+    // Başlangıç konfigürasyonu için flag
+    bInitDone: BOOL := FALSE;	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF NOT bInitDone THEN
+	bInitDone := TRUE;
+	RETURN;
+END_IF
+
+//*************************************************************************
+// Ana Besleme Ayırıcısı
+// +EP6-8CB1
+//*************************************************************************
+fbDisconnector(
+    // Fiziksel Girişler
+    bContactorOn_FB 	:= stDisconnectorIO.bContactorOn_FB,
+    bContactorOff_FB 	:= stDisconnectorIO.bContactorOff_FB,
+    bLimitOn 			:= stDisconnectorIO.bLimitOn,
+    bLimitOff 			:= stDisconnectorIO.bLimitOff,
+    bThermalFault 		:= stDisconnectorIO.bThermalFault,
+    bEarthSwitchOn 		:= stDisconnectorIO.bEarthSwitchOn,
+    bEarthSwitchOff 	:= stDisconnectorIO.bEarthSwitchOff,
+    bPLCControl 		:= stDisconnectorIO.bPLCControl,
+    
+    // Güvenlik Girişleri
+    bSafetyLoop 		:= GVL_Alarm.bSafetyLoop,
+    bInterlock 			:= FALSE,
+    
+    // Sistem Girişleri
+    bMasterReset 		:= GVL_Alarm.bMasterReset,
+    
+    // HMI Bağlantısı
+    stHMI 				:= GVL_HVCP3.st46CB1HMI,
+    
+    // Fiziksel Çıkışlar
+    bContactorOn_Out 	=> stDisconnectorIO.bContactorOn_Out,
+    bContactorOff_Out 	=> stDisconnectorIO.bContactorOff_Out
+);
+]]></ST>
+    </Implementation>
+    <Method Name="M_Init" Id="{1ae5be84-de0f-421b-909f-0bef59926128}">
+      <Declaration><![CDATA[METHOD M_Init : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[
+GVL_HVCP3.st16CB1HMI.stConfig.bEarthSwitchExists := FALSE;
+GVL_HVCP3.st16CB1HMI.stConfig.bGrounded := FALSE;
+GVL_HVCP3.st16CB1HMI.stConfig.bInterlockEnable := TRUE;
+GVL_HVCP3.st16CB1HMI.stConfig.dwOperationLimit := 10000;
+GVL_HVCP3.st16CB1HMI.stConfig.nPhaseCount := 3;
+GVL_HVCP3.st16CB1HMI.stConfig.rRatedCurrent := 1000.0;
+GVL_HVCP3.st16CB1HMI.stConfig.rRatedVoltage := 36000.0;
+GVL_HVCP3.st16CB1HMI.stConfig.sProductCode := '';
+GVL_HVCP3.st16CB1HMI.stConfig.sProjectCode := '+EP9-46CB1';
+GVL_HVCP3.st16CB1HMI.stConfig.tContactorDelay := T#500MS;
+GVL_HVCP3.st16CB1HMI.stConfig.tMotionTimeout := T#50S;
+]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="PRG_HVCP3_46CB1">
+      <LineId Id="147" Count="33" />
+      <LineId Id="80" Count="0" />
+    </LineIds>
+    <LineIds Name="PRG_HVCP3_46CB1.M_Init">
+      <LineId Id="9" Count="0" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="10" Count="10" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

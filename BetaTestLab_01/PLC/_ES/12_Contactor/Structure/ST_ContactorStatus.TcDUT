@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
+  <DUT Name="ST_ContactorStatus" Id="{fd9cbe98-c538-4ff3-8e1b-66b661428932}">
+    <Declaration><![CDATA[TYPE ST_ContactorStatus :
+STRUCT
+    ePosition: E_ContactorPosition;             // Kontaktör pozisyonu
+    eStatus: E_ContactorStatus;                 // Operasyonel durum
+    eActiveMode: E_ContactorControlMode;        // Aktif kontrol modu
+    bFaultActive: BOOL;                         // Arıza durumu
+    eFaultCode: E_ContactorFault;                // Arıza kodu
+    bPLCControlActive: BOOL;                    // PLC kontrol durumu
+    bOutput: BOOL;                              // Kontaktör çıkışı
+    wsStatusText: WSTRING(100);                 // Durum açıklama metni
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>
